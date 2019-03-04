@@ -1,0 +1,3 @@
+/home/liuguochen/summercamp/SummerCamp2018/tool/cmake/summercamp/t2/cmake-build-debug/share/doc/cmake/t2/README.md
+/home/liuguochen/summercamp/SummerCamp2018/tool/cmake/summercamp/t2/cmake-build-debug/share/doc/cmake/t2/hello.txt
+/home/liuguochen/summercamp/SummerCamp2018/tool/cmake/summercamp/t2/cmake-build-debug/bin/runhello.sh

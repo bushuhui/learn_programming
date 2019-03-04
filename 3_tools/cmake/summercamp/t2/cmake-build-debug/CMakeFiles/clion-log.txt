@@ -1,0 +1,4 @@
+/home/liuguochen/desktop/clion-2018.1.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/liuguochen/summercamp/SummerCamp2018/tool/cmake/summercamp/t2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/liuguochen/summercamp/SummerCamp2018/tool/cmake/summercamp/t2/cmake-build-debug

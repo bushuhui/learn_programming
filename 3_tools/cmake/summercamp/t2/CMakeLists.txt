@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.1)
+PROJECT(HELLO)
+ADD_SUBDIRECTORY(src)
+INSTALL(FILES README.md DESTINATION share/doc/cmake/t2)
+INSTALL(DIRECTORY doc/ DESTINATION share/doc/cmake/t2)
+INSTALL(PROGRAMS runhello.sh DESTINATION bin)
