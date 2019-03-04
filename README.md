@@ -41,11 +41,31 @@
 	- 例2：如何自己编写一个数独的自动程序，类似的思考如何才能自己实现这样的程序
 	
 
+
+
 **具体要求：**
 
 1. 根据自己的学习过程，将所编写的程序保存到对应的目录里
 2. 学习使用[git](3_tools/git)，将代码、报告提交到[gitee](https://gitee.com)
 3. 可以参考[报告例子](report/20190304_report_demo.md)来写每周的报告。其中关于[Markdown](3_tools/markdown)的用法可以通过学习资料进行学习
+
+
+
+## 关于如何提交作业，如何使用git，markdown等等，可以参考下面使用帮助。
+
+具体的操作步骤：
+
+* 大家fork这个项目到自己的项目
+* 然后git clone自己的项目到本地机器
+* 在各目录里写入各自的代码、报告等
+* 通过`git push ...`上传作业到自己的项目里
+* 由于本作业会更新因此需要更新到最新的版本，可以如下操作
+```
+git remote add upstream git@gitee.com:machinelearning2018/pr_homework.git
+git pull upstream master
+```
+
+大家提交作业后，我会在大家的项目里写入批注、建议等等，从而构建良好的反馈机制，能够更有效的取得学习效果。
 
 
 
@@ -57,7 +77,7 @@
 
 
 
-## 学习资料汇编
+## 其他相关学习资料汇编
 
 * [智能系统实验室-新人暑期培训教程](https://github.com/npupilab/SummerCamp2018), [智能系统实验室-新人暑期培训作业]([https://github.com/npupilab/SummerCamp2018Homework])
 * [机器学习教程](https://gitee.com/pi-lab/machinelearning_notebook)，[课程作业](https://gitee.com/machinelearning2018/pr_homework)
