@@ -61,7 +61,7 @@
 * 通过`git push ...`上传作业到自己的项目里
 * 由于本作业会更新因此需要更新到最新的版本，可以如下操作
 ```
-git remote add upstream git@gitee.com:machinelearning2018/pr_homework.git
+git remote add upstream git@gitee.com:pi-lab/learn_programming.git
 git pull upstream master
 ```
 
