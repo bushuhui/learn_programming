@@ -23,6 +23,7 @@
 	- 在学习过程考虑，如何更有效的编程，如何提高debug能力
 	- 资料（可以使用在线的教程，或者自己找比较合适的）：
 		- [C++ 教程](http://www.runoob.com/cplusplus/cpp-tutorial.html) 
+		- [C++ Primer](https://www.zhihu.com/question/32087709)
 2. 《算法导论》
     - 根据自己的基础，把重要的内容学一下，并尝试将每一个算法都自己实现一下 （大约4-8周）
     - 实现过程需要思考，算法的本质是什么，如何将算法转化成循环、判断
@@ -48,7 +49,7 @@
 
 重点掌握下列知识点和技能：
 
-* 基本语法：循环、判断、选择、函数、指针、结构体和类
+* 基本语法：数据类型、循环、判断、选择、函数、指针、结构体和类
 * 输入与输出：stdout打印输出，调试打印等
 * 文件读写：文本文件，二进制存储
 * 数据结构与算法：链表、二叉树、红黑树、图的遍历；查找，排序；动态规划、贪心算法
@@ -92,10 +93,10 @@ git pull upstream master
 ## （五）相关学习资料参考
 
 在上述内容学习完成之后，可以进行计算视觉、机器学习方面知识的学习，具体的资料可以参考：
-* 智能系统实验室-培训教程与作业
-    - [智能系统实验室-新人暑期培训教程](https://github.com/npupilab/SummerCamp2018)
-    - [智能系统实验室-新人暑期培训作业](https://github.com/npupilab/SummerCamp2018Homework)
-* 机器学习教程与作业
+1. 智能系统实验室-培训教程与作业
+    - [智能系统实验室-新人暑期培训教程](https://gitee.com/pi-lab/SummerCamp)
+    - [智能系统实验室-新人暑期培训作业](https://gitee.com/pi-lab/SummerCampHomework)
+2. 机器学习教程与作业
     - [机器学习教程](https://gitee.com/pi-lab/machinelearning_notebook)
     - [机器学习课程作业](https://gitee.com/machinelearning2018/pr_homework)
 
