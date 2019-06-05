@@ -59,8 +59,8 @@
 **具体要求：**
 
 1. 根据自己的学习过程，将所编写的程序保存到对应的目录里，分门别类存放程序（养成条理的习惯）
-2. 学习使用[git](3_tools/git)，将代码、报告提交到[gitee](https://gitee.com)
-3. 可以参考[报告例子](report/20190304_report_demo.md)来写每周的报告。其中关于[Markdown](3_tools/markdown)的用法可以通过学习资料进行学习
+2. 学习使用[git](5_tools/git)，将代码、报告提交到[gitee](https://gitee.com)
+3. 可以参考[报告例子](report/20190304_report_demo.md)来写每周的报告。其中关于[Markdown](5_tools/markdown)的用法可以通过学习资料进行学习
 
 
 
