@@ -5,4 +5,4 @@
 * [中级算法 - 巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/)
 * [高级算法 - 提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard/)
 
-完成后将编写的程序按照目录存放在这个文件夹。
+将编写的程序按照类别等存放在这个文件夹。
