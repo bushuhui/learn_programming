@@ -15,30 +15,33 @@
 
 因为主要的算法还是通过C/C++来实现，因此需要把C++学好。但是很多比较高级、复杂的语言特性可以不用一上来就去学，可以等基本语法、常用数据结构学的比较扎实之后再着手开始。
 
-主要的学习步骤如下：
+主要的学习阶段和步骤分为如下的4个阶段，可以同时进行两个或以上的内容同时学习和练习，从而提高整体的学习效率。
 
-1. 找一本C++的书 （教材就可以，或者如下的资料）：
-	- 将其中的基本内容快速过一遍；
+
+1. [C++基础：](1_c++)
+	- 找一本C++的书 （教材就可以，或者如下的资料），将其中的基本内容快速过一遍；
 	- 将其中的练习题都做一遍（大约2周，给自己限定一个时间，必须快速完成）
 	- 在学习过程考虑，如何更有效的编程，如何提高debug能力
 	- 资料（可以使用在线的教程，或者自己找比较合适的）：
 		- [C++ 教程](http://www.runoob.com/cplusplus/cpp-tutorial.html) 
 		- [C++ Primer](https://www.zhihu.com/question/32087709)
-2. 《算法导论》
+2. [算法](2_datastructure_algorithm)
+    - 推荐《算法导论》
     - 根据自己的基础，把重要的内容学一下，并尝试将每一个算法都自己实现一下 （大约4-8周）
     - 实现过程需要思考，算法的本质是什么，如何将算法转化成循环、判断
     - 如何实现算法，如何测试代码，如何构建输入数据
     - 可以参考一些教程，加快学习速度，例如：
          - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html)
          - [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)
-3. 在线编程练习网站
+3. [在线编程练习](3_code_practice)
     - 在基础知识学习到一定程度之后，需要找一些算法练习题目来继续提高自己的能力
     - 如果自己想不到很好的练习题目，可以通过做[leetcode](https://leetcode-cn.com/)等在线网站的练习题，来练习
+    - 需要完成50道题目的练习，各种类型的题目都需要做一些
     - 可以根据自己的能力，选择如下的练习来完成
     	- [初级算法 - 帮助入门](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/)
     	- [中级算法 - 巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/)
     	- [高级算法 - 提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard/)
-4. 综合性质的编程练习项目
+4. [综合性质的编程练习项目](4_projects)
 	- 可以思考一下，如何讲所学的编程知识去解决一些实际的问题
 	- 通过这个综合练习，运用所学的知识解决一个实际的问题，并锻炼系统性问题的解决思路
 	- 例1：如何自己编写一个自动下五子棋的程序，思考编写这样的程序需要什么样的技术，需要什么算法，如何保存棋盘的状态，如何有效判断在何位置下子最好等等
@@ -98,5 +101,6 @@ git pull upstream master
     - [智能系统实验室-新人暑期培训作业](https://gitee.com/pi-lab/SummerCampHomework)
 2. 机器学习教程与作业
     - [机器学习教程](https://gitee.com/pi-lab/machinelearning_notebook)
-    - [机器学习课程作业](https://gitee.com/machinelearning2018/pr_homework)
+    - [机器学习课程作业](https://gitee.com/pi-lab/machinelearning_homework)
+
 
