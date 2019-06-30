@@ -51,8 +51,11 @@
 	- 可以思考一下，如何讲所学的编程知识去解决一些实际的问题
 	- 通过这个综合练习，运用所学的知识解决一个实际的问题，并锻炼系统性问题的解决思路
 	- 例1：如何自己编写一个自动下五子棋的程序，思考编写这样的程序需要什么样的技术，需要什么算法，如何保存棋盘的状态，如何有效判断在何位置下子最好等等
-	- 例2：如何自己编写一个数独的自动程序，类似的思考如何才能自己实现这样的程序
-	
+	- 例2：如何自己编写一个数独的自动求解、推理程序，类似的思考如何才能自己实现这样的程序
+5. 	[高级技巧](5_advanced)
+    - 琢磨如何将前面所写的代码进行重构，如何提高代码的复用能力
+    - 如何利用CMake，PICMake将所有的代码组织起来，一次将自己编写的代码都编译出来
+    - 研究、学习如何将常用的函数、类组织到一个代码库，后续直接使用
 
 
 
@@ -65,19 +68,19 @@
 * 如何使用编程工具：熟悉自己所用的IDE，如何debug；尝试学习Linux，并尝试使用Makefile或者CMake编写项目编译脚本等
 
 
-### 具体要求：
-
-1. 根据自己的学习过程，将所编写的程序保存到对应的目录里，分门别类存放程序（养成条理的习惯）
-2. 学习使用[git](5_tools/git)，将代码、报告提交到[gitee](https://gitee.com)
-3. 可以参考[报告例子](report/20190304_report_demo.md)来写每周的报告。其中关于[Markdown](5_tools/markdown)的用法可以通过学习资料进行学习
-
 
 
 ## （三）如何提交作业，如何使用git，markdown
 
-具体的操作步骤：
+### 3.1 具体要求：
 
-* 大家fork这个项目到自己的项目
+1. 根据自己的学习过程，将所编写的程序保存到对应的目录里，分门别类存放程序（养成条理的习惯）
+2. 学习使用[git](6_tools/git)，将代码、报告提交到[gitee](https://gitee.com)
+3. 可以参考[报告例子](report/20190304_report_demo.md)来写每周的报告。其中关于[Markdown](6_tools/markdown)的用法可以通过学习资料进行学习
+
+### 3.2 具体的操作步骤：
+
+* 大家fork这个项目到自己的项目，并将自己的代码仓库的地址发送给 bushuhui # nwpu.edu.cn
 * 然后git clone自己的项目到本地机器
 * 在各目录里写入各自的代码、报告等
 * 通过`git push ...`上传作业到自己的项目里
@@ -108,10 +111,13 @@ git pull upstream master
 2. 机器学习教程与作业
     - [机器学习教程](https://gitee.com/pi-lab/machinelearning_notebook)
     - [机器学习课程作业](https://gitee.com/pi-lab/machinelearning_homework)
+3. [编程代码参考、技巧集合](https://gitee.com/pi-lab/code_cook)
+    - 可以在这个代码、技巧集合中找到某项功能的示例，从而加快自己代码的编写
 
 
 工具的使用教程等
-* [Linux](5_tools/linux)
-* [Markdown](5_tools/markdown)
-* [Git](5_tools/git)
-* [CMake](5_tools/cmake)
+* [Code Cook - 编程参考代码，技巧集合](https://gitee.com/pi-lab/code_cook)
+* [Linux](6_tools/linux)
+* [Markdown](6_tools/markdown)
+* [Git](6_tools/git)
+* [CMake](6_tools/cmake)
