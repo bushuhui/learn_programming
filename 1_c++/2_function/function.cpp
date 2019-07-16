@@ -5,6 +5,13 @@ int print_message(const char *msg)
     printf("message: %s\n", msg);
 }
 
+int pass_argument(int a, int b)
+{
+    printf("a = %d, b = %d\n", a, b);
+    return 0;
+}
+    
+
 
 int main(int argc, char *argv[])
 {
@@ -13,9 +20,11 @@ int main(int argc, char *argv[])
     for(int i=0; i<10; i++) 
     {
         sprintf(buf, "[%4d]", i);
-        print_message(buf)
+        print_message(buf);
     }
 
+    pass_argument(10, 20);
+    
     return 0;
 }
 
