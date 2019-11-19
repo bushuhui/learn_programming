@@ -2,7 +2,7 @@
 
 
 
-## （一）为何学习编程？
+## 一、为何学习编程？
 
 
 编程，英语，数学是通往未来的三个主要钥匙。其中编程是让你实现梦想，英语是让你找到通往梦想的资料，数学是让你构建路径的模型和策略。因此建议各位同学能够脚踏实地把基础打扎实，克服眼高手低的问题。
@@ -12,7 +12,7 @@
 
 
 
-## （二）如何学习？
+## 二、如何学习？
 
 因为主要的算法还是通过C/C++来实现，因此需要把C++学好。但是很多比较高级、复杂的语言特性可以不用一上来就去学，可以等基本语法、常用数据结构学的比较扎实之后再着手开始。
 
@@ -26,7 +26,7 @@ Stage 1: [C++基础：](1_c++)
 ​	- 资料（可以使用在线的教程，或者自己找比较合适的）：
 ​		- [C++ 教程](http://www.runoob.com/cplusplus/cpp-tutorial.html) 
 ​		- [C++ Primer](https://www.zhihu.com/question/32087709)
-​		
+
 Stage 2: [算法](2_datastructure_algorithm)
 ​    - 推荐《算法导论》
 ​    - 根据自己的基础，把重要的内容学一下，并尝试将每一个算法都自己实现一下 （大约4-8周）
@@ -35,7 +35,7 @@ Stage 2: [算法](2_datastructure_algorithm)
 ​    - 可以参考一些教程，加快学习速度，例如：
 ​         - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html)
 ​         - [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)
-​         
+​
 Stage 3: [在线编程练习](3_code_practice)
 ​    - 在基础知识学习到一定程度之后，需要找一些算法练习题目来继续提高自己的能力
 ​    - 如果自己想不到很好的练习题目，可以通过做[leetcode](https://leetcode-cn.com/)等在线网站的练习题，来练习
@@ -44,7 +44,7 @@ Stage 3: [在线编程练习](3_code_practice)
 ​    	- [初级算法 - 帮助入门](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/)
 ​    	- [中级算法 - 巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/)
 ​    	- [高级算法 - 提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard/)
-​    	
+​
 Stage 4: [综合性质的编程练习项目](4_projects)
 ​	- 可以思考一下，如何讲所学的编程知识去解决一些实际的问题
 ​	- 通过这个综合练习，运用所学的知识解决一个实际的问题，并锻炼系统性问题的解决思路
@@ -69,7 +69,7 @@ Stage 5: [高级技巧](5_advanced)
 
 
 
-## （三）如何提交作业，如何使用git，markdown
+## 三、如何提交作业，如何使用git，markdown
 
 ***请认真阅读具体要求和操作步骤，如果有不清楚的地方请及时咨询。***
 
@@ -79,6 +79,7 @@ Stage 5: [高级技巧](5_advanced)
 1. 根据自己的学习过程，将所编写的程序保存到对应的目录里，分门别类存放程序（养成条理的习惯）
 2. 学习使用[git](6_tools/git)，将代码、报告提交到[gitee](https://gitee.com)
 3. 可以参考[报告例子](report/20190304_report_demo.md)来写每周的报告。其中关于[Markdown](6_tools/markdown)的用法可以通过学习资料进行学习
+
 
 ### 3.2 具体的操作步骤：
 
@@ -96,7 +97,7 @@ git pull upstream master
 
 
 
-## （四）学习的建议
+## 四、学习的建议
 
 本学习材料主要针对有意提高自我编程能力的学生，通过本学习材料能够学习得到后续研究生阶段所需要的基础知识、技能。通过系统化的练习能够将所学的知识串联起来，从而提高学习的效率和效果。由于人工智能技术飞速的发展，所以想要在研究生阶段取得更好的成绩需要非常强的自学能力，在学习本系列教程的过程中，需要自己不断的反思，如何才能更有效的学习？怎么才能抓住所学科目的重点？如果遇到不会的问题，如何去找资料？什么样的问题去问？什么样的问题要自己去找答案？
 
@@ -104,7 +105,7 @@ git pull upstream master
 
 
 
-## （五）相关学习资料参考
+## 五、相关学习资料参考
 
 在上述内容学习完成之后，可以进行计算视觉、机器学习方面知识的学习，具体的资料可以参考：
 1. 智能系统实验室-培训教程与作业
@@ -113,7 +114,8 @@ git pull upstream master
 2. 机器学习教程与作业
     - [机器学习教程](https://gitee.com/pi-lab/machinelearning_notebook)
     - [机器学习课程作业](https://gitee.com/pi-lab/machinelearning_homework)
-3. [编程代码参考、技巧集合](https://gitee.com/pi-lab/code_cook)
+3. [智能系统实验室研究课题](https://gitee.com/pi-lab/pilab_research_fields)
+4. [编程代码参考、技巧集合](https://gitee.com/pi-lab/code_cook)
     - 可以在这个代码、技巧集合中找到某项功能的示例，从而加快自己代码的编写
 
 
@@ -123,3 +125,4 @@ git pull upstream master
 * [Markdown](6_tools/markdown)
 * [Git](6_tools/git)
 * [CMake](6_tools/cmake)
+
