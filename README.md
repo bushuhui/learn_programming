@@ -20,41 +20,41 @@
 
 
 Stage 1: [C++基础：](1_c++)
-​	- 找一本C++的书 （教材就可以，或者如下的资料），将其中的基本内容快速过一遍；
-​	- 将其中的练习题都做一遍（大约2周，给自己限定一个时间，必须快速完成）
-​	- 在学习过程考虑，如何更有效的编程，如何提高debug能力
-​	- 资料（可以使用在线的教程，或者自己找比较合适的）：
-​		- [C++ 教程](http://www.runoob.com/cplusplus/cpp-tutorial.html) 
-​		- [C++ Primer](https://www.zhihu.com/question/32087709)
+- 找一本C++的书 （教材就可以，或者如下的资料），将其中的基本内容快速过一遍；
+- 将其中的练习题都做一遍（大约2周，给自己限定一个时间，必须快速完成）
+- 在学习过程考虑，如何更有效的编程，如何提高debug能力
+- 资料（可以使用在线的教程，或者自己找比较合适的）：
+    - [C++ 教程](http://www.runoob.com/cplusplus/cpp-tutorial.html) 
+    - [C++ Primer](https://www.zhihu.com/question/32087709)
 
 Stage 2: [算法](2_datastructure_algorithm)
-​    - 推荐《算法导论》
-​    - 根据自己的基础，把重要的内容学一下，并尝试将每一个算法都自己实现一下 （大约4-8周）
-​    - 实现过程需要思考，算法的本质是什么，如何将算法转化成循环、判断
-​    - 如何实现算法，如何测试代码，如何构建输入数据
-​    - 可以参考一些教程，加快学习速度，例如：
-​         - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html)
-​         - [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)
+- 推荐《算法导论》
+- 根据自己的基础，把重要的内容学一下，并尝试将每一个算法都自己实现一下 （大约4-8周）
+- 实现过程需要思考，算法的本质是什么，如何将算法转化成循环、判断
+- 如何实现算法，如何测试代码，如何构建输入数据
+- 可以参考一些教程，加快学习速度，例如：
+    - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html)
+    - [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)
 ​
 Stage 3: [在线编程练习](3_code_practice)
-​    - 在基础知识学习到一定程度之后，需要找一些算法练习题目来继续提高自己的能力
-​    - 如果自己想不到很好的练习题目，可以通过做[leetcode](https://leetcode-cn.com/)等在线网站的练习题，来练习
-​    - 需要完成50道题目的练习，各种类型的题目都需要做一些
-​    - 可以根据自己的能力，选择如下的练习来完成
-​    	- [初级算法 - 帮助入门](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/)
-​    	- [中级算法 - 巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/)
-​    	- [高级算法 - 提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard/)
+- 在基础知识学习到一定程度之后，需要找一些算法练习题目来继续提高自己的能力
+- 如果自己想不到很好的练习题目，可以通过做[leetcode](https://leetcode-cn.com/)等在线网站的练习题，来练习
+- 需要完成50道题目的练习，各种类型的题目都需要做一些
+- 可以根据自己的能力，选择如下的练习来完成
+    - [初级算法 - 帮助入门](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/)
+    - [中级算法 - 巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/)
+    - [高级算法 - 提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard/)
 ​
 Stage 4: [综合性质的编程练习项目](4_projects)
-​	- 可以思考一下，如何讲所学的编程知识去解决一些实际的问题
-​	- 通过这个综合练习，运用所学的知识解决一个实际的问题，并锻炼系统性问题的解决思路
-​	- 例1：如何自己编写一个自动下五子棋的程序，思考编写这样的程序需要什么样的技术，需要什么算法，如何保存棋盘的状态，如何有效判断在何位置下子最好等等
-​	- 例2：如何自己编写一个数独的自动求解、推理程序，类似的思考如何才能自己实现这样的程序
+​- 可以思考一下，如何讲所学的编程知识去解决一些实际的问题
+- 通过这个综合练习，运用所学的知识解决一个实际的问题，并锻炼系统性问题的解决思路
+- 例1：如何自己编写一个自动下五子棋的程序，思考编写这样的程序需要什么样的技术，需要什么算法，如何保存棋盘的状态，如何有效判断在何位置下子最好等等
+- 例2：如何自己编写一个数独的自动求解、推理程序，类似的思考如何才能自己实现这样的程序
 
 Stage 5: [高级技巧](5_advanced)
-​    - 琢磨如何将前面所写的代码进行重构，如何提高代码的复用能力
-​    - 如何利用CMake，PICMake将所有的代码组织起来，一次将自己编写的代码都编译出来
-​    - 研究、学习如何将常用的函数、类组织到一个代码库，后续直接使用
+- 琢磨如何将前面所写的代码进行重构，如何提高代码的复用能力
+- 如何利用CMake，PICMake将所有的代码组织起来，一次将自己编写的代码都编译出来
+- 研究、学习如何将常用的函数、类组织到一个代码库，后续直接使用
 
 
 
