@@ -12,7 +12,7 @@
 
 2. 安装完成后，还需要进行设置，输入命令：
 ```
-| git config --global user.name zhangmi  
+| git config --global user.name zhangmi
 | git config --global user.email zhangmm94@163.com
 ```
 
@@ -26,7 +26,7 @@ ssh-keygen -t rsa -C "youremail@xxx.com"
 
 然后一路回车,这个会在当前用户文件夹下，生成`~/.ssh`文件夹，里边有个`id_rsa.pub`文件，用文本编辑器（记事本）打开，复制其中的全部内容。 
 
-然后打开https://gitee.com/profile/sshkeys页面,在该页面中添加公钥,标题可以随便填,公钥就是刚才复制过的内容,然后保存即可。
+然后打开 https://gitee.com/profile/sshkeys 页面,在该页面中添加公钥,标题可以随便填,公钥就是刚才复制过的内容,然后保存即可。
 
 
 ## Basic usage:
