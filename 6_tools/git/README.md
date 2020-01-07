@@ -1,6 +1,5 @@
 ## Git使用教程
 
-* [使用码云提交作业的说明](gitee_homework_usage.md)
 * [Git快速入门 - Git初体验](https://my.oschina.net/dxqr/blog/134811)
 * [Git系统学习 - 廖雪峰的Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
@@ -15,3 +14,5 @@
 * [git tips](git-tips.md)
 * [git-cheatsheet.pdf](git-cheatsheet.pdf)
 
+## 好用的工具
+* [GitKraken](https://www.gitkraken.com/) - Git Client
