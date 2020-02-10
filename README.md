@@ -90,14 +90,18 @@
 * 大家fork这个项目到自己的项目，并将自己的代码仓库的地址发送给 bushuhui # nwpu.edu.cn
 * 然后git clone自己的项目到本地机器
 * 在各目录里写入各自的代码、报告等
-* 通过`git push ...`上传作业到自己的项目里
+* 通过`git push origin master`上传作业到自己的项目里
 * 由于本作业会更新因此需要更新到最新的版本，可以如下操作
 ```
 git remote add upstream git@gitee.com:pi-lab/learn_programming.git
 git pull upstream master
 ```
 
-关于Git和Gitee的操作可以深入学习[git教程](6_tools/git/README.md)。可以参考[Gitee增加用户](6_tools/git/gitee_addmember.md)来增加其他用户，从而加快协同便捷性。大家提交作业后，我会在大家的项目里写入批注、建议等等，从而构建良好的反馈机制，能够更有效的取得学习效果。
+关于Git和Gitee的操作可以深入学习[git教程](6_tools/git/README.md)。可以参考[Gitee增加用户](6_tools/git/gitee_addmember.md)来增加用户，将邀请链接地址发送给`bushuhui@nwpu.edu.cn`，从而加快协同便捷性。大家提交作业后，我会在大家的项目里写入批注、建议等等，从而构建良好的反馈机制，能够更有效的取得学习效果。
+
+可以安装git客户端软件[GitKraken](https://www.gitkraken.com)，能够方便查看每次的提交都有那些更改，或者查看有那些批注、建议等。
+
+如果无法提交代码到服务器，可以尝试将服务器最新的代码更新到本地，执行操作: `git pull origin master`。合并完成之后再执行代码提交`git push origin master`
 
 
 
