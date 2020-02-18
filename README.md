@@ -36,12 +36,13 @@
 - 可以参考一些教程，加快学习速度，例如：
     - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html)
     - [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)
+    - [数据结构与算法入门](https://www.dotcpp.com/course/ds/)
 ​
 
 [Stage 3: 在线编程练习](3_code_practice)
 - 在基础知识学习到一定程度之后，需要找一些算法练习题目来继续提高自己的能力
 - 如果自己想不到很好的练习题目，可以通过做[leetcode](https://leetcode-cn.com/)等在线网站的练习题，来练习
-- 需要完成50道题目的练习，各种类型的题目都需要做一些
+- 需要完成20-50道题目的练习，各种类型的题目都需要做一些
 - 可以根据自己的能力，选择如下的练习来完成
     - [初级算法 - 帮助入门](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/)
     - [中级算法 - 巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/)
