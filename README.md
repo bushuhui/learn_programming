@@ -18,18 +18,18 @@
 
 ## 二、如何学习？
 
-因为主要的算法通过C/C++来实现，因此需要把C++学好。但是很多比较高级、复杂的语言特性可以不用一上来就去学，可以等基本语法、常用数据结构学的比较扎实之后再着手更高级的语法、技巧等。
+因为主要的计算机视觉、机器学习算法的底层通过C++来实现，因此需要把C++学好。但是C++比较博大精深，很难一上来就全部学会，因此需要采用逐步学习的方法。比较高级、复杂的语言特性不用一上来就去学，可以等基本语法、常用数据结构学的比较扎实之后再着手高级的语法、技巧等。
 
 主要的学习阶段和步骤分为如下的5个阶段，可以同时进行两个或以上的内容同时学习和练习，从而提高整体的学习效率。
 
 
-[Stage 1: C++基础：](1_c++)
+[Stage 1: C++基础](1_c++)
 - 找一本C++的书 （教材就可以，或者如下的资料），将其中的基本内容快速过一遍
 - 将其中的练习题做一遍（大约2周，给自己限定一个时间，必须快速完成）
 - 在学习过程考虑，如何更有效的编程，如何提高debug能力
 - 资料（可以使用在线的教程，或者自己找比较合适的）：
     - [C++ 教程](http://www.runoob.com/cplusplus/cpp-tutorial.html) 
-    - 如果对自己有更高的要求，可以学习[C++ Primer](https://www.zhihu.com/question/32087709)。不过最好还是用上面普通的教程先把基础只是学好之后在学习C++ Primer更有效率。
+    - 如果对自己有更高的要求，可以学习[C++ Primer](https://www.zhihu.com/question/32087709)。不过最好还是用上面普通的教程先把基础只是学好之后再学习C++ Primer更有效率。
 
 
 [Stage 2: 算法](2_datastructure_algorithm)
@@ -39,7 +39,7 @@
 - 如何实现算法，如何测试代码，如何构建输入数据
 - 可以参考一些教程，加快学习速度，例如：
     - [数据结构与算法入门](https://www.dotcpp.com/course/ds/)
-​    - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html) [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)
+    - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html) [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)
 
 
 [Stage 3: 在线编程练习](3_code_practice)
@@ -50,10 +50,10 @@
     - [初级算法 - 帮助入门](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/)
     - [中级算法 - 巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/)
     - [高级算法 - 提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard/)
-​
+
 
 [Stage 4: 综合性质的编程练习项目](4_projects)
-​- 可以思考一下，如何将所学的编程知识去解决一些实际的问题
+- 可以思考一下，如何将所学的编程知识去解决一些实际的问题
 - 通过这个综合练习，运用所学的知识解决一个或者多个实际的问题，并锻炼系统性的解决问题思路
 - 例1：如何自己编写一个自动下五子棋的程序，思考编写这样的程序需要什么样的技术，需要什么算法，如何保存棋盘的状态，如何有效判断在何位置下子最好等等
 - 例2：如何自己编写一个数独的自动求解、推理程序，类似的思考如何才能自己实现这样的程序
