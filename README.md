@@ -28,8 +28,8 @@
 - 将其中的练习题做一遍（大约2周，给自己限定一个时间，必须快速完成）
 - 在学习过程考虑，如何更有效的编程，如何提高debug能力
 - 资料（可以使用在线的教程，或者自己找比较合适的）：
-    - [C++ 教程](http://www.runoob.com/cplusplus/cpp-tutorial.html) 
-    - 如果对自己有更高的要求，可以学习[C++ Primer](https://www.zhihu.com/question/32087709)。不过最好还是用上面普通的教程先把基础只是学好之后再学习C++ Primer更有效率。
+    - [C++ 教程](http://www.runoob.com/cplusplus/cpp-tutorial.html) ，通过这个教程快速学会C++的语法等。
+    - 如果对自己有更高的要求，可以学习[C++ Primer](https://www.zhihu.com/question/32087709)。不过最好还是用上面普通的教程先把基础知识学好之后，再学习C++ Primer更有效率。
 
 
 [Stage 2: 算法](2_datastructure_algorithm)
@@ -38,8 +38,8 @@
 - 实现过程需要思考，算法的本质是什么，如何将算法转化成循环、判断
 - 如何实现算法，如何测试代码，如何构建输入数据
 - 可以参考一些教程，加快学习速度，例如：
-    - [数据结构与算法入门](https://www.dotcpp.com/course/ds/)
-    - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html) [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)
+    - [数据结构与算法入门](https://www.dotcpp.com/course/ds/)，学习基础的数据结构和算法知识，能够编写简单的算法题目。
+    - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html) [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)，如果对自己要求更高，可以通过学习算法导论掌握更深的算法分析能力。
 
 
 [Stage 3: 在线编程练习](3_code_practice)
