@@ -52,8 +52,8 @@
 通过自己查找合适的资料、教程学习如何编写一个图形化的界面，从而方便进行交互。建议的方法是，找到一个类似的实例程序，通过不断的修改，将demo程序改造成你所设想的样子。
 
 * Qt
-    - [Qt demo程序](qt_demos)
-    - [Qt学习资料](https://gitee.com/bushuhui/resources/tree/master/books/qt)
+    - [Qt例子程序](qt_demos)
+    - [Qt学习资料](https://gitee.com/pi-lab/resources/tree/master/books/qt)
 * [SFML](https://github.com/SFML/SFML)
     - [SFML例子程序](sfml_demos)
-    - [SFML学习资料](https://gitee.com/bushuhui/resources/tree/master/books/sfml/SFML-2.5.1_doc)
+    - [SFML学习资料](https://gitee.com/pi-lab/resources/tree/master/books/sfml/SFML-2.5.1_doc)
