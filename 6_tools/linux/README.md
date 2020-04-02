@@ -10,6 +10,23 @@
 ### 1.2 使用Linux的好处
 目前在计算机视觉、机器学习，计算机的大多数领域，Linux提供了大量的开源代码和工具，通过一个简单的命令行就可以自动的完成大多数软件的安装，能够极大的节省自己的时间（但前提是你需要知道如何找到这些软件名字）；此外，Linux下面没有烦人的弹出框，能让你更加集中精力在学习和工作上。
 
+### 1.3 安装Linux
+第一次使用Linux，并且安装Linux会是一个比较难、会遇到很多问题的过程。但是需要坚持下来，因为这个过程会学到很多解决实际问题的经验。在这个过程琢磨如果遇到问题，怎么去找解决办法等等。
+
+下载安装的ISO文件，可以通过国内镜像网站下载：
+* https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/
+* https://developer.aliyun.com/mirror/ 点击`OS镜像`，然后选择版本
+
+
+建议参考下面的说明文档：
+* [Ubuntu安装最佳实践（防踩坑指南）](https://zhuanlan.zhihu.com/p/114518326)
+* [VirtualBox 安装 Ubuntu 开发环境详细图文教程](https://zhuanlan.zhihu.com/p/35619204)
+
+由于直接使用系统默认的源比较慢，所以安装好系统之后，尽快把软件源替换成国内的镜像。
+* https://developer.aliyun.com/mirror/ubuntu
+* https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
+
+
 ## 2. 需要掌握的基本
 
 ### 2.1 说明文档中的标注： 
