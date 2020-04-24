@@ -15,11 +15,11 @@ Markdown具有一系列衍生版本，用于扩展Markdown的功能（如表格�
 —— [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
 ## Markdown 编辑器
-1. [在线版编辑器 -- 马克飞象](https://maxiang.io/)     (推荐使用在线网页版编辑器)
-2. [在线版编辑器 -- Madoko](https://www.madoko.net/editor.html#tab=2)
-3. [离线编辑器有道云笔记-- Windows系统](http://note.youdao.com/index.html?vendor=unsilent14)
-4.  离线编辑器ReText -- Linux系统  (**sudo apt-get install retext**  or  **sudo apt-get install ReText** )
-5.  GitHub : [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)  
+* [Typora软件](https://typora.io)
+* [在线版编辑器 -- 马克飞象](https://maxiang.io/)     (推荐使用在线网页版编辑器)
+* [在线版编辑器 -- Madoko](https://www.madoko.net/editor.html#tab=2)
+* [离线编辑器有道云笔记-- Windows系统](http://note.youdao.com/index.html?vendor=unsilent14)
+* 离线编辑器ReText -- Linux系统  (**sudo apt-get install retext**  or  **sudo apt-get install ReText** )
 
 
 ## 常用语法　(一般编辑器都支持的语法)
@@ -291,3 +291,6 @@ $$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
 学习完本课程后，大家根据自己的兴趣用markdown写一篇文章，要求用到上面介绍的常用语法．　
 书写风格可以参考[马克飞象](https://maxiang.io/#/?id=readme)和[HandsFree Object Pick Place](https://github.com/HANDS-FREE/HANDS-FREE.github.io/wiki/8.3-Object-Pick-Place/_edit)
 　
+
+## References
+* GitHub : [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
