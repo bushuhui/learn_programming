@@ -1,18 +1,15 @@
 # Markdown 教程
 
-> Step1:  在浏览器上打开　[在线版编辑器 -- 马克飞象](https://maxiang.io/)
-> Step2:  本教程正好是用Markdown写的，把教程源文件["README.md"](./README.md) 复制粘贴到马克飞象网页的编辑栏
-> Step2:  对照左边的源码和右边的排版效果来学习．
+* Step1:  在浏览器上打开　[在线版编辑器 -- 马克飞象](https://maxiang.io/)
+* Step2:  本教程正好是用Markdown写的，把教程源文件["README.md"](./README.md) 复制粘贴到马克飞象网页的编辑栏
+* Step2:  对照左边的源码和右边的排版效果来学习．
 
 ## Markdown简介
 
-> Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    
-
-Markdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的 HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。
+Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的 HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。
 
 Markdown具有一系列衍生版本，用于扩展Markdown的功能（如表格、脚注、内嵌HTML等等），这些功能原初的Markdown尚不具备，它们能让Markdown转换成更多的格式，例如LaTeX，Docbook。Markdown增强版中比较有名的有Markdown Extra、MultiMarkdown、 Maruku等。这些衍生版本要么基于工具，如Pandoc；要么基于网站，如GitHub和Wikipedia，在语法上基本兼容，但在一些语法和渲染效果上有改动。
 
-—— [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
 ## Markdown 编辑器
 * [Typora软件](https://typora.io)
