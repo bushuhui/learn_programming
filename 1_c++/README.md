@@ -18,3 +18,9 @@
 - 资料（可以使用在线的教程，或者自己找比较合适的）：
     - [C++ 教程](http://www.runoob.com/cplusplus/cpp-tutorial.html) ，通过这个教程快速学会C++的语法等。
     - 如果对自己有更高的要求，可以学习[C++ Primer](https://www.zhihu.com/question/32087709)。不过最好还是用上面普通的教程先把基础知识学好之后，再学习C++ Primer更有效率。
+
+## 4. 小技巧
+### 4.1 如何在一个程序里，写多个测试、验证代码
+具体可以参考[多个测试函数例子](1_basicusage/MultiTestFuctions.cpp)，里面的用法。这样让程序保持清晰、易懂。
+
+![multiTestFunctions](images/multiTestFunctions.png)
