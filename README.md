@@ -44,26 +44,26 @@
 
 主要的学习阶段和步骤分为如下的5个阶段，可以同时进行两个或以上的内容同时学习和练习，从而提高整体的学习效率。
 
-[Stage 1: C++基础](1_c++/README.md)
+[Stage 1: C++基础](1_c++/README.md) （需要在2周-3周完成）
 
-- 找一本C++的书 （教材就可以，或者如下的资料），将其中的基本内容快速过一遍
+- 找一本C++的书 （教材就可以，或者如下的资料），将其中的基本内容快速过一遍（大约4-8天）
 - 将其中的练习题做一遍（大约2周，给自己限定一个时间，必须快速完成）
 - 在学习过程考虑，如何更有效的编程，如何提高debug能力
 - 资料（可以使用在线的教程，或者自己找比较合适的）：
     - [C++ 教程](http://www.runoob.com/cplusplus/cpp-tutorial.html) ，通过这个教程快速学会C++的语法等。
     - 如果对自己有更高的要求，可以学习[C++ Primer](https://www.zhihu.com/question/32087709)。不过最好还是用上面普通的教程先把基础知识学好之后，再学习C++ Primer更有效率。
 
-[Stage 2: 算法](2_datastructure_algorithm/README.md)
+[Stage 2: 算法](2_datastructure_algorithm/README.md)（需要在3周-6周完成）
 
 - 推荐下面的[《数据结构与算法入门》](https://www.dotcpp.com/course/ds/)，先把各种数据结构和基本的几种算法思维学会。如果对自己有更高的要求，可以学习《算法导论》
-- 根据自己的基础，把重要的内容学一下，并尝试将算法练习题自己实现一下 （大约4-8周）
+- 根据自己的基础，把重要的内容学一下，并尝试将算法练习题自己实现一下 （大约3-6周）
 - 实现过程需要思考，算法的本质是什么，如何将算法转化成循环、判断
 - 如何实现算法，如何测试代码，如何构建输入数据
 - 可以参考一些教程，加快学习速度，例如：
     - [《数据结构与算法入门》](https://www.dotcpp.com/course/ds/)，学习基础的数据结构和算法知识，能够编写简单的算法题目。
     - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html) ， [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)，如果对自己要求更高，可以通过学习算法导论掌握更深的算法分析能力。
 
-[Stage 3: 在线编程练习](3_code_practice/README.md)
+[Stage 3: 在线编程练习](3_code_practice/README.md) （需要在3周-6周完成）
 
 - 在基础知识学习到一定程度之后，需要找一些算法练习题目来继续提高自己的能力
 - 如果自己想不到很好的练习题目，可以通过做 [leetcode](https://leetcode-cn.com/) 在线网站的练习题，来练习
@@ -73,7 +73,7 @@
     - [中级算法 - 巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/)
     - [高级算法 - 提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard/)
 
-[Stage 4: 综合编程练习项目](4_projects/README.md)
+[Stage 4: 综合编程练习项目](4_projects/README.md) （需要在2周-4周完成）
 
 - 可以思考一下，如何将所学的编程知识去解决一些实际问题
 - 通过这个综合练习，运用所学的知识解决一个或者多个实际问题，从而锻炼系统性解决问题的能力，并提高思维水平
@@ -82,7 +82,7 @@
     - 例2：如何自己编写一个数独的自动求解、推理程序，类似的思考如何才能自己实现这样的程序
     - 更多的例子和说明可以参考[《综合练习例子程序》](4_projects/README.md)
 
-[Stage 5: 高级技巧](5_advanced/README.md)
+[Stage 5: 高级技巧 ](5_advanced/README.md) （需要在2周-4周完成）
 
 - 琢磨如何将前面所写的代码进行重构，如何提高代码的复用能力
 - 如何利用CMake，PICMake将所有的代码组织起来，一次将自己编写的代码自动编译出来
