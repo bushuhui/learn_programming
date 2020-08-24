@@ -64,3 +64,9 @@ Google的编程规范大家可以作为主要的参考：
 * https://github.com/FengJungle/DesignPattern
 
 * https://gitee.com/pi-lab/code_cook/tree/master/c++/DesignPattern
+
+
+
+## 4. 开发模型
+
+* [开发模型的演化](https://www.toutiao.com/i6863271015640728068/)
