@@ -47,7 +47,7 @@
 [Stage 1: C++基础](1_c++/README.md) （需要在2周-3周完成）
 
 - 找一本C++的书 （教材就可以，或者如下的资料），将其中的基本内容快速过一遍（大约4-8天）
-- 可以同时学习C++的书、教程，同时就开始编程练习
+- 在C++基本用法的同时开始编程练习，例如书每一部分的练习题。
 - 将其中的练习题做一遍（大约2周，给自己限定一个时间，必须快速完成）
 - 在学习过程考虑，如何更有效的编程，如何提高debug能力
 - 资料（可以使用在线的教程，或者自己找比较合适的）：
@@ -118,8 +118,8 @@
 
 ### 3.2 具体操作步骤：
 
-* 大家fork这个项目到自己的项目
-* 然后git clone自己的项目到本地机器
+* [大家fork这个项目到自己的项目](6_tools/git/HowToForkClone.md)
+* [然后git clone自己的项目到本地机器](6_tools/git/HowToForkClone.md)
 * 在各目录里写入各自的代码、报告等
 * 通过`git push origin master`上传作业到自己的项目里。每次完成一个作业就提交代码一次，或者每天完成之后提交一次代码。
 * 由于本作业会更新因此需要更新到最新的版本，可以如下操作
@@ -128,13 +128,20 @@ git remote add upstream git@gitee.com:pi-lab/learn_programming.git
 git pull upstream master
 ```
 
-关于Git和Gitee的操作可以深入学习[《Git教程》](6_tools/git/README.md)。可以参考[《Gitee增加用户》](6_tools/git/gitee_addmember.md)来增加用户，将邀请链接地址发送给`bushuhui@nwpu.edu.cn`，从而加提高协同便捷性。大家提交作业后，我会在大家的项目里写入批注、建议等等，从而构建良好的反馈机制，能够更有效的取得学习效果。
 
-可以安装Git客户端软件[GitKraken](https://www.gitkraken.com)，能够方便查看每次的提交都有那些更改，或者查看有那些批注、建议等。
 
-如果无法提交代码到服务器，可以尝试将服务器最新的代码更新到本地，执行操作: `git pull origin master`。合并完成之后再执行代码提交`git push origin master`
+其他说明：
 
-关于Markdown，可以参考[《Markdown教程》](6_tools/markdown)，可以安装[Typora软件](https://typora.io)来编写Markdown，这个软件最大的特点是能够及时看到最终的效果。
+* 关于Git和Gitee的操作可以深入学习[《Git教程》](6_tools/git/README.md)。
+
+* 可以参考[《Gitee增加用户》](6_tools/git/gitee_addmember.md)来增加用户，将邀请链接地址发送给`bushuhui@nwpu.edu.cn`，从而加提高协同便捷性。大家提交作业后，我会在大家的项目里写入批注、建议等等，从而构建良好的反馈机制，能够更有效的取得学习效果。
+
+* 可以安装Git客户端软件[GitKraken](https://www.gitkraken.com)，能够方便查看每次的提交都有那些更改，或者查看有那些批注、建议等。
+
+* 如果无法提交代码到服务器，可以尝试将服务器最新的代码更新到本地，执行操作: `git pull origin master`。合并完成之后再执行代码提交`git push origin master`
+
+* 关于Markdown，可以参考[《Markdown教程》](6_tools/markdown)，可以安装[Typora软件](https://typora.io)来编写Markdown，这个软件最大的特点是能够及时看到最终的效果。
+
 
 
 ## 四、学习的建议
@@ -169,7 +176,9 @@ git pull upstream master
 
 13. 不仅要将程序写出来，还要把写程序过程中遇到的问题，如何解决的都写到报告里。报告要包括：程序目的，算法，难点问题，结果，思考等。
 
-14. 这个练习的最主要的目的是通过Stage4的综合练习来牵引学习C++，数据结构、算法等。通过过程让自己学会一种思维，如果遇到解决不了的问题，如何去找到解决这个大、难问题的子问题，并通过什么途径一个一个去解决，从而最终把大的难题解决。
+14. 如果学习基本语法、写基本的C++程序疲惫了，可以尝试做一下[《第四阶段的小项目》](4_projects)或者[《第三阶段的算法练习题》](3_code_practice)换换脑子，通过做小项目或算法练习题，发现自己的短板，从而有针对性的学习。
+
+15. 这个练习的最主要的目的是通过[Stage4的综合练习](4_projects)来牵引学习C++，数据结构、算法等。通过这个学习过程让自己学会一种思维，如果遇到解决不了的问题，如何去找到解决这个大、难问题的子问题，并通过什么途径一个一个去解决，从而最终把大的难题解决。
 
     
 
