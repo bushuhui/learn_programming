@@ -18,7 +18,7 @@
 
 ## 1. 如下图所示，点击红色圈圈部分的`Fork`
 
-![usage](../../images/how_to_fork.png)
+![usage](pic_git/how_to_fork.png)
 
 
 
@@ -26,5 +26,5 @@
 
 [git clone / 下载代码](https://gitee.com/help/articles/4192#article-header0)
 
-![usage](../../images/git_clone_code.png)
+![usage](pic_git/git_clone_code.png)
 
