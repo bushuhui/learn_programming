@@ -91,7 +91,6 @@ int store()
 }
 
 //运算符
-
 int operators()
 {
     int a = 1;
@@ -106,7 +105,6 @@ int operators()
 }
 
 //循环
-
 int loops()
 {
     int a = 0, b = 0, c = 1, d = 2, x = 50;
@@ -164,3 +162,4 @@ int main()
     
     return 0;
 }
+
