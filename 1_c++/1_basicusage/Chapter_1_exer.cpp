@@ -7,7 +7,6 @@
 using namespace std;
 
 // 1.求100内自然数奇数和
-
 int odd()
 {
     int i = 1;
@@ -25,7 +24,6 @@ int odd()
 }
 
 // 2.求100内被13整除的最大整数
-
 int div13()
 {
     int i = 1;
@@ -48,7 +46,6 @@ int div13()
 }
 
 // 3.根据输入的x，输出 y=f(x)的值
-
 int fx()
 {
     int x, ans;
@@ -72,7 +69,6 @@ int fx()
 }
 
 // 4.三数排序
-
 int order3()
 {
     //3数
@@ -88,9 +84,9 @@ int order3()
     return 0;
 }
 
-void ordern()
+// 5.冒泡排序
+void bubble_sort()
 {
-    //冒泡排序
     int arr[10000];
     int n;
     cout << "Please input numbers, enter 0 to end inputing:";
@@ -124,7 +120,6 @@ void ordern()
 }
 
 // 5.输入数字，输出星期
-
 void week()
 {
     int wnum;
@@ -157,7 +152,6 @@ void week()
 }
 
 // 6.阶乘
-
 int factr()
 {
     int num, faco;
@@ -173,7 +167,6 @@ int factr()
 }
 
 // 7.计算器
-
 int cal()
 {
     int a, b;
@@ -203,7 +196,6 @@ int cal()
 }
 
 // 8.打印图案
-
 void printer()
 {
     int c = 1;
@@ -225,9 +217,16 @@ int main()
     div13();
     //fx();
     //order3();
-    //ordern();
+    //bubble_sort();
     //week();
     //factr();
     //cal();
     printer();
+
+    return 0;
 }
+
+// FIXME:
+//  1. 做的挺好的，继续努力！
+
+
