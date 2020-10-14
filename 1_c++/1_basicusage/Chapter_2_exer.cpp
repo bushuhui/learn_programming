@@ -1,186 +1,232 @@
-//10/12
-//Chapter 2 exercise p63
+//10/11
+//《C++程序设计》第三版，齐建玲等 练习题 p49
 
 #include <iostream>
-#include <string>
-#include <cstring>
+#include <cmath>
 
 using namespace std;
 
-
-// 1-3 一维数组
-
-void doub()
+// 1.求100内自然数奇数和
+int odd()
 {
-    int arr1[10];
-    for (int i = 0; i < 10;i++)
+    int i = 1;
+    int sum = 0;
+    for (i; i <= 100; i++)
     {
-        arr1[i] = 2 * i;
-        cout << arr1[i] << ",";
-    }
-    cout << endl;
-
-    int arr2[10][10];
-    for (int i = 0; i < 10;i++)
-    {
-        for (int j = 0; j < 10;j++)
+        if (i%2 == 1)
         {
-            arr2[i][j] = i + j;
-            cout << arr2[i][j] << ",";
+            sum += i;
         }
-        cout << endl;
     }
+    cout << sum << endl;
 
+    return sum;
 }
 
-// 4.字符串操作
-
-void strop()
+// 2.求100内被13整除的最大整数
+int div13()
 {
-    int num = 0, let = 0, chr = 0;
-    char str1[100];
-    cin.getline(str1, 100);
-    for (int i = 0; i < strlen(str1);i++)
+    int i = 1;
+    int ans;
+    int choice[100];
+    int pos = 0;
+    for (i; i <= 100; i++)
     {
-        if (('a' <= str1[i] && str1[i] <= 'z') || ('A' <= str1[i] && str1[i] <= 'Z'))
+
+        if (i%13 == 0)
         {
-            let++;
-        }
-        else if ('0' <= str1[i] && str1[i] <= '9')
-        {
-            num++;
-        }
-        else
-        {
-            chr++;
+            choice[pos] = i;
+            pos++;
         }
     }
-    cout << "Total length :" << strlen(str1) << endl;
-    cout << "Numbers :" << num << endl;
-    cout << "letters :" << let << endl;
-    cout << "Other characters :" << chr << endl;
+    ans = choice[pos - 1];
+    cout << ans << endl;
+
+    return ans;
 }
 
-// 5. 找到15数中最大数及其位置;排序
-
-int maxnum()
+// 3.根据输入的x，输出 y=f(x)的值
+int fx()
 {
-    int num[15];
-    int temp = 0, tempp = 0;
-    int tran;
-    cout << "Please enter 15 numbers seperated by space or enter:";
-    for (int i = 0; i < 15;i++)
+    int x, ans;
+    cout << "Please input x:";
+    cin >> x;
+    if (x < 1)
     {
-        cin >> num[i];
+        ans = x;
     }
-    for (int i = 0; i < 15;i++)
+    else if (x > 10)
     {
-        if (num[i] > temp)
-        {
-            temp = num[i];
-            tempp = i+1;
-        }
+        ans = x - 5;
     }
-    cout << "Max number is:" << temp << endl;
-    cout << "The position of it is:" << tempp << endl;
+    else if ((x > 1) && (x < 10))
+    {
+        ans = x + 5;
+    }
+    cout << ans << endl;
 
-    for (int i = 0; i < 14;i++)
-    {
-        for (int j = i + 1; j < 15; j++)
-        {
-            if (num[i] < num[j])
-            {
-                tran = num[j];
-                num[j] = num[i];
-                num[i] = tran;
-            }
-        }
-    }
-    for (int i = 0; i < 15;i++)
-    {
-        if (i < 14)
-            cout << num[i] << '>';
-        else
-            cout << num[i] << endl;
-    }
-
-    return temp;
+    return ans;
 }
 
-// 7.小写替换为大写，反序输出
-
-void upper()
+// 4.三数排序
+int order3()
 {
-    char str[15], *p;
-    cout << "Please enter 15 letters in lower case:";
-    cin >> str;
-    p = strupr(str);
-    for (int i = 14; i > -1;i--)
-    {
-        cout << p[i];
-    }
-}
-// 8.求100内素数
+    //3数
+    int a, b, c, tran;
+    cout << "Please input 3 numbers:";
+    cin >> a >> b >> c;
+    a > b ?: (tran = a, a = b, b = tran);
+    a > c ?: (tran = a, a = c, c = tran);
+    b > c ?: (tran = b, b = c, c = tran);
+    cout << c << endl;
+    cout << a << ">"<< b << ">" << c;
 
-void eraro()
-{
-    int num[100];
-    int N = 0;
-    for (int i = 1; i <= 100;i++)
-    {
-        num[i - 1] = i;
-    }
-    for (int i = 1; i <= 100;i++) //将合数替换为0
-    {
-        int x;
-        if (i==1)
-            continue;
-        else
-        {
-            for (int j = 2; j <= 100 / i;j++)
-            {
-                x = i * j;
-                num[x - 1] = 0;
-            }
-        }
-    }
-    for (int i = 0; i < 100;i++) //输出非零数，即素数
-    {
-        if (num[i] != 0)
-        {
-            cout << num[i] << ",";
-            N++;
-        }
-    }
-    cout << endl;
-    cout << "Totoal number is:" << N << endl;
-
+    return 0;
 }
 
-// 9.打印图形
-
-void draw()
+// 5.冒泡排序
+void bubble_sort()
 {
-    for (int i = 0; i < 4;i++)
+    int arr[10000];
+    int n;
+    cout << "Please input numbers, enter 0 to end inputing:";
+    for (n = 0;;n++)
     {
-        for (int j = 0; j < 5;j++)
+        cin >> arr[n];
+        if (arr[n]==0)
+        {
+            break;
+        }
+    }
+    for (int a = 0; a < n - 1; a++)
+    {
+        for (int b = a + 1; b <= n; b++)
+        {
+            int t;
+            arr[a] > arr[b] ?: (t = arr[a], arr[a] = arr[b], arr[b] = t);
+        }
+    }
+    for (int i = 0; i <= n;i++)
+    {
+        if (i < n)
+        {
+            cout << arr[i] << ">";
+        }
+        else if (i == n)
+        {
+            cout << arr[i] << endl;
+        }
+    }
+}
+
+// 5.输入数字，输出星期
+void week()
+{
+    int wnum;
+    cout << "Please input number of 1 to 7 for weekday:";
+    cin >> wnum;
+    switch (wnum)
+    {
+        case 1:
+            cout << "Monday" << endl;
+            break;
+        case 2:
+            cout << "Tuesday" << endl;
+            break;
+        case 3:
+            cout << "Wednesday" << endl;
+            break;
+        case 4:
+            cout << "Thursday" << endl;
+            break;
+        case 5:
+            cout << "Friday" << endl;
+            break;
+        case 6:
+            cout << "Saturday" << endl;
+            break;
+        case 7:
+            cout << "Sunday" << endl;
+            break;
+    }
+}
+
+// 6.阶乘
+int factr()
+{
+    int num, faco;
+    faco = 1;
+    cout << "Please input integer for factorial:";
+    cin >> num;
+    for (num; num > 0; num--)
+    {
+        faco *= num;
+    }
+    cout << faco << endl;
+    return faco;
+}
+
+// 7.计算器
+int cal()
+{
+    int a, b;
+    double ans;
+    char op;
+    cout << "Please input 2 numbers:";
+    cin >> a >> b;
+    cout << "Please input operator:";   //未学会字符串处理，将运算符分开输入
+    cin >> op;
+    switch (op)
+    {
+        case '*':
+            ans = a * b;
+            break;
+        case '-':
+            ans = a - b;
+            break;
+        case '+':
+            ans = a + b;
+            break;
+        case '/':
+            ans = a / b;
+    }
+    cout << "Answer is: " << ans << endl;
+
+    return ans;
+}
+
+// 8.打印图案
+void printer()
+{
+    int c = 1;
+    for (int a = 5; a > 0;a--)
+    {
+
+        for (int b = 1; b <= c; b++)
         {
             cout << '*';
         }
         cout << endl;
-        for (int j = 0; j <= i; j++)
-            cout << ' ';
+        c = c + 2;
     }
 }
 
 int main()
 {
-    //doub();
-    //strop();
-    //maxnum();
-    //upper();
-    //eraro();
-    draw();
-    
+    odd();
+    div13();
+    //fx();
+    //order3();
+    //bubble_sort();
+    //week();
+    //factr();
+    //cal();
+    printer();
+
     return 0;
 }
+
+// FIXME:
+//  1. 做的挺好的，继续努力！
+
+

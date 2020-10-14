@@ -1,132 +1,186 @@
-//10/13
-//第四章 函数 p81
+//10/12
+//Chapter 2 exercise p63
 
 #include <iostream>
-#include <cstring>
 #include <string>
+#include <cstring>
 
 using namespace std;
 
-// 1.阶乘累加
 
-double faco_sum(int n)
+// 1-3 一维数组
+
+void doub()
 {
-    double faco = 0;
-    for (int i = 1; i <= n;i++)
+    int arr1[10];
+    for (int i = 0; i < 10;i++)
     {
-        int term = 1;
-        for (int j = 1; j <= i; j++)
+        arr1[i] = 2 * i;
+        cout << arr1[i] << ",";
+    }
+    cout << endl;
+
+    int arr2[10][10];
+    for (int i = 0; i < 10;i++)
+    {
+        for (int j = 0; j < 10;j++)
         {
-            term *= j;
+            arr2[i][j] = i + j;
+            cout << arr2[i][j] << ",";
         }
-        faco += term;
+        cout << endl;
     }
-    cout << "Sum is:" << faco << endl;
-    return faco;
+
 }
 
-// 2.闰年判断
+// 4.字符串操作
 
-bool leapy(int year)
+void strop()
 {
-    bool leap;
-    if (year % 4 == 0)
+    int num = 0, let = 0, chr = 0;
+    char str1[100];
+    cin.getline(str1, 100);
+    for (int i = 0; i < strlen(str1);i++)
     {
-        if ((year % 100 == 0) && (year % 400 != 0))   //普通世纪年
+        if (('a' <= str1[i] && str1[i] <= 'z') || ('A' <= str1[i] && str1[i] <= 'Z'))
         {
-            leap = false;
-            cout << "This year is not leap year." << endl;
+            let++;
         }
-        else    //普通闰年 & 世纪闰年
-        {    
-            leap = true;
-            cout << "This year is leap year." << endl;
+        else if ('0' <= str1[i] && str1[i] <= '9')
+        {
+            num++;
+        }
+        else
+        {
+            chr++;
         }
     }
-
-    return leap;
+    cout << "Total length :" << strlen(str1) << endl;
+    cout << "Numbers :" << num << endl;
+    cout << "letters :" << let << endl;
+    cout << "Other characters :" << chr << endl;
 }
 
-// 3.反序输出
+// 5. 找到15数中最大数及其位置;排序
 
-void reverse()
+int maxnum()
 {
-    char str[100], str2[100];
-    int len;
-    cout << "Please enter a string:";
-    cin.getline(str,100);
-    len = strlen(str);
-    cout << "The total length is:" << len << ", the reverse is: " << endl;
-    strcpy(str2, str);
-    for (int i = len - 1; i >= 0;i--)
+    int num[15];
+    int temp = 0, tempp = 0;
+    int tran;
+    cout << "Please enter 15 numbers seperated by space or enter:";
+    for (int i = 0; i < 15;i++)
     {
-        str[len - 1 -i] = str2[i];
-        cout << str[len - 1 - i];
+        cin >> num[i];
+    }
+    for (int i = 0; i < 15;i++)
+    {
+        if (num[i] > temp)
+        {
+            temp = num[i];
+            tempp = i+1;
+        }
+    }
+    cout << "Max number is:" << temp << endl;
+    cout << "The position of it is:" << tempp << endl;
+
+    for (int i = 0; i < 14;i++)
+    {
+        for (int j = i + 1; j < 15; j++)
+        {
+            if (num[i] < num[j])
+            {
+                tran = num[j];
+                num[j] = num[i];
+                num[i] = tran;
+            }
+        }
+    }
+    for (int i = 0; i < 15;i++)
+    {
+        if (i < 14)
+            cout << num[i] << '>';
+        else
+            cout << num[i] << endl;
     }
 
+    return temp;
 }
 
-// 4.重载函数排序
+// 7.小写替换为大写，反序输出
 
-int sort(int a,int b)
+void upper()
 {
-    int t;
-    a > b ?: (t = a, a = b, b = t);
-    cout << a << '>' << b << endl;
-
-    return 0;
-}
-
-int sort(int a, int b, int c)
-{
-    int t;
-    a > b ?: (t = a, a = b, b = t);
-    a > c ?: (t = a, a = c, c = t);
-    b > c ?: (t = b, b = c, c = t);
-    cout << a << '>' << b << '>' << c << endl;
-
-    return 0;
-}
-
-// 5.人数统计、均值计算
-
-double ave(double mean)
-{
-    cout << ", average number is: " << mean << endl;
-
-    return mean;
-}
-
-int count()
-{
-    int num = 0;
-    double mean = 0;
-    int grade[100];
-    cout << "Please enter grades of stuents, end with negative number:";
-    for (int i = 0;;i++)
+    char str[15], *p;
+    cout << "Please enter 15 letters in lower case:";
+    cin >> str;
+    p = strupr(str);
+    for (int i = 14; i > -1;i--)
     {
-        cin >> grade[i];
-        mean += grade[i];
-        num++;
-        if (grade[i] < 0)
-            break;
+        cout << p[i];
     }
-    num--;
-    mean = (mean - grade[num]) / num;
-    cout << "Total student number is: " << num;
-    ave(mean);
+}
+// 8.求100内素数
 
-    return num;
+void eraro()
+{
+    int num[100];
+    int N = 0;
+    for (int i = 1; i <= 100;i++)
+    {
+        num[i - 1] = i;
+    }
+    for (int i = 1; i <= 100;i++) //将合数替换为0
+    {
+        int x;
+        if (i==1)
+            continue;
+        else
+        {
+            for (int j = 2; j <= 100 / i;j++)
+            {
+                x = i * j;
+                num[x - 1] = 0;
+            }
+        }
+    }
+    for (int i = 0; i < 100;i++) //输出非零数，即素数
+    {
+        if (num[i] != 0)
+        {
+            cout << num[i] << ",";
+            N++;
+        }
+    }
+    cout << endl;
+    cout << "Totoal number is:" << N << endl;
+
 }
 
+// 9.打印图形
 
-int main ()
+void draw()
 {
-    //faco_sum(4);
-    //leapy(1920);
-    //reverse();
-    //sort(1, 2, 3);
-    count();
+    for (int i = 0; i < 4;i++)
+    {
+        for (int j = 0; j < 5;j++)
+        {
+            cout << '*';
+        }
+        cout << endl;
+        for (int j = 0; j <= i; j++)
+            cout << ' ';
+    }
+}
+
+int main()
+{
+    //doub();
+    //strop();
+    //maxnum();
+    //upper();
+    //eraro();
+    draw();
     
     return 0;
 }
