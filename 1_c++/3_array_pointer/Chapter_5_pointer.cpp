@@ -64,6 +64,8 @@ void dynamic()
         else
             cout << p[i];
     }
+    
+    delete [] p; // FIXME: 记得及时释放分配的内存
 }
 
 //引用 void

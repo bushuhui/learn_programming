@@ -25,6 +25,7 @@ void output()
             cout << num[i];
     }
     cout << endl;
+    
     for (int i = 0; i < 10;i++)     //#2 数组名输出
     {
         if (i < 9)
@@ -33,6 +34,7 @@ void output()
             cout << *(num+i);   
     }
     cout << endl;
+    
     int *p = num;   //#3 指针输出
     for (int i = 0; i < 10;i++)     
     {

@@ -120,6 +120,7 @@ void upper()
         cout << p[i];
     }
 }
+
 // 8.求100内素数
 
 void eraro()
