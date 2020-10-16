@@ -134,7 +134,7 @@ git pull upstream master
 
 * 关于Git和Gitee的操作可以深入学习[《Git教程》](6_tools/git/README.md)。
 
-* 可以参考[《Gitee增加用户》](6_tools/git/gitee_addmember.md)来增加用户，将邀请链接地址发送给`bushuhui@nwpu.edu.cn`，从而加提高协同便捷性。大家提交作业后，我会在大家的项目里写入批注、建议等等，从而构建良好的反馈机制，能够更有效的取得学习效果。
+* 可以参考[《Gitee增加用户》](6_tools/git/gitee_addmember.md)来增加用户，**将邀请链接地址发送给`bushuhui@nwpu.edu.cn`** （重要步骤，请不要忘记遗漏），从而加提高协同便捷性。大家提交作业后，我会在大家的项目里写入批注、建议等等，从而构建良好的反馈机制，能够更有效的取得学习效果。
 
 * 可以安装Git客户端软件[GitKraken](https://www.gitkraken.com)，能够方便查看每次的提交都有那些更改，或者查看有那些批注、建议等。
 
