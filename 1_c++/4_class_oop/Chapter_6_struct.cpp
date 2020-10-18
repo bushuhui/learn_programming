@@ -7,7 +7,7 @@
 
 using namespace std;
 
-// 结构体定义，结构体变量定义及引用
+// 结构体定义，结构体变量定义及引用 FIXME: 和另外一个文件类似的问题 Laptop 的名字更好
 struct laptop
 {
     string producer;
@@ -40,7 +40,7 @@ union electrons
     char pc[10];
     int price;
     double ram;
-}mine_electrons, others;
+} mine_electrons, others;
 
 
 void union_test()
@@ -63,3 +63,4 @@ int main ()
 
     return 0;
 }
+

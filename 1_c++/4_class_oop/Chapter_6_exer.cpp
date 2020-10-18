@@ -8,20 +8,26 @@ using namespace std;
 
 // 1-2定义结构体
 
-struct teacher
+struct teacher              // FIXME: 类型名字最好是 Teacher, 首字母大写，这样知道是类型
 {
     char name[20];
     char sex[6];
-    int age;
+    int  age;               // FIXME: 可以让变量对齐，这样看上去更清楚
     char title[30];
     char tel[12];
 };
 
-struct teacher Wang = {"Xu Ao", "male", 40, "vice professor", "17584851349"};
+struct teacher Wang = {
+    "Xu Ao", 
+    "male", 
+    40, 
+    "vice professor", 
+    "17584851349"
+};
 
 // 3.结构体数组应用
 
-struct student
+struct student              // FIXME: 类型名字最好是 Student
 {
     char id[11];
     char name[20];
@@ -34,6 +40,7 @@ struct student group[3] = {{"2017300424", "Xsc", 70, 80, 90}, \
                            {"2017300422", "Pan", 99, 88, 77}, \
                            {"2017300426", "Lin", 95, 85, 75}};
 
+// 什么average？ 最好写成 grade_average
 int *average()
 {
     int mean[3];
@@ -70,3 +77,4 @@ int main()
     
     return 0;
 }
+
