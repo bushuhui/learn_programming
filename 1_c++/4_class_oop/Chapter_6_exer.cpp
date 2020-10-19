@@ -8,7 +8,7 @@ using namespace std;
 
 // 1-2定义结构体
 
-struct teacher              // FIXME: 类型名字最好是 Teacher, 首字母大写，这样知道是类型
+struct Teacher              // FIXME: 类型名字最好是 Teacher, 首字母大写，这样知道是类型
 {
     char name[20];
     char sex[6];
@@ -17,7 +17,7 @@ struct teacher              // FIXME: 类型名字最好是 Teacher, 首字母�
     char tel[12];
 };
 
-struct teacher Wang = {
+struct Teacher Wang = {
     "Xu Ao", 
     "male", 
     40, 
@@ -27,21 +27,21 @@ struct teacher Wang = {
 
 // 3.结构体数组应用
 
-struct student              // FIXME: 类型名字最好是 Student
+struct Student              // FIXME: 类型名字最好是 Student
 {
     char id[11];
     char name[20];
-    int grade1;
-    int grade2;
-    int grade3;
+    int  grade1;
+    int  grade2;
+    int  grade3;
 };
 
-struct student group[3] = {{"2017300424", "Xsc", 70, 80, 90}, \
+struct Student group[3] = {{"2017300424", "Xsc", 70, 80, 90}, \
                            {"2017300422", "Pan", 99, 88, 77}, \
                            {"2017300426", "Lin", 95, 85, 75}};
 
 // 什么average？ 最好写成 grade_average
-int *average()
+int *grade_average()
 {
     int mean[3];
     int max = 0;
@@ -67,7 +67,7 @@ int *average()
 int main()
 {
     int *p, num;
-    p = average();
+    p = grade_average();
     num = *p;   //若不转换，而直接使用 group[*p]则会导致*p的值在输出结构体整形成员时被改变，\
                   进而无法正确输出，目前未理解其原理
     cout << group[num].id <<","<< group[num].name << ","<< \

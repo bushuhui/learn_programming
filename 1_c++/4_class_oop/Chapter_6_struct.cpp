@@ -8,7 +8,7 @@
 using namespace std;
 
 // 结构体定义，结构体变量定义及引用 FIXME: 和另外一个文件类似的问题 Laptop 的名字更好
-struct laptop
+struct Laptop
 {
     string producer;
     string gpu;
@@ -17,11 +17,11 @@ struct laptop
     int price;
 } ;
 
-struct laptop minepc = {"Acer", "N1050", "i5", 8, 4000};
+struct Laptop minepc = {"Acer", "N1050", "i5", 8, 4000};
 
 //结构体数组
 
-laptop my_dorm_pcs[4] = {{"Dell", "N1070", "i7", 8, 10000}, \
+Laptop my_dorm_pcs[4] = {{"Dell", "N1070", "i7", 8, 10000}, \
                          {"Hasee", "N1080", "i7", 16, 8000}, \
                          {"ASUS", "N760", "i3", 3000}, minepc};
 
@@ -35,7 +35,7 @@ int struct_quote()
 
 //共同体
 
-union electrons
+union Electrons
 {
     char pc[10];
     int price;
@@ -45,7 +45,7 @@ union electrons
 
 void union_test()
 {
-    electrons x={"Acer"};   //共同体仅能初始化第一个成员
+    Electrons x={"Acer"};   //共同体仅能初始化第一个成员
     cout << x.pc << endl;
     x.ram = 8;
     cout << x.ram << endl;
