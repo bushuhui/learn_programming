@@ -1,4 +1,4 @@
-//10/18
+//10/18-10/20
 //第七章 类
 
 #include <iostream>
@@ -12,9 +12,10 @@ class Computer
 {
     public:
         void input_pc();
-        void display();
+        void display() const;
+        void value_change(string, string, string, int);
         Computer();     //构造函数
-        Computer(string producer, string gpu, string cpu, int ram); //重载
+        Computer(string p, string g, string c, int r); //重载
         Computer(const Computer& pc);   //复制构造函数
         ~Computer();   //析构函数
 
@@ -33,8 +34,8 @@ Computer::Computer()    //无参
     ram = 0;
 }
 
-Computer::Computer(string producer, string gpu, string cpu, int ram): \
-                   producer(producer), gpu(gpu),cpu(cpu),ram(ram)   //带参
+Computer::Computer(string p, string g, string c, int r): \
+                   producer(p), gpu(g),cpu(c),ram(r)   //带参
 {
 }
 
@@ -63,31 +64,62 @@ void Computer::input_pc()
     cin >> ram;
 }
 
-void Computer::display()
+void Computer::display() const  //常函数
 {
     cout << "The computer is a " << producer << " comptuer with gpu " << gpu \
          << ", cpu " << cpu << " and ram of " << ram << " GB." << endl;
+}
+
+void Computer::value_change(string p = "", string g = "", string c = "", int r = 0)
+{
+    if (p!="")
+        this->producer = p;
+    if (g!="")
+        this->gpu = g;
+    if (c!="")
+        this->cpu = c;
+    if (r!=0)
+        this->ram = r;
 }
 
 //类的访问
 
 void visit_class()
 {
-    Computer pc1("Dell", "N1080", "Intel_i7", 8), pc2;
+    const Computer pc1("Dell", "N1080", "Intel_i7", 8);
+    Computer pc2;
     pc1.display();
     cout << "----------" << endl;
     pc2.input_pc();
     pc2.display();
     Computer pc3(pc2);
     pc3.display();
-    Computer *p = &pc1;
+    Computer *p = &pc2;
     p->display();
 }
 
+//对象引用
+
+void object_quote(Computer &pc)
+{
+    pc.value_change("Apple", "N1050");
+    pc.display();
+}
+
+//对象数组
+
+void object_arr()
+{
+    Computer pcs[2]={Computer("Dell2", "N1080", "Intel_i7", 8), \
+                     Computer("Acer", "N1050", "Intel_i5", 8)};
+}
 
 int main()
 {
-    visit_class();
+    //visit_class();
+    Computer pc0("Dell", "N1080", "Intel_i7",8);
+    //object_quote(pc0);
+    object_arr();
 
     return 0;
 }
