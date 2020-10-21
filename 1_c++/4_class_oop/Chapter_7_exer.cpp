@@ -11,15 +11,15 @@ using namespace std;
 
 class Book
 {
-    public:
-        void set(string = "name", string = "author", int = 0);
-        void display() const;
-        Book(string = "name", string = "author", int = 0);
-        ~Book();
-    private:
-        string name;
-        string author;
-        int    sales;
+public:
+    void set(string = "name", string = "author", int = 0);
+    void display() const;
+    Book(string = "name", string = "author", int = 0);
+    ~Book();
+private:
+    string name;
+    string author;
+    int    sales;
 };
 
 Book::Book(string n, string a, int s)
@@ -60,14 +60,14 @@ void test_book()
 
 class Number
 {
-    public:
-        void set(int xx, int yy, char c);
-        void display();
-        Number(int xx, int yy, char c);
-        ~Number();
-    private:
-        int x, y;
-        char cal_operator;
+public:
+    void set(int xx, int yy, char c);
+    void display();
+    Number(int xx, int yy, char c);
+    ~Number();
+private:
+    int  x, y;
+    char cal_operator;
 };
 
 Number::Number(int xx, int yy, char c)
@@ -117,16 +117,16 @@ void test_number()
 
 class Student
 {
-    public:
-        void   getinfo();
-        int    total();
-        double average_grade();
-        void   display();
-    private:
-        string name;
-        int    id;
-        int    subject_id[5];
-        int    subject_marks[5];
+public:
+    void   getinfo();
+    int    total();
+    double average_grade();
+    void   display();
+private:
+    string name;
+    int    id;
+    int    subject_id[5];
+    int    subject_marks[5];
 };
 
 void Student::getinfo()
@@ -180,11 +180,142 @@ void test_student()
     A.display();
 }
 
-int main ()
+// 4.矩形求面积、周长
+
+class Rectangle
+{
+public:
+    void info_display();
+    int  area();
+    int  perimeter();
+    Rectangle(int , int);
+    ~Rectangle();
+private:
+    int length, width;
+};
+
+Rectangle::Rectangle(int l = 0, int w = 0)
+{
+    length = l;
+    width = w;
+}
+
+Rectangle::~Rectangle()
+{
+    cout << "Destructor is used." << endl;
+}
+
+void Rectangle::info_display()
+{
+    cout << "This rectangle is " << length << " long and " << width << " wide, with " \
+         << " area of " << area() << " and perimeter of " << perimeter() << endl;
+}
+
+int Rectangle::area()
+{
+    int s;
+    s = length * width;
+
+    return s;
+}
+
+int Rectangle::perimeter()
+{
+    int p;
+    p = 2*(length + width);
+
+    return p;
+}
+
+void test_rectangle()
+{
+    Rectangle p = {3, 5};
+    p.area();
+    p.perimeter();
+    p.info_display();
+}
+
+// 5.计算输入整数的各数字和，直至和为一位数字
+
+class Nums
+{
+public:
+    void get();
+    int  adding();
+    void display();
+private:
+    int num;
+};
+
+void Nums::get()
+{
+    cout << "Please enter the number series:";
+    cin >> num;
+}
+
+int Nums::adding()
+{
+    int num2 = num;
+    int dignum = 1, n = num;
+    while(1)    //求数位长度
+    {
+        if( n / 10 != 0 )
+        {
+            dignum ++;
+            n = n / 10;
+        }
+        else
+            break;
+    }
+    for(int i =0;;i++)  //数位数字叠加直至和为个位数
+    {
+        if ((num2 / 10) != 0)
+        {
+            int digit[dignum] ;
+            for(int k = 0;;k++)
+            {
+                if(num2 != 0)
+                {
+                    digit[k] = num2 % 10;
+                    num2 /= 10;
+                }
+                else
+                    break;
+            }
+            num2 = 0;
+            for(int j = 0;j < dignum; j++)
+            {
+                num2 += digit[j];
+            }
+        }
+        else
+            break;
+    }
+
+
+    return num2;
+}
+
+void Nums::display()
+{
+    cout << "The sum of digits of " << num << " is " << adding();
+}
+
+void test_Nums()
+{
+    Nums x;
+    x.get();
+    x.display();
+}
+
+
+int main()
 {
     //test_book();
     //test_number();
-    test_student();
+    //test_student();
+    //test_rectangle();
+    //test_Nums();
 
     return 0;
 }

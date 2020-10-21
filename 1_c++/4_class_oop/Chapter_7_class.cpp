@@ -10,20 +10,20 @@ using namespace std;
 
 class Computer
 {
-    public:
-        void input_pc();
-        void display() const;
-        void value_change(string, string, string, int);
-        Computer();     //构造函数
-        Computer(string p, string g, string c, int r); //重载
-        Computer(const Computer& pc);   //复制构造函数
-        ~Computer();   //析构函数
+public:
+    void input_pc();
+    void display() const;
+    void value_change(string, string, string, int);
+    Computer();     //构造函数
+    Computer(string p, string g, string c, int r); //重载
+    Computer(const Computer& pc);   //复制构造函数
+    ~Computer();   //析构函数
 
-    private:
-        string producer;
-        string gpu;
-        string cpu;
-        int    ram;
+private:
+    string producer;
+    string gpu;
+    string cpu;
+    int    ram;
 };
 
 Computer::Computer()    //无参

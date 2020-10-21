@@ -4,9 +4,9 @@
 #include <iostream>
 #include <string>
 #include <cstring>
+#include <ctype.h>
 
 using namespace std;
-
 
 // 1-3 一维数组
 
@@ -108,6 +108,13 @@ int maxnum()
 }
 
 // 7.小写替换为大写，反序输出
+
+char *strupr(char *str){
+    char *orign=str;
+    for (; *str!='\0 '; str++)
+        *str = toupper(*str);
+    return orign;
+}
 
 void upper()
 {
