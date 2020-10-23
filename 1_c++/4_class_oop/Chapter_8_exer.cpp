@@ -133,7 +133,7 @@ private:
     int        id;
     string     name;
     string     sex;
-    int     expense;
+    int        expense;
     static int count;
     static int exp_sum;
 };
