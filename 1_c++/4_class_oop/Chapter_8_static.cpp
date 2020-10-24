@@ -16,8 +16,8 @@ public:
     int         perimeter();
     int         counting();
     static int  total(); //静态函数
-    friend int  area_diff(Rectangle, Rectangle);    //普通友元函数声明
-    Rectangle(int, int);
+    friend int  area_diff(Rectangle p1, Rectangle p2);    //普通友元函数声明
+    Rectangle(int l, int w);
 private:
     int        length, width;
     static int count;   //静态数据

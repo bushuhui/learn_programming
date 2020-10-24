@@ -6,11 +6,13 @@
 
 using namespace std;
 
+
+/////////////////////////////////////////////////////////////////////
 class Person    //基类1
 {
 public:
     void display();
-    Person(string, string, int);
+    Person(string nam, string gen, int a);
 private:
     string name;
     string gender;
@@ -30,12 +32,13 @@ void Person::display()
     cout << "Gender: " << gender << endl;
     cout << "Age: " << age << endl;
 }
-
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
 class Body  //基类2
 {
 public:
     void display();
-    Body(int, double);
+    Body(int w, double h);
 protected:
     int    weight;
     double height;
@@ -55,15 +58,18 @@ void Body::display()
     cout << "Height: " << height << endl;
     cout << "BMI: " << bmi << endl;
 }
+/////////////////////////////////////////////////////////////////////
 
 //单继承的公有派生，私有派生（private Person)，保护派生(protected Person)
 
+/////////////////////////////////////////////////////////////////////
 class Student:public Person
 {
 public:
     void       display_stu();
     static int stu_total();
-    Student(string, string, int, int, int, string, string, int);
+    Student(string stu_name, string stu_gen, int stu_age, int stu_id, int stu_gpa, \
+            string mas_name, string mas_gen, int mas_age);
 private:
     int        id;
     int        gpa;
@@ -73,7 +79,8 @@ private:
 
 int Student::stu_sum = 0;
 
-Student::Student(string stu_name, string stu_gen, int stu_age, int stu_id, int stu_gpa, string mas_name, string mas_gen, int mas_age)\
+Student::Student(string stu_name, string stu_gen, int stu_age, int stu_id, int stu_gpa, \
+                 string mas_name, string mas_gen, int mas_age)\
     :Person(stu_name, stu_gen, stu_age), master(mas_name, mas_gen, mas_age)  //派生类有参构造函数,含子对象
 {
     id = stu_id;
@@ -96,6 +103,7 @@ int Student::stu_total()
 
     return 0;
 }
+/////////////////////////////////////////////////////////////////////
 
 void single_inheriting()
 {
@@ -108,11 +116,12 @@ void single_inheriting()
 }
 //多继承
 
+/////////////////////////////////////////////////////////////////////
 class StudentBody:private Person, protected Body
 {
 public:
     void display();
-    StudentBody(string, string, int, int, double, int, int);
+    StudentBody(string stu_name, string stu_gen, int stu_age, int stu_w, double stu_h, int stu_id, int stu_gpa);
 private:
     int id;
     int gpa;
@@ -134,6 +143,7 @@ void StudentBody::display()
     cout << "Student ID: " << id << endl;
     cout << "GPA: " << gpa << endl;
 }
+/////////////////////////////////////////////////////////////////////
 
 void multi_inheriting()
 {
@@ -143,6 +153,7 @@ void multi_inheriting()
 
 //虚基类及数据转换
 
+/////////////////////////////////////////////////////////////////////
 class V1
 {
 public:
@@ -155,6 +166,8 @@ protected:
     int a;
 };
 
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
 class V2:virtual public V1
 {
 public:
@@ -166,7 +179,8 @@ public:
 protected:
     int b;
 };
-
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
 class V3:virtual public V1
 {
 public:
@@ -178,7 +192,8 @@ public:
 protected:
     int c;
 };
-
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
 class V4:public V2, public V3
 {
 public:
@@ -191,6 +206,7 @@ public:
 protected:
     int d;
 };
+/////////////////////////////////////////////////////////////////////
 
 void vir_base()
 {

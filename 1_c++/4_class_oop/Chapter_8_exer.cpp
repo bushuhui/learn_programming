@@ -127,7 +127,7 @@ class Student
 public:
     void          display();
     static double expense_average();
-    Student(int, string, string, int);
+    Student(int stu_id, string stu_name, string stu_sex, int stu_exp);
     ~Student();
 private:
     int        id;
@@ -185,7 +185,7 @@ public:
     void       display();
     static int total();
     static int fee_sums();
-    Guest(string, int, int);
+    Guest(string gue_name, int gue_room, int gue_fee);
 private:
     int        no;
     string     name;

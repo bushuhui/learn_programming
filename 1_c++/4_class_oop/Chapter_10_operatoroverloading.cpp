@@ -8,6 +8,7 @@ using namespace std;
 
 //运算符重载
 
+/////////////////////////////////////////////////////////////////////
 class Complex
 {
 public:
@@ -15,6 +16,9 @@ public:
     void    display();
     //Complex operator+(Complex c);   //成员函数重载
     friend Complex operator+(Complex c1, Complex c2);   //友元重载
+    Complex operator++();   //单目，前置自增
+    //Complex operator++(int);  //单目，后置自增
+    friend Complex operator++(Complex &c, int);  //友元，单目，后置
     Complex(double, double);
 private:
     double real, imagine;
@@ -25,17 +29,6 @@ Complex::Complex(double r = 0, double i = 0)
     real = r;
     imagine  = i;
 }
-
-/*
-Complex Complex::operator+(Complex c)   //成员函数
-{
-    Complex cs;
-    cs.real = real + c.real;
-    cs.imagine = imagine + c.imagine;
-
-    return cs;
-}
-*/
 
 Complex Complex::set(double r, double i)
 {
@@ -56,6 +49,17 @@ void Complex::display()
     cout << imagine << "i)" << endl;
 }
 
+/*
+Complex Complex::operator+(Complex c)   //成员函数
+{
+    Complex cs;
+    cs.real = real + c.real;
+    cs.imagine = imagine + c.imagine;
+
+    return cs;
+}
+*/
+
 Complex operator+(Complex c1, Complex c2)   //友元
 {
     Complex cs;
@@ -65,6 +69,32 @@ Complex operator+(Complex c1, Complex c2)   //友元
     return cs;
 }
 
+Complex Complex::operator++()
+{
+    real++;
+    imagine++;
+
+    return *this;
+}
+
+/*
+Complex Complex::operator++(int)
+{
+    Complex p = *this;
+    real++;
+    imagine++;
+
+    return p;
+
+}
+*/
+
+Complex operator++(Complex &c, int)
+{
+    return Complex (c.real++, c.imagine++);
+}
+/////////////////////////////////////////////////////////////////////
+
 void complex_plus()
 {
     Complex c1, c3;
@@ -72,9 +102,9 @@ void complex_plus()
     c1.set(3, -6);
     c3 = c1 + c2;
     c3.display();
+    ++c3;
+    c3.display();
 }
-
-
 
 int main()
 {

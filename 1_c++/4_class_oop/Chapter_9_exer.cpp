@@ -8,12 +8,13 @@ using namespace std;
 
 // 1.点、圆、圆柱及其相关参数
 
+/////////////////////////////////////////////////////////////////////
 class Point
 {
 public:
-    void set(double, double);
+    void set(double xx, double yy);
     void display();
-    Point(double, double);
+    Point(double xx, double yy);
     Point();
     ~Point();
 protected:
@@ -45,13 +46,16 @@ void Point::display()
     cout << "Point coordinate: (" << x << ',' << y << ')' << endl;
 }
 
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
 class Circle:public Point
 {
 public:
-    void   set(double, double, double);
+    void   set(double xx, double yy, double rr);
     void   display();
     double area();
-    Circle(double, double, double);
+    Circle(double xx, double yy, double rr);
     Circle();
     ~Circle();
 protected:
@@ -93,14 +97,17 @@ double Circle::area()
     return radius*radius*PI;
 }
 
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
 class Cylinder:public Circle
 {
 public:
-    void   set(double, double, double, double);
+    void   set(double xx, double yy, double rr, double h);
     void   display();
     double surface_area();
     double volume();
-    Cylinder(double, double ,double, double);
+    Cylinder(double xx, double yy,double rr, double h);
     Cylinder();
     ~Cylinder();
 private:
@@ -143,6 +150,7 @@ double Cylinder::volume()
 {
     return Circle::area() * height;
 }
+/////////////////////////////////////////////////////////////////////
 
 void q1_cylinder()
 {
@@ -162,12 +170,13 @@ void q1_cylinder()
 
 // 2.车。多继承
 
+/////////////////////////////////////////////////////////////////////
 class Automobile
 {
 public:
     void input();
     void display();
-    Automobile(string, string, int, int);
+    Automobile(string bands, string colors, int weights, int powers);
     Automobile();
 protected:
     string band;
@@ -208,12 +217,15 @@ void Automobile::display()
     cout << "Powerhorse: " << power << endl;
 }
 
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
 class Car:virtual public Automobile
 {
 public:
     void input();
     void display();
-    Car(string, string, int, int, int);
+    Car(string bands, string colors, int weights, int powers, int seats);
     Car();
 protected:
     int seat;
@@ -241,12 +253,15 @@ void Car::display()
     cout << "Seat number: " << seat << endl;
 }
 
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
 class Wagon:virtual public Automobile
 {
 public:
     void input();
     void display();
-    Wagon(string, string, int, int, int);
+    Wagon(string bands, string colors, int weights, int powers, int loads);
     Wagon();
 protected:
     int load;
@@ -275,12 +290,15 @@ void Wagon::display()
     cout << "Load weight: " << load << endl;
 }
 
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
 class StationWagon:public Car, public Wagon
 {
 public:
     void input();
     void display();
-    StationWagon(string, string, int, int, int, int);
+    StationWagon(string bands, string colors, int weights, int powers, int seats, int loads);
     StationWagon();
 };
 
@@ -315,6 +333,8 @@ void q2_car()
     sw1.display();
     sw2.display();
 }
+/////////////////////////////////////////////////////////////////////
+
 
 // 3,4 与1,2相似，不再重复
 
