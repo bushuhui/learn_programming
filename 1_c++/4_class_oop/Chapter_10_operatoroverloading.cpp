@@ -19,6 +19,7 @@ public:
     Complex operator++();   //单目，前置自增
     //Complex operator++(int);  //单目，后置自增
     friend Complex operator++(Complex &c, int);  //友元，单目，后置
+    friend ostream & operator<<(ostream &output, Complex &c);   //输出流重载，只能使用友元
     Complex(double, double);
 private:
     double real, imagine;
@@ -93,6 +94,17 @@ Complex operator++(Complex &c, int)
 {
     return Complex (c.real++, c.imagine++);
 }
+
+ostream & operator<<(ostream &output, Complex &c)
+{
+    output << '(' << c.real;
+    if (c.imagine < 0)
+        output << c.imagine << "i)";
+    else
+        output << '+' << c.imagine << "i)";
+
+    return output;
+}
 /////////////////////////////////////////////////////////////////////
 
 void complex_plus()
@@ -103,7 +115,7 @@ void complex_plus()
     c3 = c1 + c2;
     c3.display();
     ++c3;
-    c3.display();
+    cout << c3;
 }
 
 int main()
