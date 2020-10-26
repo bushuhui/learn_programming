@@ -138,7 +138,7 @@ Matrix::Matrix()
         {
             p[i][j] = 0;
         }
-    } 
+    }  
 }
 
 /*
@@ -472,8 +472,8 @@ void q3_time()
 int main ()
 {
     //q1_vector();
-    //q2_matrix();
-    q3_time();
+    q2_matrix();
+    //q3_time();
 
     return 0;
 }
