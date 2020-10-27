@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
+#include <fstream>
 
 using namespace std;
 
@@ -22,11 +24,45 @@ void std_iostream()
     cout << str2 << endl;
 
     cout.put(o).put('s').put('t').put('r').put('e').put('a').put('m');
+    cout << endl;
+    cout << setw(10) << setiosflags(ios::left) << setfill('-') << 35 << endl;   //输出格式控制
+    cout << resetiosflags(ios::right) << setw(5) << setfill('+') << 5 << endl;
+    cout << setprecision(2) << 5.33324 << endl;
+    cout.scientific;
+    cout << 90005.45454 << endl;
+}
+
+//文件输入、输出
+
+void file_stream()
+{
+    fstream fa;
+    fa.open(".\\Chapter_12_file\\Chapter_12.txt", ios::out|ios::in);
+    if (fa.fail())
+    {
+        cerr << "File open error" << endl;
+        abort();
+    }
+    else
+    {
+            fa << "This is a test file." << endl;
+            fa.write("A test input of write.\n", 23);
+    }
+    char c;
+    fa.seekp(0, ios::beg);
+    while(!fa.eof())
+    {
+        fa.read((char *)&c, sizeof(char));
+        cout << c;
+    }
+
+    fa.close();
 }
 
 int main()
 {
-    std_iostream();
+    //std_iostream();
+    file_stream();
 
     return 0;
 }
