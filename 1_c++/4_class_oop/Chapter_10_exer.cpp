@@ -12,6 +12,9 @@ using namespace std;
 class Vector
 {
 public:
+    Vector();
+    Vector(double xx, double yy, double zz);
+
     Vector operator++();
     Vector operator++(int);
     friend Vector operator+(Vector v1, Vector v2);
@@ -20,8 +23,7 @@ public:
     friend Vector operator-(Vector v1, Vector v2);
     friend Vector operator*(Vector v1, Vector v2);
     friend ostream & operator<<(ostream &output, Vector &v);
-    Vector(double xx, double yy, double zz);
-    Vector();
+
 private:
     double x, y, z;
 };

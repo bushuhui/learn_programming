@@ -16,6 +16,8 @@ public:
     int         perimeter();
     int         counting();
     static int  total(); //静态函数
+    
+    // FIXME: 建议参数用引用，例如"Rectangle &p1"
     friend int  area_diff(Rectangle p1, Rectangle p2);    //普通友元函数声明
     Rectangle(int l, int w);
 private:

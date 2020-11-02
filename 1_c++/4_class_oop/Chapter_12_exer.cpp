@@ -13,7 +13,7 @@ using namespace std;
 void file_in()
 {
     fstream fin;
-    fin.open(".\\Chapter_12_file\\Chapter_12_exer1.txt", ios::out|ios::trunc|ios::in);
+    fin.open(".\\Chapter_12_file\\Chapter_12_exer1.txt", ios::out|ios::trunc|ios::in); // FIXME: 可以考虑用Windows/Linux都可以用的路径表示方式 `./Chapter_12_file/Chapter_12_exer1.txt`
     if (fin.fail())
     {
         cerr << "File open error." << endl;
