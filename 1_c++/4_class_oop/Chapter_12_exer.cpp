@@ -13,7 +13,7 @@ using namespace std;
 void file_in()
 {
     fstream fin;
-    fin.open(".\\Chapter_12_file\\Chapter_12_exer1.txt", ios::out|ios::trunc|ios::in); // FIXME: 可以考虑用Windows/Linux都可以用的路径表示方式 `./Chapter_12_file/Chapter_12_exer1.txt`
+    fin.open("./Chapter_12_file/Chapter_12_exer1.txt", ios::out|ios::trunc|ios::in); // FIXME: 可以考虑用Windows/Linux都可以用的路径表示方式 `./Chapter_12_file/Chapter_12_exer1.txt`
     if (fin.fail())
     {
         cerr << "File open error." << endl;
@@ -45,7 +45,7 @@ void file_in()
 void file_b()
 {
     fstream fb;
-    fb.open(".\\Chapter_12_file\\Chapter_12_exer2.dat", ios::out | ios::in | ios::trunc | ios::binary);
+    fb.open("./Chapter_12_file/Chapter_12_exer2.dat", ios::out | ios::in | ios::trunc | ios::binary);
     if(fb.fail())
     {
         cout << "File open error" << endl;
@@ -83,11 +83,12 @@ class Stu_grade
 {
 public:
     Stu_grade();
+    Stu_grade(string stu_name, int stu_id, int stu_ch, int stu_ma, int stu_en);
     int total();
     //void file_write(fstream &f);
     //void file_read(fstream &f);
     friend istream &operator>>(istream &input, Stu_grade stu);
-    char name[20];
+    string name;
     int  id;
     int  chinese_score;
     int  math_score;
@@ -96,6 +97,15 @@ public:
 
 Stu_grade::Stu_grade()
 {}
+
+Stu_grade::Stu_grade(string stu_name, int stu_id, int stu_ch, int stu_ma, int stu_en)
+{
+    name = stu_name;
+    id = stu_id;
+    chinese_score = stu_ch;
+    math_score = stu_ma;
+    english_score = stu_en;
+}
 
 int Stu_grade::total()
 {
@@ -142,7 +152,7 @@ istream &operator>>(istream &input, Stu_grade stu)
 void file_sort()
 {
     fstream fs;
-    fs.open(".\\Chapter_12_file\\Chapter_12_exer3.dat", ios::out | ios::in | ios::trunc);
+    fs.open("./Chapter_12_file/Chapter_12_exer3.dat", ios::out | ios::in | ios::trunc);
     if (fs.fail())
     {
         cout << "File open error" << endl;
@@ -150,13 +160,13 @@ void file_sort()
     }
     else
     {
-        Stu_grade stu_1, stu;
+        Stu_grade stu_1("a", 1, 55, 66, 77), stu_t;
         cout << "Please enter student information:";
-        cin >> stu_1;
+        //cin >> stu_1;
         fs.write((char *)&stu_1, sizeof(Stu_grade));
         fs.seekp(0, ios::beg);
-        fs.read((char *)&stu, sizeof(Stu_grade));
-        cout << stu.chinese_score << endl;
+        fs.read((char *)&stu_t, sizeof(Stu_grade));
+        cout << stu_t.chinese_score << endl;
     }
 }
 
@@ -164,8 +174,8 @@ void file_sort()
 int main()
 {
     //file_in();
-    file_b();
-    //file_sort();
+    //file_b();
+    file_sort();
 
     return 0;
 }

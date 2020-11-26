@@ -18,7 +18,7 @@ public:
     static int  total(); //静态函数
     
     // FIXME: 建议参数用引用，例如"Rectangle &p1"
-    friend int  area_diff(Rectangle p1, Rectangle p2);    //普通友元函数声明
+    friend int  area_diff(Rectangle &p1, Rectangle &p2);    //普通友元函数声明
     Rectangle(int l, int w);
 private:
     int        length, width;
@@ -67,7 +67,7 @@ int Rectangle::counting()
     return count;
 }
 
-int area_diff(Rectangle p1, Rectangle p2)   //友元函数定义
+int area_diff(Rectangle &p1, Rectangle &p2)   //友元函数定义
 {
     int diff;
     diff = p1.length*p1.width - p2.length*p2.width;
