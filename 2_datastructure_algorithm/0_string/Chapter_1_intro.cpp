@@ -14,12 +14,13 @@ void mal_free()
     int *p;
     p = (int *)malloc(sizeof(int));
     if (p==NULL)
-        {
-            cerr << "Memory allocation error." << endl;
-            exit(1);
-        }
+    {
+    	cerr << "Memory allocation error." << endl;
+        exit(1);
+    }
     *p = 5;
     cout << *p;
+    
     free(p);    //释放p的内存
     p = NULL;   //p指针赋为空
 }
@@ -30,3 +31,4 @@ int main()
 
     return 0;
 }
+

@@ -14,7 +14,7 @@ int length(T &arr)
     return (sizeof(arr) / sizeof(arr[0]));
 }
 
-int del_repeated(int *arr, int len) //排序数组的处理
+int del_repeated(int *arr, int len) //排序数组的处理 FIXME: what to do for this algorithm?
 {
     int i = 0;
     for (int j = 1; j < len; j++)
