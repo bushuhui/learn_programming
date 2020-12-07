@@ -2,6 +2,7 @@
 //第二章 链表
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
 #include <string>
 
@@ -33,15 +34,14 @@ LinkedList listinit()
 }
 
 //链表的创建（头插）
-LinkedList ListCreateH(LinkedList *n)
+LinkedList ListCreateH()
 {
     Node *L;
     L = (Node*)malloc(sizeof(Node));
     L ->next = NULL;
 
     int s;
-    cout << "ENTER:" << endl;
-    while ( (scanf("%d", &s)) != EOF)
+    while ( (scanf("%d", &s)) != 0)
     {
         Node *p;
         p = (Node*)malloc(sizeof(Node));
@@ -50,12 +50,11 @@ LinkedList ListCreateH(LinkedList *n)
         L->next = p;    //L的next指针赋值为当前数据的位置
     }
 
-    cout << "END" << endl;
     return L;
 }
 
 //链表创建（尾插）
-LinkedList ListCreateT(LinkedList *n)
+LinkedList ListCreateT()
 {
     Node *L;
     L = (Node*)malloc(sizeof(Node));
@@ -65,13 +64,13 @@ LinkedList ListCreateT(LinkedList *n)
     r = L;  
 
     int s;
-    while((scanf("%d", &s)) != EOF)
+    while(scanf("%d", &s) != 0)
     {
-        Node *p;
+        Node *p;    
         p = (Node*)malloc(sizeof(Node));
         p->data = s;
-        r->next = p;  //?
-        r = p;
+        r->next = p;  //当前（前一个）尾指针r的next指针指向p
+        r = p;  //r指针等于p指针，r成为了尾指针?    
     }
     r->next = NULL;
 
@@ -86,15 +85,102 @@ void printList(LinkedList L)
     int i = 0;
     while(a)
     {
-        cout << "No." << i+1 << ", value is: " << a->data << endl;
+        cout << "No." << ++i << ", value is: " << a->data << endl;
         a = a->next;
     }
 }
 
-int main()
+//链表的修改
+
+LinkedList ListReplace(LinkedList L, int target, int value)
+{
+    Node *a = L->next;
+    while(a)
+    {
+        if(a->data == target)
+        {
+            a->data = value; 
+        }
+        a = a->next;
+    } 
+
+    return L;
+}
+
+//链表的插入
+
+LinkedList ListInsert(LinkedList L, int index, int value)
 {
     Node *a;
-    ListCreateH(&a);
-    printList(a);
-    return 0;
+    a = L;
+    for (int i = 1; i < index; i++)
+    {
+        a = a->next;
+    }
+    Node *x;
+    x = (Node*)malloc(sizeof(Node));
+    x->data = value;
+    x->next = a->next;
+    a->next = x;
+
+    return L;
+}
+
+//链表的删除
+
+LinkedList ListDelete(LinkedList L, int value)
+{
+    Node *a, *apre;
+    a = L;
+    while(a->data != value)
+    {
+        apre = a;
+        a = a->next;
+    }
+    apre->next = a->next;
+    free(a);
+
+    return L;
+}
+
+void singleLinkedList()
+{
+    LinkedList list;
+    cout << "Enter integers, end with EOF:";
+    list = ListCreateT();
+    //list = ListCreateH();
+    printList(list);
+
+    ListReplace(list, 5, 15);
+    printList(list);
+
+    ListDelete(list, 2);
+    printList(list);
+
+    ListInsert(list, 3, 10);
+    printList(list);
+}
+
+//2.双向链表
+
+typedef struct Line
+{
+    int data;
+    struct Line *pre;
+    struct Line *next;
+}Line;
+
+//双向链表的创建
+
+Line * LineInit(Line *head)
+{
+    
+}
+
+
+
+int main()
+{
+    singleLinkedList();
+
 }
