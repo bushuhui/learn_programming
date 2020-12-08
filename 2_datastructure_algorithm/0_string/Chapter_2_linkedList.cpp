@@ -18,7 +18,7 @@ typedef struct Node
 }Node,*LinkedList;
 
 //初始化函数
-
+// FIXME: name change to `ListInit` is better
 LinkedList listinit()
 {
     Node *L;
@@ -64,6 +64,7 @@ LinkedList ListCreateT()
     r = L;  
 
     int s;
+    // FIXME: 不建议在这个函数里面用scanf, 可以传入一个数组进来创建列表
     while(scanf("%d", &s) != 0)
     {
         Node *p;    
@@ -78,7 +79,6 @@ LinkedList ListCreateT()
 }
 
 //链表的遍历
-
 void printList(LinkedList L)
 {
     Node *a = L->next;
@@ -91,7 +91,6 @@ void printList(LinkedList L)
 }
 
 //链表的修改
-
 LinkedList ListReplace(LinkedList L, int target, int value)
 {
     Node *a = L->next;
@@ -108,7 +107,6 @@ LinkedList ListReplace(LinkedList L, int target, int value)
 }
 
 //链表的插入
-
 LinkedList ListInsert(LinkedList L, int index, int value)
 {
     Node *a;
@@ -117,6 +115,7 @@ LinkedList ListInsert(LinkedList L, int index, int value)
     {
         a = a->next;
     }
+
     Node *x;
     x = (Node*)malloc(sizeof(Node));
     x->data = value;
@@ -127,7 +126,6 @@ LinkedList ListInsert(LinkedList L, int index, int value)
 }
 
 //链表的删除
-
 LinkedList ListDelete(LinkedList L, int value)
 {
     Node *a, *apre;
@@ -161,7 +159,8 @@ void singleLinkedList()
     printList(list);
 }
 
-//2.双向链表
+
+//2.双向链表 (FIXME: 可以放在一个新的程序文件)
 
 typedef struct Line
 {
@@ -183,4 +182,6 @@ int main()
 {
     singleLinkedList();
 
+    return 0;
 }
+
