@@ -19,7 +19,7 @@ typedef struct Node
 
 //初始化函数
 // FIXME: name change to `ListInit` is better
-LinkedList listinit()
+LinkedList ListInit()
 {
     Node *L;
     L = (Node*)malloc(sizeof(Node));
@@ -71,15 +71,39 @@ LinkedList ListCreateT()
         p = (Node*)malloc(sizeof(Node));
         p->data = s;
         r->next = p;  //当前（前一个）尾指针r的next指针指向p
-        r = p;  //r指针等于p指针，r成为了尾指针?    
+        r = p;  //p指针赋值给r指针，r成为了尾指针?
     }
     r->next = NULL;
 
     return L;
 }
 
+//数组传参的尾插法（定长）
+LinkedList ListCreateT2(int a[5])
+{
+    Node *L;
+    L = (Node*)malloc(sizeof(Node));
+    L->next = NULL;
+
+    Node *r;
+    r = L;
+
+    for (int i = 0; i < 5; i++)
+    {
+        Node *p;
+        p = (Node*)malloc(sizeof(Node));
+        p->data = a[i];
+        r->next = p;
+        r = p;
+    }
+
+    r->next = NULL;
+
+    return L;
+}
+
 //链表的遍历
-void printList(LinkedList L)
+void PrintList(LinkedList L)
 {
     Node *a = L->next;
     int i = 0;
@@ -147,40 +171,39 @@ void singleLinkedList()
     cout << "Enter integers, end with EOF:";
     list = ListCreateT();
     //list = ListCreateH();
-    printList(list);
+    PrintList(list);
+
 
     ListReplace(list, 5, 15);
-    printList(list);
+    PrintList(list);
 
     ListDelete(list, 2);
-    printList(list);
+    PrintList(list);
 
     ListInsert(list, 3, 10);
-    printList(list);
+    PrintList(list);
 }
 
+void SingleLinkedListT2()
+{
+    LinkedList list2;
+    int a[5];
+    cout << "Enter 5 integers:" << endl;
+    for (int j = 0; j < 5; j++)
+    {
+        cin >> a[j];
+    }
+    list2=ListCreateT2(a);
+    PrintList(list2);
+}
 
 //2.双向链表 (FIXME: 可以放在一个新的程序文件)
-
-typedef struct Line
-{
-    int data;
-    struct Line *pre;
-    struct Line *next;
-}Line;
-
-//双向链表的创建
-
-Line * LineInit(Line *head)
-{
-    
-}
-
 
 
 int main()
 {
-    singleLinkedList();
+    //singleLinkedList();
+    SingleLinkedListT2();
 
     return 0;
 }
