@@ -141,12 +141,70 @@ void q4_judgeDuplicate()
     cout << "Array2: " << judgeDuplicate(arr2, length(arr2)) << endl;
 }
 
+//5.判定不重复
+//题述：给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。
+//找出那个只出现了一次的元素。
+//你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+
+//5.1异或运算
+
+int uniqueNumber(int *arr, int num)
+{
+    int a = arr[0];
+    for (int i = 1; i < num; i++)
+    {
+        a^=arr[i];
+    }
+
+    return a;
+
+}
+
+
+
+//5.2 暴力运算
+
+int uniqueNumber2(int *arr, int num)
+{
+    for(int i = 0; i < num -1; i++)
+    {
+        for(int j = i+1; j < num; j++)
+        {
+            if(arr[i] == arr[j])
+            {
+                arr[j] = 0;
+                arr[i] = 0;
+            }
+        }
+    }
+    int ans = 0;
+    for (int i = 0; i < num; i++)
+    {
+        ans += arr[i];
+    }
+
+    return ans;
+}
+
+//5.3 排序后查找a[i] != a[i+1]的那一项（若溢出，则答案为最后一项）
+
+void q5_uniqueNumber()
+{
+    int arr[7]={1, 1, 5, 7, 3, 7, 3};
+    cout << uniqueNumber(arr,sizeof(arr)/sizeof(int)) << endl;
+
+    cout << uniqueNumber2(arr, sizeof(arr)/sizeof(int)) << endl;
+}
+
+
+
 int main()
 {
     //q1();
     //q2_stock();
     //q3_rotateArray();
-    q4_judgeDuplicate();
+    //q4_judgeDuplicate();
+    q5_uniqueNumber();
 
     return 0;
 }
