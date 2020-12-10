@@ -188,12 +188,57 @@ int uniqueNumber2(int *arr, int num)
 
 //5.3 排序后查找a[i] != a[i+1]的那一项（若溢出，则答案为最后一项）
 
+void quickSort(int a[], int low, int high)
+{
+    int i = low;
+    int j = high;
+    int temp;
+    if(low < high)
+    {
+        temp = a[low];
+        while(i < j)
+        {
+            while(i < j && a[j] >= temp)
+            {
+                j--;
+            }
+            while(i < j && a[i] <= temp)
+            {
+                i++;
+            }
+            if(i < j)
+            {
+                swap(a[i], a[j]);
+            }
+        }
+        a[low] = a[i];
+        a[i] = temp;
+        quickSort(a, low, i-1);
+        quickSort(a, i+1, high);
+    }
+}
+
+int uniqueNumber3(int * a, int len)
+{
+    quickSort(a, 0, len-1);
+    for (int i = 0; i < len-1; i = i+2)
+    {
+        if(a[i] != a[i+1])
+        {
+            return a[i];
+        }
+    }
+
+    return a[len-1];
+}
+
 void q5_uniqueNumber()
 {
     int arr[7]={1, 1, 5, 7, 3, 7, 3};
     cout << uniqueNumber(arr,sizeof(arr)/sizeof(int)) << endl;
 
     cout << uniqueNumber2(arr, sizeof(arr)/sizeof(int)) << endl;
+    cout << uniqueNumber3(arr, sizeof(arr)/sizeof(int)) << endl;
 }
 
 
