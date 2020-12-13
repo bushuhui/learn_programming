@@ -1,3 +1,5 @@
+//《C++程序设计》第三版，齐建玲等
+
 #include <iostream>
 #include <cmath>
 #include <ctime>

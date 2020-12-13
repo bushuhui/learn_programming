@@ -1,7 +1,11 @@
-//12/11
+//12/11,12/13
 //数据结构 第四章 队列
+//先进先出,尾插进，从头出
 
 #include <iostream>
+#include <string.h>
+
+#define MAX 10000
 
 using namespace std;
 
@@ -113,8 +117,7 @@ void pop(Queue *q)
 
 void printQueue(Queue *q)
 {
-    Node *n = initNode();
-    n = q->front;
+    Node *n = q->front;
     if(empty(q))
     {
         return ;    //此时队列为空，直接返回函数结束
@@ -125,5 +128,109 @@ void printQueue(Queue *q)
         n = n->next;
     }
     cout << endl;   
+}
+
+void queue1()
+{
+    Queue *q = initQueue();
+    for(int i = 0; i < 3; i++)
+    {
+        push(q, i*2);
+    }
+    printQueue(q);
+
+    pop(q);
+    printQueue(q);
+}
+
+//循环队列
+//针对顺序队列的频繁出入队操作导致的队列指针向后偏移直至移出至分配内存之外，导致假溢出而进行的优化
+//给定队列的长度，当队列满了，则从队列前方开始插入，因此采用数组模拟的方式
+
+//循环队列定义
+typedef struct CirQueue
+{
+    int data[MAX];
+    int rear;
+    int front;
+}CirQueue;
+
+//初始化
+CirQueue * initCirQueue()
+{
+    CirQueue * q = (CirQueue*)malloc(sizeof(CirQueue));
+    if(q == NULL)
+    {
+        cerr << "Circle queue creation error." << endl;
+        exit(0);
+    }
+    memset(q->data, 0, sizeof(q->data));
+    q->front = 0;
+    q->rear = 0;
+
+    return q;
+}
+
+//入队
+void pushCirQueue(CirQueue * q, int data)
+{
+    if((q->rear+1)%MAX == q->front) //判断是否溢出
+    {
+        cerr << "Memory full, push denied." << endl;
+        return;
+    }
+    else
+    {
+        q->rear = (q->rear+1)%MAX;  //如当到达最大长度时，从0开始插入
+        q->data[q->rear] = data;    //从data[1]开始插入，data[front]没有数据，故最大储存长度为MAX-1
+    }
+}
+
+//出队
+void popCirQueue(CirQueue * q)
+{
+    if(q->rear == q->front)
+    {
+        cerr << "Empty Circle queue, pop dined." << endl;
+        return;
+    }
+    else
+    {
+        q->data[q->front] = 0;
+        q->front = (q->front+1)%MAX;    //如当到达最大长度时，从0开始出队
+    }
+}
+
+//遍历
+void printCirQueue(CirQueue * q)
+{
+    int i = q->front;
+    while(i != q->rear)
+    {
+        i = (i+1)%MAX;
+        cout << q->data[i] << " ";
+    }
+    cout << endl;
+}
+
+void queue2()
+{
+    CirQueue * cq = initCirQueue();
+    for(int i = 0; i < 3; i++)
+    {
+        pushCirQueue(cq, i+2);
+    }
+    printCirQueue(cq);
+
+    popCirQueue(cq);
+    printCirQueue(cq);
+}
+
+int main()
+{
+    //queue1();
+    queue2();
+
+    return 0;
 }
 

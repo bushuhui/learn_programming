@@ -1,5 +1,6 @@
 //12/9
 //数据结构 第三章 栈
+//先进后出，头插进，从头出
 
 #include <iostream>
 #include <string.h>
