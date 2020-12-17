@@ -276,27 +276,32 @@ void q11_31_findToErase()
 }
 
 //11.33 单词转换（简写->书面）
-string wordConvert(map<string, string> rule, string target)
+void wordConvert(map<string, string> rule, string &target)
 {
-    string word;
-    while(txt >> word)
+    string word, line;
+    istringstream txt(target);
+    while(getline(txt, line))   //读取行
     {
-        if(rule.find(word) != rule.end())
+        istringstream stream(line); //用流控制输出，方便读取单词
+        while(stream >> word)
         {
-            word = (rule.find(word))->second;
-            output += word;
+            cout << " ";
+            if(rule.find(word) != rule.end())
+            {
+                word = (rule.find(word))->second;
+            }
+            cout << word;
         }
-        cout << word;
+        cout << endl;
     }
 
-    return output;
 }
 
 void q11_33_wordConvert()
 {
     map<string, string> rule = {{"k", "okay?"},{"y","why"},{"r","are"},{"u","you"},\
                                 {"pic","picture"},{"thk","thanks!"},{"18r","later"}};
-    string target{"where r u \n y dont u  send me a pic \n k thk 18r\n"};
+    string target{"where r u\ny dont u send me a pic\nk thk 18r\n"};
     wordConvert(rule, target);
 
 }

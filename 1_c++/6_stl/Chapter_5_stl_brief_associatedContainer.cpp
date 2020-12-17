@@ -82,13 +82,32 @@ void pairOperations()
 
 void unorderedAssociatedContainer()
 {
+    //初始化、添加、删除、访问元素等操作类似有序容器
+    unordered_map<string, int> um;
+    um.insert({{"C", 3},{"B", 2}});
+    um.erase(um.begin());   //未排序，不一定是第一个元素
+    um.find("B");
+    for(auto i: um)
+    {
+        cout << i.first << endl;
+    }
+
+    //桶管理
+    cout << um.bucket_count() << endl;
+    cout << um.max_bucket_count() << endl;
+    cout << um.bucket_size(0) << endl;  //从0开始数
+    cout << um.load_factor() << endl;    //桶元素平均数量，浮点数
+    cout << um.max_load_factor() << endl;    //试图维护的桶平均大小，必要时将添加新桶以使max>=current桶均值
+    um.rehash(8);   //重存储，使桶数量>=8
+    um.reserve(10); //重存储，使桶数量 = 10,不必rehash
 
 }
 
 int main()
 {
-    orderedAssociatedContainer();
+    //orderedAssociatedContainer();
     //pairOperations();
+    unorderedAssociatedContainer();
 
     return 0;
 }
