@@ -186,14 +186,14 @@ git pull upstream master
 ## 五、相关学习资料参考
 
 在上述内容学习完成之后，可以进行机器学习、计算机视觉方面的学习与研究，具体的资料可以参考：
-1. 智能系统实验室-培训教程与作业
-    - [《智能系统实验室-暑期培训教程》](https://gitee.com/pi-lab/SummerCamp)
-    - [《智能系统实验室-暑期培训作业》](https://gitee.com/pi-lab/SummerCampHomework)
+1. 飞行器智能感知与控制实验室 - 培训教程与作业
+    - [《飞行器智能感知与控制实验室-暑期培训教程》](https://gitee.com/pi-lab/SummerCamp)
+    - [《飞行器智能感知与控制实验室-暑期培训作业》](https://gitee.com/pi-lab/SummerCampHomework)
 2. 机器学习教程与作业
     - [《机器学习教程》](https://gitee.com/pi-lab/machinelearning_notebook)
     - [《机器学习课程作业》](https://gitee.com/pi-lab/machinelearning_homework)
 3. [《一步一步学SLAM》](https://gitee.com/pi-lab/learn_slam)
-4. [智能系统实验室研究课题](https://gitee.com/pi-lab/pilab_research_fields)
+4. [飞行器智能感知与控制实验室-研究课题](https://gitee.com/pi-lab/pilab_research_fields)
 5. [编程代码参考、技巧集合](https://gitee.com/pi-lab/code_cook)
     - 可以在这个代码、技巧集合中找到某项功能的示例，从而加快自己代码的编写
 
