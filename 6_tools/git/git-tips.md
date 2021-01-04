@@ -129,7 +129,9 @@ git reset --hard "bdc6980"
 1. Add submodule to current project
 ```
 git submodule add 仓库地址 路径
-        即
+
+# 即
+
 git submodule add https://android.googlesource.com/platform/frameworks/volley extras
 ```
 
