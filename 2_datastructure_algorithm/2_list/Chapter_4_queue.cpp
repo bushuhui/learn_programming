@@ -224,6 +224,8 @@ void queue2()
 
     popCirQueue(cq);
     printCirQueue(cq);
+
+    // FIXME: `cq`没有释放
 }
 
 int main()
@@ -233,4 +235,5 @@ int main()
 
     return 0;
 }
+
 
