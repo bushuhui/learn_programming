@@ -100,9 +100,10 @@ public:
     friend Matrix operator-(Matrix m1, Matrix m2);
     friend Matrix operator*(Matrix m1, Matrix m2);
     Matrix convolution(Matrix &kernel); //FIXME:0 padding, unit stride
+
 private:
     int row, col;
-    vector<vector<int>> matrix;
+    vector<vector<int>> matrix; // FIXME: 可以考虑一维数组的方式
 };
 
 Matrix::Matrix(int rows, int cols)
@@ -127,6 +128,7 @@ void Matrix::display()
         cout << endl;
     }
 }
+
 void Matrix::set(int rows, int cols, int num)
 {
     matrix[rows][cols] = num;
@@ -255,6 +257,8 @@ void matrixClass()
     m4.convolution(m1);
     m4.display();
 }
+
+
 int main()
 {
     //matrixOperation();
@@ -262,3 +266,5 @@ int main()
 
     return 0;
 }
+
+
