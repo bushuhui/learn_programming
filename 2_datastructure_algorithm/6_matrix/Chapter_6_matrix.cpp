@@ -101,7 +101,7 @@ public:
     Matrix convolution(Matrix &kernel); //0 padding, unit stride
 private:
     int row, col;
-    vector<vector<int>> matrix;
+    vector<vector<int>> matrix; // FIXME: 可以考虑一维数组的方式
 };
 
 Matrix::Matrix(int rows, int cols)
@@ -126,6 +126,7 @@ void Matrix::display()
         cout << endl;
     }
 }
+
 void Matrix::set(int rows, int cols, int num)
 {
     matrix[rows][cols] = num;
@@ -282,3 +283,5 @@ int main()
 
     return 0;
 }
+
+
