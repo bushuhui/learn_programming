@@ -37,7 +37,7 @@ void std_iostream()
 void file_stream()
 {
     fstream fa;
-    fa.open(".\\Chapter_12_file\\Chapter_12.txt", ios::out|ios::in);
+    fa.open("./Chapter_12_file/Chapter_12.txt", ios::out|ios::in);
     if (fa.fail())
     {
         cerr << "File open error" << endl;

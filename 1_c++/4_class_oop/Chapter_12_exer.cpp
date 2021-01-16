@@ -173,9 +173,9 @@ void file_sort()
 
 int main()
 {
-    //file_in();
+    file_in();
     //file_b();
-    file_sort();
+    //file_sort();
 
     return 0;
 }

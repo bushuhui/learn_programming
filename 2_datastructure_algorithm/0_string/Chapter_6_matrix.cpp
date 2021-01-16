@@ -1,6 +1,5 @@
-//1/15
+//1/15， 1/16
 //数据结构 第六章 矩阵
-//FIXME
 
 #include <iostream>
 #include <cstring>
@@ -99,7 +98,7 @@ public:
     friend Matrix operator+(Matrix m1, Matrix m2);
     friend Matrix operator-(Matrix m1, Matrix m2);
     friend Matrix operator*(Matrix m1, Matrix m2);
-    Matrix convolution(Matrix &kernel); //FIXME:0 padding, unit stride
+    Matrix convolution(Matrix &kernel); //0 padding, unit stride
 private:
     int row, col;
     vector<vector<int>> matrix;
@@ -198,20 +197,38 @@ Matrix operator*(Matrix m1, Matrix m2)
 Matrix Matrix::convolution(Matrix &kernel)
 {
     Matrix ans(row, col);
-    cout << kernel.matrix[0][0] << endl;
-    for (int i = 0; i <= row; i++)
+
+    //0填充，扩增矩阵至(row+2，col+2)并填充0
+    Matrix t(row + 2, col + 2);
+    for (int i = 0; i <= row + 1; i++)
     {
-        for (int j = 0; j <= col; j++)
+        for (int j = 0; j <= col + 1; j++)
+        {
+            if (i == 0 || j == 0 || i == (row+1) || j == (col+1))
+            {
+                t.matrix[i][j] = 0;
+            }
+            else
+            {
+                t.matrix[i][j] = matrix[i - 1][j - 1];
+            }
+        }
+    }
+    //t.display();  //填充后的矩阵
+
+    for (int i = 1; i <= row; i++)
+    {
+        for (int j = 1; j <= col; j++)
         {
             int temp = 0;
             for (int a = 0; a < 3; a++)
             {
                 for (int b = 0; b < 3; b++)
                 {
-                    temp += (kernel.matrix[a][b] * matrix[i + a][j + b]);
+                    temp += (kernel.matrix[a][b] * t.matrix[i - 1 + a][j - 1 + b]);
                 }
             }
-            ans.matrix[i][j] = temp;
+            ans.matrix[i - 1][j - 1] = temp;
         }
     }
 
@@ -252,9 +269,12 @@ void matrixClass()
     }
     cout << endl;
     m4.display();
-    m4.convolution(m1);
-    m4.display();
+    //m1 inversion neglected
+    cout << "After convolution: " << endl;
+    m4.convolution(m1).display();
 }
+
+
 int main()
 {
     //matrixOperation();
