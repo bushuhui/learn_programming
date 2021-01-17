@@ -8,6 +8,7 @@
 using namespace std;
 
 #define M 100
+//FIXME:2维数组作为形参时，需传入第二维的长度col，函数内部用指针形式描述2维数组。e.g. *((int *)a + i*col + j) (i,j为一维、二维调用的参数)
 
 void matrixOperation()
 {
@@ -270,7 +271,7 @@ void matrixClass()
     }
     cout << endl;
     m4.display();
-    //m1 inversion neglected
+    //m1 transpose neglected
     cout << "After convolution: " << endl;
     m4.convolution(m1).display();
 }
