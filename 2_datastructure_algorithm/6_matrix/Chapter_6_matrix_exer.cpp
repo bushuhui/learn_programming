@@ -4,6 +4,8 @@
 #include <iostream>
 #include <iomanip>
 
+#define MAXN 100
+
 using namespace std;
 
 //1.蛇行矩阵
@@ -198,21 +200,77 @@ void q3_matrix_transpose()
 //快速算法：若b=0，则A^b%m=I%m。其中I表示单位矩阵。
 //若b为偶数，则A^b%m=(A^(b/2)%m)^2%m，即先把A乘b/2次方对m求余，然后再平方后对m求余。
 //若b为奇数，则A^b%m=(A^(b-1)%m)*a%m，即先求A乘b-1次方对m求余，然后再乘A后对m求余。
+//理解：结合矩阵快速幂解题
+
+typedef struct Matrix
+{
+    int matrix[MAXN][MAXN];
+}Matrix;
+
+Matrix matrix_multiply_modulo(Matrix m1, Matrix m2, int n, int mod)
+{
+    Matrix temp;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            temp.matrix[i][j] = 0;
+            for (int k = 0; k < n; k++)
+            {
+                temp.matrix[i][j] += (m1.matrix[i][k] * m2.matrix[1][2]) % mod;
+            }
+            temp.matrix[i][j] %= mod;
+        }
+    }
+
+    return temp;
+}
+
+Matrix matrix_quick_power_modulo(Matrix m, int n, int index, int mod)
+{
+    Matrix ans;
+    
+    //初始化结果矩阵为单位矩阵
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if(i == j)
+            {
+                ans.matrix[i][j] = 1;
+            }
+            else
+            {
+                ans.matrix[i][j] = 0;
+            }
+        }
+    }
+
+    while(index > 0)
+    {
+        if(index & 1)
+        {
+            ans = matrix_multiply_modulo(m, ans, n, mod);
+        }
+        index >>= 1;
+        m = matrix_multiply_modulo(m, m, n, mod);
+    }
+    m = ans;
+    return ans;
+}
+
 
 void q4_matrix_modulo()
 {
-    int n;
-    n = 3;
-    int m = 2;
-    int b = 50;
-    int m1[n][n];
+    int n = 2, index = 2, mod = 2;
+    Matrix m;
 
     //创建矩阵
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            m1[i][j] = i + j + 1;
+            m.matrix[i][j] = (i + j + 1)*104;
         }
     }
 
@@ -222,35 +280,35 @@ void q4_matrix_modulo()
     {
         for (int j = 0; j < n; j++)
         {
-            cout << m1[i][j] << " ";
+            cout << m.matrix[i][j] << " ";
         }
         cout << endl;
     }
+    cout << "Modulo matrix: " << endl;
 
-    if(b == 0)  //单位矩阵模m
+    if(index != 0)
     {
+        m = matrix_quick_power_modulo(m, n, index, mod);
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < n; j++)
             {
-                if(i == j)
-                {
-                    m1[i][j] = 1 % m;
-                }
-                else
-                {
-                    m1[i][j] = 0;
-                }
+                cout << m.matrix[i][j] << " ";
             }
+            cout << endl;
         }
     }
-    else if(b % 2)
+    else if(index ==0 && mod != 1)
     {
-        
+        cout << "unit matrix" << endl;
+    }
+    else
+    {
+        cout << "0 matrix" << endl;
     }
 
 
-    cout << "Modulo matrix: " << endl;
+
 }
 
 
