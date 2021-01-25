@@ -1,4 +1,4 @@
-//1/24 
+//1/24,1/25
 //数据结构 第七章 树
 
 #include <cstdlib>
@@ -87,6 +87,16 @@ void preorder(Node* node)
         printf("%d ",node->data);
         inorder(node->left);
         inorder(node->right);
+    }
+}
+
+//树的后序遍历 Post-order traversal
+void postorder(Node* node){
+    if (node != NULL)
+    {
+        inorder(node->left);
+        inorder(node->right);
+        printf("%d ", node->data);
     }
 }
 
