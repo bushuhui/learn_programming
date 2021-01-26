@@ -108,10 +108,66 @@ int q2_triangle_route()
    }
 }
 
+//3.爬楼梯
+//题述：楼梯有 n 级。每次你只能爬 1 级或者 3 级，那么你有多少种方法爬到楼梯的顶部？
+//开始的时候在0级楼梯，顶级在第n级，2<=n<=20
+//输出一个整数，表示爬到n级的方案数。
+//理解：递归函数实现:f(n)=f(n-1)+f(n-3)
+
+long mod=1000000000+7;
+
+long Num(int n)
+{
+    //n<4独立赋值
+    if(n == 1)
+        return 1;
+    if(n == 2)
+        return 1;
+    if(n == 3)
+        return 2;
+    else
+        return Num(n - 1) % mod + Num(n - 3) % mod;
+}
+void q3_stairs()
+{
+    int n;
+    cin >> n;
+    cout << Num(n) << endl;
+}
+
+//例解
+
+typedef long long ll;
+ll ans,n;
+  
+void dfs(ll k) {
+    if(k==n) {
+        ans++;
+        return;
+    } else if(k>n) {
+        return;
+    }
+    dfs(k+1);
+    dfs(k+3);
+}
+  
+void q3_stairs_eg()
+{
+    while(cin>>n)
+    {
+        ans=0;
+        dfs(0);
+        cout<<ans<<endl;
+    }
+}
+
+
+
 int main()
 {
     //q1_post_order_traversal();
     q2_triangle_route();
+    q3_stairs();
 
     return 0;
 }
