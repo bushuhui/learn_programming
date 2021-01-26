@@ -24,3 +24,8 @@
 具体可以参考[多个测试函数例子](1_basicusage/MultiTestFuctions.cpp)，里面的用法。这样让程序保持清晰、易懂。
 
 ![multiTestFunctions](images/multiTestFunctions.png)
+
+
+## Reference
+* https://www.w3resource.com/cpp-exercises/basic/index.php
+* https://edabit.com/challenges/cpp
