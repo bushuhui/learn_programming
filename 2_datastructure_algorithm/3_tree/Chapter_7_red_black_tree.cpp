@@ -175,7 +175,7 @@ class RBTNode
     RBTNode *right;
     RBTNode *parent;
 
-    RBTNode(T value, RBTColor, RBTNode *p, RBTNode *l, RBTNode *r):
+    RBTNode(T value, RBTColor c, RBTNode *p, RBTNode *l, RBTNode *r):
         key(value), color(c), parent(), left(l), right(r){}
 };
 ///////////////////////////////////////////////////////////////////////////////
@@ -229,9 +229,9 @@ private:
     RBTNode<T>* search(RBTNode<T>* x, T key) const;
     RBTNode<T>* iterativeSearch(RBTNode<T>* x, T key) const;
 
-    //查找最小、大节点，返回其键值
-    RBTNode<T>* minimum(RBTNode<T>* tree) const;
-    RBTNode<T>* maximum(RBTNode<T>* tree) const;
+    //查找最小、大节点，返回以tree为根的红黑树最小节点
+    RBTNode<T>* minimum(RBTNode<T>* tree);
+    RBTNode<T>* maximum(RBTNode<T>* tree);
 
     //左、右旋
     void leftRotate(RBTNode<T>* &root, RBTNode<T>* x);
@@ -405,6 +405,153 @@ T RBTree<T>::minimum()
     }
 
     return (T)NULL; //Notice:返回泛型NULL的方式
+}
+
+//查找最大节点
+template <typename T>
+RBTNode<T>* RBTree<T>::maximum(RBTNode<T>* tree)
+{
+    if(tree == NULL)
+    {
+        return NULL;
+    }
+
+    while(tree->right != NULL)
+    {
+        tree = tree->right;
+    }
+
+    return tree;
+}
+
+template <typename T>
+T RBTree<T>::maximum()
+{
+    RBTNode<T> *p = maximum(mRoot);
+    if(p != NULL)
+    {
+        return p->key;
+    }
+
+    return (T)NULL;
+}
+
+//查找x的后继节点
+template <typename T>
+RBTNode<T>* RBTree<T>::successor(RBTNode<T> *x)
+{
+    //当x有右孩子，则其后继节点为x右孩子中最小的节点
+    if(x->right != NULL)
+    {
+        return minimum(x->right);
+    }
+
+    //当x无右孩子
+    RBTNode<T> *y = x->parent;
+    while((y != NULL) && (x== y->right))    //找到x父系节点中第一个是左孩子的那个点（证明原x比其父节点小），其父节点则为原x的后继节点
+    {
+        x = y;  //令当前父节点为x
+        y = y->parent;  //寻找其父节点
+    }
+
+    return y;   //当x为左孩子，父节点（y）就是其后继节点，若x为右孩子，则其父系节点中第一个是左孩子的点的父节点为x的后继节点
+}
+
+//查找x的前驱节点
+template <typename T>
+RBTNode<T>* RBTree<T>::predecessor(RBTNode<T> *x)
+{
+    //当x有左孩子，则前驱节点为x左孩子中最大节点
+    if(x->left != NULL)
+    {
+        return maximum(x->left);
+    }
+
+    //当x无左孩子,若x为右孩子，则其父为前驱，否则其父系节点中第一个为右孩子的节点的父节点为前驱
+    RBTNode<T> *y = x->parent;
+    while((y != NULL) && (x == y->left))
+    {
+        x = y;
+        y = y->parent;
+    }
+
+    return y;
+}
+
+//对x左旋
+template <typename T>
+void RBTree<T>::leftRotate(RBTNode<T> *&root, RBTNode<T> *x)
+{
+    RBTNode<T> *y = x->right;   //需要x的右孩子
+
+    //将y左孩子设为x右孩子
+    x->right = y->left;
+    if(y->left != NULL)
+    {
+        y->left->parent = x;
+    }
+
+    //将y设为x父的对应孩子，若x父为空，则y设为root
+    y->parent = x->parent;
+    if(x->parent == NULL)
+    {
+        root = y;
+    }
+    else
+    {
+        if(x == x->parent->left)
+        {
+            x->parent->left = y;
+        }
+        else
+        {
+            x->parent->right = y;
+        }
+    }
+
+    //设x为y的左孩子
+    y->left = x;
+    x->parent = y;
+}
+
+//对y右旋
+template <typename T>
+void RBTree<T>::rightRotate(RBTNode<T> *&root, RBTNode<T> *y)
+{
+    RBTNode<T>* x = y->left;
+
+    y->left = x->right;
+    if(x->right != NULL)
+    {
+        x->right->parent = y;
+    }
+
+    x->parent = y->parent;
+    if(y->parent == NULL)
+    {
+        root = x;
+    }
+    else
+    {
+        if(y->parent->left == y)
+        {
+            y->parent->left = x;
+        }
+        else
+        {
+            y->parent->right = x;
+        }
+    }
+
+    x->right = y;
+    y->parent = x;
+}
+
+//红黑树的插入
+//1.插入修正函数
+void RBTree<T>::insertFixUp(RBTNode<T> *&root, RBTNode<T> *node)
+{
+
 }
 ///////////////////////////////////////////////////////////////////////////////
 
