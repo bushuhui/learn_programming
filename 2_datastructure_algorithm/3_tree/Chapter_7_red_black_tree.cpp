@@ -159,6 +159,7 @@ RB-DELETE-FIXUP(T, x)
 
 #include <iomanip>
 #include <iostream>
+#include <string.h>
 
 using namespace std;
 
@@ -176,7 +177,7 @@ class RBTNode
     RBTNode *parent;
 
     RBTNode(T value, RBTColor c, RBTNode *p, RBTNode *l, RBTNode *r):
-        key(value), color(c), parent(), left(l), right(r){}
+        key(value), color(c), parent(NULL), left(l), right(r){}
 };
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -242,7 +243,7 @@ private:
     void insertFixUp(RBTNode<T>* &root, RBTNode<T>* node);
 
     //删除函数及修正函数
-    void remove(RBTNode<T>* &root, RBTNode<T>* node);
+    RBTNode<T> *remove(RBTNode<T>* &root, RBTNode<T>* node);
     void removeFixUp(RBTNode<T>* &root, RBTNode<T>* node, RBTNode<T> *parent);
 
     //删除红黑树
@@ -446,9 +447,11 @@ RBTNode<T>* RBTree<T>::successor(RBTNode<T> *x)
         return minimum(x->right);
     }
 
-    //当x无右孩子
+    //当x无右孩子，若x为左孩子，则后继为其父
     RBTNode<T> *y = x->parent;
-    while((y != NULL) && (x== y->right))    //找到x父系节点中第一个是左孩子的那个点（证明原x比其父节点小），其父节点则为原x的后继节点
+
+    //若x是右孩子
+    while((y != NULL) && (x == y->right))    //找到x父系节点中第一个是左孩子的那个点（证明原x比其父节点小），其父节点则为原x的后继节点
     {
         x = y;  //令当前父节点为x
         y = y->parent;  //寻找其父节点
@@ -549,15 +552,490 @@ void RBTree<T>::rightRotate(RBTNode<T> *&root, RBTNode<T> *y)
 
 //红黑树的插入
 //1.插入修正函数
+template <typename T>
 void RBTree<T>::insertFixUp(RBTNode<T> *&root, RBTNode<T> *node)
 {
+    RBTNode<T> *parent, *gparent;
 
+    while ((parent = rb_parent(node)) && rb_is_red(parent))
+    {
+        gparent = rb_parent(parent);
+
+        if(parent == gparent->left)
+        {
+            RBTNode<T> *uncle = gparent->right;
+            if(uncle && rb_is_red(uncle))
+            {
+                rb_set_black(parent);
+                rb_set_black(uncle);
+                rb_set_red(gparent);
+                node = gparent; //虽然node变为了gp，但是原节点仍旧存在，并且可以通过p->son访问且仍旧正确,故只是调整了当前关注的节点
+                continue;
+            }
+            if(node == parent->right)
+            {
+
+                leftRotate(root, parent);
+                RBTNode<T> *temp;
+                temp = parent;
+                parent = node;
+                node = temp;
+            }
+
+            rb_set_black(parent);
+            rb_set_red(gparent);
+            rightRotate(root, gparent);
+        }
+        else
+        {
+            RBTNode<T> *uncle = gparent->left;
+            if(uncle && rb_is_red(uncle))
+            {
+                rb_set_black(parent);
+                rb_set_black(uncle);
+                rb_set_red(gparent);
+                node = gparent;
+                continue;
+            }
+            if(node == parent->left)
+            {
+                rightRotate(root, parent);
+                RBTNode<T> *temp;
+                temp = parent;
+                parent = node;
+                node = temp;
+            }
+
+            rb_set_black(parent);
+            rb_set_red(gparent);
+            leftRotate(root, gparent);
+        }
+    }
+    rb_set_black(root);
+}
+
+//2.插入节点函数
+template <typename T>
+void RBTree<T>::insert(RBTNode<T> *&root, RBTNode<T> *node)
+{
+    RBTNode<T> *y = NULL;
+    RBTNode<T> *x = root;
+    while(x != NULL)
+    {
+        y = x;
+        if(node->key < x->key)
+        {
+            x = x->left;
+        }
+        else
+        {
+            x = x->right;
+        }
+    }
+    rb_parent(node) = y;
+
+    if(y == NULL)
+    {
+        root = node;
+    }
+    else
+    {
+        if(node->key < y->key)
+        {
+            y->left = node;
+        }
+        else
+        {
+            y->right = node;
+        }
+    }
+
+    node->left = NULL;
+    node->right = NULL;
+
+    rb_set_red(node);
+    insertFixUp(root, node);
+}
+
+//3.插入键值
+template <typename T>
+void RBTree<T>::insert(T key)
+{
+    RBTNode<T> *z = NULL;
+    //创建新节点，若失败，则返回
+    if((z = new RBTNode<T>(key, BLACK, NULL, NULL, NULL)) == NULL)
+    {
+        return;
+    }
+    insert(mRoot, z);
+}
+
+//红黑树的删除
+//1.删除修正函数
+template <typename T>
+void RBTree<T>::removeFixUp(RBTNode<T> *&root, RBTNode<T> *node, RBTNode<T> *parent)
+{
+    RBTNode<T> *brother;
+    while((!node || rb_is_black(node)) && node != root)
+    {
+        if(node == parent->left)
+        {
+            brother = parent->right;
+            if(rb_is_red(brother))
+            {
+                rb_set_black(brother);
+                rb_set_red(parent);
+                leftRotate(root, parent);
+                brother = parent->right;
+            }
+            if((!brother->left || rb_is_black(brother->left)) &&
+               (!brother->right || rb_is_black(brother->right)))
+            {
+                rb_set_red(brother);
+                node = parent;
+                parent = rb_parent(node);
+            }
+            else
+            {
+
+                if(!brother->right || rb_is_black(brother->right))
+                {
+                    rb_set_black(brother->left);
+                    rb_set_red(brother);
+                    rightRotate(root, brother);
+                    brother = parent->right;
+                }
+
+                rb_set_color(brother, parent->color);
+                rb_set_black(parent);
+                rb_set_black(brother->right);
+                leftRotate(root, parent);
+                node = root;
+                break;
+            }
+        }
+        else
+        {
+            brother = parent->left;
+            if(rb_is_red(brother))
+            {
+                rb_set_black(brother);
+                rb_set_red(parent);
+                rightRotate(root, parent);
+                brother = parent->left;
+            }
+            if((!brother->left || rb_is_black(brother->left)) &&
+               (!brother->right || rb_is_black(brother->right)))
+            {
+                rb_set_red(brother);
+                node = parent;
+                parent = rb_parent(node);
+            }
+            else
+            {
+                if(!brother->left || rb_is_black(brother->left))
+                {
+                    rb_set_black(brother->right);
+                    rb_set_red(brother);
+                    leftRotate(root, brother);
+                    brother = parent->left;
+                }
+
+                rb_set_color(brother, parent->color);
+                rb_set_black(parent);
+                rb_set_black(brother->left);
+                rightRotate(root, parent);
+                node = root;
+                break;
+            }
+        }
+    }
+
+    if(node)
+    {
+        rb_set_black(node);
+    }
+}
+
+//2.删除节点函数，返回被删除的节点(FIXME!!!!)
+template <typename T>
+RBTNode<T> *RBTree<T>::remove(RBTNode<T> *&root, RBTNode<T> *node)
+{
+    RBTNode<T> *y;
+    RBTNode<T> *x;
+    if(node->left == NULL || node->right == NULL)
+    {
+        y = node;
+    }
+    else
+    {
+        y = node->right;
+        while(y->left != NULL)
+        {
+            y = y->left;
+        }
+    }
+    if(y->left != NULL)
+    {
+        x = y->left;
+    }
+    else if( y->right != NULL)
+    {
+        x = y->right;
+    }
+    else
+    {
+        x->key = (int)NULL;
+        x->left = NULL;
+        x->right = NULL;
+        x->color = BLACK;
+    }
+    x->parent = y->parent;
+
+    if(rb_parent(y) == NULL)
+    {
+        root = x;
+    }
+    else
+    {
+        if(y == y->parent->left)
+        {
+            y->parent->left = x;
+        }
+        else
+        {
+            y->parent->right = x;
+        }
+    }
+
+    if(y != node)
+    {
+        node->key = y->key;
+    }
+
+    if(rb_is_black(y))
+    {
+        removeFixUp(root, x, x->parent);
+    }
+
+    return y;
+}
+
+//3.删除键值的节点
+template <typename T>
+void RBTree<T>::remove(T key)
+{
+    RBTNode<T> *node;
+    if((node = iterativeSearch(mRoot, key)) != NULL)
+    {
+        remove(mRoot, node);
+    }
+}
+
+//删除红黑树
+template <typename T>
+void RBTree<T>::destroy(RBTNode<T> *&tree)
+{
+    if(tree == NULL)
+    {
+        return;
+    }
+
+    if(tree->left != NULL)
+    {
+        return destroy(tree->left);
+    }
+    if(tree->right != NULL)
+    {
+        return destroy(tree->right);
+    }
+
+    delete tree;
+    tree = NULL;
+}
+
+template <typename T>
+void RBTree<T>::destroy()
+{
+    destroy(mRoot);
+}
+
+//打印红黑树
+template <typename T>
+void RBTree<T>::print(RBTNode<T> *tree, T key, int direction)
+{
+    if(tree != NULL)
+    {
+        if(direction == 0)
+        {
+            cout << setw(2) << tree->key << "(B) is root" << endl;
+        }
+        else
+        {
+            cout << setw(2) << tree->key << (rb_is_red(tree)?"(R)":"(B)")
+                 << " is " << setw(2) << key << "'s " << setw(12)
+                 << (direction == 1 ? "right chlid":"left child") << endl;
+        }
+
+        print(tree->left, tree->key, -1);
+        print(tree->right, tree->key, 1);
+    }
+}
+
+template <typename T>
+void RBTree<T>::print()
+{
+    if(mRoot != NULL)
+    {
+        print(mRoot, mRoot->key, 0);
+    }
 }
 ///////////////////////////////////////////////////////////////////////////////
 
 
 #endif
 
+//红黑树的测试
+
+int find_arg(int argc, char *argv[], char *arg)
+{
+    for(int i = 0; i < argc; ++i)
+    {
+        if(0 == strcmp(argv[i], arg))
+        {
+            cout << argv[i] << arg << endl;
+            return 1;
+        }
+    }
+
+    return 0;
+}
+
+int find_int_arg(int argc, char *argv[], char *arg)
+{
+    for(int i = 0; i < argc; ++i)
+    {
+        if(0 == strcmp(argv[i], arg))
+        {
+            int res = atoi(argv[i+1]);
+            return res;
+        }
+    }
+
+    return 0;
+}
+
+int test_RBTree(int argc, char **argv)
+{
+    int a[]= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int len = sizeof(a)/sizeof(a[0]);
+    RBTree<int> *tree = new RBTree<int>();
+
+    for(int i = 0; i < len; ++i)
+    {
+        if(i == 0)
+        {
+            cout << "Origin data: " << endl;
+        }
+        cout << a[i] << " ";
+        if(i == len - 1)
+        {
+            cout << endl;
+        }
+    }
+
+    RBTNode<int> *temp;
+    for(int i = 0; i < len; ++i)
+    {
+         tree->insert(a[i]);
+    }
+
+    if(find_arg(argc, argv, (char *)"preOrder"))
+    {
+        tree->preOrder();
+        cout << endl;
+    }
+    if(find_arg(argc, argv, (char *)"inOrder"))
+    {
+        tree->inOrder();
+        cout << endl;
+    }
+    if(find_arg(argc, argv, (char *)"postOrder"))
+    {
+        tree->postOrder();
+        cout << endl;
+    }
+    if(find_arg(argc, argv, (char *)"search"))
+    {
+        temp = tree->search(find_int_arg(argc, argv, (char *)"search"));
+        cout << "searched, and its value is: " << temp->key << endl;
+    }
+    if(find_arg(argc, argv, (char *)"iterativeSearch"))
+    {
+        temp = tree->iterativeSearch(find_int_arg(argc, argv, (char *)"iterativeSearch"));
+        cout << "searched, and its value is: " << temp->key << endl;
+    }
+    if(find_arg(argc, argv, (char *)"minimum"))
+    {
+        cout << "min is " << tree->minimum() << endl;
+    }
+    if(find_arg(argc, argv, (char *)"maximum"))
+    {
+        cout << "max is " << tree->maximum() << endl;
+    }
+    if(find_arg(argc, argv, (char *)"successor"))
+    {
+        temp = tree->successor(tree->search(find_int_arg(argc, argv, (char *)"successor")));
+        cout << "successor value is: " << temp->key << endl;
+    }
+    if(find_arg(argc, argv, (char *)"predecessor"))
+    {
+        temp = tree->predecessor(tree->search(find_int_arg(argc, argv, (char *)"predecessor")));
+        cout << "predecessor value is: " << temp->key << endl;
+    }
+
+    if(find_arg(argc, argv, (char *)"insert"))
+    {
+        tree->insert(find_int_arg(argc, argv, (char *)"insert"));
+        tree->print();
+    }
+
+    if(find_arg(argc, argv, (char *)"remove"))
+    {
+        tree->remove(find_int_arg(argc, argv, (char *)"remove"));
+        tree->print();
+    }
+
+    tree->destroy();
+}
+
+int main(int argc, char *argv[])
+{
+    cout << "Plz enter test funcs of RBTree:" << endl;
+    cout << "Note: full cmd are: preOrder, inOrder, postOrder, search, [int key], "
+            "iterativeSearch, [int key], minimum, maximum, successor, "
+            "[int key], predecessor, [int key], insert, [int key], "
+            "remove, [int key] \nAnd 0 cmd gives full test result" << endl;
+    if(argc < 1)
+    {
+        cout << "error: insufficient cmd" << endl;
+        return 0;
+    }
+
+    else if(argc == 1)
+    {
+        char *argv_full[] ={(char*)"preOrder", (char*)"inOrder", (char*)"postOrder", (char*)"search", (char*)"9",
+                       (char*)"iterativeSearch", (char*)"9", (char*)"minimum", (char*)"maximum", (char*)"successor",
+                       (char*)"6", (char*)"predecessor", (char*)"9", (char*)"insert", (char*)"20",
+                       (char*)"remove", (char*)"4"};
+        test_RBTree(17, argv_full);
+    }
+    else
+    {
+        test_RBTree(argc, argv);
+    }
+    return 0;
+}
 
 
 

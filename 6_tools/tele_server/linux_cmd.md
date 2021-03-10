@@ -21,6 +21,8 @@ ssh-keygen -t rsa -C "mail@address.com"
 # 
 ```
 
+
+
 ### 杂项
 
 ```shell
@@ -124,7 +126,12 @@ conda remove -n your_environment_name --all
 ## Linux Tips
 
 ```shell
-# 快捷命令：修改/home下 .bashrc 文件，增加代码：
+# 快捷命令与额外设置：修改/home下 .bashrc 文件，增加代码：
+if [ -f ~/.bash_yourname ]; then
+    . ~/.bash_yourname
+fi
+## 在/home下建立相应.bash_yourname文件，添加自己的额外设置，如
 alias shortcmd="full cmd"
+source ~/xxx/xxx/setup.bash
 ```
 
