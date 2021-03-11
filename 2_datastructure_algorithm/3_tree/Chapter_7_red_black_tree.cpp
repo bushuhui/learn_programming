@@ -101,29 +101,28 @@ RB-INSERT-FIXUP(T, z)
 
 /*删除节点的伪代码
 RB-DELETE(T, z)
-01 if left[z] = nil[T] or right[z] = nil[T]       // z为删除的节点（该位置并没有被真正删除，而是值被替代），y为被删除的替换节点，x为y的唯一孩子，用于在y被删除后替换y
-02    then y ← z                                  // 若“z的左孩子” 或 “z的右孩子”为空，则将“z”赋值给 “y”；
-03    else y ← TREE-SUCCESSOR(z)                  // 否则，将“z的后继节点”赋值给 “y”。，此时，后继节点只有一个及以下的子节点，则替换节点寻找到了
-04 if left[y] ≠ nil[T]
-05    then x ← left[y]                            // 由前，y只有一个或0个儿子，若“y的左孩子” 不为空，则将“y的左孩子” 赋值给 “x”；
-06    else x ← right[y]                           // 否则，“y的右孩子” 赋值给 “x”。
-07 p[x] ← p[y]                                    // 将“y的父节点” 设置为 “x的父节点”
-08 if p[y] = nil[T]
-09    then root[T] ← x                            // 情况1：若“y的父节点” 为空，则设置“x” 为 “根节点”。
-10    else if y = left[p[y]]
-11            then left[p[y]] ← x                 // 情况2：若“y是它父节点的左孩子”，则设置“x” 为 “y的父节点的左孩子”
-12            else right[p[y]] ← x                // 情况3：若“y是它父节点的右孩子”，则设置“x” 为 “y的父节点的右孩子”，此时，在树中y被删除，x取代了其位置
-13 if y ≠ z                                       // 当y为z的后继节点时
-14    then key[z] ← key[y]                        // 将“y的值”赋值给“z”，以保证z的位置上有后继节点的值，因为z并没有被删除。注意：这里只拷贝z的值给y，而没有拷贝z的颜色！！！
-15         copy y's satellite data into z
-16 if color[y] = BLACK
-17    then RB-DELETE-FIXUP(T, x)                  // 若“y为黑节点”，则调用调整代码，否则因为删除的节点y为红，删除后对黑平衡无影响，无需操作
-18 return y
-*/
-//当删除节点没有儿子，则直接删除
-//当其有一个儿子，则删除其儿子的位置，并用儿子的值替换删除节点
-//当其有2个儿子，则寻找其后继节点（后继节点为大于删除结点的最小结点）（考虑将树投影直x轴上，可直观判别？），此时后继节点必定只有1个以下的儿子，则转换为前2种情况，同时将后继节点的值赋给删除节点
-//即，删除节点的值必定被删除，但是其位置可能得以保留，用于容纳替换的节点的值
+y = z
+y.origin.color = y.color
+if z.left == NULL   //当删除节点没有儿子，则直接删除
+    x = z.right     //当其有一个儿子，则删除其儿子的位置，并用儿子的值替换删除节点
+    set z.right to replace z
+else if z.right == NULL
+    x = z.left
+    set z.left to replace z
+else y = minimum(z.right)   //当其有2个儿子，则寻找其后继节点（后继节点为大于删除结点的最小结点）,并删除后继节点，将后继节点的值放于用原节点，同时用后继节点的子节点替代后继节点
+    y.origin.color = y.color
+    x = y.right
+    if y.p == z
+        x.p =y
+    else set y.right to replace y
+        y.right = z.right
+        y.right.p = y
+    set y to replace z
+    y.left = z.left
+    y.left.p = y
+    y.color = z.color
+if y.origin.color = BLACK
+    DELETE-FIXUP(T, x)
 
 /*删除节点后对树的调整伪代码（FIXME）
 RB-DELETE-FIXUP(T, x)
@@ -676,7 +675,7 @@ template <typename T>
 void RBTree<T>::removeFixUp(RBTNode<T> *&root, RBTNode<T> *node, RBTNode<T> *parent)
 {
     RBTNode<T> *brother;
-    while((!node || rb_is_black(node)) && node != root)
+    while((node != NULL || rb_is_black(node)) && node != root)
     {
         if(node == parent->left)
         {
@@ -751,22 +750,71 @@ void RBTree<T>::removeFixUp(RBTNode<T> *&root, RBTNode<T> *node, RBTNode<T> *par
         }
     }
 
-    if(node)
+    if(node != NULL)
     {
         rb_set_black(node);
     }
 }
 
-//2.删除节点函数，返回被删除的节点(FIXME!!!!)
+//2.删除节点函数，返回被删除的节点(Notice: can be optimized)
 template <typename T>
 RBTNode<T> *RBTree<T>::remove(RBTNode<T> *&root, RBTNode<T> *node)
 {
-    RBTNode<T> *y;
-    RBTNode<T> *x;
-    if(node->left == NULL || node->right == NULL)
+    RBTNode<T> *y = NULL;
+    RBTNode<T> *x = NULL;
+
+    y = node;
+    RBTColor y_origin = y->color;
+
+    //当node只有0或1个子节点，移除node并用子节点（或NULL）替换之
+    if (node->left == NULL)
     {
-        y = node;
+        x = node->right;
+        if(node->parent == NULL)
+        {
+            root = x;
+        }
+        else
+        {
+            if (node == node->parent->left)
+            {
+                node->parent->left = x;
+            }
+            else
+            {
+                node->parent->right = node->right;
+            }
+        }
+        if(x)
+        {
+            x->parent = node->parent;
+        }
     }
+    else if (node->right == NULL)
+    {
+        x = node->left;
+        if(node->parent == NULL)
+        {
+            root = x;
+        }
+        else
+        {
+            if (node == node->parent->left)
+            {
+                node->parent->left = x;
+            }
+            else
+            {
+                node->parent->right = x;
+            }
+
+            if(x)
+            {
+                x->parent = node->parent;
+            }
+        }
+    }
+    //当node有二个子节点，找到其后继节点，用后继节点替代node，用后继节点的右孩子（或NULL）替换后继节点
     else
     {
         y = node->right;
@@ -774,50 +822,73 @@ RBTNode<T> *RBTree<T>::remove(RBTNode<T> *&root, RBTNode<T> *node)
         {
             y = y->left;
         }
-    }
-    if(y->left != NULL)
-    {
-        x = y->left;
-    }
-    else if( y->right != NULL)
-    {
-        x = y->right;
-    }
-    else
-    {
-        x->key = (int)NULL;
-        x->left = NULL;
-        x->right = NULL;
-        x->color = BLACK;
-    }
-    x->parent = y->parent;
 
-    if(rb_parent(y) == NULL)
-    {
-        root = x;
-    }
-    else
-    {
-        if(y == y->parent->left)
+        y_origin = y->color;
+        if(y->right != NULL)
         {
-            y->parent->left = x;
+            x = y->right;   //x为右孩子或NULL（y->left = NULL必定成立）
+        }
+        if (y->parent == node)
+        {
+            if(x)
+            {
+                x->parent = y;
+            }
         }
         else
         {
-            y->parent->right = x;
+            if(y->parent == NULL)
+            {
+                root = x;
+            }
+            else
+            {
+                if (y == y->parent->left)
+                {
+                    y->parent->left = x;
+                }
+                else
+                {
+                    y->parent->right = x;
+                }
+                if(x)
+                {
+                    x->parent = y->parent;
+                }
+            }
+
+            y->right = node->right;
+            y->right->parent = y;
         }
+        if(node->parent == NULL)
+        {
+            root = y;
+        }
+        else
+        {
+            if (node == node->parent->left)
+            {
+                node->parent->left = y;
+            }
+            else
+            {
+                node->parent->right = y;
+            }
+            y->parent = node->parent;
+        }
+
+        y->left = node->left;
+        y->left->parent = y;
+        y->color = node->color;
+
     }
 
-    if(y != node)
-    {
-        node->key = y->key;
-    }
-
-    if(rb_is_black(y))
+    if (y_origin == BLACK && x != NULL)
     {
         removeFixUp(root, x, x->parent);
     }
 
+    delete node;
     return y;
 }
 
@@ -843,11 +914,11 @@ void RBTree<T>::destroy(RBTNode<T> *&tree)
 
     if(tree->left != NULL)
     {
-        return destroy(tree->left);
+        destroy(tree->left);
     }
     if(tree->right != NULL)
     {
-        return destroy(tree->right);
+        destroy(tree->right);
     }
 
     delete tree;
@@ -903,7 +974,7 @@ int find_arg(int argc, char *argv[], char *arg)
     {
         if(0 == strcmp(argv[i], arg))
         {
-            cout << argv[i] << arg << endl;
+            cout << argv[i] << ": " << endl;
             return 1;
         }
     }
@@ -1007,6 +1078,8 @@ int test_RBTree(int argc, char **argv)
     }
 
     tree->destroy();
+    delete tree;
+    tree = NULL;
 }
 
 int main(int argc, char *argv[])
@@ -1025,15 +1098,16 @@ int main(int argc, char *argv[])
     else if(argc == 1)
     {
         char *argv_full[] ={(char*)"preOrder", (char*)"inOrder", (char*)"postOrder", (char*)"search", (char*)"9",
-                       (char*)"iterativeSearch", (char*)"9", (char*)"minimum", (char*)"maximum", (char*)"successor",
-                       (char*)"6", (char*)"predecessor", (char*)"9", (char*)"insert", (char*)"20",
-                       (char*)"remove", (char*)"4"};
+                            (char*)"iterativeSearch", (char*)"9", (char*)"minimum", (char*)"maximum", (char*)"successor",
+                            (char*)"6", (char*)"predecessor", (char*)"9", (char*)"insert", (char*)"20",
+                            (char*)"remove", (char*)"4"};
         test_RBTree(17, argv_full);
     }
     else
     {
         test_RBTree(argc, argv);
     }
+
     return 0;
 }
 
