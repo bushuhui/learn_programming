@@ -26,7 +26,7 @@ git config --global user.email zhangmm94@163.com
 ### 1.3 设置SSH公钥
 使用SSH提交代码到服务器使用公钥来识别用户身份，因此免去了用户名、密码的输入。
 
-Windows下，在Git GUI里面的，菜单`Help` - `SSH Key`生成SSH公钥
+Windows下，在`Git GUI Here`里面的，菜单`Help` - `Show SSH Key`生成SSH公钥
 
 Linux下建议将SSH公钥设置好。
 ```
