@@ -5,6 +5,7 @@
 #include <math.h>
 
 #include <QtGui>
+#include <QGraphicsSceneMouseEvent>
 
 #include "map_viewer.h"
 

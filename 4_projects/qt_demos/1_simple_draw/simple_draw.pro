@@ -1,5 +1,5 @@
 TEMPLATE = app
-QT += gui
+QT += gui widgets
 TARGET = simple_draw
 
 SOURCES += \

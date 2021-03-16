@@ -4,7 +4,7 @@
 
 TEMPLATE = app
 TARGET = draw_map
-QT += gui
+QT += gui widgets
 
 INCLUDEPATH += .
 
