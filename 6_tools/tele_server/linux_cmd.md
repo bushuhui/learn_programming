@@ -52,6 +52,19 @@ find file_path -name "*" | xargs dos2unix
 # 关闭进程
 kill -9 [pid]
 killall -9 software_name
+
+# 查询进程
+ps --help
+top
+htop
+
+# github加速
+https://github.zhlh6.cn
+## github raw
+raw.githubusercontent.com -> raw.sevencdn.com
+
+#打开文件夹gui (可能需要安装相关lib)
+nautilus [folder_path, none for home folder]
 ```
 
 
@@ -89,7 +102,10 @@ pkg-config opencv --libs
 
 # 查询cudnn
 cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+
 ```
+
+
 
 ### Conda相关
 
@@ -122,6 +138,24 @@ conda info --envs
 conda remove -n your_environment_name --all
 
 ```
+
+
+
+## Python相关
+
+[pytorch版本](https://pytorch.org/get-started/previous-versions/)
+
+```python
+# 查询pytorch
+import torch
+torch.__version__
+torch.cuda.is_available()
+torch.cuda.version
+```
+
+
+
+
 
 ## Linux Tips
 
