@@ -23,3 +23,11 @@ qmake-qt4 simple_draw.pro
 make
 ```
 
+## 其他例子程序
+
+* [DynamicPathPlanning](https://gitee.com/pi-lab/DynamicPathPlanning) - Demo of dynamic path planning
+
+* [FastSLAM](https://gitee.com/pi-lab/fastslam) - FastSLAM with GUI
+* [SimpGCS](https://gitee.com/pi-lab/SimpGCS) - Simple Ground Control Station
+
+- [PI-SLAM](https://gitee.com/pi-lab/pi-slam) - Modularized SLAM System by PI-LAB
