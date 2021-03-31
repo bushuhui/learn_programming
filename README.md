@@ -25,7 +25,7 @@
 * 数据结构、算法
 * Linux
 * IDE（QtCreator等）
-* Debug能力
+* [Debug能力](6_tools/debug)
 * 第三方库，Qt，OpenGL等
 * 综合练习，小项目（小游戏，模拟仿真程序）
 * 高级技巧（CMake，库编写）
