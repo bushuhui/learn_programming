@@ -20,15 +20,15 @@
 
 本教程提供了一个编程能力的综合学习引导，主要需要学习的内容和技能包括：
 
-* C++语法、编程
+* [C++语法、编程基础](1_c++)
 * [Git](6_tools/git), [Markdown](6_tools/markdown)
-* 数据结构、算法
-* Linux
-* IDE（QtCreator等）
+* [数据结构、算法](2_datastructure_algorithm)
+* [Linux](6_tools/linux)
+* IDE（[QtCreator](https://blog.csdn.net/sinat_27554409/article/details/78171499) 等）
 * [Debug能力](6_tools/debug)
 * 第三方库，Qt，OpenGL等
-* 综合练习，小项目（小游戏，模拟仿真程序）
-* 高级技巧（CMake，库编写）
+* [综合练习，小项目（小游戏，模拟仿真程序）](4_projects)
+* 高级技巧（[CMake](6_tools/cmake)，[库编写](5_advanced/3_Library)）
 * [代码规范](5_advanced/programming_standard)
 * [设计模式](5_advanced/4_DesignPattern_UML)
 * 编程思维，分析问题、分解问题、解决问题能力
