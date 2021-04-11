@@ -41,6 +41,10 @@ cat /proc/cpuinfo
 # 查询系统信息
 lspci
 lspci | grep -i vga
+lsusb
+
+#查询内存
+free -m
 
 # 抓取相关内容
 someCmd | grep interested_content
@@ -65,6 +69,13 @@ raw.githubusercontent.com -> raw.sevencdn.com
 
 #打开文件夹gui (可能需要安装相关lib)
 nautilus [folder_path, none for home folder]
+
+#debug of gdb
+gdb
+(在gdb环境下)file [filename]
+run
+## 查看报错位置
+backtrace
 ```
 
 
