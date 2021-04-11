@@ -4,3 +4,4 @@ a.out
 *.exe
 settings.json
 .vscode
+build*
