@@ -106,3 +106,8 @@
 
 ## 3. log文件分析
 
+
+
+
+## 4. 参考资料
+* [段错误(segmentation fault )：9种实用调试方法](https://m.toutiaocdn.com/i6833639010007515659)
