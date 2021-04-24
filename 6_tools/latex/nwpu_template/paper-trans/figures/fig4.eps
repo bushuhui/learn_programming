@@ -1,0 +1,4254 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: (4bitle.pdf)
+%%Version: 1 4
+%%Creator: Adobe Acrobat 7.0
+%%CreationDate: 13:54:12 06/06/09
+%%For: (qy)
+%%DocumentData: Clean7Bit
+%%LanguageLevel: 2
+%%ADO_ContainsXMP: MainFirst
+%%BoundingBox: 0 163 595 663
+%%HiResBoundingBox: 0.0 0.0 595.22 842.0
+%%Pages: 0
+%%DocumentProcessColors: Cyan Magenta Yellow Black
+%%DocumentSuppliedResources:
+%%+ procset (Adobe Acrobat - PDF operators) 1.2 0
+%%EndComments
+%%BeginProlog
+%%EndProlog
+%%BeginSetup
+%ADOPrintSettings: L2 W0 VM op crd os scsa T h ef bg ucr sf ef r b fa pr seps ttf hb EF t2 irt ´òÓ¡»ú£¯PostScript É«²Ê¹ÜÀí 0
+%%BeginResource: procset l2check 6.0 1
+%%Copyright: Copyright 1993,2001 Adobe Systems Incorporated. All Rights Reserved.
+systemdict /languagelevel known
+{ systemdict /languagelevel get 1 eq }
+{ true }
+ifelse
+{
+initgraphics /Helvetica findfont 18 scalefont setfont
+72 600 moveto (Error: This application does not support) dup show
+72 580 moveto (printing to a PostScript Language Level 1 printer.) dup show
+exch = =
+/Times-Roman findfont 16 scalefont setfont
+72 500 moveto (As a workaround, try selecting Print As Image from) show
+72 480 moveto (the Advanced Print dialog.) show
+showpage
+quit
+}
+if
+%%EndResource
+/currentpacking where{pop currentpacking true setpacking}if
+%%BeginResource: procset pdfvars 6.0 1
+%%Copyright: Copyright 1987-2002 Adobe Systems Incorporated. All Rights Reserved.
+%%Title: definition of dictionary of variables used by PDF & PDFText procsets
+userdict /PDF 162 dict put
+userdict /PDFVars 89 dict dup begin put
+/docSetupDone false def
+/InitAll 0 def
+/TermAll 0 def
+/DocInitAll 0 def
+/DocTermAll 0 def
+/_pdfEncodings 2 array def
+/_pdf_str1 1 string def
+/_pdf_i 0 def
+/_pdf_na 0 def
+/_pdf_showproc 0 def
+/_italMtx [1 0 .212557 1 0 0] def
+/_italMtx_WMode1 [1 -.212557 0 1 0 0] def
+/_italMtxType0 [1 0 .1062785 1 0 0] def
+/_italMtx_WMode1Type0 [1 -.1062785 0 1 0 0] def
+/_basefont 0 def
+/_basefonto 0 def
+/_pdf_oldCIDInit null def
+/_pdf_FontDirectory 30 dict def
+/_categories 10 dict def
+/_sa? true def
+/_ColorSep5044? false def
+/nulldict 0 dict def
+/_processColors 0 def
+/overprintstack null def
+/_defaulttransfer currenttransfer def
+/_defaultflatness currentflat def
+/_defaulthalftone null def
+/_defaultcolortransfer null def
+/_defaultblackgeneration null def
+/_defaultundercolorremoval null def
+/_defaultcolortransfer null def
+PDF begin
+[/c/cs/cm/d/d0/f/h/i/j/J/l/m/M/n/q/Q/re/ri/S/sc/sh/Tf/w/W
+/applyInterpFunc/applystitchFunc/domainClip/encodeInput
+/initgs/int/limit/rangeClip
+/defineRes/undefineRes/findRes/setSA/pl
+/? /! /| /: /+ /GetGlyphDirectory
+/pdf_flushFilters /pdf_readstring /pdf_dictOp /pdf_image /pdf_maskedImage
+/pdf_shfill /pdf_sethalftone
+] {null def} bind forall
+end
+end
+%%EndResource
+PDFVars begin PDF begin
+%%BeginResource: procset pdfutil 6.0 1
+%%Copyright: Copyright 1993-2001 Adobe Systems Incorporated. All Rights Reserved.
+%%Title: Basic utilities used by other PDF procsets
+/bd {bind def} bind def
+/ld {load def} bd
+/bld {
+dup length dict begin
+{ null def } forall
+bind
+end
+def
+} bd
+/dd { PDFVars 3 1 roll put } bd
+/xdd { exch dd } bd
+/Level2?
+systemdict /languagelevel known
+{ systemdict /languagelevel get 2 ge } { false } ifelse
+def
+/Level1? Level2? not def
+/Level3?
+systemdict /languagelevel known
+{systemdict /languagelevel get 3 eq } { false } ifelse
+def
+/getifknown {
+2 copy known { get true } { pop pop false } ifelse
+} bd
+/here {
+currentdict exch getifknown
+} bd
+/isdefined? { where { pop true } { false } ifelse } bd
+%%EndResource
+%%BeginResource: procset pdf 6.0 1
+%%Copyright: Copyright 1998-2003 Adobe Systems Incorporated. All Rights Reserved.
+%%Title: General operators for PDF, common to all Language Levels.
+/cm { matrix astore concat } bd
+/d /setdash ld
+/f /fill ld
+/h /closepath ld
+/i {dup 0 eq {pop _defaultflatness} if setflat} bd
+/j /setlinejoin ld
+/J /setlinecap ld
+/M /setmiterlimit ld
+/n /newpath ld
+/S /stroke ld
+/w /setlinewidth ld
+/W /clip ld
+/sg /setgray ld
+/initgs {
+0 setgray
+[] 0 d
+0 j
+0 J
+10 M
+1 w
+false setSA
+/_defaulttransfer load settransfer
+0 i
+/RelativeColorimetric ri
+newpath
+} bd
+/int {
+dup 2 index sub 3 index 5 index sub div 6 -2 roll sub mul
+exch pop add exch pop
+} bd
+/limit {
+dup 2 index le { exch } if pop
+dup 2 index ge { exch } if pop
+} bd
+/domainClip {
+Domain aload pop 3 2 roll
+limit
+} [/Domain] bld
+/applyInterpFunc {
+0 1 DimOut 1 sub
+{
+dup C0 exch get exch
+dup C1 exch get exch
+3 1 roll
+1 index sub
+3 index
+N exp mul add
+exch
+currentdict /Range_lo known
+{
+dup Range_lo exch get exch
+Range_hi exch get
+3 2 roll limit
+}
+{
+pop
+}
+ifelse
+exch
+} for
+pop
+} [/DimOut /C0 /C1 /N /Range_lo /Range_hi] bld
+/encodeInput {
+NumParts 1 sub
+0 1 2 index
+{
+dup Bounds exch get
+2 index gt
+{ exit }
+{ dup
+3 index eq
+{ exit }
+{ pop } ifelse
+} ifelse
+} for
+3 2 roll pop
+dup Bounds exch get exch
+dup 1 add Bounds exch get exch
+2 mul
+dup Encode exch get exch
+1 add Encode exch get
+int
+} [/NumParts /Bounds /Encode] bld
+/rangeClip {
+exch dup Range_lo exch get
+exch Range_hi exch get
+3 2 roll
+limit
+} [/Range_lo /Range_hi] bld
+/applyStitchFunc {
+Functions exch get exec
+currentdict /Range_lo known {
+0 1 DimOut 1 sub {
+DimOut 1 add -1 roll
+rangeClip
+} for
+} if
+} [/Functions /Range_lo /DimOut] bld
+/pdf_flushfilters
+{
+aload length
+{ dup status
+1 index currentfile ne and
+{ dup flushfile closefile }
+{ pop }
+ifelse
+} repeat
+} bd
+/pdf_readstring
+{
+1 index dup length 1 sub get
+exch readstring pop
+exch pdf_flushfilters
+} bind def
+/pdf_dictOp
+{
+3 2 roll
+10 dict copy
+begin
+_Filters dup length 1 sub get def
+currentdict exch exec
+_Filters pdf_flushfilters
+end
+} [/_Filters] bld
+/pdf_imagemask {{imagemask} /DataSource pdf_dictOp} bd
+/pdf_shfill {{sh} /DataSource pdf_dictOp} bd
+/pdf_sethalftone {{sethalftone} /Thresholds pdf_dictOp} bd
+/masks [ 2#10000000
+2#11000000
+2#11100000
+2#11110000
+2#11111000
+2#11111100
+2#11111110
+2#11111111 ] def
+/addNBits
+{
+/numBits exch def
+/byte exch def
+OutBitOffset numBits add 8 gt
+{
+byte OutBitOffset 8 sub bitshift
+OutBuffer OutByteIndex get or
+OutBuffer OutByteIndex 3 -1 roll put
+/OutByteIndex OutByteIndex 1 add def
+/bitsDoneSoFar OutBitOffset def
+/OutBitOffset numBits 8 OutBitOffset sub sub def
+OutBitOffset 0 gt
+{
+byte bitsDoneSoFar bitshift
+masks numBits bitsDoneSoFar sub get and
+OutBuffer OutByteIndex 3 -1 roll put
+} if
+}
+{
+byte masks numBits 1 sub get and
+OutBitOffset neg bitshift
+OutBuffer OutByteIndex get or
+OutBuffer OutByteIndex 3 -1 roll put
+/OutBitOffset OutBitOffset numBits add def
+OutBitOffset 8 eq
+{
+/OutBitOffset 0 def
+/OutByteIndex OutByteIndex 1 add def
+} if
+} ifelse
+} bind def
+/DevNNFilter
+{
+/InBuffer Width NumComps mul BitsPerComponent mul 7 add 8 idiv string def
+AllSource InBuffer readstring pop pop
+/outlen Width NewNumComps mul BitsPerComponent mul 7 add 8 idiv def
+/OutBuffer outlen string def
+0 1 outlen 1 sub { OutBuffer exch 0 put } for
+/InByteIndex 0 def
+/InBitOffset 0 def
+/OutByteIndex 0 def
+/OutBitOffset 0 def
+/KeepArray NumComps array def
+0 1 NumComps 1 sub { KeepArray exch true put } for
+DevNNones { KeepArray exch false put } forall
+Width {
+KeepArray
+{
+{
+/bitsLeft BitsPerComponent def
+{
+bitsLeft 0 le { exit } if
+/bitsToDo 8 InBitOffset sub dup bitsLeft gt { pop bitsLeft } if def
+InBuffer InByteIndex get
+InBitOffset bitshift
+bitsToDo addNBits
+/bitsLeft bitsLeft bitsToDo sub def
+InBitOffset bitsToDo add
+dup 8 mod /InBitOffset exch def
+8 idiv InByteIndex add /InByteIndex exch def
+} loop
+}
+{
+InBitOffset BitsPerComponent add
+dup 8 mod /InBitOffset exch def
+8 idiv InByteIndex add /InByteIndex exch def
+}
+ifelse
+}
+forall
+} repeat
+OutBuffer
+} bd
+/pdf_image
+{
+20 dict copy
+begin
+/UnusedNones where { /UnusedNones get}{false} ifelse
+{
+/NumComps Decode length 2 div cvi def
+/OrigDecode Decode def
+/NumNones DevNNones length def
+/NewNumComps NumComps NumNones sub def
+/Decode NewNumComps 2 mul cvi array def
+/devNNindx 0 def
+/decIndx 0 def
+/cmpIndx 0 def
+NumComps {
+cmpIndx DevNNones devNNindx get eq
+{
+/devNNindx devNNindx 1 add dup NumNones eq {pop 0} if def
+}
+{
+Decode decIndx OrigDecode cmpIndx 2 mul get put
+Decode decIndx 1 add OrigDecode cmpIndx 2 mul 1 add get put
+/decIndx decIndx 2 add def
+} ifelse
+/cmpIndx cmpIndx 1 add def
+} repeat
+_Filters dup length 1 sub get /AllSource exch def
+/DataSource { DevNNFilter } def
+}
+{ _Filters dup length 1 sub get /DataSource exch def }
+ifelse
+currentdict image
+_Filters pdf_flushfilters
+end
+} bd
+/pdf_maskedImage
+{
+10 dict copy begin
+/miDict currentdict def
+/DataDict DataDict 10 dict copy def
+DataDict begin
+/DataSource
+_Filters dup length 1 sub get
+def
+miDict image
+_Filters pdf_flushfilters
+end
+miDict /InterleaveType get 3 eq
+{ MaskDict /DataSource get dup type /filetype eq { closefile } { pop } ifelse }
+if
+end
+} [/miDict /DataDict /_Filters] bld
+/RadialShade {
+40 dict begin
+/background exch def
+/ext1 exch def
+/ext0 exch def
+/BBox exch def
+/r2 exch def
+/c2y exch def
+/c2x exch def
+/r1 exch def
+/c1y exch def
+/c1x exch def
+/rampdict exch def
+gsave
+BBox length 0 gt {
+newpath
+BBox 0 get BBox 1 get moveto
+BBox 2 get BBox 0 get sub 0 rlineto
+0 BBox 3 get BBox 1 get sub rlineto
+BBox 2 get BBox 0 get sub neg 0 rlineto
+closepath
+clip
+newpath
+} if
+c1x c2x eq
+{
+c1y c2y lt {/theta 90 def}{/theta 270 def} ifelse
+}
+{
+/slope c2y c1y sub c2x c1x sub div def
+/theta slope 1 atan def
+c2x c1x lt c2y c1y ge and { /theta theta 180 sub def} if
+c2x c1x lt c2y c1y lt and { /theta theta 180 add def} if
+}
+ifelse
+gsave
+clippath
+c1x c1y translate
+theta rotate
+-90 rotate
+{ pathbbox } stopped
+{ 0 0 0 0 } if
+/yMax exch def
+/xMax exch def
+/yMin exch def
+/xMin exch def
+grestore
+xMax xMin eq yMax yMin eq or
+{
+grestore
+end
+}
+{
+/max { 2 copy gt { pop } {exch pop} ifelse } bind def
+/min { 2 copy lt { pop } {exch pop} ifelse } bind def
+rampdict begin
+40 dict begin
+background length 0 gt { background sssetbackground gsave clippath fill grestore } if
+gsave
+c1x c1y translate
+theta rotate
+-90 rotate
+/c2y c1x c2x sub dup mul c1y c2y sub dup mul add sqrt def
+/c1y 0 def
+/c1x 0 def
+/c2x 0 def
+ext0 {
+0 getrampcolor
+c2y r2 add r1 sub 0.0001 lt
+{
+c1x c1y r1 360 0 arcn
+pathbbox
+/aymax exch def
+/axmax exch def
+/aymin exch def
+/axmin exch def
+/bxMin xMin axmin min def
+/byMin yMin aymin min def
+/bxMax xMax axmax max def
+/byMax yMax aymax max def
+bxMin byMin moveto
+bxMax byMin lineto
+bxMax byMax lineto
+bxMin byMax lineto
+bxMin byMin lineto
+eofill
+}
+{
+c2y r1 add r2 le
+{
+c1x c1y r1 0 360 arc
+fill
+}
+{
+c2x c2y r2 0 360 arc fill
+r1 r2 eq
+{
+/p1x r1 neg def
+/p1y c1y def
+/p2x r1 def
+/p2y c1y def
+p1x p1y moveto p2x p2y lineto p2x yMin lineto p1x yMin lineto
+fill
+}
+{
+/AA r2 r1 sub c2y div def
+AA -1 eq
+{ /theta 89.99 def}
+{ /theta AA 1 AA dup mul sub sqrt div 1 atan def}
+ifelse
+/SS1 90 theta add dup sin exch cos div def
+/p1x r1 SS1 SS1 mul SS1 SS1 mul 1 add div sqrt mul neg def
+/p1y p1x SS1 div neg def
+/SS2 90 theta sub dup sin exch cos div def
+/p2x r1 SS2 SS2 mul SS2 SS2 mul 1 add div sqrt mul def
+/p2y p2x SS2 div neg def
+r1 r2 gt
+{
+/L1maxX p1x yMin p1y sub SS1 div add def
+/L2maxX p2x yMin p2y sub SS2 div add def
+}
+{
+/L1maxX 0 def
+/L2maxX 0 def
+}ifelse
+p1x p1y moveto p2x p2y lineto L2maxX L2maxX p2x sub SS2 mul p2y add lineto
+L1maxX L1maxX p1x sub SS1 mul p1y add lineto
+fill
+}
+ifelse
+}
+ifelse
+} ifelse
+} if
+c1x c2x sub dup mul
+c1y c2y sub dup mul
+add 0.5 exp
+0 dtransform
+dup mul exch dup mul add 0.5 exp 72 div
+0 72 matrix defaultmatrix dtransform dup mul exch dup mul add sqrt
+72 0 matrix defaultmatrix dtransform dup mul exch dup mul add sqrt
+1 index 1 index lt { exch } if pop
+/hires exch def
+hires mul
+/numpix exch def
+/numsteps NumSamples def
+/rampIndxInc 1 def
+/subsampling false def
+numpix 0 ne
+{
+NumSamples numpix div 0.5 gt
+{
+/numsteps numpix 2 div round cvi dup 1 le { pop 2 } if def
+/rampIndxInc NumSamples 1 sub numsteps div def
+/subsampling true def
+} if
+} if
+/xInc c2x c1x sub numsteps div def
+/yInc c2y c1y sub numsteps div def
+/rInc r2 r1 sub numsteps div def
+/cx c1x def
+/cy c1y def
+/radius r1 def
+newpath
+xInc 0 eq yInc 0 eq rInc 0 eq and and
+{
+0 getrampcolor
+cx cy radius 0 360 arc
+stroke
+NumSamples 1 sub getrampcolor
+cx cy radius 72 hires div add 0 360 arc
+0 setlinewidth
+stroke
+}
+{
+0
+numsteps
+{
+dup
+subsampling { round } if
+getrampcolor
+cx cy radius 0 360 arc
+/cx cx xInc add def
+/cy cy yInc add def
+/radius radius rInc add def
+cx cy radius 360 0 arcn
+eofill
+rampIndxInc add
+}
+repeat
+pop
+} ifelse
+ext1 {
+c2y r2 add r1 lt
+{
+c2x c2y r2 0 360 arc
+fill
+}
+{
+c2y r1 add r2 sub 0.0001 le
+{
+c2x c2y r2 360 0 arcn
+pathbbox
+/aymax exch def
+/axmax exch def
+/aymin exch def
+/axmin exch def
+/bxMin xMin axmin min def
+/byMin yMin aymin min def
+/bxMax xMax axmax max def
+/byMax yMax aymax max def
+bxMin byMin moveto
+bxMax byMin lineto
+bxMax byMax lineto
+bxMin byMax lineto
+bxMin byMin lineto
+eofill
+}
+{
+c2x c2y r2 0 360 arc fill
+r1 r2 eq
+{
+/p1x r2 neg def
+/p1y c2y def
+/p2x r2 def
+/p2y c2y def
+p1x p1y moveto p2x p2y lineto p2x yMax lineto p1x yMax lineto
+fill
+}
+{
+/AA r2 r1 sub c2y div def
+AA -1 eq
+{ /theta 89.99 def}
+{ /theta AA 1 AA dup mul sub sqrt div 1 atan def}
+ifelse
+/SS1 90 theta add dup sin exch cos div def
+/p1x r2 SS1 SS1 mul SS1 SS1 mul 1 add div sqrt mul neg def
+/p1y c2y p1x SS1 div sub def
+/SS2 90 theta sub dup sin exch cos div def
+/p2x r2 SS2 SS2 mul SS2 SS2 mul 1 add div sqrt mul def
+/p2y c2y p2x SS2 div sub def
+r1 r2 lt
+{
+/L1maxX p1x yMax p1y sub SS1 div add def
+/L2maxX p2x yMax p2y sub SS2 div add def
+}
+{
+/L1maxX 0 def
+/L2maxX 0 def
+}ifelse
+p1x p1y moveto p2x p2y lineto L2maxX L2maxX p2x sub SS2 mul p2y add lineto
+L1maxX L1maxX p1x sub SS1 mul p1y add lineto
+fill
+}
+ifelse
+}
+ifelse
+} ifelse
+} if
+grestore
+grestore
+end
+end
+end
+} ifelse
+} bd
+/GenStrips {
+40 dict begin
+/background exch def
+/ext1 exch def
+/ext0 exch def
+/BBox exch def
+/y2 exch def
+/x2 exch def
+/y1 exch def
+/x1 exch def
+/rampdict exch def
+gsave
+BBox length 0 gt {
+newpath
+BBox 0 get BBox 1 get moveto
+BBox 2 get BBox 0 get sub 0 rlineto
+0 BBox 3 get BBox 1 get sub rlineto
+BBox 2 get BBox 0 get sub neg 0 rlineto
+closepath
+clip
+newpath
+} if
+x1 x2 eq
+{
+y1 y2 lt {/theta 90 def}{/theta 270 def} ifelse
+}
+{
+/slope y2 y1 sub x2 x1 sub div def
+/theta slope 1 atan def
+x2 x1 lt y2 y1 ge and { /theta theta 180 sub def} if
+x2 x1 lt y2 y1 lt and { /theta theta 180 add def} if
+}
+ifelse
+gsave
+clippath
+x1 y1 translate
+theta rotate
+{ pathbbox } stopped
+{ 0 0 0 0 } if
+/yMax exch def
+/xMax exch def
+/yMin exch def
+/xMin exch def
+grestore
+xMax xMin eq yMax yMin eq or
+{
+grestore
+end
+}
+{
+rampdict begin
+20 dict begin
+background length 0 gt { background sssetbackground gsave clippath fill grestore } if
+gsave
+x1 y1 translate
+theta rotate
+/xStart 0 def
+/xEnd x2 x1 sub dup mul y2 y1 sub dup mul add 0.5 exp def
+/ySpan yMax yMin sub def
+/numsteps NumSamples def
+/rampIndxInc 1 def
+/subsampling false def
+xStart 0 transform
+xEnd 0 transform
+3 -1 roll
+sub dup mul
+3 1 roll
+sub dup mul
+add 0.5 exp 72 div
+0 72 matrix defaultmatrix dtransform dup mul exch dup mul add sqrt
+72 0 matrix defaultmatrix dtransform dup mul exch dup mul add sqrt
+1 index 1 index lt { exch } if pop
+mul
+/numpix exch def
+numpix 0 ne
+{
+NumSamples numpix div 0.5 gt
+{
+/numsteps numpix 2 div round cvi dup 1 le { pop 2 } if def
+/rampIndxInc NumSamples 1 sub numsteps div def
+/subsampling true def
+} if
+} if
+ext0 {
+0 getrampcolor
+xMin xStart lt
+{ xMin yMin xMin neg ySpan rectfill } if
+} if
+/xInc xEnd xStart sub numsteps div def
+/x xStart def
+0
+numsteps
+{
+dup
+subsampling { round } if
+getrampcolor
+x yMin xInc ySpan rectfill
+/x x xInc add def
+rampIndxInc add
+}
+repeat
+pop
+ext1 {
+xMax xEnd gt
+{ xEnd yMin xMax xEnd sub ySpan rectfill } if
+} if
+grestore
+grestore
+end
+end
+end
+} ifelse
+} bd
+/currentdistillerparams where { pop currentdistillerparams /CoreDistVersion get 5000 lt}{true}ifelse
+{
+/PDFMark5 {cleartomark} bd
+}
+{
+/PDFMark5 {pdfmark} bd
+}ifelse
+/ReadByPDFMark5
+{
+2 dict begin
+/makerString exch def string /tmpString exch def
+{
+currentfile tmpString readline pop
+makerString anchorsearch
+{
+pop pop cleartomark exit
+}
+{
+3 copy /PUT PDFMark5 pop 2 copy (\n) /PUT PDFMark5
+} ifelse
+}loop
+end
+}bd
+%%EndResource
+%%BeginResource: procset pdflev2 6.0 1
+%%Copyright: Copyright 1987-2001,2003 Adobe Systems Incorporated. All Rights Reserved.
+%%Title: PDF operators, with code specific for Level 2
+/docinitialize {
+PDF begin
+/_defaulthalftone currenthalftone dd
+/_defaultblackgeneration currentblackgeneration dd
+/_defaultundercolorremoval currentundercolorremoval dd
+/_defaultcolortransfer [currentcolortransfer] dd
+/_defaulttransfer currenttransfer dd
+end
+PDFVars /docSetupDone true put
+} bd
+/initialize {
+PDFVars /docSetupDone get {
+_defaulthalftone sethalftone
+/_defaultblackgeneration load setblackgeneration
+/_defaultundercolorremoval load setundercolorremoval
+_defaultcolortransfer aload pop setcolortransfer
+} if
+false setoverprint
+} bd
+/terminate { } bd
+/c /curveto ld
+/cs /setcolorspace ld
+/l /lineto ld
+/m /moveto ld
+/q /gsave ld
+/Q /grestore ld
+/sc /setcolor ld
+/setSA/setstrokeadjust ld
+/re {
+4 2 roll m
+1 index 0 rlineto
+0 exch rlineto
+neg 0 rlineto
+h
+} bd
+/concattransferfuncs {
+[ 3 1 roll /exec load exch /exec load ] cvx
+} bd
+/concatandsettransfer {
+/_defaulttransfer load concattransferfuncs settransfer
+} bd
+/concatandsetcolortransfer {
+_defaultcolortransfer aload pop
+8 -1 roll 5 -1 roll concattransferfuncs 7 1 roll
+6 -1 roll 4 -1 roll concattransferfuncs 5 1 roll
+4 -1 roll 3 -1 roll concattransferfuncs 3 1 roll
+concattransferfuncs
+setcolortransfer
+} bd
+/defineRes/defineresource ld
+/undefineRes/undefineresource ld
+/findRes/findresource ld
+currentglobal
+true systemdict /setglobal get exec
+[/Function /ExtGState /Form /Shading /FunctionDictionary /MadePattern /PatternPrototype /DataSource /Image]
+{ /Generic /Category findresource dup length dict copy /Category defineresource pop }
+forall
+systemdict /setglobal get exec
+/ri
+{
+/findcolorrendering isdefined?
+{
+mark exch
+findcolorrendering
+counttomark 2 eq
+{ type /booleantype eq
+{ dup type /nametype eq
+{ dup /ColorRendering resourcestatus
+{ pop pop
+dup /DefaultColorRendering ne
+{
+/ColorRendering findresource
+setcolorrendering
+} if
+} if
+} if
+} if
+} if
+cleartomark
+}
+{ pop
+} ifelse
+} bd
+/knownColorants? {
+pop false
+} bd
+/getrampcolor {
+cvi
+/indx exch def
+0 1 NumComp 1 sub {
+dup
+Samples exch get
+dup type /stringtype eq { indx get } if
+exch
+Scaling exch get aload pop
+3 1 roll
+mul add
+} for
+setcolor
+} bd
+/sssetbackground { aload pop setcolor } bd
+%%EndResource
+%%BeginResource: procset pdftext 6.0 1
+%%Copyright: Copyright 1987-2001,2003 Adobe Systems Incorporated. All Rights Reserved.
+%%Title: Text operators for PDF
+PDF /PDFText 78 dict dup begin put
+/docinitialize
+{
+/resourcestatus where {
+pop
+/CIDParams /ProcSet resourcestatus {
+pop pop
+false /CIDParams /ProcSet findresource /SetBuildCompatible get exec
+} if
+} if
+PDF begin
+PDFText /_pdfDefineIdentity-H known
+{ PDFText /_pdfDefineIdentity-H get exec}
+if
+end
+} bd
+/initialize {
+PDFText begin
+} bd
+/terminate { end } bd
+Level2?
+{
+/_safeput
+{
+3 -1 roll load 3 1 roll put
+}
+bd
+}
+{
+/_safeput
+{
+2 index load dup dup length exch maxlength ge
+{ dup length 5 add dict copy
+3 index xdd
+}
+{ pop }
+ifelse
+3 -1 roll load 3 1 roll put
+}
+bd
+}
+ifelse
+/pdf_has_composefont? systemdict /composefont known def
+/CopyFont {
+{
+1 index /FID ne 2 index /UniqueID ne and
+{ def } { pop pop } ifelse
+} forall
+} bd
+/Type0CopyFont
+{
+exch
+dup length dict
+begin
+CopyFont
+[
+exch
+FDepVector
+{
+dup /FontType get 0 eq
+{
+1 index Type0CopyFont
+/_pdfType0 exch definefont
+}
+{
+/_pdfBaseFont exch
+2 index exec
+}
+ifelse
+exch
+}
+forall
+pop
+]
+/FDepVector exch def
+currentdict
+end
+} bd
+Level2? {currentglobal true setglobal} if
+/cHexEncoding
+[/c00/c01/c02/c03/c04/c05/c06/c07/c08/c09/c0A/c0B/c0C/c0D/c0E/c0F/c10/c11/c12
+/c13/c14/c15/c16/c17/c18/c19/c1A/c1B/c1C/c1D/c1E/c1F/c20/c21/c22/c23/c24/c25
+/c26/c27/c28/c29/c2A/c2B/c2C/c2D/c2E/c2F/c30/c31/c32/c33/c34/c35/c36/c37/c38
+/c39/c3A/c3B/c3C/c3D/c3E/c3F/c40/c41/c42/c43/c44/c45/c46/c47/c48/c49/c4A/c4B
+/c4C/c4D/c4E/c4F/c50/c51/c52/c53/c54/c55/c56/c57/c58/c59/c5A/c5B/c5C/c5D/c5E
+/c5F/c60/c61/c62/c63/c64/c65/c66/c67/c68/c69/c6A/c6B/c6C/c6D/c6E/c6F/c70/c71
+/c72/c73/c74/c75/c76/c77/c78/c79/c7A/c7B/c7C/c7D/c7E/c7F/c80/c81/c82/c83/c84
+/c85/c86/c87/c88/c89/c8A/c8B/c8C/c8D/c8E/c8F/c90/c91/c92/c93/c94/c95/c96/c97
+/c98/c99/c9A/c9B/c9C/c9D/c9E/c9F/cA0/cA1/cA2/cA3/cA4/cA5/cA6/cA7/cA8/cA9/cAA
+/cAB/cAC/cAD/cAE/cAF/cB0/cB1/cB2/cB3/cB4/cB5/cB6/cB7/cB8/cB9/cBA/cBB/cBC/cBD
+/cBE/cBF/cC0/cC1/cC2/cC3/cC4/cC5/cC6/cC7/cC8/cC9/cCA/cCB/cCC/cCD/cCE/cCF/cD0
+/cD1/cD2/cD3/cD4/cD5/cD6/cD7/cD8/cD9/cDA/cDB/cDC/cDD/cDE/cDF/cE0/cE1/cE2/cE3
+/cE4/cE5/cE6/cE7/cE8/cE9/cEA/cEB/cEC/cED/cEE/cEF/cF0/cF1/cF2/cF3/cF4/cF5/cF6
+/cF7/cF8/cF9/cFA/cFB/cFC/cFD/cFE/cFF] def
+Level2? {setglobal} if
+/modEnc {
+/_enc xdd
+/_icode 0 dd
+counttomark 1 sub -1 0
+{
+index
+dup type /nametype eq
+{
+_enc _icode 3 -1 roll put
+_icode 1 add
+}
+if
+/_icode xdd
+} for
+cleartomark
+_enc
+} bd
+/trEnc {
+/_enc xdd
+255 -1 0 {
+exch dup -1 eq
+{ pop /.notdef }
+{ Encoding exch get }
+ifelse
+_enc 3 1 roll put
+} for
+pop
+_enc
+} bd
+/TE {
+/_i xdd
+StandardEncoding 256 array copy modEnc
+_pdfEncodings exch _i exch put
+} bd
+Level2?
+{
+/pdfPatchCStrings
+{
+currentdict /CharStrings known currentdict /FontType known and
+{
+FontType 1 eq CharStrings type /dicttype eq and
+{
+CharStrings /mu known CharStrings /mu1 known not and CharStrings wcheck and
+{
+CharStrings /mu get
+type /stringtype eq
+{
+currentglobal
+CharStrings /mu1
+CharStrings /mu get
+dup gcheck setglobal
+dup length string copy
+put
+setglobal
+} if
+} if
+} if
+} if
+} bd
+}
+{ /pdfPatchCStrings {} bd }
+ifelse
+/TZ
+{
+/_usePDFEncoding xdd
+findfont
+dup length 6 add dict
+begin
+{
+1 index /FID ne { def } { pop pop } ifelse
+} forall
+pdfPatchCStrings
+/pdf_origFontName FontName def
+/FontName exch def
+currentdict /PaintType known
+{ PaintType 2 eq {/PaintType 0 def} if }
+if
+_usePDFEncoding 0 ge
+{
+/Encoding _pdfEncodings _usePDFEncoding get def
+pop
+}
+{
+_usePDFEncoding -1 eq
+{
+counttomark 0 eq
+{ pop }
+{
+Encoding 256 array copy
+modEnc /Encoding exch def
+}
+ifelse
+}
+{
+256 array
+trEnc /Encoding exch def
+}
+ifelse
+}
+ifelse
+pdf_EuroProcSet pdf_origFontName known
+{
+pdf_origFontName pdf_AddEuroGlyphProc
+} if
+Level2?
+{
+currentdict /pdf_origFontName undef
+} if
+FontName currentdict
+end
+definefont pop
+}
+bd
+Level2?
+{
+/TZG
+{
+currentglobal true setglobal
+2 index _pdfFontStatus
+{
+2 index findfont
+false setglobal
+3 index findfont
+true setglobal
+ne
+{
+2 index findfont dup rcheck
+{
+dup length dict begin
+{
+1 index /FID ne { def } { pop pop } ifelse
+} forall
+pdfPatchCStrings
+currentdict end
+}
+if
+3 index exch definefont pop
+}
+if
+} if
+setglobal
+TZ
+} bd
+}
+{
+/TZG {TZ} bd
+} ifelse
+Level2?
+{
+currentglobal false setglobal
+userdict /pdftext_data 5 dict put
+pdftext_data
+begin
+/saveStacks
+{
+pdftext_data
+begin
+/vmmode currentglobal def
+false setglobal
+count array astore /os exch def
+end
+countdictstack array dictstack pdftext_data exch /ds exch put
+cleardictstack pdftext_data /dscount countdictstack put
+pdftext_data /vmmode get setglobal
+} bind def
+/restoreStacks
+{
+pdftext_data /vmmode currentglobal put false setglobal
+clear cleardictstack
+pdftext_data /ds get dup
+pdftext_data /dscount get 1 2 index length 1 sub
+{ get begin dup } for
+pop pop
+pdftext_data /os get aload pop
+pdftext_data /vmmode get setglobal
+} bind def
+/testForClonePrinterBug
+{
+currentglobal true setglobal
+/undefinedCategory /Generic /Category findresource
+dup length dict copy /Category defineresource pop
+setglobal
+pdftext_data /saveStacks get exec
+pdftext_data /vmmode currentglobal put false setglobal
+/undefined /undefinedCategory { resourcestatus } stopped
+pdftext_data exch /bugFound exch put
+pdftext_data /vmmode get setglobal
+pdftext_data /restoreStacks get exec
+pdftext_data /bugFound get
+} bind def
+end
+setglobal
+/pdf_resourcestatus
+pdftext_data /testForClonePrinterBug get exec
+{
+{
+pdftext_data /saveStacks get exec
+pdftext_data /os get dup dup length 1 sub
+dup 1 sub dup 0 lt { pop 0 } if
+exch 1 exch { get exch dup } for
+pop pop
+{ resourcestatus }
+stopped
+{
+clear cleardictstack pdftext_data /restoreStacks get exec
+{ pop pop } stopped pop false
+}
+{
+count array astore pdftext_data exch /results exch put
+pdftext_data /restoreStacks get exec pop pop
+pdftext_data /results get aload pop
+}
+ifelse
+}
+}
+{ { resourcestatus } }
+ifelse
+bd
+}
+if
+Level2?
+{
+/_pdfUndefineResource
+{
+currentglobal 3 1 roll
+_pdf_FontDirectory 2 index 2 copy known
+{undef}
+{pop pop}
+ifelse
+1 index (pdf) exch _pdfConcatNames 1 index
+1 index 1 _pdfConcatNames 1 index
+5 index 1 _pdfConcatNames 1 index
+4
+{
+2 copy pdf_resourcestatus
+{
+pop 2 lt
+{2 copy findresource gcheck setglobal undefineresource}
+{pop pop}
+ifelse
+}
+{ pop pop}
+ifelse
+} repeat
+setglobal
+} bd
+}
+{
+/_pdfUndefineResource { pop pop} bd
+}
+ifelse
+Level2?
+{
+/_pdfFontStatus
+{
+currentglobal exch
+/Font pdf_resourcestatus
+{pop pop true}
+{false}
+ifelse
+exch setglobal
+} bd
+}
+{
+/_pdfFontStatusString 50 string def
+_pdfFontStatusString 0 (fonts/) putinterval
+/_pdfFontStatus
+{
+FontDirectory 1 index known
+{ pop true }
+{
+_pdfFontStatusString 6 42 getinterval
+cvs length 6 add
+_pdfFontStatusString exch 0 exch getinterval
+{ status } stopped
+{pop false}
+{
+{ pop pop pop pop true}
+{ false }
+ifelse
+}
+ifelse
+}
+ifelse
+} bd
+}
+ifelse
+Level2?
+{
+/_pdfCIDFontStatus
+{
+/CIDFont /Category pdf_resourcestatus
+{
+pop pop
+/CIDFont pdf_resourcestatus
+{pop pop true}
+{false}
+ifelse
+}
+{ pop false }
+ifelse
+} bd
+}
+if
+/_pdfString100 100 string def
+/_pdfComposeFontName
+{
+dup length 1 eq
+{
+0 get
+1 index
+type /nametype eq
+{
+_pdfString100 cvs
+length dup dup _pdfString100 exch (-) putinterval
+_pdfString100 exch 1 add dup _pdfString100 length exch sub getinterval
+2 index exch cvs length
+add 1 add _pdfString100 exch 0 exch getinterval
+exch pop
+true
+}
+{
+pop pop
+false
+}
+ifelse
+}
+{
+false
+}
+ifelse
+dup {exch cvn exch} if
+} bd
+/_pdfConcatNames
+{
+exch
+_pdfString100 cvs
+length dup dup _pdfString100 exch (-) putinterval
+_pdfString100 exch 1 add dup _pdfString100 length exch sub getinterval
+3 -1 roll exch cvs length
+add 1 add _pdfString100 exch 0 exch getinterval
+cvn
+} bind def
+/_pdfTextTempString 50 string def
+/_pdfRegOrderingArray [(Adobe-Japan1) (Adobe-CNS1) (Adobe-Korea1) (Adobe-GB1)] def
+/_pdf_CheckCIDSystemInfo
+{
+1 index _pdfTextTempString cvs
+(Identity) anchorsearch
+{
+pop pop pop pop true
+}
+{
+false
+_pdfRegOrderingArray
+{
+2 index exch
+anchorsearch
+{ pop pop pop true exit}
+{ pop }
+ifelse
+}
+forall
+exch pop
+exch /CIDFont findresource
+/CIDSystemInfo get
+3 -1 roll /CMap findresource
+/CIDSystemInfo get
+exch
+3 -1 roll
+{
+2 copy
+/Supplement get
+exch
+dup type /dicttype eq
+{/Supplement get}
+{pop 0 }
+ifelse
+ge
+}
+{ true }
+ifelse
+{
+dup /Registry get
+2 index /Registry get eq
+{
+/Ordering get
+exch /Ordering get
+dup type /arraytype eq
+{
+1 index type /arraytype eq
+{
+true
+1 index length 1 sub -1 0
+{
+dup 2 index exch get exch 3 index exch get ne
+{ pop false exit}
+if
+} for
+exch pop exch pop
+}
+{ pop pop false }
+ifelse
+}
+{
+eq
+}
+ifelse
+}
+{ pop pop false }
+ifelse
+}
+{ pop pop false }
+ifelse
+}
+ifelse
+} bind def
+pdf_has_composefont?
+{
+/_pdfComposeFont
+{
+2 copy _pdfComposeFontName not
+{
+2 index
+}
+if
+(pdf) exch _pdfConcatNames
+dup _pdfFontStatus
+{ dup findfont 5 2 roll pop pop pop true}
+{
+4 1 roll
+1 index /CMap pdf_resourcestatus
+{
+pop pop
+true
+}
+{false}
+ifelse
+1 index true exch
+{
+_pdfCIDFontStatus not
+{pop false exit}
+if
+}
+forall
+and
+{
+1 index 1 index 0 get _pdf_CheckCIDSystemInfo
+{
+3 -1 roll pop
+2 index 3 1 roll
+composefont true
+}
+{
+pop pop exch pop false
+}
+ifelse
+}
+{
+_pdfComposeFontName
+{
+dup _pdfFontStatus
+{
+exch pop
+1 index exch
+findfont definefont true
+}
+{
+pop exch pop
+false
+}
+ifelse
+}
+{
+exch pop
+false
+}
+ifelse
+}
+ifelse
+{ true }
+{
+dup _pdfFontStatus
+{ dup findfont true }
+{ pop false }
+ifelse
+}
+ifelse
+}
+ifelse
+} bd
+}
+{
+/_pdfComposeFont
+{
+_pdfComposeFontName not
+{
+dup
+}
+if
+dup
+_pdfFontStatus
+{exch pop dup findfont true}
+{
+1 index
+dup type /nametype eq
+{pop}
+{cvn}
+ifelse
+eq
+{pop false}
+{
+dup _pdfFontStatus
+{dup findfont true}
+{pop false}
+ifelse
+}
+ifelse
+}
+ifelse
+} bd
+}
+ifelse
+/_pdfStyleDicts 4 dict dup begin
+/Adobe-Japan1 4 dict dup begin
+Level2?
+{
+/Serif
+/HeiseiMin-W3-83pv-RKSJ-H _pdfFontStatus
+{/HeiseiMin-W3}
+{
+/HeiseiMin-W3 _pdfCIDFontStatus
+{/HeiseiMin-W3}
+{/Ryumin-Light}
+ifelse
+}
+ifelse
+def
+/SansSerif
+/HeiseiKakuGo-W5-83pv-RKSJ-H _pdfFontStatus
+{/HeiseiKakuGo-W5}
+{
+/HeiseiKakuGo-W5 _pdfCIDFontStatus
+{/HeiseiKakuGo-W5}
+{/GothicBBB-Medium}
+ifelse
+}
+ifelse
+def
+/HeiseiMaruGo-W4-83pv-RKSJ-H _pdfFontStatus
+{/HeiseiMaruGo-W4}
+{
+/HeiseiMaruGo-W4 _pdfCIDFontStatus
+{/HeiseiMaruGo-W4}
+{
+/Jun101-Light-RKSJ-H _pdfFontStatus
+{ /Jun101-Light }
+{ SansSerif }
+ifelse
+}
+ifelse
+}
+ifelse
+/RoundSansSerif exch def
+/Default Serif def
+}
+{
+/Serif /Ryumin-Light def
+/SansSerif /GothicBBB-Medium def
+{
+(fonts/Jun101-Light-83pv-RKSJ-H) status
+}stopped
+{pop}{
+{ pop pop pop pop /Jun101-Light }
+{ SansSerif }
+ifelse
+/RoundSansSerif exch def
+}ifelse
+/Default Serif def
+}
+ifelse
+end
+def
+/Adobe-Korea1 4 dict dup begin
+/Serif /HYSMyeongJo-Medium def
+/SansSerif /HYGoThic-Medium def
+/RoundSansSerif SansSerif def
+/Default Serif def
+end
+def
+/Adobe-GB1 4 dict dup begin
+/Serif /STSong-Light def
+/SansSerif /STHeiti-Regular def
+/RoundSansSerif SansSerif def
+/Default Serif def
+end
+def
+/Adobe-CNS1 4 dict dup begin
+/Serif /MKai-Medium def
+/SansSerif /MHei-Medium def
+/RoundSansSerif SansSerif def
+/Default Serif def
+end
+def
+end
+def
+/TZzero
+{
+/_wmode xdd
+/_styleArr xdd
+/_regOrdering xdd
+3 copy
+_pdfComposeFont
+{
+5 2 roll pop pop pop
+}
+{
+[
+0 1 _styleArr length 1 sub
+{
+_styleArr exch get
+_pdfStyleDicts _regOrdering 2 copy known
+{
+get
+exch 2 copy known not
+{ pop /Default }
+if
+get
+}
+{
+pop pop pop /Unknown
+}
+ifelse
+}
+for
+]
+exch pop
+2 index 3 1 roll
+_pdfComposeFont
+{3 -1 roll pop}
+{
+findfont dup /FontName get exch
+}
+ifelse
+}
+ifelse
+dup /WMode 2 copy known
+{ get _wmode ne }
+{ pop pop _wmode 1 eq}
+ifelse
+{
+exch _wmode _pdfConcatNames
+dup _pdfFontStatus
+{ exch pop dup findfont false}
+{ exch true }
+ifelse
+}
+{
+dup /FontType get 0 ne
+}
+ifelse
+{
+dup /FontType get 3 eq _wmode 1 eq and
+{
+_pdfVerticalRomanT3Font dup length 10 add dict copy
+begin
+/_basefont exch
+dup length 3 add dict
+begin
+{1 index /FID ne {def}{pop pop} ifelse }
+forall
+/Encoding Encoding dup length array copy
+dup 16#27 /quotesingle put
+dup 16#60 /grave put
+_regOrdering /Adobe-Japan1 eq
+{dup 16#5c /yen put dup 16#a5 /yen put dup 16#b4 /yen put}
+if
+def
+FontName
+currentdict
+end
+definefont
+def
+/Encoding _basefont /Encoding get def
+/_fauxfont true def
+}
+{
+dup length 3 add dict
+begin
+{1 index /FID ne {def}{pop pop} ifelse }
+forall
+FontType 0 ne
+{
+/Encoding Encoding dup length array copy
+dup 16#27 /quotesingle put
+dup 16#60 /grave put
+_regOrdering /Adobe-Japan1 eq
+{dup 16#5c /yen put}
+if
+def
+/_fauxfont true def
+} if
+} ifelse
+/WMode _wmode def
+dup dup /FontName exch def
+currentdict
+end
+definefont pop
+}
+{
+pop
+}
+ifelse
+/_pdf_FontDirectory 3 1 roll _safeput
+}
+bd
+Level2?
+{
+/Tf {
+_pdf_FontDirectory 2 index 2 copy known
+{get exch 3 -1 roll pop}
+{pop pop}
+ifelse
+selectfont
+} bd
+}
+{
+/Tf {
+_pdf_FontDirectory 2 index 2 copy known
+{get exch 3 -1 roll pop}
+{pop pop}
+ifelse
+exch findfont exch
+dup type /arraytype eq
+{makefont}
+{scalefont}
+ifelse
+setfont
+} bd
+}
+ifelse
+/cshow where
+{
+pop /pdf_cshow /cshow load dd
+/pdf_remove2 {pop pop} dd
+}
+{
+/pdf_cshow {exch forall} dd
+/pdf_remove2 {} dd
+} ifelse
+/pdf_xshow
+{
+/_pdf_na xdd
+/_pdf_i 0 dd
+currentpoint
+/_pdf_y xdd
+/_pdf_x xdd
+{
+pdf_remove2
+_pdf_str1 exch 0 exch put
+_pdf_str1 /_pdf_showproc load exec
+{_pdf_na _pdf_i get} stopped
+{ pop pop }
+{
+_pdf_x _pdf_y moveto
+0
+rmoveto
+}
+ifelse
+_pdf_i 1 add /_pdf_i xdd
+currentpoint
+/_pdf_y xdd
+/_pdf_x xdd
+}
+exch
+pdf_cshow
+} bd
+/pdf_yshow
+{
+/_pdf_na xdd
+/_pdf_i 0 dd
+currentpoint
+/_pdf_y xdd
+/_pdf_x xdd
+{
+pdf_remove2
+_pdf_str1 exch 0 exch put
+_pdf_str1 /_pdf_showproc load exec
+{_pdf_na _pdf_i get} stopped
+{ pop pop }
+{
+_pdf_x _pdf_y moveto
+0 exch
+rmoveto
+}
+ifelse
+_pdf_i 1 add /_pdf_i xdd
+currentpoint
+/_pdf_y xdd
+/_pdf_x xdd
+}
+exch
+pdf_cshow
+} bd
+/pdf_xyshow
+{
+/_pdf_na xdd
+/_pdf_i 0 dd
+currentpoint
+/_pdf_y xdd
+/_pdf_x xdd
+{
+pdf_remove2
+_pdf_str1 exch 0 exch put
+_pdf_str1 /_pdf_showproc load exec
+{_pdf_na _pdf_i get} stopped
+{ pop pop }
+{
+{_pdf_na _pdf_i 1 add get} stopped
+{ pop pop pop}
+{
+_pdf_x _pdf_y moveto
+rmoveto
+}
+ifelse
+}
+ifelse
+_pdf_i 2 add /_pdf_i xdd
+currentpoint
+/_pdf_y xdd
+/_pdf_x xdd
+}
+exch
+pdf_cshow
+} bd
+/pdfl1xs {/_pdf_showproc /show load dd pdf_xshow} bd
+/pdfl1ys {/_pdf_showproc /show load dd pdf_yshow} bd
+/pdfl1xys {/_pdf_showproc /show load dd pdf_xyshow} bd
+Level2? _ColorSep5044? not and
+{
+/pdfxs {{xshow} stopped {pdfl1xs} if} bd
+/pdfys {{yshow} stopped {pdfl1ys} if} bd
+/pdfxys {{xyshow} stopped {pdfl1xys} if} bd
+}
+{
+/pdfxs /pdfl1xs load dd
+/pdfys /pdfl1ys load dd
+/pdfxys /pdfl1xys load dd
+} ifelse
+/pdf_charpath {false charpath} bd
+/pdf_xcharpath {/_pdf_showproc /pdf_charpath load dd pdf_xshow} bd
+/pdf_ycharpath {/_pdf_showproc /pdf_charpath load dd pdf_yshow} bd
+/pdf_xycharpath {/_pdf_showproc /pdf_charpath load dd pdf_xyshow} bd
+/pdf_strokepath
+{
+{
+pdf_remove2
+_pdf_str1 exch 0 exch put
+_pdf_str1 false charpath
+currentpoint S moveto
+} bind
+exch pdf_cshow
+} bd
+/pdf_xstrokepath {/_pdf_showproc {pdf_charpath S} dd pdf_xshow} bd
+/pdf_ystrokepath {/_pdf_showproc {pdf_charpath S} dd pdf_yshow} bd
+/pdf_xystrokepath {/_pdf_showproc {pdf_charpath S} dd pdf_xyshow} bd
+Level2? {currentglobal true setglobal} if
+/d0/setcharwidth ld
+/nND {{/.notdef} repeat} bd
+/T3Defs {
+/BuildChar
+{
+1 index /Encoding get exch get
+1 index /BuildGlyph get exec
+}
+def
+/BuildGlyph {
+exch begin
+GlyphProcs exch get exec
+end
+} def
+/_pdfT3Font true def
+} bd
+/_pdfBoldRomanWidthProc
+{
+stringwidth 1 index 0 ne { exch .03 add exch }if setcharwidth
+0 0
+} bd
+/_pdfType0WidthProc
+{
+dup stringwidth 0 0 moveto
+2 index true charpath pathbbox
+0 -1
+7 index 2 div .88
+setcachedevice2
+pop
+0 0
+} bd
+/_pdfType0WMode1WidthProc
+{
+dup stringwidth
+pop 2 div neg -0.88
+2 copy
+moveto
+0 -1
+5 -1 roll true charpath pathbbox
+setcachedevice
+} bd
+/_pdfBoldBaseFont
+11 dict begin
+/FontType 3 def
+/FontMatrix[1 0 0 1 0 0]def
+/FontBBox[0 0 1 1]def
+/Encoding cHexEncoding def
+/_setwidthProc /_pdfBoldRomanWidthProc load def
+/_bcstr1 1 string def
+/BuildChar
+{
+exch begin
+_basefont setfont
+_bcstr1 dup 0 4 -1 roll put
+dup
+_setwidthProc
+3 copy
+moveto
+show
+_basefonto setfont
+moveto
+show
+end
+}bd
+currentdict
+end
+def
+pdf_has_composefont?
+{
+/_pdfBoldBaseCIDFont
+11 dict begin
+/CIDFontType 1 def
+/CIDFontName /_pdfBoldBaseCIDFont def
+/FontMatrix[1 0 0 1 0 0]def
+/FontBBox[0 0 1 1]def
+/_setwidthProc /_pdfType0WidthProc load def
+/_bcstr2 2 string def
+/BuildGlyph
+{
+exch begin
+_basefont setfont
+_bcstr2 1 2 index 256 mod put
+_bcstr2 0 3 -1 roll 256 idiv put
+_bcstr2 dup _setwidthProc
+3 copy
+moveto
+show
+_basefonto setfont
+moveto
+show
+end
+}bd
+currentdict
+end
+def
+/_pdfDefineIdentity-H
+{
+/Identity-H /CMap PDFText /pdf_resourcestatus get exec
+{
+pop pop
+}
+{
+/CIDInit/ProcSet findresource begin 12 dict begin
+begincmap
+/CIDSystemInfo
+3 dict begin
+/Registry (Adobe) def
+/Ordering (Identity) def
+/Supplement 0 def
+currentdict
+end
+def
+/CMapName /Identity-H def
+/CMapVersion 1 def
+/CMapType 1 def
+1 begincodespacerange
+<0000> <ffff>
+endcodespacerange
+1 begincidrange
+<0000> <ffff> 0
+endcidrange
+endcmap
+CMapName currentdict/CMap defineresource pop
+end
+end
+} ifelse
+} def
+} if
+/_pdfVerticalRomanT3Font
+10 dict begin
+/FontType 3 def
+/FontMatrix[1 0 0 1 0 0]def
+/FontBBox[0 0 1 1]def
+/_bcstr1 1 string def
+/BuildChar
+{
+exch begin
+_basefont setfont
+_bcstr1 dup 0 4 -1 roll put
+dup
+_pdfType0WidthProc
+moveto
+show
+end
+}bd
+currentdict
+end
+def
+Level2? {setglobal} if
+/MakeBoldFont
+{
+dup /ct_SyntheticBold known
+{
+dup length 3 add dict begin
+CopyFont
+/ct_StrokeWidth .03 0 FontMatrix idtransform pop def
+/ct_SyntheticBold true def
+currentdict
+end
+definefont
+}
+{
+dup dup length 3 add dict
+begin
+CopyFont
+/PaintType 2 def
+/StrokeWidth .03 0 FontMatrix idtransform pop def
+/dummybold currentdict
+end
+definefont
+dup /FontType get dup 9 ge exch 11 le and
+{
+_pdfBoldBaseCIDFont
+dup length 3 add dict copy begin
+dup /CIDSystemInfo get /CIDSystemInfo exch def
+/_Type0Identity /Identity-H 3 -1 roll [ exch ] composefont
+/_basefont exch def
+/_Type0Identity /Identity-H 3 -1 roll [ exch ] composefont
+/_basefonto exch def
+currentdict
+end
+/CIDFont defineresource
+}
+{
+_pdfBoldBaseFont
+dup length 3 add dict copy begin
+/_basefont exch def
+/_basefonto exch def
+currentdict
+end
+definefont
+}
+ifelse
+}
+ifelse
+} bd
+/MakeBold {
+1 index
+_pdf_FontDirectory 2 index 2 copy known
+{get}
+{exch pop}
+ifelse
+findfont
+dup
+/FontType get 0 eq
+{
+dup /WMode known {dup /WMode get 1 eq }{false} ifelse
+version length 4 ge
+and
+{version 0 4 getinterval cvi 2015 ge }
+{true}
+ifelse
+{/_pdfType0WidthProc}
+{/_pdfType0WMode1WidthProc}
+ifelse
+_pdfBoldBaseFont /_setwidthProc 3 -1 roll load put
+{MakeBoldFont} Type0CopyFont definefont
+}
+{
+dup /_fauxfont known not 1 index /SubstMaster known not and
+{
+_pdfBoldBaseFont /_setwidthProc /_pdfBoldRomanWidthProc load put
+MakeBoldFont
+}
+{
+2 index 2 index eq
+{ exch pop }
+{
+dup length dict begin
+CopyFont
+currentdict
+end
+definefont
+}
+ifelse
+}
+ifelse
+}
+ifelse
+pop pop
+dup /dummybold ne
+{/_pdf_FontDirectory exch dup _safeput }
+{ pop }
+ifelse
+}bd
+/MakeItalic {
+_pdf_FontDirectory exch 2 copy known
+{get}
+{exch pop}
+ifelse
+dup findfont
+dup /FontInfo 2 copy known
+{
+get
+/ItalicAngle 2 copy known
+{get 0 eq }
+{ pop pop true}
+ifelse
+}
+{ pop pop true}
+ifelse
+{
+exch pop
+dup /FontType get 0 eq Level2? not and
+{ dup /FMapType get 6 eq }
+{ false }
+ifelse
+{
+dup /WMode 2 copy known
+{
+get 1 eq
+{ _italMtx_WMode1Type0 }
+{ _italMtxType0 }
+ifelse
+}
+{ pop pop _italMtxType0 }
+ifelse
+}
+{
+dup /WMode 2 copy known
+{
+get 1 eq
+{ _italMtx_WMode1 }
+{ _italMtx }
+ifelse
+}
+{ pop pop _italMtx }
+ifelse
+}
+ifelse
+makefont
+dup /FontType get 42 eq Level2? not or
+{
+dup length dict begin
+CopyFont
+currentdict
+end
+}
+if
+1 index exch
+definefont pop
+/_pdf_FontDirectory exch dup _safeput
+}
+{
+pop
+2 copy ne
+{
+/_pdf_FontDirectory 3 1 roll _safeput
+}
+{ pop pop }
+ifelse
+}
+ifelse
+}bd
+/MakeBoldItalic {
+/dummybold exch
+MakeBold
+/dummybold
+MakeItalic
+}bd
+Level2?
+{
+/pdf_CopyDict
+{1 index length add dict copy}
+def
+}
+{
+/pdf_CopyDict
+{
+1 index length add dict
+1 index wcheck
+{ copy }
+{ begin
+{def} forall
+currentdict
+end
+}
+ifelse
+}
+def
+}
+ifelse
+/pdf_AddEuroGlyphProc
+{
+currentdict /CharStrings known
+{
+CharStrings /Euro known not
+{
+dup
+/CharStrings
+CharStrings 1 pdf_CopyDict
+begin
+/Euro pdf_EuroProcSet 4 -1 roll get def
+currentdict
+end
+def
+/pdf_PSBuildGlyph /pdf_PSBuildGlyph load def
+/pdf_PathOps /pdf_PathOps load def
+/Symbol eq Encoding 160 get /.notdef eq and
+{
+/Encoding Encoding dup length array copy
+dup 160 /Euro put def
+}
+if
+}
+{ pop
+}
+ifelse
+}
+{ pop
+}
+ifelse
+}
+def
+Level2? {currentglobal true setglobal} if
+/pdf_PathOps 4 dict dup begin
+/m {moveto} def
+/l {lineto} def
+/c {curveto} def
+/cp {closepath} def
+end
+def
+/pdf_PSBuildGlyph
+{
+gsave
+8 -1 roll pop
+7 1 roll
+currentdict /PaintType 2 copy known {get 2 eq}{pop pop false} ifelse
+dup 9 1 roll
+{
+currentdict /StrokeWidth 2 copy known
+{
+get 2 div
+5 1 roll
+4 -1 roll 4 index sub
+4 1 roll
+3 -1 roll 4 index sub
+3 1 roll
+exch 4 index add exch
+4 index add
+5 -1 roll pop
+}
+{
+pop pop
+}
+ifelse
+}
+if
+setcachedevice
+pdf_PathOps begin
+exec
+end
+{
+currentdict /StrokeWidth 2 copy known
+{ get }
+{ pop pop 0 }
+ifelse
+setlinewidth stroke
+}
+{
+fill
+}
+ifelse
+grestore
+} def
+/pdf_EuroProcSet 13 dict def
+pdf_EuroProcSet
+begin
+/Courier-Bold
+{
+600 0 6 -12 585 612
+{
+385 274 m
+180 274 l
+179 283 179 293 179 303 c
+179 310 179 316 180 323 c
+398 323 l
+423 404 l
+197 404 l
+219 477 273 520 357 520 c
+409 520 466 490 487 454 c
+487 389 l
+579 389 l
+579 612 l
+487 612 l
+487 560 l
+449 595 394 612 349 612 c
+222 612 130 529 98 404 c
+31 404 l
+6 323 l
+86 323 l
+86 304 l
+86 294 86 284 87 274 c
+31 274 l
+6 193 l
+99 193 l
+129 77 211 -12 359 -12 c
+398 -12 509 8 585 77 c
+529 145 l
+497 123 436 80 356 80 c
+285 80 227 122 198 193 c
+360 193 l
+cp
+600 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Courier-BoldOblique /Courier-Bold load def
+/Courier
+{
+600 0 17 -12 578 584
+{
+17 204 m
+97 204 l
+126 81 214 -12 361 -12 c
+440 -12 517 17 578 62 c
+554 109 l
+501 70 434 43 366 43 c
+266 43 184 101 154 204 c
+380 204 l
+400 259 l
+144 259 l
+144 270 143 281 143 292 c
+143 299 143 307 144 314 c
+418 314 l
+438 369 l
+153 369 l
+177 464 249 529 345 529 c
+415 529 484 503 522 463 c
+522 391 l
+576 391 l
+576 584 l
+522 584 l
+522 531 l
+473 566 420 584 348 584 c
+216 584 122 490 95 369 c
+37 369 l
+17 314 l
+87 314 l
+87 297 l
+87 284 88 272 89 259 c
+37 259 l
+cp
+600 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Courier-Oblique /Courier load def
+/Helvetica
+{
+556 0 24 -19 541 703
+{
+541 628 m
+510 669 442 703 354 703 c
+201 703 117 607 101 444 c
+50 444 l
+25 372 l
+97 372 l
+97 301 l
+49 301 l
+24 229 l
+103 229 l
+124 67 209 -19 350 -19 c
+435 -19 501 25 509 32 c
+509 131 l
+492 105 417 60 343 60 c
+267 60 204 127 197 229 c
+406 229 l
+430 301 l
+191 301 l
+191 372 l
+455 372 l
+479 444 l
+194 444 l
+201 531 245 624 348 624 c
+433 624 484 583 509 534 c
+cp
+556 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Helvetica-Oblique /Helvetica load def
+/Helvetica-Bold
+{
+556 0 12 -19 563 710
+{
+563 621 m
+537 659 463 710 363 710 c
+216 710 125 620 101 462 c
+51 462 l
+12 367 l
+92 367 l
+92 346 l
+92 337 93 328 93 319 c
+52 319 l
+12 224 l
+102 224 l
+131 58 228 -19 363 -19 c
+417 -19 471 -12 517 18 c
+517 146 l
+481 115 426 93 363 93 c
+283 93 254 166 246 224 c
+398 224 l
+438 319 l
+236 319 l
+236 367 l
+457 367 l
+497 462 l
+244 462 l
+259 552 298 598 363 598 c
+425 598 464 570 486 547 c
+507 526 513 517 517 509 c
+cp
+556 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Helvetica-BoldOblique /Helvetica-Bold load def
+/Symbol
+{
+750 0 20 -12 714 685
+{
+714 581 m
+650 645 560 685 465 685 c
+304 685 165 580 128 432 c
+50 432 l
+20 369 l
+116 369 l
+115 356 115 347 115 337 c
+115 328 115 319 116 306 c
+50 306 l
+20 243 l
+128 243 l
+165 97 300 -12 465 -12 c
+560 -12 635 25 685 65 c
+685 155 l
+633 91 551 51 465 51 c
+340 51 238 131 199 243 c
+555 243 l
+585 306 l
+184 306 l
+183 317 182 326 182 336 c
+182 346 183 356 184 369 c
+614 369 l 644 432 l
+199 432 l
+233 540 340 622 465 622 c
+555 622 636 580 685 520 c
+cp
+750 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Times-Bold
+{
+500 0 16 -14 478 700
+{
+367 308 m
+224 308 l
+224 368 l
+375 368 l
+380 414 l
+225 414 l
+230 589 257 653 315 653 c
+402 653 431 521 444 457 c
+473 457 l
+473 698 l
+444 697 l
+441 679 437 662 418 662 c
+393 662 365 700 310 700 c
+211 700 97 597 73 414 c
+21 414 l
+16 368 l
+69 368 l
+69 359 68 350 68 341 c
+68 330 68 319 69 308 c
+21 308 l
+16 262 l
+73 262 l
+91 119 161 -14 301 -14 c
+380 -14 443 50 478 116 c
+448 136 l
+415 84 382 40 323 40 c
+262 40 231 77 225 262 c
+362 262 l
+cp
+500 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Times-BoldItalic
+{
+500 0 9 -20 542 686
+{
+542 686 m
+518 686 l
+513 673 507 660 495 660 c
+475 660 457 683 384 683 c
+285 683 170 584 122 430 c
+58 430 l
+34 369 l
+105 369 l
+101 354 92 328 90 312 c
+34 312 l
+9 251 l
+86 251 l
+85 238 84 223 84 207 c
+84 112 117 -14 272 -14 c
+326 -14 349 9 381 9 c
+393 9 393 -10 394 -20 c
+420 -20 l
+461 148 l
+429 148 l
+416 109 362 15 292 15 c
+227 15 197 55 197 128 c
+197 162 204 203 216 251 c
+378 251 l
+402 312 l
+227 312 l
+229 325 236 356 241 369 c
+425 369 l
+450 430 l
+255 430 l
+257 435 264 458 274 488 c
+298 561 337 654 394 654 c
+437 654 484 621 484 530 c
+484 516 l
+516 516 l
+cp
+500 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Times-Italic
+{
+500 0 23 -10 595 692
+{
+399 317 m
+196 317 l
+199 340 203 363 209 386 c
+429 386 l
+444 424 l
+219 424 l
+246 514 307 648 418 648 c
+448 648 471 638 492 616 c
+529 576 524 529 527 479 c
+549 475 l
+595 687 l
+570 687 l
+562 674 558 664 542 664 c
+518 664 474 692 423 692 c
+275 692 162 551 116 424 c
+67 424 l
+53 386 l
+104 386 l
+98 363 93 340 90 317 c
+37 317 l
+23 279 l
+86 279 l
+85 266 85 253 85 240 c
+85 118 137 -10 277 -10 c
+370 -10 436 58 488 128 c
+466 149 l
+424 101 375 48 307 48 c
+212 48 190 160 190 234 c
+190 249 191 264 192 279 c
+384 279 l
+cp
+500 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Times-Roman
+{
+500 0 10 -12 484 692
+{
+347 298 m
+171 298 l
+170 310 170 322 170 335 c
+170 362 l
+362 362 l
+374 403 l
+172 403 l
+184 580 244 642 308 642 c
+380 642 434 574 457 457 c
+481 462 l
+474 691 l
+449 691 l
+433 670 429 657 410 657 c
+394 657 360 692 299 692 c
+204 692 94 604 73 403 c
+22 403 l
+10 362 l
+70 362 l
+69 352 69 341 69 330 c
+69 319 69 308 70 298 c
+22 298 l
+10 257 l
+73 257 l
+97 57 216 -12 295 -12 c
+364 -12 427 25 484 123 c
+458 142 l
+425 101 384 37 316 37 c
+256 37 189 84 173 257 c
+335 257 l
+cp
+500 0 m
+}
+pdf_PSBuildGlyph
+} def
+end
+Level2? {setglobal} if
+currentdict readonly pop end
+%%EndResource
+PDFText begin
+[39/quotesingle 96/grave 128/Adieresis/Aring/Ccedilla/Eacute/Ntilde/Odieresis
+/Udieresis/aacute/agrave/acircumflex/adieresis/atilde/aring/ccedilla/eacute
+/egrave/ecircumflex/edieresis/iacute/igrave/icircumflex/idieresis/ntilde
+/oacute/ograve/ocircumflex/odieresis/otilde/uacute/ugrave/ucircumflex
+/udieresis/dagger/degree/cent/sterling/section/bullet/paragraph/germandbls
+/registered/copyright/trademark/acute/dieresis/.notdef/AE/Oslash
+/.notdef/plusminus/.notdef/.notdef/yen/mu/.notdef/.notdef
+/.notdef/.notdef/.notdef/ordfeminine/ordmasculine/.notdef/ae/oslash
+/questiondown/exclamdown/logicalnot/.notdef/florin/.notdef/.notdef
+/guillemotleft/guillemotright/ellipsis/space/Agrave/Atilde/Otilde/OE/oe
+/endash/emdash/quotedblleft/quotedblright/quoteleft/quoteright/divide
+/.notdef/ydieresis/Ydieresis/fraction/currency/guilsinglleft/guilsinglright
+/fi/fl/daggerdbl/periodcentered/quotesinglbase/quotedblbase/perthousand
+/Acircumflex/Ecircumflex/Aacute/Edieresis/Egrave/Iacute/Icircumflex
+/Idieresis/Igrave/Oacute/Ocircumflex/.notdef/Ograve/Uacute/Ucircumflex
+/Ugrave/dotlessi/circumflex/tilde/macron/breve/dotaccent/ring/cedilla
+/hungarumlaut/ogonek/caron
+0 TE
+[1/dotlessi/caron 39/quotesingle 96/grave 
+127/bullet/Euro/bullet/quotesinglbase/florin/quotedblbase/ellipsis
+/dagger/daggerdbl/circumflex/perthousand/Scaron/guilsinglleft/OE
+/bullet/Zcaron/bullet/bullet/quoteleft/quoteright/quotedblleft
+/quotedblright/bullet/endash/emdash/tilde/trademark/scaron
+/guilsinglright/oe/bullet/zcaron/Ydieresis/space/exclamdown/cent/sterling
+/currency/yen/brokenbar/section/dieresis/copyright/ordfeminine
+/guillemotleft/logicalnot/hyphen/registered/macron/degree/plusminus
+/twosuperior/threesuperior/acute/mu/paragraph/periodcentered/cedilla
+/onesuperior/ordmasculine/guillemotright/onequarter/onehalf/threequarters
+/questiondown/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex/Idieresis
+/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis/multiply/Oslash
+/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls/agrave
+/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla/egrave/eacute
+/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis/eth/ntilde
+/ograve/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrave/uacute
+/ucircumflex/udieresis/yacute/thorn/ydieresis
+1 TE
+end
+%%BeginResource: procset pdfasc.prc 6.0 1
+%%Copyright: Copyright 1992-2003 Adobe Systems Incorporated. All Rights Reserved.
+/ASR {
+13 dict begin
+/mirV? exch def
+/mirH? exch def
+/center? exch def
+/autorotate? exch def
+/angle exch def
+/shrink exch def
+/Pury exch def
+/Purx exch def
+/Plly exch def
+/Pllx exch def
+/Dury exch def
+/Durx exch def
+/Dlly exch def
+/Dllx exch def
+Dury 0 eq Durx 0 eq and Dlly 0 eq Dllx 0 eq and and
+{ shrink 0 gt { GClipBBox } { GPageBBox } ifelse }
+{ ITransDBBox }
+ifelse
+/PHt Pury Plly sub def
+/PW Purx Pllx sub def
+/DHt Dury Dlly sub def
+/DW Durx Dllx sub def
+angle 90 eq angle 270 eq or
+{
+PHt /PHt PW def /PW exch def
+} if
+autorotate? PHt PW ne and DHt DW ne and
+{
+DHt DW ge
+PHt PW ge
+ne
+{ /angle angle 90 add def
+PHt /PHt PW def /PW exch def
+}
+if
+} if
+angle 0 ne
+{
+/angle angle 360 mod def
+angle rotate
+angle 90 eq
+{ 0 DW neg translate }
+if
+angle 180 eq
+{ DW neg DHt neg translate }
+if
+angle 270 eq
+{ DHt neg 0 translate }
+if
+} if
+center?
+{
+ITransBBox
+Durx Dllx add 2 div Dury Dlly add 2 div
+Purx Pllx add -2 div Pury Plly add -2 div
+3 -1 roll add exch
+3 -1 roll add exch
+translate
+}
+{
+ITransBBox
+angle 0 eq
+{Dllx Pllx sub Dury Pury sub}
+if
+angle 90 eq
+{Durx Purx sub Dury Pury sub}
+if
+angle 180 eq
+{Durx Purx sub Dlly Plly sub}
+if
+angle 270 eq
+{Dllx Pllx sub Dlly Plly sub}
+if
+translate
+}
+ifelse
+mirH? mirV? or
+{
+ITransBBox
+mirH?
+{
+-1 1 scale
+Durx Dllx add neg 0 translate
+} if
+mirV?
+{
+1 -1 scale
+0 Dury Dlly add neg translate
+} if
+} if
+shrink 0 ne
+{
+ITransBBox
+Dury Dlly sub Pury Plly sub div
+Durx Dllx sub Purx Pllx sub div
+2 copy gt { exch } if pop
+shrink 1 eq
+{
+Durx Dllx add 2 div Dury Dlly add 2 div translate
+dup scale
+Purx Pllx add -2 div Pury Plly add -2 div translate
+}
+{
+shrink 2 eq 1 index 1.0 lt and
+{
+Durx Dllx add 2 div Dury Dlly add 2 div translate
+dup scale
+Purx Pllx add -2 div Pury Plly add -2 div translate
+}
+{ pop }
+ifelse
+}
+ifelse
+} if
+end
+} [/autorotate? /shrink? /mirH? /mirV? /angle /Pury /Purx /Plly /Pllx /Durx /Dury /Dllx /Dlly /PW /PHt /DW /DHt
+/Devurx /Devury /Devllx /Devlly /pdfHt /pdfW]
+bld
+/GClipBBox
+{
+gsave newpath clippath pathbbox newpath grestore
+/Dury exch def
+/Durx exch def
+/Dlly exch def
+/Dllx exch def
+ITransDBBox
+} [/Durx /Dury /Dllx /Dlly]
+bld
+/GPageBBox
+{
+{
+currentpagedevice /PageSize get aload pop
+/Devury exch def /Devurx exch def
+/Devllx 0 def /Devlly 0 def
+ITransBBox
+}
+stopped
+{ GClipBBox }
+if
+} [/Devurx /Devury /Devllx /Devlly ]
+bld
+/ITransDBBox
+{
+Durx Dury transform matrix defaultmatrix itransform
+/Devury exch def
+/Devurx exch def
+Dllx Dlly transform matrix defaultmatrix itransform
+/Devlly exch def
+/Devllx exch def
+Devury Devlly lt {/Devlly Devury /Devury Devlly def def} if
+Devurx Devllx lt {/Devllx Devurx /Devurx Devllx def def} if
+} [/Durx /Dury /Dllx /Dlly /Devurx /Devury /Devllx /Devlly ]
+bld
+/ITransBBox
+{
+/um matrix currentmatrix matrix defaultmatrix matrix invertmatrix matrix concatmatrix def
+Devllx Devlly um itransform
+Devurx Devury um itransform
+/Dury exch def
+/Durx exch def
+/Dlly exch def
+/Dllx exch def
+Dury Dlly lt {/Dlly Dury /Dury Dlly def def} if
+Durx Dllx lt {/Dllx Durx /Durx Dllx def def} if
+} [ /um /Durx /Dury /Dllx /Dlly /Devurx /Devury /Devllx /Devlly ]
+bld
+%%EndResource
+currentdict readonly pop
+end end
+/currentpacking where {pop setpacking}if
+PDFVars/DocInitAll{[PDF PDFText]{/docinitialize get exec}forall }put
+PDFVars/InitAll{[PDF PDFText]{/initialize get exec}forall initgs}put
+PDFVars/TermAll{[PDFText PDF]{/terminate get exec}forall}put
+PDFVars begin PDF begin
+PDFVars/DocInitAll get exec PDFVars/InitAll get exec
+
+[/NamespacePush PDFMark5
+[/_objdef {Metadata_In_EPS} /type /stream /OBJ PDFMark5
+[{Metadata_In_EPS} 4195 (% &end XMP packet& %) ReadByPDFMark5
+<?xpacket begin="ï»¿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="3.1-701">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xap="http://ns.adobe.com/xap/1.0/">
+         <xap:CreateDate>2009-06-06T13:54:12+08:00</xap:CreateDate>
+         <xap:ModifyDate>2009-06-06T13:54:12+08:00</xap:ModifyDate>
+         <xap:MetadataDate>2009-06-06T13:54:12+08:00</xap:MetadataDate>
+      </rdf:Description>
+      <rdf:Description rdf:about=""
+            xmlns:xapMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#">
+         <xapMM:DocumentID>uuid:5488FA885D52DE1191399F63EB79A74F</xapMM:DocumentID>
+         <xapMM:InstanceID>uuid:5488FA885D52DE1191399F63EB79A74F</xapMM:InstanceID>
+         <xapMM:DerivedFrom rdf:parseType="Resource">
+            <stRef:instanceID>uuid:4cfed28b-134a-464d-9595-17fdf997bcf2</stRef:instanceID>
+            <stRef:documentID>uuid:5388FA885D52DE1191399F63EB79A74F</stRef:documentID>
+         </xapMM:DerivedFrom>
+      </rdf:Description>
+      <rdf:Description rdf:about=""
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/">
+         <pdf:Keywords/>
+      </rdf:Description>
+      <rdf:Description rdf:about=""
+            xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/">
+         <pdfx:PTEX.Fullbanner>This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) kpathsea version 3.5.4</pdfx:PTEX.Fullbanner>
+      </rdf:Description>
+      <rdf:Description rdf:about=""
+            xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <dc:description>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default"/>
+            </rdf:Alt>
+         </dc:description>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>qy</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default">4bitle.pdf</rdf:li>
+            </rdf:Alt>
+         </dc:title>
+         <dc:format>application/eps</dc:format>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?>
+
+% &end XMP packet& %
+
+[{Metadata_In_EPS} 2 dict begin /Type /Metadata def /Subtype /XML def currentdict end /PUT PDFMark5
+[/Document 1 dict begin /Metadata {Metadata_In_EPS} def currentdict end /BDC PDFMark5
+[/NamespacePop PDFMark5
+
+PDFVars/TermAll get exec end end
+
+%%EndSetup
+ PDF /docinitialize get exec
+PDFVars begin PDF begin PDFVars/InitAll get exec
+0.0 0.0 595.22 842.0 rectclip
+/N10 [/CIEBasedABC 20 dict
+dup /CreationDate (19980209064900) put
+dup /RenderingIntent (RelativeColorimetric) put
+dup /Description (sRGB IEC61966-2.1) put
+dup /ColorSpace (RGB ) put
+dup /Copyright (Copyright (c) 1998 Hewlett-Packard Company) put
+dup /ProfileID <1D3FDA2EDB4A89AB60A23C5F7C7D81DD> put
+dup /DecodeABC [
+{{0 0.00031 0.00061 0.0009 0.0012 0.00151 0.00181 0.00212 0.00242 0.00271
+0.00302 0.00334 0.00366 0.00401 0.00437 0.00476 0.00515 0.00558 0.00602 0.00648
+0.00696 0.00745 0.00798 0.00852 0.00908 0.00966 0.01027 0.01089 0.01153 0.0122
+0.0129 0.01362 0.01435 0.01511 0.01589 0.0167 0.01752 0.01837 0.01925 0.02015
+0.02107 0.02203 0.02299 0.02399 0.02501 0.02606 0.02713 0.02822 0.02934 0.03049
+0.03166 0.03287 0.03409 0.03533 0.03662 0.03792 0.03925 0.04061 0.04199 0.04341
+0.04484 0.04631 0.04781 0.04933 0.05088 0.05245 0.05406 0.05569 0.05736 0.05904
+0.06077 0.06252 0.0643 0.06611 0.06794 0.06981 0.0717 0.07363 0.07558 0.07756
+0.07959 0.08162 0.0837 0.08581 0.08795 0.09011 0.09231 0.09454 0.0968 0.09909
+0.10142 0.10376 0.10616 0.10857 0.11102 0.11351 0.11602 0.11856 0.12114 0.12376
+0.12639 0.12907 0.13178 0.13452 0.13729 0.14009 0.14294 0.14581 0.14873 0.15166
+0.15463 0.15765 0.16068 0.16376 0.16687 0.17001 0.17319 0.17641 0.17965 0.18293
+0.18625 0.1896 0.19299 0.19641 0.19987 0.20335 0.20688 0.21045 0.21405 0.21767
+0.22134 0.22505 0.22879 0.23257 0.23638 0.24023 0.24411 0.24804 0.25199 0.25599
+0.26002 0.26409 0.2682 0.27234 0.27651 0.28073 0.28499 0.28928 0.29361 0.29798
+0.30238 0.30683 0.3113 0.31582 0.32038 0.32497 0.3296 0.33428 0.33898 0.34372
+0.34851 0.35333 0.3582 0.3631 0.36804 0.37302 0.37804 0.3831 0.38819 0.39333
+0.3985 0.40372 0.40898 0.41427 0.41961 0.42498 0.43039 0.43585 0.44134 0.44688
+0.45245 0.45806 0.46372 0.46942 0.47516 0.48094 0.48675 0.49261 0.49851 0.50445
+0.51043 0.51646 0.52253 0.52863 0.53477 0.54097 0.54719 0.55347 0.55979 0.56613
+0.57253 0.57897 0.58545 0.59198 0.59855 0.60515 0.6118 0.61849 0.62524 0.63201
+0.63884 0.6457 0.6526 0.65955 0.66654 0.67357 0.68066 0.68778 0.69495 0.70215
+0.7094 0.71669 0.72404 0.73142 0.73885 0.74632 0.75383 0.76138 0.76899 0.77663
+0.78433 0.79206 0.79983 0.80765 0.81552 0.82343 0.83139 0.8394 0.84744 0.85554
+0.86367 0.87185 0.88007 0.88835 0.89666 0.90503 0.91343 0.92189 0.93038 0.93892
+0.94751 0.95614 0.96482 0.97355 0.98232 0.99114 1}
+dup 3 -1 roll 0 1 3 copy 3 -1 roll exch ge
+{pop pop pop pop pop 256 get}
+{pop 3 copy pop le {pop pop pop pop 0 get}
+{exch dup 4 -1 roll exch sub 3 1 roll sub div 256 mul dup
+floor dup 3 1 roll sub exch cvi dup 1 add 4 -1 roll exch
+get 4 -1 roll 3 -1 roll get dup 4 1 roll sub mul add}
+ifelse} ifelse
+} bind
+dup
+dup
+] put
+dup /MatrixABC [
+0.2180189128 0.1112492942 0.0069565698
+0.1925612492 0.358452993 0.0485281768
+0.0715286348 0.0303053423 0.3569742448
+] put
+dup /MatrixLMN [1.9999694824 0 0 0 1.9999694824 0 0 0 1.9999694824] put
+dup /BlackPoint [0 0 0] put
+dup /WhitePoint [0.9642028809 1 0.8249053955] put]
+/ColorSpace defineRes pop
+
+q
+0.0 0.0 m
+595.22 0.0 l
+595.22 842.0 l
+0.0 842.0 l
+h
+W
+n
+q
+1 J
+1 j
+2.395 w
+n
+299.415 235.337 m
+475.724 540.76 l
+123.106 540.76 l
+299.415 235.337 l
+h
+[/CIEBasedABC 20 dict
+dup /CreationDate (19980209064900) put
+dup /RenderingIntent (RelativeColorimetric) put
+dup /Description (sRGB IEC61966-2.1) put
+dup /ColorSpace (RGB ) put
+dup /Copyright (Copyright (c) 1998 Hewlett-Packard Company) put
+dup /ProfileID <1D3FDA2EDB4A89AB60A23C5F7C7D81DD> put
+dup /DecodeABC [
+{{0 0.00031 0.00061 0.0009 0.0012 0.00151 0.00181 0.00212 0.00242 0.00271
+0.00302 0.00334 0.00366 0.00401 0.00437 0.00476 0.00515 0.00558 0.00602 0.00648
+0.00696 0.00745 0.00798 0.00852 0.00908 0.00966 0.01027 0.01089 0.01153 0.0122
+0.0129 0.01362 0.01435 0.01511 0.01589 0.0167 0.01752 0.01837 0.01925 0.02015
+0.02107 0.02203 0.02299 0.02399 0.02501 0.02606 0.02713 0.02822 0.02934 0.03049
+0.03166 0.03287 0.03409 0.03533 0.03662 0.03792 0.03925 0.04061 0.04199 0.04341
+0.04484 0.04631 0.04781 0.04933 0.05088 0.05245 0.05406 0.05569 0.05736 0.05904
+0.06077 0.06252 0.0643 0.06611 0.06794 0.06981 0.0717 0.07363 0.07558 0.07756
+0.07959 0.08162 0.0837 0.08581 0.08795 0.09011 0.09231 0.09454 0.0968 0.09909
+0.10142 0.10376 0.10616 0.10857 0.11102 0.11351 0.11602 0.11856 0.12114 0.12376
+0.12639 0.12907 0.13178 0.13452 0.13729 0.14009 0.14294 0.14581 0.14873 0.15166
+0.15463 0.15765 0.16068 0.16376 0.16687 0.17001 0.17319 0.17641 0.17965 0.18293
+0.18625 0.1896 0.19299 0.19641 0.19987 0.20335 0.20688 0.21045 0.21405 0.21767
+0.22134 0.22505 0.22879 0.23257 0.23638 0.24023 0.24411 0.24804 0.25199 0.25599
+0.26002 0.26409 0.2682 0.27234 0.27651 0.28073 0.28499 0.28928 0.29361 0.29798
+0.30238 0.30683 0.3113 0.31582 0.32038 0.32497 0.3296 0.33428 0.33898 0.34372
+0.34851 0.35333 0.3582 0.3631 0.36804 0.37302 0.37804 0.3831 0.38819 0.39333
+0.3985 0.40372 0.40898 0.41427 0.41961 0.42498 0.43039 0.43585 0.44134 0.44688
+0.45245 0.45806 0.46372 0.46942 0.47516 0.48094 0.48675 0.49261 0.49851 0.50445
+0.51043 0.51646 0.52253 0.52863 0.53477 0.54097 0.54719 0.55347 0.55979 0.56613
+0.57253 0.57897 0.58545 0.59198 0.59855 0.60515 0.6118 0.61849 0.62524 0.63201
+0.63884 0.6457 0.6526 0.65955 0.66654 0.67357 0.68066 0.68778 0.69495 0.70215
+0.7094 0.71669 0.72404 0.73142 0.73885 0.74632 0.75383 0.76138 0.76899 0.77663
+0.78433 0.79206 0.79983 0.80765 0.81552 0.82343 0.83139 0.8394 0.84744 0.85554
+0.86367 0.87185 0.88007 0.88835 0.89666 0.90503 0.91343 0.92189 0.93038 0.93892
+0.94751 0.95614 0.96482 0.97355 0.98232 0.99114 1}
+dup 3 -1 roll 0 1 3 copy 3 -1 roll exch ge
+{pop pop pop pop pop 256 get}
+{pop 3 copy pop le {pop pop pop pop 0 get}
+{exch dup 4 -1 roll exch sub 3 1 roll sub div 256 mul dup
+floor dup 3 1 roll sub exch cvi dup 1 add 4 -1 roll exch
+get 4 -1 roll 3 -1 roll get dup 4 1 roll sub mul add}
+ifelse} ifelse
+} bind
+dup
+dup
+] put
+dup /MatrixABC [
+0.2180189128 0.1112492942 0.0069565698
+0.1925612492 0.358452993 0.0485281768
+0.0715286348 0.0303053423 0.3569742448
+] put
+dup /MatrixLMN [1.9999694824 0 0 0 1.9999694824 0 0 0 1.9999694824] put
+dup /BlackPoint [0 0 0] put
+dup /WhitePoint [0.9642028809 1 0.8249053955] put]
+/E6 exch /ColorSpace defineRes
+
+cs 0.0 0.0 0.0 sc
+S
+n
+457.189 605.346 -329.564 53.888 re
+127.625 605.346 m
+0.90196 0.93333 0.97255 sc
+f
+q
+n
+22.657 168.411 550.027 492.019 re
+W
+n
+0.479 w
+n
+127.625 605.346 329.564 53.888 re
+0.0 0.0 0.0 sc
+S
+Q
+n
+179.34 621.535 m
+179.34 647.221 l
+182.829 647.221 l
+196.33 627.027 l
+196.33 647.221 l
+199.59 647.221 l
+199.59 621.535 l
+196.101 621.535 l
+182.6 641.729 l
+182.6 621.535 l
+h
+217.668 627.542 m
+220.928 627.141 l
+220.413 625.196 219.441 623.709 218.068 622.679 c
+216.695 621.65 214.864 621.135 212.748 621.135 c
+210.002 621.135 207.828 621.936 206.226 623.595 c
+204.625 625.311 203.824 627.656 203.824 630.688 c
+203.824 633.834 204.682 636.237 206.284 638.011 c
+207.885 639.727 210.002 640.585 212.576 640.585 c
+215.036 640.585 217.096 639.727 218.64 638.011 c
+220.242 636.352 221.043 633.949 221.043 630.86 c
+221.043 630.688 221.043 630.402 220.986 630.059 c
+207.084 630.059 l
+207.256 627.999 207.828 626.398 208.858 625.311 c
+209.888 624.224 211.203 623.709 212.748 623.709 c
+213.892 623.709 214.864 623.995 215.723 624.624 c
+216.523 625.196 217.153 626.169 217.668 627.542 c
+h
+207.313 632.633 m
+217.668 632.633 l
+217.553 634.178 217.153 635.379 216.523 636.18 c
+215.494 637.381 214.178 638.011 212.576 638.011 c
+211.146 638.011 209.945 637.496 208.915 636.523 c
+207.943 635.551 207.37 634.235 207.313 632.633 c
+h
+231.797 624.338 m
+232.255 621.535 l
+231.34 621.364 230.539 621.306 229.852 621.306 c
+228.708 621.306 227.793 621.478 227.164 621.821 c
+226.535 622.164 226.134 622.679 225.848 623.251 c
+225.619 623.823 225.448 625.082 225.448 626.97 c
+225.448 637.724 l
+223.159 637.724 l
+223.159 640.184 l
+225.448 640.184 l
+225.448 644.761 l
+228.594 646.649 l
+228.594 640.184 l
+231.797 640.184 l
+231.797 637.724 l
+228.594 637.724 l
+228.594 626.798 l
+228.594 625.883 228.651 625.311 228.766 625.082 c
+228.88 624.796 229.052 624.624 229.338 624.453 c
+229.566 624.281 229.91 624.224 230.367 624.224 c
+230.768 624.224 231.225 624.281 231.797 624.338 c
+h
+238.319 621.535 m
+232.598 640.184 l
+235.859 640.184 l
+238.834 629.43 l
+239.921 625.425 l
+239.978 625.597 240.321 626.855 240.893 629.258 c
+243.868 640.184 l
+247.129 640.184 l
+249.875 629.372 l
+250.847 625.768 l
+251.877 629.372 l
+255.08 640.184 l
+258.169 640.184 l
+252.334 621.535 l
+249.074 621.535 l
+246.099 632.69 l
+245.355 635.837 l
+241.58 621.535 l
+h
+259.657 630.86 m
+259.657 634.292 260.572 636.866 262.517 638.525 c
+264.119 639.898 266.064 640.585 268.352 640.585 c
+270.926 640.585 273.043 639.727 274.645 638.068 c
+276.304 636.409 277.105 634.063 277.105 631.089 c
+277.105 628.686 276.761 626.798 276.018 625.425 c
+275.274 624.052 274.244 623.023 272.871 622.222 c
+271.498 621.478 270.011 621.135 268.352 621.135 c
+265.778 621.135 263.661 621.936 262.059 623.595 c
+260.458 625.311 259.657 627.714 259.657 630.86 c
+h
+262.86 630.86 m
+262.86 628.457 263.432 626.684 264.462 625.482 c
+265.492 624.281 266.808 623.709 268.352 623.709 c
+269.954 623.709 271.27 624.281 272.299 625.482 c
+273.329 626.684 273.844 628.514 273.844 630.974 c
+273.844 633.262 273.329 634.979 272.299 636.18 c
+271.212 637.381 269.954 637.953 268.352 637.953 c
+266.808 637.953 265.492 637.381 264.462 636.18 c
+263.432 635.036 262.86 633.205 262.86 630.86 c
+h
+280.766 621.535 m
+280.766 640.184 l
+283.626 640.184 l
+283.626 637.324 l
+284.313 638.64 284.999 639.498 285.628 639.956 c
+286.2 640.356 286.887 640.585 287.631 640.585 c
+288.717 640.585 289.804 640.242 290.891 639.555 c
+289.804 636.638 l
+289.004 637.095 288.26 637.324 287.459 637.324 c
+286.772 637.324 286.143 637.095 285.628 636.695 c
+285.056 636.294 284.656 635.722 284.427 634.979 c
+284.084 633.834 283.912 632.633 283.912 631.26 c
+283.912 621.535 l
+h
+292.779 621.535 m
+292.779 647.221 l
+295.925 647.221 l
+295.925 632.576 l
+303.419 640.184 l
+307.481 640.184 l
+300.388 633.262 l
+308.225 621.535 l
+304.335 621.535 l
+298.156 631.031 l
+295.925 628.915 l
+295.925 621.535 l
+h
+320.982 621.535 m
+320.982 647.221 l
+324.357 647.221 l
+324.357 624.567 l
+337.057 624.567 l
+337.057 621.535 l
+h
+352.845 623.823 m
+351.701 622.851 350.557 622.107 349.47 621.707 c
+348.383 621.306 347.239 621.135 345.981 621.135 c
+343.921 621.135 342.377 621.592 341.29 622.622 c
+340.146 623.595 339.631 624.91 339.631 626.455 c
+339.631 627.37 339.803 628.171 340.26 628.915 c
+340.661 629.716 341.175 630.288 341.862 630.745 c
+342.548 631.203 343.292 631.546 344.15 631.775 c
+344.779 631.947 345.695 632.118 346.953 632.29 c
+349.528 632.576 351.358 632.919 352.559 633.377 c
+352.617 633.777 352.617 634.063 352.617 634.178 c
+352.617 635.436 352.331 636.352 351.701 636.924 c
+350.9 637.61 349.699 637.953 348.097 637.953 c
+346.61 637.953 345.523 637.724 344.837 637.21 c
+344.093 636.638 343.578 635.722 343.235 634.407 c
+340.146 634.864 l
+340.432 636.18 340.889 637.21 341.576 638.068 c
+342.205 638.869 343.12 639.498 344.322 639.898 c
+345.58 640.356 346.953 640.585 348.555 640.585 c
+350.157 640.585 351.473 640.413 352.445 640.013 c
+353.418 639.67 354.161 639.155 354.619 638.583 c
+355.134 638.011 355.42 637.324 355.591 636.466 c
+355.706 635.894 355.763 634.921 355.763 633.548 c
+355.763 629.315 l
+355.763 626.398 355.82 624.567 355.992 623.766 c
+356.106 622.965 356.392 622.222 356.793 621.535 c
+353.475 621.535 l
+353.132 622.164 352.96 622.965 352.845 623.823 c
+h
+352.559 630.86 m
+351.415 630.402 349.699 630.002 347.411 629.658 c
+346.152 629.487 345.237 629.258 344.665 629.029 c
+344.15 628.8 343.693 628.457 343.406 627.999 c
+343.12 627.599 343.006 627.084 343.006 626.512 c
+343.006 625.711 343.292 624.968 343.921 624.396 c
+344.608 623.881 345.523 623.595 346.724 623.595 c
+347.983 623.595 349.013 623.823 349.985 624.396 c
+350.958 624.91 351.644 625.654 352.102 626.569 c
+352.388 627.256 352.559 628.343 352.559 629.716 c
+h
+360.511 614.327 m
+360.168 617.302 l
+360.854 617.13 361.484 617.016 361.998 617.016 c
+362.685 617.016 363.257 617.13 363.657 617.359 c
+364.115 617.645 364.458 617.931 364.687 618.389 c
+364.916 618.675 365.202 619.476 365.66 620.734 c
+365.717 620.906 365.831 621.135 365.946 621.478 c
+358.909 640.184 l
+362.284 640.184 l
+366.174 629.372 l
+366.689 627.999 367.09 626.569 367.49 625.082 c
+367.891 626.512 368.291 627.942 368.806 629.315 c
+372.81 640.184 l
+375.957 640.184 l
+368.863 621.192 l
+368.12 619.19 367.49 617.76 367.09 616.959 c
+366.518 615.929 365.888 615.185 365.145 614.671 c
+364.458 614.213 363.6 613.984 362.57 613.984 c
+361.941 613.984 361.255 614.098 360.511 614.327 c
+h
+391.402 627.542 m
+394.663 627.141 l
+394.148 625.196 393.176 623.709 391.803 622.679 c
+390.43 621.65 388.599 621.135 386.483 621.135 c
+383.737 621.135 381.563 621.936 379.961 623.595 c
+378.359 625.311 377.558 627.656 377.558 630.688 c
+377.558 633.834 378.417 636.237 380.018 638.011 c
+381.62 639.727 383.737 640.585 386.311 640.585 c
+388.771 640.585 390.83 639.727 392.375 638.011 c
+393.977 636.352 394.778 633.949 394.778 630.86 c
+394.778 630.688 394.778 630.402 394.72 630.059 c
+380.819 630.059 l
+380.991 627.999 381.563 626.398 382.593 625.311 c
+383.622 624.224 384.938 623.709 386.483 623.709 c
+387.627 623.709 388.599 623.995 389.457 624.624 c
+390.258 625.196 390.888 626.169 391.402 627.542 c
+h
+381.048 632.633 m
+391.402 632.633 l
+391.288 634.178 390.888 635.379 390.258 636.18 c
+389.229 637.381 387.913 638.011 386.311 638.011 c
+384.881 638.011 383.68 637.496 382.65 636.523 c
+381.677 635.551 381.105 634.235 381.048 632.633 c
+h
+398.61 621.535 m
+398.61 640.184 l
+401.413 640.184 l
+401.413 637.324 l
+402.157 638.64 402.844 639.498 403.416 639.956 c
+404.045 640.356 404.731 640.585 405.475 640.585 c
+406.505 640.585 407.592 640.242 408.736 639.555 c
+407.592 636.638 l
+406.848 637.095 406.104 637.324 405.303 637.324 c
+404.617 637.324 403.988 637.095 403.416 636.695 c
+402.901 636.294 402.5 635.722 402.272 634.979 c
+401.928 633.834 401.757 632.633 401.757 631.26 c
+401.757 621.535 l
+0.0 0.0 0.0 sc
+f
+n
+241.58 605.346 m
+211.547 575.999 l
+231.511 576.171 l
+231.797 540.646 l
+252.392 540.817 l
+252.106 576.342 l
+272.128 576.514 l
+241.58 605.346 l
+eofill
+0.479 w
+n
+241.58 605.346 m
+211.547 575.999 l
+231.511 576.171 l
+231.797 540.646 l
+252.392 540.817 l
+252.106 576.342 l
+272.128 576.514 l
+241.58 605.346 l
+h
+S
+n
+349.127 540.76 m
+379.16 569.363 l
+359.653 569.649 l
+360.168 605.174 l
+340.089 605.518 l
+339.516 569.993 l
+319.952 570.279 l
+349.127 540.76 l
+eofill
+n
+349.127 540.76 m
+379.16 569.363 l
+359.653 569.649 l
+360.168 605.174 l
+340.089 605.518 l
+339.516 569.993 l
+319.952 570.279 l
+349.127 540.76 l
+h
+S
+n
+206.455 520.395 m
+208.686 519.823 l
+208.229 517.935 207.37 516.505 206.112 515.532 c
+204.911 514.56 203.366 514.045 201.593 514.045 c
+199.762 514.045 198.275 514.445 197.073 515.189 c
+195.929 515.933 195.071 517.02 194.442 518.45 c
+193.87 519.88 193.527 521.425 193.527 523.084 c
+193.527 524.857 193.87 526.402 194.556 527.717 c
+195.243 529.09 196.215 530.063 197.474 530.749 c
+198.732 531.436 200.105 531.779 201.65 531.779 c
+203.366 531.779 204.796 531.378 205.998 530.52 c
+207.142 529.605 207.943 528.404 208.4 526.802 c
+206.169 526.287 l
+205.769 527.546 205.197 528.461 204.453 529.033 c
+203.709 529.605 202.737 529.834 201.593 529.834 c
+200.277 529.834 199.19 529.548 198.275 528.919 c
+197.417 528.289 196.787 527.431 196.444 526.344 c
+196.044 525.315 195.872 524.228 195.872 523.084 c
+195.872 521.596 196.101 520.338 196.501 519.251 c
+196.959 518.164 197.588 517.363 198.504 516.848 c
+199.419 516.276 200.391 515.99 201.421 515.99 c
+202.68 515.99 203.766 516.391 204.625 517.134 c
+205.54 517.821 206.112 518.908 206.455 520.395 c
+h
+210.46 520.567 m
+210.46 522.855 211.089 524.571 212.347 525.715 c
+213.434 526.63 214.75 527.088 216.295 527.088 c
+218.011 527.088 219.384 526.516 220.471 525.372 c
+221.558 524.285 222.072 522.74 222.072 520.738 c
+222.072 519.136 221.844 517.878 221.386 516.963 c
+220.871 516.047 220.185 515.361 219.269 514.846 c
+218.354 514.331 217.382 514.102 216.295 514.102 c
+214.521 514.102 213.148 514.617 212.061 515.761 c
+210.974 516.848 210.46 518.45 210.46 520.567 c
+h
+212.633 520.567 m
+212.633 518.965 212.977 517.821 213.663 517.02 c
+214.35 516.219 215.208 515.818 216.295 515.818 c
+217.324 515.818 218.182 516.219 218.869 517.02 c
+219.555 517.821 219.899 519.022 219.899 520.624 c
+219.899 522.168 219.555 523.37 218.869 524.113 c
+218.182 524.914 217.324 525.315 216.295 525.315 c
+215.208 525.315 214.35 524.914 213.663 524.171 c
+212.977 523.37 212.633 522.168 212.633 520.567 c
+h
+224.532 514.388 m
+224.532 526.802 l
+226.42 526.802 l
+226.42 525.029 l
+226.821 525.658 227.335 526.116 228.022 526.516 c
+228.651 526.859 229.395 527.088 230.196 527.088 c
+231.111 527.088 231.855 526.859 232.484 526.516 c
+233.056 526.116 233.456 525.601 233.685 524.914 c
+234.715 526.344 235.973 527.088 237.575 527.088 c
+238.777 527.088 239.749 526.745 240.378 526.058 c
+241.065 525.372 241.408 524.285 241.408 522.912 c
+241.408 514.388 l
+239.291 514.388 l
+239.291 522.168 l
+239.291 523.026 239.234 523.656 239.063 523.999 c
+238.948 524.399 238.719 524.685 238.319 524.914 c
+237.976 525.143 237.575 525.257 237.06 525.257 c
+236.202 525.257 235.459 524.971 234.887 524.342 c
+234.315 523.77 234.029 522.855 234.029 521.596 c
+234.029 514.388 l
+231.912 514.388 l
+231.912 522.454 l
+231.912 523.37 231.74 524.056 231.397 524.514 c
+231.054 525.029 230.539 525.257 229.738 525.257 c
+229.166 525.257 228.594 525.086 228.079 524.8 c
+227.564 524.457 227.221 523.999 226.992 523.427 c
+226.763 522.798 226.649 521.939 226.649 520.795 c
+226.649 514.388 l
+h
+244.497 509.583 m
+244.497 526.802 l
+246.442 526.802 l
+246.442 525.2 l
+246.9 525.829 247.415 526.287 247.987 526.573 c
+248.502 526.916 249.245 527.088 250.046 527.088 c
+251.076 527.088 252.048 526.802 252.849 526.23 c
+253.65 525.715 254.279 524.914 254.68 523.942 c
+255.08 522.969 255.309 521.825 255.309 520.681 c
+255.309 519.422 255.08 518.278 254.623 517.249 c
+254.165 516.219 253.479 515.418 252.62 514.903 c
+251.762 514.331 250.847 514.102 249.875 514.102 c
+249.188 514.102 248.559 514.217 247.987 514.503 c
+247.415 514.846 246.957 515.189 246.614 515.647 c
+246.614 509.583 l
+h
+246.442 520.509 m
+246.442 518.908 246.728 517.706 247.358 516.963 c
+248.044 516.219 248.845 515.818 249.76 515.818 c
+250.675 515.818 251.476 516.219 252.163 517.02 c
+252.792 517.821 253.135 519.022 253.135 520.681 c
+253.135 522.283 252.792 523.427 252.163 524.228 c
+251.534 525.029 250.733 525.429 249.817 525.429 c
+248.959 525.429 248.158 524.971 247.472 524.171 c
+246.785 523.312 246.442 522.111 246.442 520.509 c
+h
+265.949 515.876 m
+265.149 515.246 264.405 514.789 263.661 514.503 c
+262.975 514.217 262.174 514.102 261.373 514.102 c
+260.0 514.102 258.97 514.445 258.227 515.075 c
+257.483 515.761 257.14 516.619 257.14 517.649 c
+257.14 518.221 257.254 518.793 257.54 519.308 c
+257.826 519.823 258.169 520.223 258.627 520.509 c
+259.085 520.795 259.6 521.024 260.114 521.196 c
+260.572 521.31 261.144 521.425 262.002 521.539 c
+263.718 521.711 264.977 521.939 265.778 522.225 c
+265.778 522.512 265.778 522.74 265.778 522.798 c
+265.778 523.656 265.549 524.285 265.149 524.628 c
+264.634 525.086 263.833 525.315 262.803 525.315 c
+261.773 525.315 261.03 525.143 260.572 524.8 c
+260.114 524.457 259.771 523.827 259.542 522.969 c
+257.483 523.255 l
+257.655 524.113 257.998 524.857 258.398 525.372 c
+258.856 525.944 259.428 526.344 260.286 526.63 c
+261.087 526.916 262.002 527.088 263.089 527.088 c
+264.119 527.088 264.977 526.916 265.663 526.688 c
+266.35 526.459 266.808 526.116 267.151 525.772 c
+267.437 525.372 267.666 524.914 267.78 524.342 c
+267.837 523.942 267.894 523.312 267.894 522.397 c
+267.894 519.594 l
+267.894 517.592 267.952 516.391 268.009 515.876 c
+268.123 515.361 268.295 514.846 268.581 514.388 c
+266.35 514.388 l
+266.121 514.789 266.007 515.304 265.949 515.876 c
+h
+265.778 520.624 m
+264.977 520.28 263.833 519.995 262.345 519.823 c
+261.43 519.651 260.858 519.537 260.458 519.365 c
+260.114 519.251 259.828 519.022 259.657 518.679 c
+259.485 518.393 259.371 518.049 259.371 517.706 c
+259.371 517.134 259.6 516.677 260.0 516.276 c
+260.401 515.933 261.03 515.761 261.888 515.761 c
+262.689 515.761 263.375 515.933 264.004 516.276 c
+264.634 516.619 265.149 517.077 265.435 517.706 c
+265.663 518.221 265.778 518.908 265.778 519.823 c
+h
+271.155 514.388 m
+271.155 526.802 l
+273.043 526.802 l
+273.043 524.914 l
+273.501 525.772 273.958 526.344 274.359 526.63 c
+274.759 526.916 275.217 527.088 275.732 527.088 c
+276.418 527.088 277.162 526.859 277.906 526.402 c
+277.162 524.457 l
+276.647 524.743 276.132 524.914 275.617 524.914 c
+275.16 524.914 274.759 524.743 274.359 524.457 c
+274.016 524.171 273.729 523.827 273.558 523.312 c
+273.329 522.569 273.215 521.768 273.215 520.853 c
+273.215 514.388 l
+h
+287.631 518.393 m
+289.804 518.107 l
+289.461 516.848 288.832 515.818 287.917 515.132 c
+287.001 514.445 285.8 514.102 284.37 514.102 c
+282.539 514.102 281.109 514.617 280.022 515.761 c
+278.935 516.905 278.42 518.45 278.42 520.452 c
+278.42 522.569 278.992 524.171 280.022 525.315 c
+281.109 526.516 282.539 527.088 284.255 527.088 c
+285.914 527.088 287.23 526.516 288.317 525.372 c
+289.347 524.228 289.862 522.626 289.862 520.624 c
+289.862 520.452 289.862 520.28 289.862 520.052 c
+280.594 520.052 l
+280.709 518.679 281.052 517.649 281.738 516.905 c
+282.482 516.162 283.34 515.818 284.37 515.818 c
+285.113 515.818 285.8 515.99 286.315 516.448 c
+286.887 516.848 287.287 517.477 287.631 518.393 c
+h
+280.709 521.768 m
+287.631 521.768 l
+287.573 522.798 287.287 523.598 286.887 524.113 c
+286.2 524.914 285.342 525.315 284.255 525.315 c
+283.283 525.315 282.482 525.029 281.796 524.342 c
+281.166 523.713 280.766 522.855 280.709 521.768 c
+f
+n
+332.823 511.814 m
+332.823 528.976 l
+339.288 528.976 l
+340.432 528.976 341.29 528.919 341.919 528.804 c
+342.72 528.633 343.464 528.404 344.036 528.003 c
+344.551 527.603 345.008 527.031 345.409 526.344 c
+345.752 525.658 345.924 524.857 345.924 523.999 c
+345.924 522.569 345.466 521.31 344.493 520.28 c
+343.578 519.308 341.919 518.793 339.459 518.793 c
+335.112 518.793 l
+335.112 511.814 l
+h
+335.112 520.795 m
+339.516 520.795 l
+341.004 520.795 342.034 521.081 342.663 521.653 c
+343.235 522.168 343.578 522.969 343.578 523.942 c
+343.578 524.628 343.406 525.257 343.006 525.772 c
+342.663 526.287 342.205 526.63 341.576 526.802 c
+341.233 526.859 340.489 526.916 339.459 526.916 c
+335.112 526.916 l
+h
+350.614 526.516 -2.05939 2.4599 re
+348.555 526.516 m
+h
+350.614 511.814 -2.05939 12.414 re
+348.555 511.814 m
+h
+353.818 511.814 m
+353.818 524.228 l
+355.763 524.228 l
+355.763 522.454 l
+356.678 523.827 357.994 524.514 359.71 524.514 c
+360.454 524.514 361.14 524.399 361.77 524.113 c
+362.399 523.827 362.857 523.484 363.143 523.026 c
+363.486 522.626 363.715 522.111 363.829 521.482 c
+363.886 521.081 363.943 520.452 363.943 519.48 c
+363.943 511.814 l
+361.827 511.814 l
+361.827 519.365 l
+361.827 520.223 361.77 520.853 361.598 521.31 c
+361.426 521.711 361.14 522.054 360.74 522.34 c
+360.282 522.569 359.825 522.683 359.253 522.683 c
+358.337 522.683 357.594 522.397 356.907 521.825 c
+356.278 521.253 355.935 520.166 355.935 518.622 c
+355.935 511.814 l
+f
+n
+402.615 169.607 m
+571.487 462.216 l
+524.864 489.16 l
+355.935 196.609 l
+402.615 169.607 l
+0.90196 0.93333 0.97255 sc
+eofill
+q
+n
+22.657 168.411 550.027 492.019 re
+W
+n
+n
+402.615 169.607 m
+571.487 462.216 l
+524.864 489.16 l
+355.935 196.609 l
+402.615 169.607 l
+h
+0.0 0.0 0.0 sc
+S
+Q
+n
+416.001 225.212 m
+393.748 238.083 l
+398.61 246.492 l
+399.468 247.98 400.155 249.067 400.784 249.753 c
+401.585 250.726 402.443 251.469 403.416 251.927 c
+404.331 252.327 405.418 252.556 406.562 252.442 c
+407.763 252.385 408.907 252.041 409.994 251.355 c
+411.882 250.268 413.141 248.781 413.77 246.778 c
+414.399 244.833 413.77 242.259 411.939 239.113 c
+408.679 233.392 l
+417.717 228.186 l
+h
+406.047 234.937 m
+409.365 240.715 l
+410.452 242.602 410.91 244.147 410.624 245.348 c
+410.395 246.549 409.651 247.522 408.335 248.266 c
+407.42 248.838 406.505 249.067 405.532 248.952 c
+404.617 248.895 403.816 248.495 403.13 247.865 c
+402.729 247.465 402.157 246.549 401.356 245.234 c
+398.095 239.513 l
+h
+427.785 245.634 m
+405.532 258.506 l
+407.134 261.251 l
+415.086 256.618 l
+414.342 258.734 414.571 260.794 415.658 262.739 c
+416.344 263.94 417.202 264.855 418.175 265.428 c
+419.147 266.057 420.177 266.286 421.207 266.228 c
+422.294 266.114 423.609 265.599 425.154 264.684 c
+435.394 258.792 l
+433.792 256.046 l
+423.609 261.938 l
+422.236 262.739 421.035 263.025 420.063 262.796 c
+419.147 262.567 418.346 261.881 417.717 260.794 c
+417.259 259.993 417.031 259.135 417.031 258.162 c
+417.031 257.19 417.317 256.389 417.832 255.645 c
+418.404 254.902 419.262 254.215 420.577 253.471 c
+429.387 248.38 l
+h
+443.918 259.249 m
+441.172 260.393 l
+441.686 260.908 442.087 261.366 442.316 261.824 c
+442.716 262.453 442.888 262.968 442.888 263.483 c
+442.888 263.94 442.773 264.398 442.545 264.855 c
+442.373 265.199 441.858 265.885 441.0 266.858 c
+440.886 267.029 440.714 267.201 440.485 267.487 c
+420.749 270.69 l
+422.465 273.665 l
+433.735 271.606 l
+435.165 271.377 436.652 271.034 438.14 270.633 c
+437.11 271.663 436.08 272.75 435.108 273.894 c
+427.728 282.761 l
+429.273 285.507 l
+442.144 269.89 l
+443.574 268.173 444.49 266.972 444.947 266.228 c
+445.576 265.199 445.92 264.283 445.977 263.425 c
+446.034 262.567 445.805 261.652 445.29 260.794 c
+445.004 260.279 444.547 259.764 443.918 259.249 c
+h
+441.343 280.187 m
+442.487 283.161 l
+443.631 282.647 444.718 282.589 445.691 282.99 c
+446.663 283.333 447.521 284.134 448.208 285.392 c
+448.952 286.651 449.238 287.738 449.066 288.596 c
+448.894 289.511 448.494 290.198 447.808 290.541 c
+447.178 290.941 446.549 290.941 445.863 290.598 c
+445.405 290.369 444.604 289.626 443.345 288.367 c
+441.686 286.651 440.428 285.507 439.627 284.935 c
+438.826 284.363 437.968 284.077 437.053 284.077 c
+436.195 284.019 435.337 284.248 434.536 284.706 c
+433.849 285.106 433.277 285.678 432.82 286.365 c
+432.419 287.051 432.19 287.795 432.076 288.596 c
+432.019 289.168 432.076 289.912 432.305 290.77 c
+432.534 291.628 432.877 292.486 433.334 293.344 c
+434.078 294.603 434.879 295.632 435.794 296.376 c
+436.71 297.12 437.625 297.52 438.54 297.635 c
+439.398 297.692 440.428 297.52 441.572 297.12 c
+440.371 294.202 l
+439.455 294.603 438.655 294.603 437.854 294.317 c
+437.053 293.973 436.309 293.287 435.68 292.257 c
+434.993 290.999 434.65 289.969 434.765 289.168 c
+434.879 288.424 435.222 287.852 435.737 287.509 c
+436.138 287.337 436.481 287.28 436.938 287.337 c
+437.339 287.395 437.797 287.566 438.254 287.967 c
+438.483 288.138 439.227 288.825 440.371 289.969 c
+441.972 291.571 443.174 292.715 443.975 293.287 c
+444.718 293.859 445.519 294.145 446.435 294.259 c
+447.293 294.317 448.208 294.088 449.123 293.573 c
+450.039 293.001 450.782 292.257 451.24 291.285 c
+451.755 290.255 451.926 289.111 451.812 287.852 c
+451.64 286.651 451.24 285.335 450.496 284.077 c
+449.295 282.017 447.922 280.644 446.435 280.072 c
+444.89 279.443 443.231 279.5 441.343 280.187 c
+h
+436.652 305.129 m
+433.506 306.959 l
+435.051 309.648 l
+438.197 307.874 l
+h
+455.759 294.088 m
+439.627 303.412 l
+441.229 306.101 l
+457.361 296.834 l
+h
+459.935 314.911 m
+461.823 317.428 l
+463.482 316.055 464.512 314.453 464.855 312.622 c
+465.198 310.792 464.912 309.018 463.882 307.245 c
+462.567 305.071 460.851 303.698 458.619 303.184 c
+456.388 302.669 453.929 303.184 451.24 304.785 c
+449.524 305.758 448.151 306.959 447.178 308.275 c
+446.206 309.591 445.748 311.021 445.748 312.622 c
+445.805 314.167 446.206 315.654 447.007 317.027 c
+448.036 318.744 449.295 319.945 450.839 320.574 c
+452.384 321.146 454.043 321.146 455.816 320.517 c
+454.729 317.599 l
+453.471 318.0 452.384 318.0 451.469 317.657 c
+450.553 317.371 449.867 316.741 449.295 315.826 c
+448.551 314.453 448.38 313.023 448.894 311.593 c
+449.352 310.163 450.668 308.847 452.784 307.588 c
+454.958 306.387 456.789 305.872 458.276 306.158 c
+459.706 306.387 460.851 307.188 461.594 308.561 c
+462.223 309.591 462.395 310.677 462.166 311.822 c
+461.937 312.909 461.194 313.938 459.935 314.911 c
+h
+472.807 328.183 m
+473.093 326.695 473.15 325.379 472.978 324.235 c
+472.749 323.091 472.349 322.004 471.72 320.917 c
+470.747 319.144 469.489 318.0 468.116 317.599 c
+466.686 317.142 465.313 317.256 463.94 318.057 c
+463.139 318.515 462.509 319.087 462.109 319.83 c
+461.651 320.574 461.365 321.375 461.308 322.176 c
+461.251 322.977 461.365 323.835 461.594 324.636 c
+461.766 325.265 462.052 326.18 462.567 327.324 c
+463.596 329.67 464.226 331.501 464.454 332.759 c
+464.054 332.988 463.825 333.102 463.711 333.159 c
+462.624 333.789 461.709 334.018 460.908 333.732 c
+459.935 333.388 459.02 332.53 458.219 331.157 c
+457.475 329.899 457.132 328.812 457.247 327.954 c
+457.361 327.038 457.876 326.18 458.848 325.208 c
+456.96 322.748 l
+455.931 323.663 455.244 324.579 454.844 325.551 c
+454.501 326.524 454.386 327.61 454.615 328.869 c
+454.844 330.185 455.359 331.501 456.16 332.873 c
+456.96 334.246 457.761 335.276 458.619 335.963 c
+459.42 336.649 460.164 337.049 460.908 337.164 c
+461.651 337.278 462.452 337.221 463.253 336.935 c
+463.768 336.763 464.626 336.306 465.885 335.619 c
+469.489 333.503 l
+472.063 332.015 473.722 331.157 474.466 330.871 c
+475.209 330.642 475.953 330.471 476.754 330.471 c
+475.152 327.61 l
+474.408 327.668 473.607 327.839 472.807 328.183 c
+h
+466.571 331.501 m
+466.399 330.299 465.885 328.583 465.027 326.466 c
+464.569 325.208 464.283 324.35 464.226 323.72 c
+464.168 323.148 464.226 322.634 464.454 322.176 c
+464.74 321.661 465.084 321.318 465.541 321.032 c
+466.285 320.574 467.029 320.517 467.83 320.803 c
+468.631 321.089 469.374 321.718 470.003 322.805 c
+470.576 323.835 470.919 324.922 470.919 326.009 c
+470.919 327.096 470.633 328.068 470.061 328.926 c
+469.603 329.555 468.802 330.242 467.601 330.928 c
+h
+478.699 333.789 m
+456.388 346.66 l
+457.99 349.349 l
+480.243 336.535 l
+h
+487.852 349.635 m
+465.541 362.506 l
+467.258 365.424 l
+486.936 354.097 l
+493.229 365.08 l
+495.861 363.536 l
+h
+501.81 378.352 m
+502.039 376.865 502.096 375.549 501.924 374.405 c
+501.753 373.261 501.352 372.174 500.723 371.087 c
+499.693 369.314 498.492 368.17 497.062 367.769 c
+495.632 367.311 494.259 367.426 492.886 368.227 c
+492.142 368.684 491.513 369.257 491.055 370.0 c
+490.598 370.744 490.369 371.545 490.312 372.346 c
+490.254 373.147 490.312 374.005 490.54 374.805 c
+490.712 375.435 491.055 376.35 491.513 377.494 c
+492.543 379.84 493.172 381.67 493.401 382.929 c
+493.057 383.158 492.829 383.272 492.714 383.329 c
+491.57 383.958 490.655 384.187 489.911 383.901 c
+488.881 383.558 487.966 382.7 487.165 381.327 c
+486.422 380.068 486.136 378.982 486.193 378.123 c
+486.307 377.208 486.822 376.293 487.795 375.378 c
+485.907 372.918 l
+484.877 373.833 484.191 374.748 483.847 375.721 c
+483.447 376.693 483.39 377.78 483.619 379.039 c
+483.847 380.354 484.362 381.67 485.163 383.043 c
+485.907 384.416 486.765 385.446 487.566 386.132 c
+488.367 386.819 489.168 387.219 489.854 387.334 c
+490.598 387.448 491.399 387.391 492.257 387.105 c
+492.771 386.933 493.63 386.476 494.831 385.789 c
+498.492 383.672 l
+501.009 382.185 502.668 381.327 503.412 381.041 c
+504.155 380.812 504.899 380.641 505.757 380.641 c
+504.098 377.78 l
+503.355 377.837 502.611 378.009 501.81 378.352 c
+h
+495.575 381.67 m
+495.403 380.469 494.888 378.753 493.973 376.636 c
+493.515 375.378 493.229 374.519 493.172 373.89 c
+493.115 373.318 493.172 372.803 493.458 372.346 c
+493.687 371.831 494.03 371.488 494.488 371.202 c
+495.231 370.744 496.032 370.687 496.833 370.973 c
+497.634 371.259 498.32 371.888 498.95 372.975 c
+499.579 374.005 499.865 375.092 499.865 376.178 c
+499.865 377.265 499.636 378.238 499.007 379.096 c
+498.606 379.725 497.748 380.412 496.547 381.098 c
+h
+513.823 380.297 m
+511.077 381.499 l
+511.592 381.956 511.993 382.471 512.222 382.872 c
+512.565 383.501 512.794 384.073 512.794 384.531 c
+512.794 384.988 512.679 385.503 512.45 385.903 c
+512.279 386.247 511.764 386.933 510.906 387.906 c
+510.791 388.077 510.563 388.306 510.334 388.535 c
+490.655 391.796 l
+492.371 394.713 l
+503.641 392.654 l
+505.071 392.425 506.558 392.082 508.046 391.681 c
+506.959 392.711 505.986 393.798 505.014 394.942 c
+497.634 403.809 l
+499.179 406.555 l
+512.05 390.938 l
+513.423 389.279 514.395 388.02 514.853 387.276 c
+515.482 386.304 515.768 385.331 515.826 384.473 c
+515.883 383.615 515.711 382.757 515.196 381.842 c
+514.853 381.327 514.453 380.812 513.823 380.297 c
+h
+517.828 413.591 m
+519.83 416.223 l
+521.203 414.85 522.061 413.248 522.233 411.532 c
+522.461 409.816 522.004 407.985 520.974 406.154 c
+519.601 403.752 517.771 402.322 515.539 401.75 c
+513.251 401.235 510.849 401.692 508.217 403.237 c
+505.471 404.781 503.812 406.726 503.126 408.957 c
+502.439 411.246 502.725 413.477 503.984 415.708 c
+505.242 417.882 507.016 419.197 509.247 419.712 c
+511.535 420.227 513.995 419.712 516.626 418.225 c
+516.798 418.11 517.027 417.939 517.37 417.767 c
+510.391 405.754 l
+512.222 404.781 513.88 404.553 515.368 404.896 c
+516.798 405.239 517.942 406.097 518.686 407.47 c
+519.315 408.443 519.544 409.472 519.43 410.445 c
+519.258 411.475 518.743 412.504 517.828 413.591 c
+h
+508.274 407.184 m
+513.423 416.165 l
+512.05 416.852 510.791 417.081 509.819 416.909 c
+508.217 416.68 507.073 415.822 506.272 414.449 c
+505.528 413.191 505.357 411.875 505.7 410.559 c
+506.043 409.186 506.901 408.099 508.274 407.184 c
+h
+526.637 416.852 m
+510.505 426.177 l
+511.936 428.636 l
+514.395 427.206 l
+513.594 428.465 513.194 429.494 513.137 430.238 c
+513.08 430.982 513.194 431.668 513.594 432.298 c
+514.109 433.27 514.967 434.014 516.112 434.643 c
+518.057 432.24 l
+517.313 431.783 516.741 431.211 516.34 430.524 c
+515.997 429.952 515.883 429.323 515.94 428.636 c
+515.997 427.95 516.34 427.321 516.855 426.749 c
+517.656 425.891 518.629 425.09 519.773 424.46 c
+528.239 419.598 l
+0.0 0.0 0.0 sc
+f
+n
+23.853 482.067 m
+201.249 174.813 l
+247.93 201.757 l
+70.534 509.068 l
+23.853 482.067 l
+0.90196 0.93333 0.97255 sc
+eofill
+q
+n
+22.657 168.411 550.027 492.019 re
+W
+n
+n
+23.853 482.067 m
+201.249 174.813 l
+247.93 201.757 l
+70.534 509.068 l
+23.853 482.067 l
+h
+0.0 0.0 0.0 sc
+S
+Q
+n
+86.437 406.04 m
+108.69 418.911 l
+110.406 415.937 l
+90.727 404.61 l
+97.077 393.626 l
+94.446 392.139 l
+h
+115.44 399.976 m
+118.587 401.807 l
+120.131 399.061 l
+116.985 397.287 l
+h
+96.276 388.935 m
+112.408 398.26 l
+114.01 395.514 l
+97.878 386.189 l
+h
+100.281 382.071 m
+116.413 391.395 l
+117.843 388.935 l
+115.555 387.562 l
+118.015 387.448 119.845 386.247 121.161 383.958 c
+121.733 382.986 122.076 382.013 122.191 380.984 c
+122.305 379.954 122.191 379.096 121.847 378.352 c
+121.504 377.666 121.047 376.979 120.36 376.35 c
+119.902 375.95 119.044 375.378 117.786 374.691 c
+107.832 368.97 l
+106.287 371.659 l
+116.07 377.323 l
+117.214 378.009 117.957 378.581 118.415 379.096 c
+118.815 379.611 119.044 380.24 119.044 380.984 c
+119.102 381.727 118.873 382.471 118.472 383.215 c
+117.786 384.359 116.813 385.16 115.612 385.56 c
+114.353 385.961 112.752 385.617 110.635 384.416 c
+101.825 379.325 l
+h
+110.292 364.737 m
+132.545 377.609 l
+134.147 374.863 l
+121.447 367.54 l
+131.744 364.852 l
+133.746 361.305 l
+124.193 363.994 l
+118.015 351.351 l
+116.07 354.726 l
+121.218 364.852 l
+118.243 365.71 l
+111.836 361.991 l
+h
+124.364 340.31 m
+146.618 353.182 l
+148.334 350.207 l
+128.712 338.88 l
+135.005 327.897 l
+132.431 326.409 l
+h
+142.27 313.881 m
+140.84 314.396 139.696 315.025 138.78 315.712 c
+137.865 316.455 137.121 317.371 136.492 318.458 c
+135.462 320.231 135.119 321.833 135.462 323.263 c
+135.748 324.75 136.607 325.837 137.922 326.638 c
+138.723 327.096 139.581 327.324 140.439 327.324 c
+141.297 327.324 142.098 327.21 142.785 326.81 c
+143.529 326.466 144.215 326.009 144.844 325.379 c
+145.302 324.922 145.874 324.178 146.675 323.206 c
+148.219 321.146 149.421 319.659 150.393 318.858 c
+150.794 319.03 151.023 319.201 151.137 319.258 c
+152.224 319.888 152.91 320.631 153.025 321.375 c
+153.254 322.462 152.968 323.663 152.167 325.036 c
+151.423 326.295 150.679 327.153 149.878 327.496 c
+149.02 327.839 147.991 327.839 146.675 327.496 c
+145.474 330.356 l
+146.789 330.757 147.933 330.928 148.963 330.757 c
+149.993 330.585 150.965 330.128 151.995 329.269 c
+152.968 328.469 153.883 327.324 154.684 325.952 c
+155.485 324.579 155.942 323.377 156.114 322.29 c
+156.285 321.261 156.228 320.402 155.999 319.716 c
+155.713 319.03 155.256 318.343 154.626 317.771 c
+154.226 317.428 153.368 316.913 152.167 316.169 c
+148.505 314.053 l
+145.988 312.622 144.387 311.65 143.815 311.135 c
+143.185 310.62 142.67 309.991 142.27 309.305 c
+140.611 312.165 l
+141.011 312.794 141.584 313.366 142.27 313.881 c
+h
+148.277 317.599 m
+147.304 318.4 146.103 319.659 144.673 321.489 c
+143.872 322.519 143.185 323.206 142.728 323.549 c
+142.27 323.892 141.755 324.064 141.24 324.121 c
+140.668 324.121 140.153 324.007 139.696 323.778 c
+138.952 323.32 138.552 322.691 138.38 321.89 c
+138.208 321.032 138.437 320.117 139.009 319.03 c
+139.639 318.0 140.382 317.142 141.355 316.627 c
+142.27 316.055 143.242 315.826 144.272 315.883 c
+145.073 315.94 146.046 316.341 147.247 317.027 c
+h
+137.922 302.497 m
+140.325 304.27 l
+140.497 303.584 140.725 303.012 141.011 302.554 c
+141.355 301.925 141.698 301.525 142.156 301.296 c
+142.556 301.01 143.014 300.895 143.529 300.838 c
+143.872 300.838 144.73 300.952 146.046 301.181 c
+146.217 301.239 146.446 301.296 146.846 301.353 c
+159.432 316.799 l
+161.148 313.881 l
+153.768 305.129 l
+152.796 303.984 151.823 302.897 150.679 301.753 c
+152.109 302.211 153.597 302.497 155.027 302.783 c
+166.411 304.728 l
+168.013 302.039 l
+148.048 298.664 l
+145.874 298.321 144.387 298.149 143.471 298.092 c
+142.327 298.092 141.355 298.264 140.554 298.607 c
+139.753 299.007 139.124 299.637 138.609 300.495 c
+138.323 301.067 138.094 301.696 137.922 302.497 c
+h
+164.752 282.36 m
+166.068 279.329 l
+164.123 278.814 162.407 278.871 160.805 279.557 c
+159.203 280.244 157.83 281.502 156.743 283.39 c
+155.37 285.736 155.027 288.024 155.713 290.255 c
+156.343 292.486 158.002 294.374 160.633 295.861 c
+163.322 297.463 165.839 297.978 168.127 297.406 c
+170.415 296.891 172.246 295.518 173.504 293.287 c
+174.763 291.113 175.049 288.939 174.363 286.708 c
+173.676 284.477 172.017 282.647 169.386 281.102 c
+169.214 280.988 168.928 280.873 168.642 280.702 c
+161.663 292.715 l
+159.947 291.571 158.917 290.312 158.459 288.882 c
+158.059 287.395 158.23 286.022 159.031 284.649 c
+159.603 283.676 160.347 282.99 161.262 282.589 c
+162.235 282.132 163.379 282.074 164.752 282.36 c
+h
+164.008 293.859 m
+169.214 284.878 l
+170.473 285.736 171.331 286.708 171.674 287.623 c
+172.246 289.111 172.074 290.541 171.273 291.971 c
+170.587 293.23 169.557 294.031 168.184 294.374 c
+166.869 294.774 165.496 294.603 164.008 293.859 c
+h
+163.15 273.093 m
+179.282 282.418 l
+180.712 279.958 l
+178.31 278.528 l
+179.797 278.585 180.884 278.413 181.571 278.127 c
+182.2 277.784 182.772 277.326 183.115 276.697 c
+183.63 275.725 183.916 274.638 183.859 273.379 c
+180.77 272.807 l
+180.77 273.722 180.598 274.523 180.198 275.153 c
+179.854 275.782 179.397 276.182 178.71 276.468 c
+178.081 276.754 177.395 276.812 176.651 276.64 c
+175.507 276.354 174.363 275.896 173.218 275.267 c
+164.752 270.347 l
+0.0 0.0 0.0 sc
+f
+n
+356.678 361.133 m
+339.574 365.767 l
+340.718 367.769 l
+351.759 364.394 l
+352.96 364.051 354.104 363.65 355.191 363.25 c
+353.818 364.566 353.017 365.309 352.845 365.538 c
+344.436 374.119 l
+345.809 376.522 l
+354.562 374.291 l
+356.735 373.776 358.681 373.147 360.454 372.403 c
+359.653 373.147 358.681 374.005 357.651 375.034 c
+349.47 382.872 l
+350.614 384.817 l
+363.085 372.174 l
+361.998 370.286 l
+348.898 373.719 l
+347.811 374.005 347.125 374.176 346.896 374.233 c
+347.468 373.661 347.983 373.204 348.383 372.803 c
+357.88 363.135 l
+h
+366.403 377.837 m
+351.53 386.418 l
+352.559 388.249 l
+357.937 385.16 l
+357.422 386.59 357.536 387.963 358.28 389.279 c
+358.738 390.079 359.31 390.652 359.939 391.052 c
+360.625 391.452 361.312 391.624 361.998 391.567 c
+362.685 391.51 363.543 391.166 364.63 390.537 c
+371.437 386.647 l
+370.408 384.817 l
+363.543 388.707 l
+362.628 389.279 361.884 389.45 361.255 389.279 c
+360.568 389.107 360.053 388.707 359.653 387.963 c
+359.31 387.448 359.195 386.819 359.195 386.189 c
+359.195 385.56 359.367 384.988 359.71 384.531 c
+360.111 384.073 360.683 383.558 361.541 383.1 c
+367.433 379.668 l
+h
+360.282 396.773 m
+358.223 397.974 l
+359.253 399.805 l
+361.369 398.603 l
+h
+373.039 389.393 m
+362.284 395.629 l
+363.314 397.459 l
+374.069 391.224 l
+h
+376.357 398.946 m
+378.131 398.26 l
+377.959 397.688 377.73 397.173 377.501 396.773 c
+377.101 396.143 376.7 395.686 376.3 395.457 c
+375.9 395.171 375.442 395.114 375.041 395.114 c
+374.584 395.171 373.84 395.514 372.753 396.143 c
+366.575 399.747 l
+365.774 398.374 l
+364.344 399.232 l
+365.145 400.548 l
+362.456 402.093 l
+362.399 404.553 l
+366.174 402.379 l
+367.261 404.209 l
+368.634 403.351 l
+367.605 401.521 l
+373.897 397.917 l
+374.412 397.631 374.755 397.459 374.927 397.402 c
+375.156 397.402 375.327 397.459 375.499 397.516 c
+375.671 397.631 375.842 397.802 375.957 398.088 c
+376.071 398.26 376.243 398.546 376.357 398.946 c
+h
+379.79 409.129 m
+381.162 410.903 l
+382.078 409.93 382.593 408.9 382.764 407.756 c
+382.879 406.612 382.593 405.411 381.906 404.152 c
+380.991 402.55 379.79 401.578 378.245 401.235 c
+376.758 400.891 375.156 401.177 373.382 402.207 c
+371.552 403.237 370.465 404.553 370.007 406.04 c
+369.55 407.527 369.721 409.072 370.579 410.559 c
+371.38 411.989 372.582 412.848 374.069 413.191 c
+375.613 413.534 377.215 413.191 378.989 412.218 c
+379.103 412.104 379.275 412.047 379.503 411.875 c
+374.87 403.866 l
+376.071 403.294 377.158 403.065 378.131 403.294 c
+379.103 403.58 379.847 404.095 380.362 405.01 c
+380.762 405.697 380.934 406.383 380.819 407.013 c
+380.762 407.699 380.419 408.385 379.79 409.129 c
+h
+373.382 404.839 m
+376.872 410.845 l
+375.9 411.303 375.099 411.475 374.469 411.36 c
+373.382 411.189 372.639 410.616 372.067 409.701 c
+371.609 408.843 371.495 407.985 371.723 407.07 c
+371.952 406.212 372.524 405.468 373.382 404.839 c
+f
+n
+207.485 416.051 m
+225.619 418.969 l
+226.878 416.852 l
+215.551 402.207 l
+214.235 404.438 l
+217.725 408.729 l
+214.121 414.964 l
+208.686 413.992 l
+h
+216.066 415.307 m
+218.983 410.273 l
+222.187 414.22 l
+223.159 415.422 224.017 416.337 224.647 417.024 c
+223.617 416.68 222.53 416.394 221.386 416.223 c
+h
+224.303 396.086 m
+225.104 394.198 l
+223.731 393.626 222.473 393.569 221.329 394.027 c
+220.185 394.427 219.212 395.171 218.583 396.372 c
+217.725 397.86 217.496 399.29 217.954 400.777 c
+218.411 402.207 219.498 403.466 221.329 404.495 c
+222.473 405.125 223.617 405.525 224.704 405.64 c
+225.791 405.811 226.763 405.582 227.679 405.068 c
+228.537 404.495 229.28 403.752 229.795 402.836 c
+230.482 401.692 230.711 400.548 230.596 399.461 c
+230.424 398.374 229.852 397.402 228.88 396.601 c
+227.564 398.203 l
+228.193 398.775 228.594 399.404 228.708 400.033 c
+228.823 400.663 228.708 401.292 228.365 401.921 c
+227.793 402.836 227.049 403.409 226.077 403.58 c
+225.104 403.752 223.846 403.466 222.473 402.665 c
+220.986 401.807 220.127 400.891 219.784 399.976 c
+219.441 399.061 219.555 398.146 220.07 397.23 c
+220.471 396.544 221.043 396.086 221.729 395.857 c
+222.473 395.629 223.331 395.686 224.303 396.086 c
+h
+222.301 390.48 m
+237.118 399.061 l
+238.205 397.23 l
+229.738 392.311 l
+236.603 390.537 l
+237.976 388.192 l
+231.569 389.965 l
+227.45 381.556 l
+226.134 383.787 l
+229.566 390.537 l
+227.621 391.109 l
+223.331 388.649 l
+f
+n
+208.743 392.368 m
+169.1 405.754 l
+179.511 387.791 l
+150.279 370.915 l
+160.976 352.381 l
+190.209 369.257 l
+200.563 351.294 l
+208.743 392.368 l
+eofill
+n
+208.743 392.368 m
+169.1 405.754 l
+179.511 387.791 l
+150.279 370.915 l
+160.976 352.381 l
+190.209 369.257 l
+200.563 351.294 l
+208.743 392.368 l
+h
+S
+n
+436.996 337.393 m
+426.126 378.867 l
+416.058 361.591 l
+383.394 380.698 l
+372.982 362.907 l
+405.647 343.8 l
+395.521 326.524 l
+436.996 337.393 l
+eofill
+n
+436.996 337.393 m
+426.126 378.867 l
+416.058 361.591 l
+383.394 380.698 l
+372.982 362.907 l
+405.647 343.8 l
+395.521 326.524 l
+436.996 337.393 l
+h
+S
+Q
+Q
+[/EMC PDFMark5
+PDFVars/TermAll get exec end end
+%%PageTrailer
+%%Trailer
+%%EOF

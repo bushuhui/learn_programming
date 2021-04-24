@@ -1,0 +1,158 @@
+﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   LaTeX File for Doctor (Master) Thesis of Tsinghua University
+%   LaTeX + CJK     清华大学博士\KH{硕士}论文模板
+%   Based on Wang Tianshu's Template for XJTU
+%   Version: 1.00
+%   Last Update: 2003-09-12
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Copyright 2002-2003  by  Lei Wang (BaconChina)       (bcpub@sina.com)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   LaTeX File for phd thesis of xi'an Jiao Tong University
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Copyright 2002  by  Wang Tianshu    (tswang@asia.com)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Latex 西安交通大学博士论文的模板.
+%
+% 建议使用miktex2.1最大安装编译此模板
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%draft 选项可以使插入的图形只显示外框，以加快预览速度。
+%fleqn 让公式左对齐。
+\documentclass[12pt,a4paper,openany,oneside]{book}
+%\documentclass[11pt,a4paper,openany,draft]{book}
+%\documentclass[11pt,a4paper,fleqn,openany,draft]{book}
+%\documentclass[11pt,a4paper,fleqn,openany,draft]{book}
+
+%以下是采用dvipdfmx所需设置
+%\AtBeginDvi{\special{pdf:tounicode GBK-EUC-UCS2}}
+%\usepackage[CJKbookmarks=true,dvipdfm,
+%           hyperindex=true,
+%           pdfstartview=FitH,
+%           bookmarksnumbered=true,
+%           bookmarksopen=true,
+%           colorlinks=true, %注释掉此项则交叉引用为彩色边框(将colorlinks和pdfborder同时注释掉)
+%           pdfborder=001,   %注释掉此项则交叉引用为彩色边框
+%           citecolor=blue%
+%           ]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 引用的宏包
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{setup/package.tex}
+
+\begin{document}
+
+%定义所有的eps文件在 figures 子目录下
+\graphicspath{{figures/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  文本格式定义
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{setup/format.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 正文部分
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%--- Preface ------------------------
+\frontmatter
+
+% 解决中英文混排的断行问题，会加入间距，但不会影响断行
+\sloppy
+
+\pagenumbering{Roman}
+
+%封面
+\include{preface/cover}
+
+%授权
+%\include{preface/authorization}
+
+\setcounter{page}{1}
+
+%中文摘要
+\include{preface/c_abstract}
+
+%英文摘要
+\include{preface/e_abstract}
+%目录
+\renewcommand{\baselinestretch}{1.25}
+\fontsize{12pt}{12pt}\selectfont
+
+\tableofcontents
+
+%符号对照表
+%\include{preface/denotation}
+
+\mainmatter
+
+\renewcommand{\baselinestretch}{1.5}
+
+% 对应于小四的标准字号是 12pt
+% 可以在正文中用此命令修改所需要字体的的大小
+%\fontsize{12pt}{13pt}\selectfont
+\xiaosi\song
+
+
+%--- body --------------------------
+
+%正文章节
+\include{body/preface}
+\include{body/introduction}
+\include{body/le}
+\include{body/routing}
+\include{body/forward}
+\include{body/simulate}
+
+% 结论
+\include{body/conclusion}
+
+%参考文献
+\wuhao
+
+\bibliographystyle{unsrt}
+
+\ifpdf \phantomsection \fi
+
+\addcontentsline{toc}{chapter}{\hei 参考文献}
+
+%\addtolength{\itemsep}{-0.8 em} % 缩小参考文献间的垂直间距, 在bibtex下无效
+\bibliography{reference/reference}
+
+% 致谢
+\include{appendix/acknowledgements}
+\include{appendix/design-conclusion}
+
+%  附录
+
+%\begin{appendix}
+%    \renewcommand{\chaptername}{附录\Alph{chapter}}
+%   \input{appendix/appendix.tex}
+%\end{appendix}
+
+% 发表的文章列表
+
+%\include{appendix/publications}
+
+\clearpage
+\end{document}
+
+%%%%%%%%%%%%%%%%%% End of the file  %%%%%%%%%%%%%%%%%%%%%%%%

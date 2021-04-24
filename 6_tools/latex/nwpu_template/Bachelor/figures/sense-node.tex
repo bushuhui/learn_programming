@@ -1,0 +1,48 @@
+\begin{tikzpicture}[>=stealth,scale=1.5]
+\fontsize{9pt}{9pt}
+\tikzstyle{arrow}=[->]
+	\draw[dashed] (0.28,0.21) rectangle (2.74,0.81);
+	\draw[dashed] (2.88,0.21) rectangle (4.36,0.81);
+	\draw[dashed] (4.54,0.21) rectangle (6.42,0.81);
+
+	\draw (0.28,1.00) rectangle (6.42,1.60);
+
+	\draw (0.28,2) rectangle (1.53,2.6);
+	\draw (1,2)--(1,2.6);
+	\draw (1.75,2) rectangle (3,2.6);
+	\draw (2.47,2)--(2.47,2.6);
+	\draw (3.39,2) rectangle (4.39,2.6);
+	\draw (3.39,2.3)--(4.39,2.3);
+	\draw (4.75,2) rectangle (5.75,2.6);
+
+	\draw (5.95,2) -- (6.42,2) --(6.18,3.43)--cycle;
+
+	\node at (1.5,0.5) {定位系统};
+	\node at (3.6,0.5) {电源产生器};
+	\node at (5.5,0.5) {致动装置};
+	\node at (3.6,1.3) {电源管理单元};
+	\node at (0.65,2.3) {传感器};
+	\node at (1.25,2.3) {\textsf{\tiny ADC}};
+	\node at (2.11,2.3) {传感器};
+	\node at (2.75,2.3) {\textsf{\tiny ADC}};
+	\node at (3.85,2.15) {存储器};
+	\node at (3.85,2.45) {处理器};
+	\node at (5.20,2.3) {收发器};
+	\node at (6.18,3.6) {天线};
+
+	\path (1.5,1) edge[arrow] (1.5,0.81);
+	\path (3.55,0.81) edge[arrow] (3.55,1);
+	\path (5.6,1) edge[arrow] (5.6,0.81);
+
+	\path (0.7,1.6) edge[arrow] (0.7,2);
+	\path (1.15,1.6) edge[arrow] (1.15,2);
+	\path (2.16,1.6) edge[arrow] (2.16,2);
+	\path (2.6,1.6) edge[arrow] (2.6,2);
+	\path (3.7,1.6) edge[arrow] (3.7,2);
+	\path (5.25,1.6) edge[arrow] (5.25,2);
+
+	\draw[<->] (3.39,2.35) -- (3.24,2.35) -- (3.24,1.81) --(1.44,1.81)--(1.44,2);
+	\draw[<->] (3.39,2.5) -- (3.13,2.5) -- (3.13,1.85) -- (2.92,1.85) -- (2.92,2);
+	\draw[<->] (4.4,2.4) -- (4.75,2.4);
+	\draw (5.75,2.3) -- (6,2.3);
+\end{tikzpicture}

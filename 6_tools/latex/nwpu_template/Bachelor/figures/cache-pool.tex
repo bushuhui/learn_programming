@@ -1,0 +1,62 @@
+\begin{tikzpicture}[>=latex]
+	\fill[gray!40] (2,4) rectangle (3,3.5);
+	\fill[gray!40] (2,2.5) rectangle (3,2);
+	\draw (2,4) rectangle (3,2);
+	\draw (2,2.5)--(3,2.5);
+	\draw (2,3)--(3,3);
+	\draw (2,3.5)--(3,3.5);
+	\node at (2.5,3.75) {0};
+	\node at (2.5,3.25) {1};
+	\node at (2.5,2.75) {2};
+	\node at (2.5,2.25) {3};
+
+	\fill[gray!40] (7,3.5) rectangle (8,3);
+	\fill[gray!40] (7,2) rectangle (8,1.5);
+	\fill[gray!20] (7,2.5) rectangle (8,2);
+	\draw (7,3.5) rectangle (8,1.5);
+	\draw (7,3)--(8,3);
+	\draw (7,2.5)--(8,2.5);
+	\draw (7,2)--(8,2);
+	\node at (7.5,3.25) {0};
+	\node at (7.5,2.75) {1};
+	\node at (7.5,2.25) {2};
+	\node at (7.5,1.75) {3};
+
+	\fill[gray!40] (5,8) rectangle (6,7.5);
+	\fill[gray!40] (5,6.5) rectangle (6,6);
+	\fill[gray!40] (5,7) rectangle (6,6.5);
+	\draw (5,8) rectangle (6,6);
+	\draw (5,7.5)--(6,7.5);
+	\draw (5,7)--(6,7);
+	\draw (5,6.5)--(6,6.5);
+	\node at (5.5,7.75) {0};
+	\node at (5.5,7.25) {1};
+	\node at (5.5,6.75) {2};
+	\node at (5.5,6.25) {3};
+	
+	%\draw[rotate=-10] (2,3.4) ellipse (1.2 and 1.5);
+	%\draw[rotate=-10] (7,3.7) ellipse (1.2 and 1.5);
+	%\draw[rotate=-10] (4.2,7.8) ellipse (1.2 and 1.5);
+
+	\node (AI) at (2,2.75) {};
+	\node (AO) at (3,2.75) {};
+	\node (BI) at (7,2.25) {};
+	\node (BO) at (8,2.25) {};
+	\node (CI) at (6,6.6) {};
+	\node (CO) at (5,6.75) {};
+
+	\draw[->] (AO) .. controls +(right:2) and +(left:1) .. node[below] {获取qe} (BI);
+	\draw[->] (BO) .. controls +(right:2) and +(right:2) .. node[right] {使用qe} (CI);
+	\draw[->] (CO) .. controls +(left:2) and +(left:2) .. node[left] {释放qe} (AI);
+
+	\draw (7,7.3) -- node[above] {\footnotesize 将qe指针放入发送队列} (9,7.3);
+	\draw (7,6.7) -- (9,6.7);
+	\draw (7.5,7.3) -- (7.5,6.7);
+	\draw (7.9,7.3) -- (7.9,6.7);
+	\draw (8.3,7.3) -- (8.3,6.7);
+	\draw (8.7,7.3) -- (8.7,6.7);
+	\node at (7.7,7) {2};
+	\node at (8.1,7) {0};
+	\node at (8.5,7) {3};
+	\draw[->] (6,6.8) .. controls +(right:0.8) and +(left:0.5).. (7.3,7);
+\end{tikzpicture}

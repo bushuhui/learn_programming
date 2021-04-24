@@ -1,0 +1,88 @@
+\begin{tikzpicture}[>=latex,scale=1.4]
+	\draw[->] (0,5.7) -- (0.7,5.7);
+	\draw[->] (0,5.7) -- (0,6.3);
+	\draw (0,5.8) parabola (0.6,6.2);
+
+	\draw[->] (0,3.7) -- (0.7,3.7);
+	\draw[->] (0,3.7) -- (0,4.3);
+	\draw (0,3.95) -- (0.6,3.95);
+
+	\draw (1.5,6) circle (0.3);
+	\draw (1.5,6) -- (1.8,6);
+	\draw (1.5,6) -- (1.5,6.3);
+
+	\draw (1.5,4) circle (0.3);
+	\draw (1.5,4) -- (1.8,4);
+	\draw (1.5,4) -- (1.5,4.3);
+
+	\draw[->,gray,line width=2pt] (3-0.3,6) -- (3+0.3,6);
+	\draw[->,gray,line width=2pt] (3-0.3,4) -- (3+0.3,4);
+
+	\draw (3.5,6.3) rectangle (4.5,5.7);
+	\draw (3.8,6.3) -- (3.8,5.7);
+
+	\draw (3.5,3) -- (3.5,4.5) -- (5,4.5) -- (5,3);
+	\draw (3.5,3.3) -- (5,3.3);
+	\draw (3.5,3.6) -- (5,3.6);
+	\draw (3.5,3.9) -- (5,3.9);
+	\draw (3.5,4.2) -- (5,4.2);
+
+	\draw (3.9,4.5) -- (3.9,3);
+	\draw (4.5,4.5) -- (4.5,3);
+	\node at (4.2,4.35) {\tiny ETX};
+	\node at (4.2,4.05) {\tiny 9};
+	\node at (4.2,3.75) {\tiny 6};
+	\node at (4.2,3.45) {\tiny 4};
+	\node at (3.7,4.05) {\tiny 2};
+	\node at (3.7,3.75) {\tiny 5};
+	\node at (3.7,3.45) {\tiny 3};
+	\node at (3.7, 3.15) {\tiny\ldots};
+	\node at (4.2, 3.15) {\tiny\ldots};
+	\node at (4.75, 3.15) {\tiny\ldots};
+
+	\node[draw, circle] (parent) at (5.9,4) {3};
+	\node[inner sep=1,circle,fill] (d) at (4.75,3.45) {};
+	\draw[->] (d) .. controls +(right:1) and +(left:1) .. (parent);
+
+	\draw[dashed] (7,7) -- (7,2);
+
+	\draw (8,6.3) rectangle (9,5.7);
+	\draw (8.3,6.3) -- (8.3,5.7);
+
+	\draw (8,3) -- (8,4.5) -- (9.5,4.5) -- (9.5,3);
+	\draw (8,3.3) -- (9.5,3.3);
+	\draw (8,3.6) -- (9.5,3.6);
+	\draw (8,3.9) -- (9.5,3.9);
+	\draw (8,4.2) -- (9.5,4.2);
+
+	\draw (8.4,4.5) -- (8.4,3);
+	\draw (9,4.5) -- (9,3);
+	\node at (8.7,4.35) {\tiny ETX};
+	\node at (8.2,4.05) {\tiny 4};
+	\node at (8.2,3.75) {\tiny 1};
+	\node at (8.2,3.45) {\tiny 3};
+	\node at (8.2, 3.15) {\tiny\ldots};
+	\node at (8.7, 3.15) {\tiny\ldots};
+	\node at (9.25, 3.15) {\tiny\ldots};
+
+	\node[inner sep=1,fill,circle] (head) at (8.15,6) {};
+	\node[inner sep=0] (end) at (8,3.75) {};
+	\draw[->] (head) .. controls +(left:1) and +(left:1) .. (end);
+
+	\draw (2.2,6.15) node[text width=1cm,text centered] {\scriptsize 信标帧};
+	\draw (2.2,5.85) node[text width=1cm,text centered] {\scriptsize 定时器};
+	\draw (2.2,4.15) node[text width=1cm,text centered] {\scriptsize 路由};
+	\draw (2.2,3.85) node[text width=1cm,text centered] {\scriptsize 定时器};
+	\draw (4.35,4.7) node[text width=1cm,text centered] {\scriptsize 路由表};
+	\draw (8.85,4.7) node[text width=1cm,text centered] {\scriptsize 路由表};
+	\draw (4,6.5) node[text width=1cm,text centered] {\scriptsize 信标帧};
+	\draw (8.5,6.5) node[text width=1cm,text centered] {\scriptsize 信标帧};
+	\draw (6,3.15) node[text width=2cm,text centered] {\scriptsize 选择ETX最小};
+	\draw (6,2.85) node[text width=2cm,text centered] {\scriptsize 的作为父节点};
+	\draw (7.5,3.15) node[text width=1cm,text centered] {\scriptsize 更新路};
+	\draw (7.5,2.85) node[text width=1cm,text centered] {\scriptsize 由表项};
+	\draw (2,2.4) node {节点1};
+	\draw (9,2.4) node {节点2};
+
+	\draw[->,gray,line width=1.5pt] (5,6) -- (7.5,6);
+\end{tikzpicture}

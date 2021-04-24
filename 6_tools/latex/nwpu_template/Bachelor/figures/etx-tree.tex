@@ -1,0 +1,49 @@
+\begin{tikzpicture}[grow=right, sloped]
+\tikzstyle{level 1}=[level distance=3.5cm, sibling distance=3.5cm]
+\tikzstyle{level 2}=[level distance=3.5cm, sibling distance=2cm]
+
+\tikzstyle{bag} = [text width=2em, text centered,draw,circle,inner sep=0pt]
+\tikzstyle{end} = [circle, minimum width=3pt,fill, inner sep=0pt]
+\usetikzlibrary{trees}
+\node[bag] {$0$}
+    child {
+        node[bag] {$4$}        
+            child {
+                node[end, label=right:
+                    {$8$}] {}
+                edge from parent
+                node[above] {$$}
+                node[below]  {$4$}
+            }
+            child {
+                node[end, label=right:
+                    {$9$}] {}
+                edge from parent
+                node[above] {$$}
+                node[below]  {$5$}
+            }
+            edge from parent 
+            node[above] {$$}
+            node[below]  {$4$}
+    }
+    child {
+        node[bag] {$3$}        
+        child {
+                node[end, label=right:
+                    {$6$}] {}
+                edge from parent
+                node[above] {$$}
+                node[below]  {$3$}
+            }
+            child {
+                node[end, label=right:
+                    {$9$}] {}
+                edge from parent
+                node[above] {$$}
+                node[below]  {$6$}
+            }
+        edge from parent         
+            node[above] {$$}
+            node[below]  {$3$}
+    };
+\end{tikzpicture}

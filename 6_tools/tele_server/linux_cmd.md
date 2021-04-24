@@ -76,6 +76,10 @@ gdb
 run
 ## 查看报错位置
 backtrace
+
+# 查看字体
+fc-list 
+fc-list :lang=zh
 ```
 
 

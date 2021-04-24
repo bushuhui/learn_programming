@@ -1,0 +1,219 @@
+\chapter*{附~~录}
+\markboth{附录}{附录}
+\addcontentsline{toc}{chapter}{\hei 附录}
+\noindent\bfseries\texttt{test.py}源代码：
+\setmonofont{Monaco}
+\lstset{basicstyle=\ttfamily\scriptsize,keywordstyle=\color{blue},commentstyle=\color{green},stringstyle=\color{red},tabsize=4,frameround=fttt,escapeinside=``,lineskip=0.6pt}
+\begin{lstlisting}[language=Python]
+#!/usr/bin/env python
+from TOSSIM import *
+from random import *
+import sys
+
+if len(sys.argv) < 3:
+	print "usage: need 2 parameter, nodes number and simulate time"
+	sys.exit(0)
+
+nodes = int(sys.argv[1])
+sim_time = int(sys.argv[2])
+t = Tossim([])
+r = t.radio()
+
+f = open("topo.txt", "r")
+lines = f.readlines()
+for line in lines:
+  s = line.split()
+  if (len(s) > 0):
+    if s[0] == "gain":
+      r.add(int(s[1]), int(s[2]), float(s[3]))
+
+noise = open("meyer-short.txt", "r")
+lines = noise.readlines()
+for line in lines:
+  str = line.strip()
+  if (str != ""):
+    val = int(str)
+    for i in range(0, nodes):
+      m = t.getNode(i);
+      m.addNoiseTraceReading(val)
+
+for i in range(0, nodes):
+  m = t.getNode(i);
+  m.createNoiseModel();
+  time = randint(t.ticksPerSecond(), 10 * t.ticksPerSecond())
+  m.bootAtTime(time)
+  print "Booting ", i, " at time ", time
+
+print "Starting simulation."
+
+t.addChannel("Forwarder", sys.stdout)
+t.addChannel("TestNetworkC", sys.stdout)
+t.addChannel("TreeRouting", sys.stdout)
+t.addChannel("LI", sys.stdout)
+
+while (t.time() < sim_time):
+  t.runNextEvent()
+
+print "Completed simulation."
+\end{lstlisting}
+
+\noindent\bfseries\texttt{ctpsim-3d.py}源代码：
+\begin{lstlisting}[language=Python,tabsize=2]
+#!/usr/bin/env python
+import xmlrpclib,time
+import re
+
+nodes = 10
+server = xmlrpclib.Server('http://localhost:20738/RPC2')
+G = server.ubigraph
+
+G.clear()
+
+node = [0 for col in range(nodes)]
+
+for i in range(0,nodes):
+	node[i] = G.new_vertex()
+	G.set_vertex_attribute(node[i], 'label', str(i))
+	G.set_vertex_attribute(node[i], 'shape','sphere')
+	G.set_vertex_attribute(node[i], 'size','0.5')
+	G.set_vertex_attribute(node[i], 'color','#1E90FF')
+
+edge = [[0 for col in range(nodes)] for row in range(nodes)]
+
+for i in range(0,nodes):
+	for j in range(i+1, nodes):
+		edge[i][j] = G.new_edge(node[i], node[j])
+		edge[j][i] = edge[i][j]
+
+topo = open('topo.txt', 'r')
+lines = topo.readlines()
+for line in lines:
+	s = line.split()
+	if s[0] == 'gain':
+		if int(s[1]) < nodes and int(s[2]) < 
+				nodes and int(s[1]) < int(s[2]):
+			G.set_edge_attribute(edge[int(s[1])][int(s[2])],
+					     'strength',
+					     str(1 + float(s[3]) / 120.0))
+			#G.set_edge_attribute(edge[int(s[1])][int(s[2])],
+					      'label', s[3]) # add gain value
+
+G.set_vertex_attribute(node[0], 'color', '#FFFF00') # root node
+
+def node_spark(node_id):
+	node_id = int(node_id)
+	G.set_vertex_attribute(node[node_id], 'color', '#FF0000')
+	G.set_vertex_attribute(node[node_id], 'color', '#FFFFFF')
+	G.set_vertex_attribute(node[node_id], 'color', '#FF0000')
+	G.set_vertex_attribute(node[node_id], 'color', '#FFFFFF')
+	if node_id != 0:
+		G.set_vertex_attribute(node[node_id], 'color', '#1E90FF')
+	else:
+		G.set_vertex_attribute(node[node_id], 'color', '#FFFF00')
+
+
+def node_display_debug_str(node_id, debug_str):
+	G.set_vertex_attribute(node[int(node_id)], 'label', node_id+": "+debug_str)
+	#time.sleep(0.0)
+	#G.set_vertex_attribute(node[node_id], 'label', str(node_id))
+
+def process_boot_at_time(node_id, time):
+	G.set_vertex_attribute(node[int(node_id)], 'label','boot at:'+time)
+
+
+def process_parent_change(node_id, origin_parent, new_parent):
+	node_id = int(node_id)
+	origin_parent = int(origin_parent)
+	new_parent = int(new_parent)
+	if origin_parent != 65535:
+		G.set_edge_attribute(edge[node_id][origin_parent], 'color', '#C0C0C0')
+		G.set_edge_attribute(edge[node_id][origin_parent], 'width','1')
+	G.set_edge_attribute(edge[node_id][new_parent], 'color', '#FF00FF')
+	G.set_edge_attribute(edge[node_id][new_parent], 'width','7')
+	time.sleep(0.5)
+
+def animateArrow(e, reverse):
+  pos = 0.0
+  if reverse:
+    pos = 1.0
+  G.set_edge_attribute(e, "arrow_position", str(pos))
+  G.set_edge_attribute(e, "arrow_reverse", str(reverse))
+  G.set_edge_attribute(e, "arrow", "true")
+  for i in range(0,20):
+    a = i / 19.0
+    if reverse:
+      a = 1.0 - a
+    G.set_edge_attribute(e, "arrow_position", str(a))
+    time.sleep(0.05)
+  G.set_edge_attribute(e, "arrow", "false")
+
+def animate_broadcast(node_id):
+	node_id = int(node_id)
+	for j in range(2):
+		for i in range(21):
+			G.set_vertex_attribute(node[node_id], 
+				'size', str(0.5 + i / 20.0))
+		for i in range(21):
+			G.set_vertex_attribute(node[node_id],
+				'size', str(0.5 + (20 - i)/20.0))
+
+def process_send_beacon(node_id):
+	node_id = int(node_id)
+	animate_broadcast(node_id)
+	
+
+def process_forwoard_subsend(node_id, dest):
+	print node_id, dest
+	node_id = int(node_id)
+	dest = int(dest)
+	if node_id == dest:
+		return
+	G.set_edge_attribute(edge[node_id][dest], 'arrow','true')
+	if node_id > dest:
+		G.set_edge_attribute(edge[node_id][dest], "arrow_reverse", 'true')
+	speed = 10 # the smaller, the faster
+	for pos in range(speed+1):
+			if node_id < dest:
+				G.set_edge_attribute(edge[node_id][dest], 
+					"arrow_position", str(pos / float(speed)))
+			else:
+				G.set_edge_attribute(edge[node_id][dest], 
+					"arrow_position", str(1- pos / float(speed)))
+			time.sleep(0.05)
+	G.set_edge_attribute(edge[node_id][dest], "arrow_reverse", 'false')
+	G.set_edge_attribute(edge[node_id][dest], 'arrow','false')
+
+def dispatch_each_line(line):
+	re_boot_at_time = r'Booting  (/d+)  at time  (/d+)'
+	re_debug = r'^DEBUG \((\d+)\): (.*)'
+
+	re_parent_change = r'Changed parent. from (\d+) to (\d+)'
+	# 1.parent,  2.etx
+	re_send_beacon = r'CtpRoutingEngineP\$0\$sendBeaconTask\$runTask parent: (\d+) etx: (\d+)' 
+	# 1.dest, 2. error
+	re_forward_subsend = r'CtpForwardingEngineP\$0\$SubSend\$sendDone to (\d+) and (\d+)' 
+
+	match = re.match(re_boot_at_time, line)
+	if match:
+		process_boot_at_time(match.group(1), match.group(2))
+	else:	# match debug messages
+		match = re.match(re_debug, line)
+		if match:
+			node_id = match.group(1)
+			node_spark(node_id)
+			debug_str = match.group(2)
+			node_display_debug_str(node_id, debug_str)
+			
+			if re.match(re_parent_change, debug_str):
+				match = re.match(re_parent_change, debug_str)
+				process_parent_change(node_id, match.group(1), match.group(2))
+			elif re.match(re_send_beacon, debug_str):
+				process_send_beacon(node_id)
+			elif re.match(re_forward_subsend, debug_str):	# Forwarder send a packet
+				match = re.match(re_forward_subsend, debug_str)
+				process_forwoard_subsend(node_id, match.group(1))
+line = raw_input()
+while line:
+	dispatch_each_line(line)
+	line = raw_input()
+\end{lstlisting}

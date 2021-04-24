@@ -1,0 +1,40 @@
+\begin{tikzpicture}[>=latex]
+	\usetikzlibrary{shapes.multipart}
+	\tikzstyle{qi}=[minimum height=1.2cm,minimum width=3cm,draw,rectangle]
+	\tikzstyle{table}=[minimum height=1.2cm,rectangle split,rectangle split parts=3,draw=black]
+
+	\node[table] (TRO) at (3,3.5)
+	{
+		\fontsize{9pt}{9pt}路由表
+		\nodepart{second}
+		\nodepart{third}
+	};
+	\node[table] (TLE) at (3,1.5)
+	{
+		\fontsize{9pt}{9pt}邻居表
+		\nodepart{second}
+		\nodepart{third}
+	};
+
+	\node at (2.9,6.1) {\fontsize{9pt}{9pt}发送队列};
+	\draw (2.2,5.8) -- (3.7,5.8);
+	\draw (2.2,5.2) -- (3.7,5.2);
+
+	\draw (2.5,5.2) -- (2.5,5.8);
+	\draw (2.8,5.2) -- (2.8,5.8);
+	\draw (3.1,5.2) -- (3.1,5.8);
+	\draw (3.4,5.2) -- (3.4,5.8);
+
+	\node[qi] (FO) at (7,5.5) {转发引擎};
+	\node[qi] (RO) at (7,3.5) {路由引擎};
+	\node[qi] (LE) at (7,1.5) {链路估计器};
+	\node[qi] (TR) at (12,5.5) {收发器};
+
+	\path (LE) edge[->] node[right]{\fontsize{9pt}{9pt}单跳连接质量}(RO);
+	\path (RO) edge[->] node[right]{\fontsize{9pt}{9pt}父节点}(FO);
+	\path (FO) edge[->] node[above]{\fontsize{9pt}{9pt}数据包}(TR);
+
+	\path (3.7,5.5) edge[<->] (FO);
+	\path (TRO) edge[<->] (RO);
+	\path (TLE) edge[<->] (LE);
+\end{tikzpicture}

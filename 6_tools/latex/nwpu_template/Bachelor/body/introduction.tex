@@ -1,0 +1,150 @@
+\chapter{无线传感器网络}\label{introduction}
+\section{无线传感器网络简介}
+\subsection{无线传感器网络结构}
+无线传感器网络是由大量廉价、微型、低功耗传感器节点通过无线方式通信，自组形成的网络系统\ucite{sunlimin2005}。其目的是通过节点间的协作来感知、采集和处理网络覆盖区域中感知对象的信息，并将结果发送给观察者。
+
+\begin{figure}[ht]
+\centering
+\input{figures/wsn-scenario}
+\caption{典型无线传感器网络结构}\label{wsn-scenario}
+\end{figure}
+常见的无线传感器网络结构如图\ref{wsn-scenario}所示，传感器网络体系中通常包含传感器节点、汇聚节点和管理节点。大量传感器节点随机部署在监测区域内部或附近，能够通过自组织方式构成网络。传感器节点监测的数据沿着其他传感器节点逐跳地进行传输，在传输过程中监测数据可能被多个节点处理，经过多跳后路由到汇聚节点，最后通过互联网或卫星到达管理节点。用户通过管理节点对传感器网络进行配置和管理，发布监测任务以及收集监测数据。
+
+\subsection{传感器节点结构}
+无线传感器网络节点的体系结构如图\ref{sense-node}所示，它的四个基本组成部分是:
+传感器模块、处理器模块、无线通信模块和能量供应模块。传感器模块负责监测区域内信息的采集和数据转换；处理器模块负责控制整个传感器网络节点的操作，存储和处理本身采集的数据以及其他节点发来的数据；无线通信模块负责与其他传感器节点进行无线通信，交换控制消息和收发采集数据；能量供应模块为传感器节点提供运行所需的能量。
+
+\begin{figure}[ht]
+\centering
+\input{figures/sense-node}
+\caption{传感器节点结构}\label{sense-node}
+\end{figure}
+
+\subsection{传感器节点的限制}
+作为一种嵌入式设备，传感器节点在实现各种网络协议和应用时，将受到以下因素的限制：
+\vspace{-10pt}
+\begin{enumerate}
+	\item 电源能力有限。传感器节点体积微小，通常携带能量十分有限的电池。而且由于节点分布广、地理环境复杂，人为更换电池补充能量是不现实的。如何高效地使用能量来最大化网络的生命周期是传感器网络面临的首要挑战。
+	\item 通信能力有限。传感器网络的通信带宽比较窄，通信覆盖范围只有几米到几百米，且更多地受到高山、建筑物、障碍物等地势地貌以及风雨雷电等自然环境因素的影响，通信中断频繁，容易导致通信失败。因此要求无线传感器网络的通信协议具有高效性和可靠性。
+	\item 计算和存储能力有限。由于体积和功耗的限制，传感器使用的嵌入式处理器和存储器一般能力有限。
+	\item 传感器数量大、分布范围广。传感器网络中，传感器节点密集，数量巨大，可能达到几百万、几千万，甚至更多，这使得网络的维护十分困难甚至不可维护。
+	\item 网络动态性强。传感器网络具有很强的动态性，网络中的传感器、感知对象和观察者这三要素都可能具有移动性，并且经常有新节点加入或已有节点失效。因此，网络的拓扑结构动态变化将导致传感器、感知对象和观察者三者之间的路径也随之变化，这就要求无线传感器网络必须具有可重构和自组织性。
+\end{enumerate}
+
+\section{TinyOS简介}
+TinyOS\ucite{tinyos-web}是一款的基于组件的无线传感器网络操作系统，它是自由和开源的，目前已被学术界和工业界广泛采用，成为WSN研究领域事实上的标准平台。起初它是UC Berkeley和Intel Research实验室合作编写的，用来嵌入到智能微尘中。后来逐渐演变成一个国际合作项目，即TinyOS联盟。
+
+TinyOS使用nesC\ucite{gay2003nlh}语言写成。nesC（network embedded systems C）是一种基于组件、事件驱动的编程语言，用于编写TinyOS应用程序。它是对C语言的一种扩展，增加了命令（command）、事件（event）、连线（wire）、接口（interface）、配置（configuration）和模块（module）等机制\ucite{gay2002nlr}。
+
+\subsection{TinyOS的基本工作原理}
+TinyOS的设计允许应用程序直接访问硬件。它主要解决两个问题：如何处理硬件设备中的并发数据流，如何用较小的计算和存储开销提供模块化的组件\ucite{sohraby2007wsn}。这两个问题是很重要的，这是因为TinyOS要在高效支持并发操作的同时管理硬件兼容性和资源有效性。TinyOS使用基于事件的模型用较小的存储开销支持高层的并发操作。与使用基于栈的线程方法的操作系统相比，TinyOS具有更高的吞吐量。这是因为基于栈的线程需要为每个执行上下文保留栈空间，因此切换的速度不如TinyOS基于事件的方法来的快。TinyOS可以快速创建与事件相关的任务，中间不需要阻塞或轮询。
+
+TinyOS包含一个小型的调度器和一系列组件。调度器用于调度组件的操作。每个组件由4部分组成：命令处理程序，事件处理程序，固定大小的帧和一组任务。命令和任务都在帧的上下文中执行并操纵它的状态。每个组件都会声明它的命令和事件以便与其它组件相连接。当前TinyOS的任务调度器使用的是简单的FIFO机制，但非常有效，它会在任务队列为空时让处理器进入睡眠状态，但外围设备仍处于工作状态。帧的大小是固定的并且它是静态分配的。它在编译阶段就确定了内存需求从而省去了动态分配的开销。命令是由低层组件发出的非阻塞请求，它通过返回值指示是否执行成功。
+
+\subsection{TinyOS的优势}
+相对于其它WSN操作系统，TinyOS的优势在于：
+\vspace{-10pt}
+\begin{itemize}
+	\item 编写应用程序的代码量小。
+	\item 事件传播、任务投递和上下文切换的速度快。
+	\item 使用高效的模块化组件。
+\end{itemize}
+
+\subsection{TinyOS主要功能}
+经历了数年的发展，如今的TinyOS已演进到2.1.0版，支持数十种平台，功能和稳定性都得了不断的增强。最新版本具有的主要功能有：
+\vspace{-10pt}
+\begin{enumerate}
+	\item {硬件平台抽象}：TinyOS使用三层硬件抽象以支持多平台。目前支持的平台有: eyesIFXv2，intelmote2，mica2， mica2dot，micaZ，telosb，tinynode，btnode3，iris，shimmer。
+	\item {任务调度}：使用非抢占式的FIFO策略进行调度。
+	\item {资源虚拟化}：引入通用组件和实例化组件使数据可以被重用。
+	\item {定时器}：提供更丰富的定时器接口。
+	\item {通信}：提供消息缓冲区结构message\_t以及操作缓冲区的一系列接口。
+	\item {资源仲裁}：引入Resource接口，可以连接到使用不同资源分配策略的仲裁器上。
+	\item {电源管理}：实现微控制器和外围设备的电源自动管理，提供CC2420的低功耗监听功能。
+	\item {网络协议}：提供两种无线传感器网络中最基本的协议──数据分发协议和汇聚协议。
+\end{enumerate}
+
+\section{汇聚协议}
+	汇聚数据到基站是传感器网络应用程序的常见需求。常用的方法是建立至少一棵汇聚树，树根节点作为基站。当节点产生的数据要汇聚到根节点时，它只需沿着汇聚树往上发。当节点收到数据时，则将它转发给其它节点，最后一定可以到达根节点。有时汇聚协议需要根据汇聚数据的形式，检查过往的数据包，以便获取统计信息，计算聚合度和抑制重复的传输。
+
+	当网络中具有不止一个根节点时，就形成了一片森林。汇聚协议通过选择父节点隐式地使节点加入了其中一棵汇聚树中。汇聚协议一般提供了到根节点的尽力、多跳传输，它是一个{\kai 任意播}协议，这意味着该协议会尽力地将消息传输到任意根节点中的至少一个，但是传输并不保证必定是成功的。另外还有传到多个根节点的问题，而且数据包到达的顺序也没有保证。
+
+	由于节点的存储空间有限并且建树的算法要求是分布式的，因此协议的实现将遇到诸多挑战，主要有以下四种：
+\vspace{-10pt}
+\begin{itemize}
+	\item 路由循环检测：检测节点是否选择了子孙节点作为父节点。
+	\item 重复抑制：检测并处理网络中重复的包，避免浪费带宽。
+	\item 链路估计：估计单跳的链路质量。
+	\item 自干扰：防止转发的包干扰自己产生的包的发送。
+\end{itemize}
+\vspace{-10pt}
+	TinyOS 2.x中提供了两种汇聚协议的实现：CTP协议和MultiHopLQI协议，可以较好地解决这些问题。如果需要在TinyOS中实现新的汇聚协议，则必须遵从TEP（TinyOS Enhancement Proposals）119\ucite{tep119}中定义的CollectionC配置规范，它主要定义了汇聚协议中使用的接口和组件，将网络中节点分为四种角色：发送者，侦听者，中间处理者和接收者，CollectionC配置的源码如下所示：
+
+\begin{figure}[ht]
+\centering
+%\begin{lstlisting}[label=cintf,captionpos=b,caption={\wuhao\song 汇聚协议使用和提供的接口}]
+\begin{lstlisting}
+configuration CollectionC {
+	provides {
+		interface StdControl;
+		interface Send[uint8_t client];
+		interface Receive[collection_id_t id];
+		interface Receive as Snoop[collection_id_t];
+		interface Intercept[collection_id_t id];
+		interface RootControl;
+		interface Packet;
+		interface CollectionPacket;
+	}
+	uses {
+		interface CollectionId[uint8_t client];
+	}
+}
+\end{lstlisting}
+%\caption{汇聚协议使用和提供的接口}\label{collection-interfaces}
+\end{figure}
+
+\subsection{CTP协议}
+CTP（Collection Tree Protocol）协议\ucite{tep123}是TinyOS 2.x中自带的汇聚协议，也是实际应用中最常用的汇聚协议之一。本文将致力于CTP协议的分析和仿真，详细地阐述CTP协议的总体架构、涉及的基本概念和工作流程。
+
+\subsubsection{CTP协议的实现}
+CTP协议的实现主要分布在TinyOS 2.x安装根目录的\texttt{tos/lib/net}路径下，
+涉及的目录和文件如表\ref{ctp-files}所示：
+\begin{table}[ht]
+\caption{\hei CTP协议实现文件分布}\label{ctp-files}
+\vspace{-5pt}
+\begin{center}
+\begin{tabular}{|c|l|c|}
+\hline
+目录名&~~~~~~文件&作用 \\
+\hline
+4bitle&LinkEstimatorP.nc&4位链路估计器 \\
+\hline
+\raisebox{-5pt}{ctp}&CtpRoutingEngineP.nc&路由引擎 \\
+&CtpForwardingEngineP.nc&转发引擎 \\
+\hline
+le&LinkEstimatorP.nc&标准链路估计器 \\
+\hline
+\raisebox{-5pt}{lqi}&LqiForwardingEngineP&\raisebox{-5pt}{MultiHopLQI协议} \\
+&LqiRoutingEngineP&\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsubsection{CTP协议总体架构}
+CTP协议可以分为三个部分：链路估计器，路由引擎和转发引擎，这三个部分的关系如图\ref{ctp-structure}所示。其中链路估计器位于最底层，负责估计两个相邻节点间的通信质量。路由引擎位于中间层，使用链路估计器提供的信息选择到根节点传输代价最小的节点作为父节点。转发引擎维护本地包和转发包的发送队列，选择适当的时机把队头的包发送给父节点。
+
+\begin{figure}[ht]
+\centering
+\input{figures/ctp-structure}
+\caption{CTP协议总体架构}\label{ctp-structure}
+\end{figure}
+
+\subsection{MultiHopLQI协议}
+MultiHopLQI协议是一种专用于具有CC2420无线模块节点的汇聚协议。由于它的实现类似于CTP协议，本文将不专门分析MultiHopLQI协议，但它与CTP有以下几方面的不同：
+\vspace{-10pt}
+\begin{enumerate}
+	\item 使用CC2420无线模块中的LQI功能作链路估计，因此它并不需要CTP协议中的链路估计器。
+	\item 没有路由表，直接使用到根节点传输代价最小的节点作为下一跳。
+	\item 发送队列并不遵从先进先出的原则，而是随机选择下一个发送的包。
+\end{enumerate}

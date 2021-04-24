@@ -1,0 +1,41 @@
+﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   LaTeX File for Doctor (Master) Thesis of Tsinghua University
+%   LaTeX + CJK     清华大学博士（硕士）论文模板
+%   Based on Wang Tianshu's Template for XJTU
+%   Version: 1.00
+%   Last Update: 2003-09-12
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Copyright 2002-2003  by  Lei Wang (BaconChina)       (bcpub@sina.com)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   LaTeX File for xi'an Jiao Tong University
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Copyright 2001  by  Wang Tianshu    (tswang@asia.com)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\baselinestretch}{1.5}
+\fontsize{12pt}{13pt}\selectfont
+
+\chapter[ABSTRACT（英文摘要）]{\textsf{\textbf{Abstract}}}
+\markboth{英~文~摘~要}{英~文~摘~要}
+\noindent As a new technology, wireless sensor networks (WSN) have gained increasing attention both from  the industry and research community in recent years.
+They are now widely used in many industrial and civilian application areas, such as precision agriculture control, disaster warning and relief, environment monitoring and biodiversity survey, health care and medical management, military reconnaissance and surveillance.
+
+Wireless sensor network is a network consisting of many distributed sensors commumicate with each other, cooperate to archive certain goals. As a result, a robust and efficient routing protocol is crucial to WSN. TinyOS is an operating system designed for wireless sensor networks, with an efficient routing protocol implementation: CTP (Collection Tree Protocol) protocol, which is aimed to deliver small data items from every node in a network to designated collection roots.
+
+In this paper, We analyzed the CTP protocol in detail:
+\vspace{-12pt}
+\begin{enumerate} \setlength{\itemsep}{0pt}
+	\item \textsc{Link Estimator: } Estimate the quality between two nodes.
+	\item \textsc{Routing Engine: } Select the next hop.
+	\item \textsc{Forwarding Engine: } Maintain a queue of packets to transmit, decide when to transmit and manage retransmitting.
+\end{enumerate}
+\vspace{-12pt}
+Additionally, we have simulated the TinyOS appllications with CTP protocol in TOSSIM and evaluated its performance according to three metrics: cost, average depth and delivery rate. Finally, we describe how to deploy this application to the npumote platform which is developed by ourselves.
+
+\vspace{1em}
+\noindent {\textbf{Key Words:}} \quad wireless sensor network, tinyos, collection protocol, CTP

@@ -1,0 +1,12 @@
+\begin{tikzpicture}[>=latex]
+	\usetikzlibrary{shapes}
+	\node[ellipse,draw] (BP) at (4,1.5) {缓冲池};
+	\node[ellipse,draw] (MP) at (8,3.5) {队列项};
+	\node[rectangle,draw] (BF) at (4,5.5) {缓冲区};
+	\node[rectangle,draw] (RC) at (4,7) {接收器};
+
+	\draw[->] (BP) .. controls +(left:2)  and +(left:2) .. node[left] {获取msg} (BF);
+	\draw[->] (BF) .. controls +(right:2) and +(up:1.5) .. node[above,rotate=-20] {使用msg} (MP);
+	\draw[->] (MP) .. controls +(down:1) and +(right:2) .. node[below,rotate=30] {释放msg} (BP);
+	\draw[->] (RC) -- node[right] {填充msg} (BF);
+\end{tikzpicture}
