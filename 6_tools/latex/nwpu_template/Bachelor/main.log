@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2021.4.24)  24 APR 2021 22:04
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2021.4.24)  25 APR 2021 19:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1686,67 +1686,152 @@ tly
 )
 \Hy@SectionHShift=\skip113
 ))
-*************************************************
-* xeCJK warning: "fandol"
-* 
-* Fandol is being set as the default font for CJK text.
-* Please make sure it has been properly installed.
-*************************************************
-*************************************************
-* fontspec warning: "script-not-exist"
-* 
-* Font 'FandolSong-Regular' does not contain script 'CJK'.
-*************************************************
-\g__fontspec_family_FandolSong-Regular_int=\count374
+\g__fontspec_family_TimesNewRoman_int=\count374
 .................................................
 . fontspec info: "defining-font"
 . 
-. Font family 'FandolSong-Regular(0)' created for font 'FandolSong-Regular'
-. with options
-. [Script={CJK},Extension={.otf},BoldFont={FandolSong-Bold},ItalicFont={FandolK
-ai-Regular}].
+. Font family 'TimesNewRoman(0)' created for font 'Times New Roman' with
+. options [Ligatures=TeX].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
-. - 'normal' (m/n) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT"
+. - 'normal' (m/n) with NFSS spec.: <->"Times New
+. Roman/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
-. - 'bold' (bx/n) with NFSS spec.: <->"[FandolSong-Bold.otf]/OT"
+. - 'bold' (bx/n) with NFSS spec.: <->"Times New
+. Roman/B/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'bold small caps'  (bx/sc) with NFSS spec.: 
-. - 'italic' (m/it) with NFSS spec.: <->"[FandolKai-Regular.otf]/OT"
+. - 'italic' (m/it) with NFSS spec.: <->"Times New
+. Roman/I/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'italic small caps'  (m/itsc) with NFSS spec.: 
+. - 'bold italic' (bx/it) with NFSS spec.: <->"Times New
+. Roman/BI/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 .................................................
+LaTeX Info: Redefining \rmfamily on input line 55.
+\g__fontspec_family_MyriadPro_int=\count375
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MyriadPro(0)' created for font 'Myriad Pro' with options
+. [Ligatures=TeX].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.: <->"Myriad
+. Pro/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+. - 'bold' (bx/n) with NFSS spec.: <->"Myriad
+. Pro/B/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+. - 'italic' (m/it) with NFSS spec.: <->"Myriad
+. Pro/I/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'italic small caps'  (m/itsc) with NFSS spec.: 
+. - 'bold italic' (bx/it) with NFSS spec.: <->"Myriad
+. Pro/BI/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+.................................................
+LaTeX Info: Redefining \sffamily on input line 56.
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font "Courier" does not contain any OpenType `Script' information.
+.................................................
+\g__fontspec_family_Courier_int=\count376
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Courier(0)' created for font 'Courier' with options
+. [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.: <->"Courier/OT"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
+. \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
+. \tex_hyphenchar:D \font =-1\scan_stop: 
+. - 'bold' (bx/n) with NFSS spec.: <->"Courier/B/OT"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
+. \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
+. \tex_hyphenchar:D \font =-1\scan_stop: 
+. - 'italic' (m/it) with NFSS spec.: <->"Courier/I/OT"
+. - 'italic small caps'  (m/itsc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
+. \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
+. \tex_hyphenchar:D \font =-1\scan_stop: 
+. - 'bold italic' (bx/it) with NFSS spec.: <->"Courier/BI/OT"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
+. \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
+. \tex_hyphenchar:D \font =-1\scan_stop: 
+.................................................
+LaTeX Info: Redefining \ttfamily on input line 57.
+\g__fontspec_family_SimSun_int=\count377
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "SimSun/BI" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "SimSun/B" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "SimSun/I" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Script={CJK}].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.: <->"SimSun/OT:script=hani;language=DFLT;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+.................................................
+
 (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2018/02/27 v3.6.1 xeCJK patch file for listings
-\l__xeCJK_listings_max_char_int=\count375
-\l__xeCJK_listings_flag_int=\count376
+\l__xeCJK_listings_max_char_int=\count378
+\l__xeCJK_listings_flag_int=\count379
 )
 No file main.aux.
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 56.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 87.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 87.
 (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1783,7 +1868,7 @@ LaTeX Font Info:    ... okay on input line 56.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Package layouts Warning: Layout scale set to 0.5 on input line 56.
+Package layouts Warning: Layout scale set to 0.5 on input line 87.
 
 .................................................
 . fontspec info: "setup-math"
@@ -1792,261 +1877,146 @@ Package layouts Warning: Layout scale set to 0.5 on input line 56.
 .................................................
 \symlegacymaths=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 56.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 56.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 56.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 56.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 56.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 56.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 56.
-LaTeX Font Info:    Redeclaring math accent \check on input line 56.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 56.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 56.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 56.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 56.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 56.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 56.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 56.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 56.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 56.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 56.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 56.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 56.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 56.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 56.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 56.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 56.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 87.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 87.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 87.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 87.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 87.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 87.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 87.
+LaTeX Font Info:    Redeclaring math accent \check on input line 87.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 87.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 87.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 87.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 87.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 56.
+(Font)              `operators' in the math version `normal' on input line 87.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 56.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 8
+7.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 56.
+(Font)              `operators' in the math version `bold' on input line 87.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 56.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
+87.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 56.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
+input line 87.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 56.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
+ 87.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 56.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/bx/n on input line
+ 87.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 56.
+(Font)                  OT1/cmss/m/n --> TU/MyriadPro(0)/m/n on input line 87.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 56.
+(Font)                  OT1/cmtt/m/n --> TU/Courier(0)/m/n on input line 87.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/bx/n on input line 56.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/bx/n on
+ input line 87.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/bx/it on input line 56.
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/bx/it on input li
+ne 87.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 56.
+(Font)                  OT1/cmss/bx/n --> TU/MyriadPro(0)/bx/n on input line 87
+.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 56.
+(Font)                  OT1/cmtt/m/n --> TU/Courier(0)/bx/n on input line 87.
 ABD: EveryShipout initializing macros
-\c@lstlisting=\count377
+\c@lstlisting=\count380
 \AtBeginShipoutBox=\box64
 
 
 Package hyperref Warning: Height of page (\stockheight) is invalid (0.0pt),
 (hyperref)                using 11in.
 
-Package hyperref Info: Link coloring ON on input line 56.
+Package hyperref Info: Link coloring ON on input line 87.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count378
+\c@section@level=\count381
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 56.
-LaTeX Info: Redefining \pageref on input line 56.
-LaTeX Info: Redefining \nameref on input line 56.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Info: Redefining \Ref on input line 56.
+LaTeX Info: Redefining \Ref on input line 87.
 
 
 Package hyperref Warning: Rerun to get /PageLabels entry.
 
-(./setup/format.tex
-\g__fontspec_family_TeXGyreTermes_int=\count379
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'TeXGyreTermes(0)' created for font 'TeX Gyre Termes' with
-. options [Ligatures=TeX].
-.  
-.  This font family consists of the following NFSS series/shapes:
-.  
-. - 'normal' (m/n) with NFSS spec.: <->"TeX Gyre
-. Termes/OT:script=latn;language=DFLT;mapping=tex-text;"
-. - 'small caps'  (m/sc) with NFSS spec.: <->"TeX Gyre
-. Termes/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
-. - 'bold' (bx/n) with NFSS spec.: <->"TeX Gyre
-. Termes/B/OT:script=latn;language=DFLT;mapping=tex-text;"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: <->"TeX Gyre
-. Termes/B/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
-. - 'italic' (m/it) with NFSS spec.: <->"TeX Gyre
-. Termes/I/OT:script=latn;language=DFLT;mapping=tex-text;"
-. - 'italic small caps'  (m/itsc) with NFSS spec.: <->"TeX Gyre
-. Termes/I/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
-. - 'bold italic' (bx/it) with NFSS spec.: <->"TeX Gyre
-. Termes/BI/OT:script=latn;language=DFLT;mapping=tex-text;"
-. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->"TeX Gyre
-. Termes/BI/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
-.................................................
-LaTeX Info: Redefining \rmfamily on input line 67.
-\g__fontspec_family_TeXGyreHeros_int=\count380
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'TeXGyreHeros(0)' created for font 'TeX Gyre Heros' with options
-. [Ligatures=TeX].
-.  
-.  This font family consists of the following NFSS series/shapes:
-.  
-. - 'normal' (m/n) with NFSS spec.: <->"TeX Gyre
-. Heros/OT:script=latn;language=DFLT;mapping=tex-text;"
-. - 'small caps'  (m/sc) with NFSS spec.: <->"TeX Gyre
-. Heros/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
-. - 'bold' (bx/n) with NFSS spec.: <->"TeX Gyre
-. Heros/B/OT:script=latn;language=DFLT;mapping=tex-text;"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: <->"TeX Gyre
-. Heros/B/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
-. - 'italic' (m/it) with NFSS spec.: <->"TeX Gyre
-. Heros/I/OT:script=latn;language=DFLT;mapping=tex-text;"
-. - 'italic small caps'  (m/itsc) with NFSS spec.: <->"TeX Gyre
-. Heros/I/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
-. - 'bold italic' (bx/it) with NFSS spec.: <->"TeX Gyre
-. Heros/BI/OT:script=latn;language=DFLT;mapping=tex-text;"
-. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->"TeX Gyre
-. Heros/BI/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
-.................................................
-LaTeX Info: Redefining \sffamily on input line 68.
-\g__fontspec_family_TeXGyreCursor_int=\count381
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'TeXGyreCursor(0)' created for font 'TeX Gyre Cursor' with
-. options [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace].
-.  
-.  This font family consists of the following NFSS series/shapes:
-.  
-. - 'normal' (m/n) with NFSS spec.: <->"TeX Gyre
-. Cursor/OT:script=latn;language=DFLT;"
-. - 'small caps'  (m/sc) with NFSS spec.: <->"TeX Gyre
-. Cursor/OT:script=latn;language=DFLT;+smcp;"
-. and font adjustment code:
-. \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
-. \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
-. \tex_hyphenchar:D \font =-1\scan_stop: 
-. - 'bold' (bx/n) with NFSS spec.: <->"TeX Gyre
-. Cursor/B/OT:script=latn;language=DFLT;"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: <->"TeX Gyre
-. Cursor/B/OT:script=latn;language=DFLT;+smcp;"
-. and font adjustment code:
-. \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
-. \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
-. \tex_hyphenchar:D \font =-1\scan_stop: 
-. - 'italic' (m/it) with NFSS spec.: <->"TeX Gyre
-. Cursor/I/OT:script=latn;language=DFLT;"
-. - 'italic small caps'  (m/itsc) with NFSS spec.: <->"TeX Gyre
-. Cursor/I/OT:script=latn;language=DFLT;+smcp;"
-. and font adjustment code:
-. \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
-. \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
-. \tex_hyphenchar:D \font =-1\scan_stop: 
-. - 'bold italic' (bx/it) with NFSS spec.: <->"TeX Gyre
-. Cursor/BI/OT:script=latn;language=DFLT;"
-. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->"TeX Gyre
-. Cursor/BI/OT:script=latn;language=DFLT;+smcp;"
-. and font adjustment code:
-. \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
-. \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
-. \tex_hyphenchar:D \font =-1\scan_stop: 
-.................................................
-LaTeX Info: Redefining \ttfamily on input line 69.
-
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.73 \setCJKmainfont
-                    {SimSun}    % 宋体
-? 
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.74 \setCJKsansfont
-                    {SimHei}
-? 
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.75 \setCJKmonofont
-                    {FangSong_GB2312}
+! Undefined control sequence.
+l.97 \xeCJKcaption
+                  {gb_452}
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.75 \setCJKmonofont{FangSong_
-                              GB2312}
+l.97 \xeCJKcaption{gb_
+                      452}
 ? 
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 75.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 97.
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 ! Extra }, or forgotten $.
-l.75 \setCJKmonofont{FangSong_GB2312}
-                                     
+l.97 \xeCJKcaption{gb_452}
+                          
 ? 
+(./setup/format.tex
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.76 
+l.12 
      
 ? 
 ! Undefined control sequence.
-l.144 \xeCJKcaption
+l.117 \xeCJKcaption
                    {gb_452}
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.144 \xeCJKcaption{gb_
+l.117 \xeCJKcaption{gb_
                        452}
 ? 
 ! Extra }, or forgotten $.
-l.144 \xeCJKcaption{gb_452}
+l.117 \xeCJKcaption{gb_452}
                            
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.145 
+l.118 
       
 ? 
 \CJKtwospaces=\skip114
 \AphorismAuthor=\box65
 \c@newlist=\count382
+\g__fontspec_family_TeXGyreCursor_int=\count383
 .................................................
 . fontspec info: "defining-font"
 . 
-. Font family 'TeXGyreCursor(1)' created for font 'TeX Gyre Cursor' with
+. Font family 'TeXGyreCursor(0)' created for font 'TeX Gyre Cursor' with
 . options [].
 .  
 .  This font family consists of the following NFSS series/shapes:
@@ -2068,7 +2038,7 @@ l.145
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->"TeX Gyre
 . Cursor/BI/OT:script=latn;language=DFLT;+smcp;"
 .................................................
-\g__fontspec_family_TeXGyrePagella_int=\count383
+\g__fontspec_family_TeXGyrePagella_int=\count384
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -2102,7 +2072,7 @@ Missing character: There is no   in font nwpulogo/OT!
 * 
 * Font 'nwpulogo' does not contain script 'CJK'.
 *************************************************
-\g__fontspec_family_nwpulogo_int=\count384
+\g__fontspec_family_nwpulogo_int=\count385
 .................................................
 . fontspec info: "no-font-shape"
 . 
@@ -2129,36 +2099,9 @@ Missing character: There is no   in font nwpulogo/OT!
 . - 'normal' (m/n) with NFSS spec.: <->"nwpulogo/OT"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
-\g__fontspec_family_SimSun_int=\count385
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font "SimSun/BI" (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font "SimSun/B" (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font "SimSun/I" (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Script={CJK}].
-.  
-.  This font family consists of the following NFSS series/shapes:
-.  
-. - 'normal' (m/n) with NFSS spec.: <->"SimSun/OT:script=hani;language=DFLT;"
-. - 'small caps'  (m/sc) with NFSS spec.: 
-.................................................
 
 LaTeX Font Warning: Font shape `TU/SimSun(0)/bx/n' undefined
-(Font)              using `TU/SimSun(0)/m/n' instead on input line 76.
+(Font)              using `TU/SimSun(0)/m/n' instead on input line 107.
 
 [1
 
@@ -2235,25 +2178,6 @@ l.24 \chapter{摘~~~~要}
 l.24 \chapter{摘~~~~要}
                          
 ? 
-*************************************************
-* fontspec warning: "script-not-exist"
-* 
-* Font 'FandolHei-Regular' does not contain script 'CJK'.
-*************************************************
-\g__fontspec_family_FandolHei-Regular_int=\count387
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'FandolHei-Regular(0)' created for font 'FandolHei-Regular' with
-. options [Script={CJK},Extension={.otf},BoldFont={FandolHei-Bold}].
-.  
-.  This font family consists of the following NFSS series/shapes:
-.  
-. - 'normal' (m/n) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT"
-. - 'small caps'  (m/sc) with NFSS spec.: 
-. - 'bold' (bx/n) with NFSS spec.: <->"[FandolHei-Bold.otf]/OT"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: 
-.................................................
 ) [1
 
 
@@ -2280,6 +2204,10 @@ l.23 ...�文摘要）]{\textsf{\textbf{Abstract}}}
 l.23 ...�文摘要）]{\textsf{\textbf{Abstract}}}
                                                   
 ? 
+
+LaTeX Font Warning: Font shape `TU/TimesNewRoman(0)/m/sc' undefined
+(Font)              using `TU/TimesNewRoman(0)/m/n' instead on input line 33.
+
 ) [2
 
 
@@ -2372,20 +2300,12 @@ LaTeX Warning: Citation `kim2007hmc' on page 1 undefined on input line 12.
 
 LaTeX Warning: Citation `wanglin2006' on page 2 undefined on input line 15.
 
-Missing character: There is no ─ in font TeX Gyre Termes/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no ─ in font TeX Gyre Termes/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
 
 LaTeX Warning: Reference `preface' on page 2 undefined on input line 32.
 
 
 LaTeX Warning: Reference `introduction' on page 2 undefined on input line 34.
 
-Missing character: There is no ─ in font TeX Gyre Termes/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no ─ in font TeX Gyre Termes/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
 
 LaTeX Warning: Reference `le' on page 2 undefined on input line 36.
 
@@ -2468,7 +2388,7 @@ LaTeX Warning: Citation `sunlimin2005' on page 4 undefined on input line 4.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-\g__fontspec_family_KaiTi_GB2312_int=\count388
+\g__fontspec_family_KaiTi_GB2312_int=\count387
 .................................................
 . fontspec info: "no-font-shape"
 . 
@@ -2521,33 +2441,39 @@ LaTeX Warning: Citation `gay2002nlr' on page 6 undefined on input line 37.
 
 LaTeX Warning: Citation `sohraby2007wsn' on page 6 undefined on input line 40.
 
-[6]
-Missing character: There is no ─ in font TeX Gyre Termes/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no ─ in font TeX Gyre Termes/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
- [7]
+[6] [7]
 
 LaTeX Warning: Citation `tep119' on page 8 undefined on input line 81.
 
 
 LaTeX Warning: Citation `tep123' on page 8 undefined on input line 107.
 
-*************************************************
-* fontspec warning: "script-not-exist"
-* 
-* Font 'FandolFang-Regular' does not contain script 'CJK'.
-*************************************************
-\g__fontspec_family_FandolFang-Regular_int=\count389
+\g__fontspec_family_FangSong_GB2312_int=\count388
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "FangSong_GB2312/BI" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "FangSong_GB2312/B" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "FangSong_GB2312/I" (it probably doesn't exist).
+.................................................
 .................................................
 . fontspec info: "defining-font"
 . 
-. Font family 'FandolFang-Regular(0)' created for font 'FandolFang-Regular'
-. with options [Script={CJK},Extension={.otf}].
+. Font family 'FangSong_GB2312(0)' created for font 'FangSong_GB2312' with
+. options [Script={CJK}].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
-. - 'normal' (m/n) with NFSS spec.: <->"[FandolFang-Regular.otf]/OT"
+. - 'normal' (m/n) with NFSS spec.:
+. <->"FangSong_GB2312/OT:script=hani;language=DFLT;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
 
@@ -2777,268 +2703,4 @@ LaTeX Warning: Reference `route-engine' on page 20 undefined on input line 143.
 
  (./body/forward.tex
 ! Undefined control sequence.
-\chaptername ->\CJKprechaptername 
-                                  \CJKthechapter \CJKchaptername 
-l.1 \chapter{转发引擎}
-                          \label{forward}
-? 
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername \CJKthechapter 
-                                                 \CJKchaptername 
-l.1 \chapter{转发引擎}
-                          \label{forward}
-? 
-! Undefined control sequence.
-\chaptername ...me \CJKthechapter \CJKchaptername 
-                                                  
-l.1 \chapter{转发引擎}
-                          \label{forward}
-? 
- 5.
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername 
-                                  \CJKthechapter \CJKchaptername 
-l.1 \chapter{转发引擎}
-                          \label{forward}
-? 
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername \CJKthechapter 
-                                                 \CJKchaptername 
-l.1 \chapter{转发引擎}
-                          \label{forward}
-? 
-! Undefined control sequence.
-\chaptername ...me \CJKthechapter \CJKchaptername 
-                                                  
-l.1 \chapter{转发引擎}
-                          \label{forward}
-? 
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername 
-                                  \CJKthechapter \CJKchaptername 
-l.1 \chapter{转发引擎}
-                          \label{forward}
-? 
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername \CJKthechapter 
-                                                 \CJKchaptername 
-l.1 \chapter{转发引擎}
-                          \label{forward}
-? 
-! Undefined control sequence.
-\chaptername ...me \CJKthechapter \CJKchaptername 
-                                                  
-l.1 \chapter{转发引擎}
-                          \label{forward}
-? 
-
-LaTeX Warning: Reference `route-loop' on page 22 undefined on input line 17.
-
-(./figures/route-loop.tex) [22
-
-
-
-]
-
-LaTeX Warning: Reference `ctp-data-frame' on page 23 undefined on input line 33
-.
-
-[23]
-
-LaTeX Warning: Citation `bach1986duo' on page 24 undefined on input line 112.
-
-
-LaTeX Warning: Reference `qe-buffer-pool' on page 24 undefined on input line 11
-8.
-
-(./figures/cache-pool.tex)
-
-LaTeX Warning: Reference `buffer-swap' on page 24 undefined on input line 142.
-
-[24] (./figures/buffer-swap.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.code.tex
-File: tikzlibraryshapes.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.geometric.code.tex
-File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
-s.geometric.code.tex
-File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
-
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.misc.code.tex
-File: tikzlibraryshapes.misc.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
-s.misc.code.tex
-File: pgflibraryshapes.misc.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.5)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.symbols.code.tex
-File: tikzlibraryshapes.symbols.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
-s.symbols.code.tex
-File: pgflibraryshapes.symbols.code.tex 2013/09/11 v3.0.1a (rcs-revision 1.6)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.arrows.code.tex
-File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
-s.arrows.code.tex
-File: pgflibraryshapes.arrows.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.callouts.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
-s.callouts.code.tex)))) [25] [26] [27]) [28]
-\openout2 = `body/simulate.aux'.
-
- (./body/simulate.tex
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername 
-                                  \CJKthechapter \CJKchaptername 
-l.1 \chapter{仿真与部署}
-                             \label{simulate}
-? 
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername \CJKthechapter 
-                                                 \CJKchaptername 
-l.1 \chapter{仿真与部署}
-                             \label{simulate}
-? 
-! Undefined control sequence.
-\chaptername ...me \CJKthechapter \CJKchaptername 
-                                                  
-l.1 \chapter{仿真与部署}
-                             \label{simulate}
-? 
- 6.
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername 
-                                  \CJKthechapter \CJKchaptername 
-l.1 \chapter{仿真与部署}
-                             \label{simulate}
-? 
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername \CJKthechapter 
-                                                 \CJKchaptername 
-l.1 \chapter{仿真与部署}
-                             \label{simulate}
-? 
-! Undefined control sequence.
-\chaptername ...me \CJKthechapter \CJKchaptername 
-                                                  
-l.1 \chapter{仿真与部署}
-                             \label{simulate}
-? 
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername 
-                                  \CJKthechapter \CJKchaptername 
-l.1 \chapter{仿真与部署}
-                             \label{simulate}
-? 
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername \CJKthechapter 
-                                                 \CJKchaptername 
-l.1 \chapter{仿真与部署}
-                             \label{simulate}
-? 
-! Undefined control sequence.
-\chaptername ...me \CJKthechapter \CJKchaptername 
-                                                  
-l.1 \chapter{仿真与部署}
-                             \label{simulate}
-? 
-
-LaTeX Warning: Citation `levis2003taa' on page 29 undefined on input line 5.
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [29
-
-
-
-]
-
-LaTeX Warning: Citation `lee2007iws' on page 30 undefined on input line 39.
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-
-LaTeX Warning: Citation `todd2007dmgv' on page 30 undefined on input line 72.
-
-[30]
-
-LaTeX Warning: Reference `nodes-link-quality' on page 31 undefined on input lin
-e 83.
-
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 89.
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 89.
-
-
-LaTeX Warning: Reference `ctp-tree-build' on page 31 undefined on input line 10
-6.
-
-[31]
-
-LaTeX Warning: Reference `collection-tree' on page 32 undefined on input line 1
-40.
-
-File: figures/topo.eps Graphic file (type eps)
-<figures/topo.eps>
-[32]
-
-LaTeX Warning: Reference `sim-result' on page 33 undefined on input line 160.
-
-
-LaTeX Warning: Reference `nodes-link-quality' on page 33 undefined on input lin
-e 181.
-
-[33] [34]
-
-LaTeX Warning: Citation `liuliping2006' on page 35 undefined on input line 215.
-
-
-) [35]
-\openout2 = `body/conclusion.aux'.
-
- (./body/conclusion.tex
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername 
-                                  \CJKthechapter \CJKchaptername 
-l.16 \chapter{总结与展望}
-                              \label{conclusion}
-? 
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername \CJKthechapter 
-                                                 \CJKchaptername 
-l.16 \chapter{总结与展望}
-                              \label{conclusion}
-? 
-! Undefined control sequence.
-\chaptername ...me \CJKthechapter \CJKchaptername 
-                                                  
-l.16 \chapter{总结与展望}
-                              \label{conclusion}
-? 
- 7.
-! Undefined control sequence.
-\chaptername ->\CJKprechaptername 
-                                  \CJKthechapter \CJKchaptername 
-l.16 \chapter{总结与展望}
-                              \label{conclusion}
-? 
-! Undefined
+\ch

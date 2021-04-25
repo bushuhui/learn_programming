@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2021.4.24)  24 APR 2021 21:37
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2021.4.24)  25 APR 2021 22:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**document.tex
-(./document.tex
+**tmp.tex
+(./tmp.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexart.cls
@@ -194,8 +194,8 @@ File: ctexopts.cfg 2018/01/28 v2.4.12 Option configuration file (CTEX)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count165
 \c@section=\count166
@@ -1161,8 +1161,8 @@ File: ctex-name-utf8.cfg 2018/01/28 v2.4.12 Caption with encoding UTF8 (CTEX)
 . 
 . Defining command \zihao with sig. 'm' on line 1204.
 .................................................
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctex-c5size.clo
-File: ctex-c5size.clo 2018/01/28 v2.4.12 c5size option (CTEX)
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctex-cs4size.clo
+File: ctex-cs4size.clo 2018/01/28 v2.4.12 cs4size option (CTEX)
 )
 .................................................
 . LaTeX info: "xparse/define-command"
@@ -1220,34 +1220,179 @@ ai-Regular}].
 )) (/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2018/01/28 v2.4.12 Configuration file (CTEX)
 )
-(./document.aux)
-\openout1 = `document.aux'.
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 5.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 5.
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count198
+\Gm@cntv=\count199
+\c@Gm@tempcnt=\count266
+\Gm@bindingoffset=\dimen177
+\Gm@wd@mp=\dimen178
+\Gm@odd@mp=\dimen179
+\Gm@even@mp=\dimen180
+\Gm@layoutwidth=\dimen181
+\Gm@layoutheight=\dimen182
+\Gm@layouthoffset=\dimen183
+\Gm@layoutvoffset=\dimen184
+\Gm@dimlist=\toks19
+)
+\g__fontspec_family_TimesNewRoman_int=\count267
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'TimesNewRoman(0)' created for font 'Times New Roman' with
+. options [Ligatures=TeX].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.: <->"Times New
+. Roman/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+. - 'bold' (bx/n) with NFSS spec.: <->"Times New
+. Roman/B/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+. - 'italic' (m/it) with NFSS spec.: <->"Times New
+. Roman/I/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'italic small caps'  (m/itsc) with NFSS spec.: 
+. - 'bold italic' (bx/it) with NFSS spec.: <->"Times New
+. Roman/BI/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+.................................................
+LaTeX Info: Redefining \rmfamily on input line 20.
+
+*************************************************
+* xeCJK warning: "CJKfamily-redef"
+* 
+* Redefining CJKfamily `\CJKrmdefault' (FandolSong-Regular(0)).
+*************************************************
+\g__fontspec_family_SimSun_int=\count268
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "SimSun/BI" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "SimSun/B" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "SimSun/I" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Script={CJK}].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.: <->"SimSun/OT:script=hani;language=DFLT;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+.................................................
+(/usr/share/texlive/texmf-dist/tex/latex/type1cm/type1cm.sty
+Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, p
+atched RF)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip62
+\f@nch@O@elh=\skip63
+\f@nch@O@erh=\skip64
+\f@nch@O@olh=\skip65
+\f@nch@O@orh=\skip66
+\f@nch@O@elf=\skip67
+\f@nch@O@erf=\skip68
+\f@nch@O@olf=\skip69
+\f@nch@O@orf=\skip70
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyref/fancyref.sty
+Package: fancyref 1999/02/03 v0.9c Fancy cross-referencing
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/varioref.sty
+Package: varioref 2016/02/16 v1.5c package for extended references (FMi)
+\c@vrcnt=\count269
+))
+(/usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks20
+\footnotemargin=\dimen185
+\c@pp@next@reset=\count270
+\c@@fnserial=\count271
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+
+! LaTeX Error: Command \enabstract already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.99 }{\par}
+            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Unused global option(s):
+    [UTF-8,linspread=1.25].
+
+(./tmp.aux)
+\openout1 = `tmp.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 104.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 104.
  (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    ... okay on input line 104.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 5.
+LaTeX Info: Redefining \selectfont on input line 104.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -1255,73 +1400,152 @@ LaTeX Info: Redefining \selectfont on input line 5.
 .................................................
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 5.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 5.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 5.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 5.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 5.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 5.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 5.
-LaTeX Font Info:    Redeclaring math accent \check on input line 5.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 5.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 5.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 5.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 5.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 5.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 104.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 104.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 104.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 104.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 104.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 104.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 104.
+LaTeX Font Info:    Redeclaring math accent \check on input line 104.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 104.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 104.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 104.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 104.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 104.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 5.
+(Font)              `operators' in the math version `normal' on input line 104.
+
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 5.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 1
+04.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 5.
+(Font)              `operators' in the math version `bold' on input line 104.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 5.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
+104.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 5.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
+input line 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 5.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
+ 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 5.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/bx/n on input line
+ 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 5.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 5.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 104.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/bx/n on input line 5.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/bx/n on
+ input line 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/bx/it on input line 5.
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/bx/it on input li
+ne 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 5.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12.045> on input line 6.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 6.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 6.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 104.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: heightrounded 
+* h-part:(L,W,R)=(90.47977pt, 416.54834pt, 90.47977pt)
+* v-part:(T,H,B)=(72.26997pt, 700.5069pt, 72.26997pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=416.54834pt
+* \textheight=707.23822pt
+* \oddsidemargin=18.20978pt
+* \evensidemargin=18.20978pt
+* \topmargin=-37.00002pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+*************************************************
+* fontspec warning: "script-not-exist"
+* 
+* Font 'FandolHei-Regular' does not contain script 'CJK'.
+*************************************************
+\g__fontspec_family_FandolHei-Regular_int=\count272
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FandolHei-Regular(0)' created for font 'FandolHei-Regular' with
+. options [Script={CJK},Extension={.otf},BoldFont={FandolHei-Bold}].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+. - 'bold' (bx/n) with NFSS spec.: <->"[FandolHei-Bold.otf]/OT"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+.................................................
+(./tmp.toc
+
+LaTeX Font Warning: Font shape `TU/SimSun(0)/bx/n' undefined
+(Font)              using `TU/SimSun(0)/m/n' instead on input line 1.
+
+)
+\tf@toc=\write3
+\openout3 = `tmp.toc'.
+
  [1
 
-] (./document.aux) ) 
-Here is how much of TeX's memory you used:
- 20524 strings out of 493007
- 437619 string characters out of 6136719
- 491646 words of memory out of 5000000
- 24374 multiletter control sequences out of 15000+600000
- 533290 words of font info for 54 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 57i,6n,74p,10431b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
+]
+File: nwpuname.png Graphic file (type bmp)
+<nwpuname.png>
 
-Output written on document.pdf (1 page).
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 18.63762pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2] (./tmp.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 21766 strings out of 493007
+ 459515 string characters out of 6136719
+ 494044 words of memory out of 5000000
+ 25549 multiletter control sequences out of 15000+600000
+ 534004 words of font info for 62 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 57i,11n,74p,10426b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on tmp.pdf (2 pages).

@@ -1,4 +1,4 @@
-﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %   LaTeX File for Doctor (Master) Thesis of Tsinghua University
 %   LaTeX + CJK     清华大学博士\KH{硕士}论文模板
@@ -52,6 +52,37 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{setup/package.tex}
+\setmainfont{Times New Roman}
+\setsansfont{Myriad Pro}
+\setmonofont{Courier}
+%\setCJKmainfont[BoldFont={方正小标宋简体}]{Adobe Song Std}    % 宋体  
+%\setCJKsansfont{Adobe Heiti Std}
+%\setCJKmonofont{Adobe Fangsong Std}
+\setCJKmainfont{SimSun}    % 宋体  
+\setCJKsansfont{SimHei}
+\setCJKmonofont{FangSong_GB2312}
+
+%\setCJKfamilyfont{song}[BoldFont={方正宋黑简体}]{SimSun}      	% 宋体  
+%\setCJKfamilyfont{song}[BoldFont={方正宋三_GBK}]{方正博雅宋_GBK}  % 宋体  
+%\setCJKfamilyfont{song}[BoldFont={Adobe Heiti Std}]{Adobe Song Std}    % 宋体  
+%\setCJKfamilyfont{song}[BoldFont={华文中宋}]{华文宋体}    % 宋体  
+%\setCJKfamilyfont{song}[BoldFont={方正大标宋_GBK}]{方正兰亭宋_GBK}    % 宋体  
+%\setCJKfamilyfont{song}[BoldFont={方正小标宋简体}]{方正书宋简体}    % 宋体  
+%文泉驿微米黑
+%\setCJKfamilyfont{song}[BoldFont={方正小标宋简体}]{Adobe Song Std}    % 宋体  
+\setCJKfamilyfont{song}{SimSun}    			% 宋体  
+\setCJKfamilyfont{hei}{SimHei}      		% 黑体  
+\setCJKfamilyfont{kai}{KaiTi_GB2312}      	% 楷体  
+\setCJKfamilyfont{fang}{Fangsong_GB2312}  	% 仿宋体
+\setCJKfamilyfont{nwpulogo}{nwpulogo}     	% 含"西北工业大学"logo字体 
+
+\newcommand{\song}{\CJKfamily{song}}
+\newcommand{\hei}{\CJKfamily{hei}}
+\newcommand{\fang}{\CJKfamily{fang}}
+\newcommand{\kai}{\CJKfamily{kai}}
+\newcommand{\nwpulogo}{\CJKfamily{nwpulogo}}
+
+
 
 \begin{document}
 
@@ -63,7 +94,7 @@
 %  文本格式定义
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\xeCJKcaption{gb_452}
 \input{setup/format.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
