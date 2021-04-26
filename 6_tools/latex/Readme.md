@@ -20,9 +20,7 @@ sudo apt install texstudio
 
 ## Templates
 
-> Search on Internet, here is only an old template of NWPU bachelor paper found on Internet
-
-[NWPU bachelor template](./nwpu_template/Bachelor/README) contains schedule, English paper translate and Bachelor paper 3 parts. Requires to install some fonts(or replace them according to requirements).However, some problems exist.
+> Search on Internet, here is only a template of NWPU bachelor paper.
 
 [This one](https://gitee.com/pi-lab/template_bachelor) is more powerful and well formed.
 
