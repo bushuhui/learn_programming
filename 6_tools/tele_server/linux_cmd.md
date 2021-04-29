@@ -129,7 +129,9 @@ cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 conda create -n yourname
 
 # 激活conda环境
-conda activate yourname
+conda activate [yourname]
+## 旧版命令
+source activate [YOURNAME]
 
 # 帮助命令
 conda -h
