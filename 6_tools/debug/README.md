@@ -106,6 +106,23 @@
 
 ## 3. log文件分析
 
+## 4. 单元测试
+`gtest`是一个跨平台的(Liunx、Mac OS X、Windows 、Cygwin 、Windows CE and Symbian ) C++单元测试框架，由google公司发布。gtest是为在不同平台上为编写C++测试而生成的。它提供了丰富的断言、致命和非致命判断、参数化、”死亡测试”等等。
+
+```
+TEST(test_case_name, test_name)
+TEST_F(test_fixture,test_name) //多个测试场景需要相同数据配置的情况，用TEST_F。TEST_F test fixture，测试夹具，测试套，承担了一个注册的功能。
+```
+
+TEST(test_case_name, test_name)
+
+TEST_F(test_fixture,test_name) //多个测试场景需要相同数据配置的情况，用 TEST_F 。TEST_F test fixture，测试夹具，测试套，承担了一个注册的功能。
+
+TEST宏的作用是创建一个简单测试，它定义了一个测试函数，在这个函数里可以使用任何C++代码并使用提供的断言来进行检查。后续文章还会提到TEST_P这个宏，在这里就先不介绍了。
+
+可以参考[示例程序](module_test)，或者更详细的说明
+* https://blog.csdn.net/linhai1028/article/details/81675724
+* http://www.uml.org.cn/Test/201905061.asp
 
 
 
