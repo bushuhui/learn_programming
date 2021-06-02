@@ -6,6 +6,14 @@
 
 `axmath`用于查找字符，支持latex源码转换
 
+### Others
+
+`axel`用于替代wget，多线程快速下载 
+
+```shell
+axel -n 20 URL
+```
+
 
 
 ## 零碎细节知识

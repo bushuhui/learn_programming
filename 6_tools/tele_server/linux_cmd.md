@@ -1,6 +1,6 @@
 [TOC]
 
-## Linux系统命令
+# Linux系统命令
 
 ### git
 
@@ -11,19 +11,32 @@ git config --global user.email "youremail"
 # 
 ```
 
+## 网络
 
+****
 
 ### ssh相关
 
 ```shell
-# 生成ssh key
+## 生成ssh key
 ssh-keygen -t rsa -C "mail@address.com"
-# 
+```
+
+### 网络工具
+
+[这里总结了常用工具。](https://blog.csdn.net/li_101357/article/details/70256411)
+
+`tcpdump`数据包抓取工具，[用法介绍](https://www.jianshu.com/p/d9162722f189)。
+
+```shell
+sudo tcpdump [options] [not] [protocool] [dir] [type]
+# e.g.
+sudo tcpdump -c 2 -q -XX -vvv -nn -i lo udp src port 6243
 ```
 
 
 
-### 杂项
+## 杂项
 
 ```shell
 # 查询磁盘容量及挂载情况

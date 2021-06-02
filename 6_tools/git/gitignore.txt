@@ -1,0 +1,10 @@
+#Latex
+*.aux
+*.log
+*.bak
+*.sav
+*.bbl
+*.toc
+*.blg
+*.out
+main.pdf
