@@ -26,7 +26,7 @@
 * [ ] 能否使用`Markdown`来编写文档
 * [ ] 是否会用`QtCreator`等IDE编写代码，单步调试程序
 * [ ] 使用Linux完成程序的编译、安装（安装Linux，Linux常用的命令）
-* [ ]  使用Makefile或者CMake编写项目编译脚本等
+* [ ] 使用Makefile或者CMake编写项目编译脚本等
 
 
 ## 4. 第三方库，Qt，OpenGL等
@@ -44,7 +44,7 @@
 * [ ] [设计模式](5_advanced/4_DesignPattern_UML)
 
 
-## 6. 思维
+## 6. 思维、方法论
 * [ ] 如何分析问题，梳理项目的整体内容、计算点
 * [ ] 分析出关键的技术点
 * [ ] 如何去找相关资料
