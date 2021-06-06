@@ -34,14 +34,19 @@
 * [Linux](6_tools/linux)
     - 安装Linux
     - 常用命令
-* IDE（[QtCreator](https://blog.csdn.net/sinat_27554409/article/details/78171499) 等）
-    - 熟悉自己所用的IDE （建议QtCreator）
+* IDE
+    - 熟悉自己所用的IDE （建议[QtCreator](https://blog.csdn.net/sinat_27554409/article/details/78171499)）
 * [Debug能力](6_tools/debug)
     - 学会debug
-* 第三方库，Qt，OpenGL等
+    - 单元测试
+* 第三方库
+    - Qt，OpenGL
+    - Eigen3
+    - OpenCV
 * [综合练习，小项目（小游戏，模拟仿真程序）](4_projects)
 * 高级技巧（[CMake](6_tools/cmake)，[库编写](5_advanced/3_Library)）
     - 使用Makefile或者CMake编写项目编译脚本等
+    - 如何把常用的程序组织成库（静态库，动态库）
 * [代码规范](5_advanced/programming_standard)
 * [设计模式](5_advanced/4_DesignPattern_UML)
 * 编程思维，分析问题、分解问题、解决问题能力
@@ -220,4 +225,5 @@ git pull upstream master
 * [Markdown](6_tools/markdown)
 * [Git](6_tools/git)
 * [CMake](6_tools/cmake)
+
 
