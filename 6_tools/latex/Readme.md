@@ -81,3 +81,17 @@ fc-list | grep [YOUR_FONT_NAME]
 
     tlmgr repository set http://mirror.hust.edu.cn/CTAN/systems/texlive/tlnet
 
+
+
+## In-use Tips
+
+### Equation environment
+
+```latex
+
+%基于amsmath宏包，取消编号（或使用equation*环境）
+\notag
+%基于amsmath宏包，指定编号(不影响自动编号)
+\tag{EqNo}
+```
+

@@ -197,5 +197,8 @@ fi
 ## 在/home下建立相应.bash_yourname文件，添加自己的额外设置，如
 alias shortcmd="full cmd"
 source ~/xxx/xxx/setup.bash
+
+# 开始vim的简单学习(30mins)
+vimtutor
 ```
 
