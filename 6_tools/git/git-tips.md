@@ -116,7 +116,7 @@ git remote add origin git@gitee.com:pi-lab/project_name.git
 
 ## 4. 小技巧
 
-### 1. Discard current modification
+### 4.1 Discard current modification
 ```
 git log # to see which revision want to back, and get the number, eg. "bdc6980"
     
@@ -124,7 +124,7 @@ git reset --hard "bdc6980"
 ```
 
 
-### 2. Submodule
+### 4.2 Submodule
 
 1. Add submodule to current project
 ```
@@ -154,6 +154,12 @@ git submodule update --init --recursive
 ```
 即可将子模块内容下载下来后工程才不会缺少相应的文件。
 
+
+### 4.3 git命令行显示中文
+将git 配置文件 core.quotepath项设置为false。quotepath表示引用路径
+```
+git config --global core.quotepath false
+```
 
 
 ## 其他
