@@ -1,7 +1,5 @@
 # Git使用教程
 
-# Git基本使用与技巧
-
 ## 1. 安装与配置
 ### 1.1 安装 Git
 Windows操作系统：首先下载 https://pc.qq.com/detail/13/detail_22693.html ；然后安装到自己的电脑中。
