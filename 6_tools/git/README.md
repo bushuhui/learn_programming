@@ -52,16 +52,22 @@ git clone git@192.168.1.3:pi-lab/PIL2.git
 对本地代码、文件进行编辑、操作
 
 
-### 2.3 增加、提交到本地仓库
+### 2.3 将服务器最新代码下载到本地
+```
+git pull origin master
+```
+
+### 2.4 增加、提交到本地仓库
 ```
 git add -A
 git commit -m "comments to this revision"
 ```
 
-### 2.4 提交到服务器
+### 2.5 提交到服务器
 ```
 git push origin <branchname>
 ```
+
 
 
 ## 3. 创建新的仓库
