@@ -33,7 +33,16 @@ sudo tcpdump [options] [not] [protocool] [dir] [type]
 # e.g.
 sudo tcpdump -c 2 -q -XX -vvv -nn -i lo udp src port 6243
 ```
-
+`Ad-hoc`wifi直连模式设置（需要检查无线网卡是否支持）
+```shell
+# 首先尝试使用图形界面中的网络面板进行设置，并且直连的多台电脑需要设置ip在同频段内192.168.1.xxxx(存疑)
+# 关闭无线网卡
+ifconfig [wirelessName] down
+# 设置无线网卡工作模式为ad-hoc(其他模式为managed, master, monitor)
+iwconfig [wirelessName] mode Ad-hoc
+# 打开无线网卡
+ifconfig [wirelessName] up
+```
 
 
 ## 杂项
