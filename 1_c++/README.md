@@ -11,7 +11,7 @@
 * 如何使用IDE环境编写、调试程序；或者在Linux下用GCC编译器编译程序
 
 ## 2. 要求
-请将练习的程序按照类别保存到对应的目录里。
+请将练习的程序按照类别保存到对应的目录里。编程练习题目可以参考[《编程练习题》](CodePractice.md)
 
 
 ## 3. 学习资料
@@ -26,6 +26,10 @@
 ![multiTestFunctions](images/multiTestFunctions.png)
 
 
+
 ## Reference
+
+英文的编程练习题
+
 * https://www.w3resource.com/cpp-exercises/basic/index.php
 * https://edabit.com/challenges/cpp
