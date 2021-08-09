@@ -228,3 +228,9 @@ git pull upstream master
 * [CMake](6_tools/cmake)
 
 
+
+
+
+参考资料：
+
+* [C++的算法、程序大全](https://github.com/TheAlgorithms/C-Plus-Plus)
