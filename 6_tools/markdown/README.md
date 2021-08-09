@@ -280,6 +280,8 @@ $$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
 $$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$
 $$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
 
+更多表示可以参考[ref](https://www.jianshu.com/p/25f0139637b7)
+
 ### 课程作业
 
 > 不同编辑器对语法的支持性不一样，更多语法请看本教程的附件 "Markdown 语法手册.pdf"．
