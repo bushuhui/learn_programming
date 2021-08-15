@@ -544,7 +544,40 @@ AAA=10
 
 当然这个系统变量，也可以放置在`~/.bashrc`里面，这样可以一直使用该设置。
 
-## 8. 课程作业
+
+## 8. Tips
+
+### 8.1 安装Sogou拼音输入法
+
+更详细的安装说明可以参考: https://pinyin.sogou.com/linux/help.php
+
+
+1. 打开 系统设置——区域和语言——管理已安装的语言——在“语言”tab下——点击“添加或删除语言”
+    - Select Chinese
+    
+2. 如果在键盘输入法系统中，没有“fcitx”选项时，建议先打开终端手动安装fcitx：
+```
+sudo apt-get install fcitx
+```
+
+3. Download sogou pinyin input at: https://pinyin.sogou.com/linux/
+
+通过命令行安装搜狗输入法
+```
+sudo dpkg -i sogoupinyin_版本号_amd64.deb
+```
+
+如果出现问题，则先执行下述命令:
+```
+sudo apt-get purge fcitx-ui-qimpanel
+sudo apt-get install fcitx-libs libfcitx-qt0
+```
+
+4. 注销计算机即可正常使用搜狗输入法
+
+
+
+## 9. 课程作业
 1. 安装一个Linux到你的电脑，例如LinuxMint，关于如何分区，如何制作安装启动U盘，可以在网上查找资料，或者问问师兄、师姐。
 2. 练习上述命令，掌握Linux命令行的精髓。
 
