@@ -20,6 +20,16 @@ git config --global user.email "youremail"
 ```shell
 ## 生成ssh key
 ssh-keygen -t rsa -C "mail@address.com"
+## login 
+ssh netAddr
+# 复制ssh key至远程服务器
+ssh-copy-id yourname@intranet_address
+
+# 登陆远程服务器
+ssh yourname@intranet_address
+
+# 登出
+logout
 ```
 
 ### 网络工具
@@ -98,28 +108,12 @@ gdb
 run
 ## 查看报错位置
 backtrace
+where
+wh
 
 # 查看字体
 fc-list 
 fc-list :lang=zh
-```
-
-
-
-## 远程服务器相关命令
-
-### 登陆与挂载
-
-```shell
-# 复制ssh key至远程服务器
-ssh-copy-id yourname@intranet_address
-
-# 登陆远程服务器
-ssh yourname@intranet_address
-
-# 登出
-logout
-
 ```
 
 
@@ -209,5 +203,7 @@ source ~/xxx/xxx/setup.bash
 
 # 开始vim的简单学习(30mins)
 vimtutor
+# 设置其他支持软件(e.g. *.AppImage)的可执行权限
+chmod a+x [ExcutableFileName]
 ```
 
