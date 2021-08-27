@@ -1,5 +1,7 @@
 [toc]
 
+> This file is written to save those apps, softwares or any other things that could be helpful during programming, documenting or even entertaining.
+
 ## 可堪一用的软件
 
 ### 文字排版
@@ -20,7 +22,7 @@ axel -n 20 URL
 ack str
 ```
 
-
+`tree`用于展示文件夹结构，方便寻找特定文件
 
 ## 零碎细节知识
 
