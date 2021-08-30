@@ -5,11 +5,15 @@
 Windows操作系统：首先下载 https://pc.qq.com/detail/13/detail_22693.html ；然后安装到自己的电脑中。
 
 Linux操作系统下，在终端命令行输入git（PS:以下的命令输入基本都在终端进行）
+
 ![](./pic_git/git1.png) 
+
 上图表明我的电脑已安装git。若提示git未安装，按照以下命令提示安装。
+
 ```
 sudo apt-get install git
 ```
+
 若提示`unable to locate package git`，可能是新装的ubuntu系统没有update,输入`sudo apt-get update`命令，再重复命令`sudo apt-get install git`即可。
 
 ### 1.2 配置个人的基本信息
