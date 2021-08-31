@@ -285,7 +285,7 @@ exit
 
 > in bash, specificly
 
-| Variable Name            | Definition                                                   |
+| Reserved Variable Name   | Definition                                                   |
 | ------------------------ | :----------------------------------------------------------- |
 | COLUMNS                  | terminal width, auto set upon it                             |
 | LINES                    | terminal length                                              |
@@ -301,11 +301,48 @@ exit
 | SHELLOPTS                | shell options separated by `;`                               |
 | SHLVL                    | shell level, reveals current depth of shell(start from 1)    |
 
+[A detailed(& more) explanation](https://www.jb51.net/article/174033.htm)
+
+| Special Parameters | Definition(take input: start.sh A B C D as example)          |
+| ------------------ | ------------------------------------------------------------ |
+| $[Num]             | positional params(\$0-start.sh, \$1-A, etc)                  |
+| $*                 | all positional params(from \$1) , if quoted, it expands all params as one varialbe("$*"-A B C D) |
+| $@                 | all positional params(from $1), if quoted, it expands to single params like an array("\$@"-A // B // C // D) |
+| $#                 | number of positional params( except the script name)         |
+| $-                 | options of current shell use, e.g. himB                      |
+| $$                 | process ID of current shell                                  |
+| $!                 | last process ID in background                                |
+| $_                 | last argument of previous command; and more                  |
+
+Or we can say: `_` holds the command last argument, `!` holds the background process id and `?` holds the exit code other than 0.
+
 ## Shell programming
 
 > `unfin`: This is a [demo](docs/demo_lml_starter.sh) of shell programming for setting up the music library using `VLC`.
 
+### Writing expansions
 
+escape`\`: remove special meaning of single character,e.g. `\$`
+
+single quote`''`: preserve literal value of each character inside, cannot be nested, e.g. `'PWD'`
+
+double quote `""`: preserve literal value of all character inside except dollar`$`, backticks\`\`, backslash`\`. can  be nested with `\` mark. e.g. `" \"PWD\" of this"`
+
+ANSI-C quote `"$'STRING'"`: remained for more digging
+
+locale `$" somestring "`: translate string inside according to current locale
+
+brace expansion`PRE{c1,c2,...}POST`: pure textual operation with highest level, generate `PREcnPOST` strings with exact written order separated by space 
+
+tilde expansion`~STRING`: tilde-prefix ends at `"`,  and will left the word unchanged if following pattern unmatched:
+
+| ~                         | ~+   | ~-     | ~STRING                                  |
+| ------------------------- | ---- | ------ | ---------------------------------------- |
+| HOME > home of shell user | PWD  | OLDPWD | home of STRING, which is taken as a user |
+
+parameter and variable expansion `$`:
+
+# !!!Page 47
 
 ```shell
 
