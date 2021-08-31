@@ -167,6 +167,7 @@ If you want to embed images, this is how you do it:
 ```
 
 > Coffee. The finest organic suspension ever devised... I beat the Borg with it.
+>
 > - Captain Janeway
 
 引用的多层嵌套：
@@ -281,6 +282,12 @@ $$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$
 $$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
 
 更多表示可以参考[ref](https://www.jianshu.com/p/25f0139637b7)
+
+
+
+如果遇到Typora显示不了行内公式，可以[更改Typora的设置](https://blog.csdn.net/fffsolomon/article/details/102895371)
+
+
 
 ### 课程作业
 
