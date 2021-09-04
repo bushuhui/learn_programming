@@ -21,11 +21,11 @@ sudo apt-get install git
 
 输入命令：
 ```
-git config --global user.name zhangmi
-git config --global user.email zhangmm94@163.com
+git config --global user.name <username>
+git config --global user.email <email>
 ```
 
-此步是自报家门：姓名（上例中的`zhangmi`要替换成你自己的名字）和邮箱地址（上例中的`zhangmi94@163.com`，替换成自己邮箱)，这里的名字和邮箱最好是gitee上的保持一致。
+此步是自报家门：姓名（上例中的`<username>`要替换成你自己的名字）和邮箱地址（上例中的`<email>`，替换成自己邮箱)，这里的名字和邮箱最好是gitee上的保持一致。
 
 `git config`命令的`--global`参数，表明本地电脑所有的git仓库都会使用此配置，当然可以对特定的仓库指定不同的用户名和邮箱。后续的操作都会标记并使用上面设置的用户名和邮箱。
 
