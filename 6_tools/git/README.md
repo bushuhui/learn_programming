@@ -46,32 +46,37 @@ ssh-keygen -t rsa -C "youremail@xxx.com"
 
 ## 2. 操作已有的仓库的项目
 
+### 2.1 Clone项目到自己的项目
+具体见 [如何Fork代码到自己的仓库并clone到本地](https://gitee.com/pi-lab/learn_programming/blob/master/6_tools/git/HowToForkClone.md)
 
-### 2.1 Clone项目到本地
+
+### 2.2 Clone项目到本地
+在自己项目的页面，找到“Clone or download”，根据需要选择SSH，或者HTTPS网址，然后在本地命令行执行如下命令，可以参考[操作页面示例]（https://gitee.com/pi-lab/learn_programming/blob/master/6_tools/git/pic_git/git_clone_code.png）
 ```
 git clone git@192.168.1.3:pi-lab/PIL2.git
 ```
 
-### 2.2 增加、编辑代码
+### 2.3 增加、编辑代码
 对本地代码、文件进行编辑、操作
 
 
-### 2.3 将服务器最新代码下载到本地
+### 2.4 将服务器最新代码下载到本地
+为了防止服务器上的代码其他人更改，可以现在推送本地文件到服务之前，将服务器最新代码更新到本地
 ```
 git pull origin master
 ```
 
-### 2.4 增加、提交到本地仓库
+### 2.5 增加、提交到本地仓库
 ```
 git add -A
 git commit -m "comments to this revision"
 ```
 
-### 2.5 提交到服务器
+### 2.6 提交到服务器
 ```
 git push origin <branchname>
 ```
-
+其中`<branchname>`一般是`master`
 
 
 ## 3. 创建新的仓库
