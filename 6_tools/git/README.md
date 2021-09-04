@@ -51,7 +51,7 @@ ssh-keygen -t rsa -C "youremail@xxx.com"
 
 
 ### 2.2 Clone项目到本地
-在自己项目的页面，找到“Clone or download”，根据需要选择SSH，或者HTTPS网址，然后在本地命令行执行如下命令，可以参考[操作页面示例]（https://gitee.com/pi-lab/learn_programming/blob/master/6_tools/git/pic_git/git_clone_code.png）
+在自己项目的页面，找到“Clone or download”，根据需要选择SSH，或者HTTPS网址，然后在本地命令行执行如下命令，可以参考[操作页面示例](https://gitee.com/pi-lab/learn_programming/blob/master/6_tools/git/pic_git/git_clone_code.png)
 ```
 git clone git@192.168.1.3:pi-lab/PIL2.git
 ```
