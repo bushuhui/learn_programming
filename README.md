@@ -20,7 +20,7 @@
 
 
 
-本教程提供了一个编程能力的综合学习引导，主要需要[学习的内容和技能](Target.md)包括：
+本教程提供了一个编程能力的综合学习引导，[预期需要达到的能力和技能](Target.md)主要包括：
 
 * [C++语法、编程基础](1_c++)
     - **基本语法**：数据类型、循环、判断、选择、函数、指针、结构体和类
@@ -127,8 +127,8 @@
 ### 3.1 具体要求：
 
 1. 根据自己的学习过程，将所编写的程序保存到对应的目录里，分门别类存放程序、文档（养成条理的习惯）
-2. 学习使用[《Git》](6_tools/git)，将代码、报告提交到[Gitee](https://gitee.com)
-3. 可以参考[《报告例子》](report/20200511_report_demo.md)来写每周的报告。其中关于[Markdown](6_tools/markdown)的用法可以通过学习资料进行学习
+2. 学习使用[《Git》](6_tools/git/README.md)，将代码、报告提交到[Gitee](https://gitee.com)
+3. 可以参考[《报告例子》](report/20200511_report_demo.md)来写每周的报告。其中关于[Markdown](6_tools/markdown/README.md)的用法可以通过学习资料进行学习
 
 
 ### 3.2 具体操作步骤：
@@ -136,12 +136,15 @@
 * [大家fork这个项目到自己的项目](6_tools/git/HowToForkClone.md)
 * [然后git clone自己的项目到本地机器](6_tools/git/HowToForkClone.md)
 * 在各目录里写入各自的代码、报告等
-* 通过`git push origin master`上传作业到自己的项目里。每次完成一个作业就提交代码一次，或者每天完成之后提交一次代码。
-* 由于本作业会更新因此需要更新到最新的版本，可以如下操作
+* 提交代码到本地仓库
 ```
-git remote add upstream git@gitee.com:pi-lab/learn_programming.git
-git pull upstream master
+git add -A
+git commit -m "Change log"
 ```
+* 通过`git push origin master`上传作业到自己的项目里。
+
+每次完成一个作业就提交代码一次，或者每天完成之后提交一次代码。
+
 
 
 
@@ -149,7 +152,7 @@ git pull upstream master
 
 * 关于Git和Gitee的操作可以深入学习[《Git教程》](6_tools/git/README.md)。
 
-* 可以参考[《Gitee增加用户》](6_tools/git/gitee_addmember.md)来增加用户，**将邀请链接地址发送给`bushuhui@nwpu.edu.cn`** （重要步骤，请不要忘记遗漏），从而加提高协同便捷性。大家提交作业后，我会在大家的项目里写入批注、建议等等，从而构建良好的反馈机制，能够更有效的取得学习效果。
+* 可以参考[《Gitee增加用户》](6_tools/git/gitee_addmember.md)来增加用户，**将邀请链接地址发送给`bushuhui@nwpu.edu.cn`** （重要步骤，请不要忘记遗漏！），从而加提高协同便捷性。大家提交作业后，我会在大家的项目里写入批注、建议等等，从而构建良好的反馈机制，能够更有效的取得学习效果。
 
 * 可以安装Git客户端软件[GitKraken](https://www.gitkraken.com)，能够方便查看每次的提交都有那些更改，或者查看有那些批注、建议等。
 
@@ -219,18 +222,16 @@ git pull upstream master
 
 
 
-工具的使用教程等
+### 5.1 工具的使用教程等
 
 * [Code Cook - 编程参考代码，技巧集合](https://gitee.com/pi-lab/code_cook)
-* [Linux](6_tools/linux)
-* [Markdown](6_tools/markdown)
-* [Git](6_tools/git)
-* [CMake](6_tools/cmake)
+* [Linux](6_tools/linux/README.md)
+* [Markdown](6_tools/markdown/README.md)
+* [Git](6_tools/git/README.md)
+* [CMake](6_tools/cmake/README.md)
 
 
 
-
-
-参考资料：
+### 5.2 参考资料：
 
 * [C++的算法、程序大全](https://github.com/TheAlgorithms/C-Plus-Plus)
