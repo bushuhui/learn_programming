@@ -24,3 +24,9 @@ sudo apt install qt5-default qt5-qmake-bin
 sudo apt install libqt5network5 libqt5sql5 libqt5svg5 libqt5svg5-dev 
 ```
 
+
+
+## 示例代码
+
+* [Qt示例代码](https://gitee.com/pi-lab/code_cook/tree/master/gui/qt)
+* [示例项目](https://gitee.com/pi-lab/code_cook/blob/master/DemoProjects.md)
