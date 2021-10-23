@@ -25,12 +25,14 @@
 
 
 ### 1.2 [无人机路径规划](https://gitee.com/aircraft-is-design/aircraft-information-system-design/blob/master/project-uav-planning/README.md)
-目前无人机虽然实现了自动飞行，但是大部分的无人机仍不具备感知环境、动态适应环境的能力。本课题通过一步一步实现无人机的感知、路径规划、仿真，通过本项目理解无人机系统的感知、控制。需要设计开发一套仿真、控制系统：
+目前无人机虽然实现了自动飞行，但是大部分的无人机仍不具备感知环境、动态适应环境的能力。本课题通过一步一步实现无人机的感知、路径规划、仿真，通过本项目理解无人机系统的感知、控制。需要设计开发一套仿真、控制系统，具体效果如下图所示。
 * 让无人机从红色的起点出发，朝向蓝色的终点飞行，但是事先不知道环境地图（障碍物）的分布
 * 假设无人机上装备了激光雷达，能够探测一定范围内的障碍物信息
 * 在飞行过程探测周围环境，不断完善环境地图，并不断更新规划路径
 * 无人机利用A * 算法规划当前认为可行的路径，绿色的线段
 * 更具体的说明见 [无人机路径规划](https://gitee.com/aircraft-is-design/aircraft-information-system-design/blob/master/project-uav-planning/README.md)
+
+![dynamic_pathplanning.gif](images/dynamic_pathplanning.gif)
 
 
 ### 1.3 编队无人机的集结
