@@ -23,3 +23,9 @@
 ④事件
 
 事件是用来通知线程有一些事件已发生，从而启动后继任务的开始。事件对象也可以通过通知操作的方式来保持线程的同步，并且可以实现不同进程中的线程同步操作
+
+
+
+## References
+
+[一个详细介绍多线程的书籍](https://www.bookstack.cn/read/CPP-Concurrency-In-Action-2ed-2019/README.md)

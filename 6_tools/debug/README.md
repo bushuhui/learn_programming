@@ -152,6 +152,12 @@ arr_t.push_back(t);	//将此对象存入数组，此时产生了t的临时副本
 3.在类内部阻止拷贝构造函数的非期望调用（即阻止产生临时对象，即可阻止产生额外的指针）。[参考这里](https://blog.csdn.net/alxe_made/article/details/96184209)(或许有用，有待验证)
 
 
+
+#### 编译错误
+
+`undefined reference to 'pthread_create'`：C++库文件缺失，需要手动添加提示的库，例如 `-lpthread`
+
+
 ## 6. 参考资料
 * [段错误(segmentation fault )：9种实用调试方法](https://m.toutiaocdn.com/i6833639010007515659)
 

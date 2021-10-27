@@ -26,6 +26,10 @@ git config --global user.email "youremail"
 ssh-keygen -t rsa -C "mail@address.com"
 ## login 
 ssh netAddr
+
+## scp, send via ssh protocol
+scp [filename] [username]@[ipaddr]:[targetfilepath]
+
 # 复制ssh key至远程服务器
 ssh-copy-id yourname@intranet_address
 
