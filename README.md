@@ -61,7 +61,9 @@
 
 主要的学习阶段和步骤分为如下的5个阶段，可以同时进行两个或以上的内容学习和练习，从而提高整体的学习效率。
 
-[Stage 1: C++基础](1_c++/README.md) （需要在2周-3周完成）
+### 2.1 [Stage 1: C++基础](1_c++/README.md) 
+
+**需要在2周-3周完成：**
 
 - 找一本C++的书 （教材就可以，或者如下的资料），将其中的基本内容快速过一遍（大约4-8天）
 - 在C++基本用法的同时开始编程练习，例如书每一部分的练习题，或者参考[《编程练习题》](1_c++/CodePractice.md)
@@ -71,7 +73,9 @@
     - [《C++ 教程》](http://www.runoob.com/cplusplus/cpp-tutorial.html) ，通过这个教程快速学会C++的语法等。
     - 如果对自己有更高的要求，可以学习《[C++ Primer》](https://www.zhihu.com/question/32087709)。不过最好还是用上面普通的教程先把基础知识学好之后，再学习C++ Primer更有效率。
 
-[Stage 2: 算法](2_datastructure_algorithm/README.md)（需要在3周-6周完成）
+### 2.2 [Stage 2: 算法](2_datastructure_algorithm/README.md)
+
+**需要在3周-6周完成：**
 
 - 推荐下面的[《数据结构与算法入门》](https://www.dotcpp.com/course/ds/)，先把各种数据结构和基本的几种算法思维学会。如果对自己有更高的要求，可以学习《算法导论》
 - 根据自己的基础，把重要的内容学一下，并尝试将算法练习题自己实现一下 （大约3-6周）
@@ -81,7 +85,9 @@
     - [《数据结构与算法入门》](https://www.dotcpp.com/course/ds/)，学习基础的数据结构和算法知识，能够编写简单的算法题目。
     - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html) ， [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)，如果对自己要求更高，可以通过学习算法导论掌握更深的算法分析能力。
 
-[Stage 3: 在线编程练习](3_code_practice/README.md) （需要在3周-6周完成）
+### 2.3 [Stage 3: 在线编程练习](3_code_practice/README.md) 
+
+**需要在3周-6周完成：**
 
 - 在基础知识学习到一定程度之后，需要找一些算法练习题目来继续提高自己的能力
 - 如果自己想不到很好的练习题目，可以通过做 [《leetcode在线网站》](https://leetcode-cn.com/) 的练习题，来练习
@@ -91,28 +97,44 @@
     - [中级算法 - 巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/)
     - [高级算法 - 提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard/)
 
-[Stage 4: 综合编程练习项目](4_projects/README.md) （需要在2周-4周完成）
+### 2.4 [Stage 4: 综合编程练习项目](4_projects/README.md) 
+
+**需要在2周-4周完成：**
 
 - 可以思考一下，如何将所学的编程知识去解决一些实际问题
 - 通过这个综合练习，运用所学的知识解决一个或者多个实际问题，从而锻炼系统性解决问题的能力，并提高思维水平
 - 如果自己想不到太好的例子，可以参考所列的：[《综合练习例子程序》](4_projects/README.md)
 
-[Stage 5: 高级技巧](5_advanced/README.md) （需要在2周-4周完成）
+### 2.5 [Stage 5: 高级技巧](5_advanced/README.md) 
 
+**需要在2周-4周完成：**
+
+- 如何把自己代码写的更规范：命名、格式、函数、类等。
+    - 参考[《编码规范》](5_advanced/programming_standard)，将自己写过的代码按照规范进行格式、写法的调整
 - 琢磨如何将前面所写的代码进行重构，如何提高代码的复用能力
+    - 思考程序哪里写的不好，不容易理解，如何才能更好理解
+    - 程序是否结构不清晰，如何分割成更好的函数、类
+    - 思考那些函数、类是可以复用的，可以写成头文件
 - 如何利用[CMake](6_tools/cmake)，[PICMake](6_tools/cmake/PICMake.md)将所有的代码组织起来，一次将自己编写的代码自动编译出来
+    - 将自己C++（[Stage1](1_c++)），数据结构([Stage2](2_datastructure_algorithm))，综合练习项目（[Stage4](4_projects/README.md)）的程序用CMake组织起来
 - 研究、学习如何将常用的函数、类组织到一个代码库，后续直接使用
-- 如何把自己代码写的更规范：命名、格式、函数、类等
-- 如何让代码更清晰易懂，在什么地方用什么设计模式？
+    - 分析哪些函数、类可以复用，将可以复用的写成库
+- 如何让代码更清晰易懂，在什么地方用什么[设计模式](5_advanced/4_DesignPattern_UML)？
+	- 分析程序常用几种写法、模式，学习[设计模式](5_advanced/4_DesignPattern_UML)
+	- 按照[设计模式](5_advanced/4_DesignPattern_UML)的方法，将自己的程序优化一下
 - 掌握[多种编程工具](6_tools)的用法
 - 在用的过程多琢磨技巧，并不断总结
 
+### 2.6 [Stage 6: 高级项目](6_adv_projects) 
 
-[Stage 6: 高级项目](6_adv_projects) （需要在2周-4周完成，为更好的提高自己的能力建议完成）
+**需要在2周-4周完成，为更好的提高自己的能力建议完成：**
+
 - 在学习基本工具的基础上，通过完成一个更复杂一点的项目，将编程语言、数据结构、工具、Debug、设计模式等多种技能进行综合练习，巩固所学的知识和技能。
 
+### 2.7 [Stage 7: 高级C++](7_adv_c++) 
 
-[Stage 7: 高级C++](7_adv_c++) （需要在2周-4周完成，为更好的提高自己的能力建议完成）
+**需要在2周-4周完成，为更好的提高自己的能力建议完成：**
+
 - 主要学习C++ 11， C++14， C++20等最新功能、函数。
 - 目前主流的高端项目使用了大量的高级C++技巧，因此为了能编写复杂软件系统，建议好好学习一下高级C++
 
