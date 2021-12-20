@@ -60,10 +60,8 @@ Google的编程规范大家可以作为主要的参考：
 更多的资料可以参考：
 
 * https://blog.csdn.net/u011012932/article/details/66974516
-
 * https://github.com/FengJungle/DesignPattern
-
-* https://gitee.com/pi-lab/code_cook/tree/master/c++/DesignPattern
+* https://gitee.com/pi-lab/code_cook/tree/master/c++/design_pattern
 
 
 
