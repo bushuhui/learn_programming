@@ -4,10 +4,13 @@
 ## 1. 设计模式
 设计模式是软件设计中常见问题的典型解决方案。 每个模式就像一张蓝图，你可以通过对其进行定制来解决代码中的特定设计问题。设计模式与方法或库的使用方式不同，你很难直接在自己的程序中套用某个设计模式。模式并不是一段特定的代码，而是解决特定问题的一般性概念。你可以根据模式来实现符合自己程序实际所需的解决方案。 
 
-* [设计模式详解 (很好的教程)](https://refactoringguru.cn/design-patterns)
-* [设计模式 - 示例代码](https://gitee.com/pi-lab/code_cook/tree/master/c++/design_pattern)
-* [23种设计模式的C++实现](https://gitee.com/pi-lab/code_cook/tree/master/c++/design_pattern/DesignPattern)
-* [设计模式 - 廖雪峰](https://www.liaoxuefeng.com/wiki/1252599548343744/1264742167474528)
+* 教程
+    * [设计模式详解 (很好的教程)](https://refactoringguru.cn/design-patterns) (推荐)
+    * [Dive Into Design Pattern](https://refactoring.guru/design-patterns/book) (推荐)
+    * [设计模式 - 廖雪峰](https://www.liaoxuefeng.com/wiki/1252599548343744/1264742167474528)
+* 设计模式 - 示例程序
+    * [设计模式 - 示例代码](https://gitee.com/pi-lab/code_cook/tree/master/c++/design_pattern)
+    * [23种设计模式的C++实现](https://gitee.com/pi-lab/code_cook/tree/master/c++/design_pattern/DesignPattern)
 
 
 
@@ -25,6 +28,7 @@
 * [UML类图 - 用实例讲解如何画类图](https://www.jianshu.com/p/57620b762160)
 
 
+
 ## 4. 结构化、分布式程序设计
 
 随着无人系统、人工智能的发展，目前系统的复杂度越来越高，集成的技术越来越多，一般需要集成传感器数据获取、数据预处理、多源数据融合、SLAM、全局数据融合生成、数据分析、交互、数据存储、多机交互与协调等等。如何将这么多的系统进行有机的整合，并且能够最大化发挥作用，是一个非常有挑战的工作。
@@ -35,6 +39,9 @@
 * API接口设计
 * 网络通信方式
 
+
+
+教程、说明：
 
 * [ROS Design Patterns, C++ APIs, and Best Practices](https://courses.cs.washington.edu/courses/cse466/11au/calendar/ros_cc_2_patterns.pdf)
     - [ROS Best Practices](https://github.com/leggedrobotics/ros_best_practices/wiki)
