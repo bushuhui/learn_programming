@@ -24,3 +24,20 @@
 * [一次搞懂建模语言UML](https://m.toutiaocdn.com/i6737896747319689735)
 * [UML类图 - 用实例讲解如何画类图](https://www.jianshu.com/p/57620b762160)
 
+
+## 4. 结构化、分布式程序设计
+
+随着无人系统、人工智能的发展，目前系统的复杂度越来越高，集成的技术越来越多，一般需要集成传感器数据获取、数据预处理、多源数据融合、SLAM、全局数据融合生成、数据分析、交互、数据存储、多机交互与协调等等。如何将这么多的系统进行有机的整合，并且能够最大化发挥作用，是一个非常有挑战的工作。
+
+由于未来的系统智能化程度、集成度、集群协同性的提高，通过分布式的方式将多个模块、子系统整合是主要的发展方向。在这个过程中主要考虑的要素有：
+* 系统的目标、性能指标
+* 实时性要求
+* API接口设计
+* 网络通信方式
+
+
+* [ROS Design Patterns, C++ APIs, and Best Practices](https://courses.cs.washington.edu/courses/cse466/11au/calendar/ros_cc_2_patterns.pdf)
+    - [ROS Best Practices](https://github.com/leggedrobotics/ros_best_practices/wiki)
+* [Creating Web APIs with Python and Flask](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
+
+
