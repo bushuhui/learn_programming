@@ -71,7 +71,7 @@
 - 在学习过程考虑，如何更有效的编程，如何提高debug能力
 - 资料（可以使用在线的教程，或者自己找比较合适的）：
     - [《C++ 教程》](http://www.runoob.com/cplusplus/cpp-tutorial.html) ，通过这个教程快速学会C++的语法等。
-    - 如果对自己有更高的要求，可以学习《[C++ Primer》](https://www.zhihu.com/question/32087709)。不过最好还是用上面普通的教程先把基础知识学好之后，再学习C++ Primer更有效率。
+    - 如果对自己有更高的要求，可以学习《[C++ Primer》](https://www.zhihu.com/question/32087709)。不过最好还是用上面普通的教程先把基础知识学好之后，把Stage4的小项目做完之后，再学习C++ Primer更有效率。
 
 ### 2.2 [Stage 2: 算法](2_datastructure_algorithm/README.md)
 
