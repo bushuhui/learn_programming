@@ -27,9 +27,15 @@
 
 
 
-## 5. Reference
+## 5. 参考资料
 
-英文的编程练习题
+### 5.1 教程
+
+* [C++基础入门](https://gitee.com/andy-upp/linux-cpp-tutorial/blob/master/01.C++%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/01.C++%20%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/C++%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E8%AE%B2%E4%B9%89/C++%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8.md)
+* [C++核心编程](https://gitee.com/andy-upp/linux-cpp-tutorial/blob/master/01.C++%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/03.C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/%E8%AE%B2%E4%B9%89/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B.md)
+* [C++提高编程](https://gitee.com/andy-upp/linux-cpp-tutorial/blob/master/01.C++%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/05.C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/%E8%AE%B2%E4%B9%89/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B.md)
+
+### 5.2 英文的编程练习题
 
 * https://www.w3resource.com/cpp-exercises/basic/index.php
 * https://edabit.com/challenges/cpp
