@@ -190,6 +190,11 @@ conda info --envs
 # 删除环境
 conda remove -n your_environment_name --all
 
+# 查看cuda,cudnn版本(python下)
+import torch as t
+t.version.cuda
+t.backends.cudnn.version()
+
 ```
 
 
@@ -229,6 +234,10 @@ chmod a+x <ExcutableFileName>
 ## o - other user group		- - remove		x - execute
 ## a - all
 chmod [u|g|o|a][+/=/-][r|w|x] <FILENAME> 
+
+# add user right to start docker
+sudo usermod -a -G docker <USERNAME>
+
 ```
 
 - `source` = `.`，意味着你在当前shell中执行脚本/程序，而使用`./<Script>`或者`bash <Script>`会开启一个子shell并执行，他们之间的区别通常是定义的变量是否会影响当前shell(或者被当前shell影响)。
@@ -310,8 +319,8 @@ exit
 | Special Parameters | Definition(take input: start.sh A B C D as example)          |
 | ------------------ | ------------------------------------------------------------ |
 | $[Num]             | positional params(\$0-start.sh, \$1-A, etc)                  |
-| $*                 | all positional params(from \$1) , if quoted, it expands all params as one varialbe("$*"-A B C D) |
-| $@                 | all positional params(from $1), if quoted, it expands to single params like an array("\$@"-A // B // C // D) |
+| $*                 | all positional params(from `$1`) , if quoted, it expands all params as one varialbe(`$*`-A B C D) |
+| $@                 | all positional params(from `$1`), if quoted, it expands to single params like an array("\$@"-A // B // C // D) |
 | $#                 | number of positional params( except the script name)         |
 | $-                 | options of current shell use, e.g. himB                      |
 | $$                 | process ID of current shell                                  |
@@ -396,6 +405,26 @@ system initiation file are store in `/etc/init.d/` with a link in `/etc/rc0.d/` 
    ln -s <PATHOFINITFILE> <LINKFILE>
    ```
 
+Second method of adding auto-start item (specially for `ubuntu 18.04`): 
+
+1. add contents in `/lib/systemd/system/rc-local.service` as shown below
+
+```shell
+[Install]
+WantedBy=multi-user.target
+Alias=rc-local.service
+```
+
+2. link it and create init script in `/etc/rc-local`
+
+```
+ln -fs /lib/systemd/system/rc-local.service /etc/systemd/system/rc-local.service
+sudo touch /etc/rc.local
+chmod 755 /etc/rc.local
+```
+
+3. add in auto-start items
+
 ### custom bash settings
 
 > remained part
@@ -404,3 +433,7 @@ system initiation file are store in `/etc/init.d/` with a link in `/etc/rc0.d/` 
 
 2. prompt settings
 
+## shell programming tips
+
+- when using pipeline `|`, the change of variants can't be delivered outside of pipeline
+- `expect`, and temp file program(such as `cat <<EOF; EOF`) can't not be nested inside of `if` since `if` needs the result of command execution, yet `expect` or `EOF` can't provide such(Note: requires more research and implementation)
