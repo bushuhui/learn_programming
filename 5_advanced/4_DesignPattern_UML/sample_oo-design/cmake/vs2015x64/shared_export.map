@@ -1,0 +1,8 @@
+{  
+global:  
+  createRTMapperInstance;
+  exportTileManager;
+  *SvarWithType*;
+  main;
+local: *;  
+};
