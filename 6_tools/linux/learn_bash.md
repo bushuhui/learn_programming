@@ -154,6 +154,9 @@ cat /etc/shells
 # 查询默认使用常用可执行文件(e.g. bash, man, proxy, root, ...)
 cat /etc/passwd
 
+# 查询执行文件对应源码(dpkg)
+dpkg -S [Executable]
+dpkg -S /bin/ls
 ```
 
 

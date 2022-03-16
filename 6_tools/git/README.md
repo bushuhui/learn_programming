@@ -5,11 +5,15 @@
 Windows操作系统：首先下载 https://pc.qq.com/detail/13/detail_22693.html ；然后安装到自己的电脑中。
 
 Linux操作系统下，在终端命令行输入git（PS:以下的命令输入基本都在终端进行）
+
 ![](./pic_git/git1.png) 
+
 上图表明我的电脑已安装git。若提示git未安装，按照以下命令提示安装。
+
 ```
 sudo apt-get install git
 ```
+
 若提示`unable to locate package git`，可能是新装的ubuntu系统没有update,输入`sudo apt-get update`命令，再重复命令`sudo apt-get install git`即可。
 
 ### 1.2 配置个人的基本信息
@@ -17,11 +21,11 @@ sudo apt-get install git
 
 输入命令：
 ```
-git config --global user.name zhangmi
-git config --global user.email zhangmm94@163.com
+git config --global user.name <username>
+git config --global user.email <email>
 ```
 
-此步是自报家门：姓名（上例中的`zhangmi`要替换成你自己的名字）和邮箱地址（上例中的`zhangmi94@163.com`，替换成自己邮箱)，这里的名字和邮箱最好是gitee上的保持一致。
+此步是自报家门：姓名（上例中的`<username>`要替换成你自己的名字）和邮箱地址（上例中的`<email>`，替换成自己邮箱)，这里的名字和邮箱最好是gitee上的保持一致。
 
 `git config`命令的`--global`参数，表明本地电脑所有的git仓库都会使用此配置，当然可以对特定的仓库指定不同的用户名和邮箱。后续的操作都会标记并使用上面设置的用户名和邮箱。
 
@@ -42,32 +46,37 @@ ssh-keygen -t rsa -C "youremail@xxx.com"
 
 ## 2. 操作已有的仓库的项目
 
+### 2.1 Clone项目到自己的项目
+具体见 [如何Fork代码到自己的仓库并clone到本地](https://gitee.com/pi-lab/learn_programming/blob/master/6_tools/git/HowToForkClone.md)
 
-### 2.1 Clone项目到本地
+
+### 2.2 Clone项目到本地
+在自己项目的页面，找到“Clone or download”，根据需要选择SSH，或者HTTPS网址，然后在本地命令行执行如下命令，可以参考[操作页面示例](https://gitee.com/pi-lab/learn_programming/blob/master/6_tools/git/pic_git/git_clone_code.png)
 ```
 git clone git@192.168.1.3:pi-lab/PIL2.git
 ```
 
-### 2.2 增加、编辑代码
+### 2.3 增加、编辑代码
 对本地代码、文件进行编辑、操作
 
 
-### 2.3 将服务器最新代码下载到本地
+### 2.4 将服务器最新代码下载到本地
+为了防止服务器上的代码其他人更改，可以现在推送本地文件到服务之前，将服务器最新代码更新到本地
 ```
 git pull origin master
 ```
 
-### 2.4 增加、提交到本地仓库
+### 2.5 增加、提交到本地仓库
 ```
 git add -A
 git commit -m "comments to this revision"
 ```
 
-### 2.5 提交到服务器
+### 2.6 提交到服务器
 ```
 git push origin <branchname>
 ```
-
+其中`<branchname>`一般是`master`
 
 
 ## 3. 创建新的仓库

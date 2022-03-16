@@ -20,7 +20,7 @@
 
 
 
-本教程提供了一个编程能力的综合学习引导，主要需要[学习的内容和技能](Target.md)包括：
+本教程提供了一个编程能力的综合学习引导，[预期需要达到的能力和技能](Target.md)主要包括：
 
 * [C++语法、编程基础](1_c++)
     - **基本语法**：数据类型、循环、判断、选择、函数、指针、结构体和类
@@ -61,17 +61,21 @@
 
 主要的学习阶段和步骤分为如下的5个阶段，可以同时进行两个或以上的内容学习和练习，从而提高整体的学习效率。
 
-[Stage 1: C++基础](1_c++/README.md) （需要在2周-3周完成）
+### 2.1 [Stage 1: C++基础](1_c++/README.md) 
+
+**需要在2周-3周完成：**
 
 - 找一本C++的书 （教材就可以，或者如下的资料），将其中的基本内容快速过一遍（大约4-8天）
-- 在C++基本用法的同时开始编程练习，例如书每一部分的练习题
+- 在C++基本用法的同时开始编程练习，例如书每一部分的练习题，或者参考[《编程练习题》](1_c++/CodePractice.md)
 - 将其中的练习题做一遍（大约2周，给自己限定一个时间，必须快速完成）
 - 在学习过程考虑，如何更有效的编程，如何提高debug能力
 - 资料（可以使用在线的教程，或者自己找比较合适的）：
     - [《C++ 教程》](http://www.runoob.com/cplusplus/cpp-tutorial.html) ，通过这个教程快速学会C++的语法等。
-    - 如果对自己有更高的要求，可以学习《[C++ Primer》](https://www.zhihu.com/question/32087709)。不过最好还是用上面普通的教程先把基础知识学好之后，再学习C++ Primer更有效率。
+    - 如果对自己有更高的要求，可以学习《[C++ Primer》](https://www.zhihu.com/question/32087709)。不过最好还是用上面普通的教程先把基础知识学好之后，把Stage4的小项目做完之后，再学习C++ Primer更有效率。
 
-[Stage 2: 算法](2_datastructure_algorithm/README.md)（需要在3周-6周完成）
+### 2.2 [Stage 2: 算法](2_datastructure_algorithm/README.md)
+
+**需要在3周-6周完成：**
 
 - 推荐下面的[《数据结构与算法入门》](https://www.dotcpp.com/course/ds/)，先把各种数据结构和基本的几种算法思维学会。如果对自己有更高的要求，可以学习《算法导论》
 - 根据自己的基础，把重要的内容学一下，并尝试将算法练习题自己实现一下 （大约3-6周）
@@ -81,7 +85,9 @@
     - [《数据结构与算法入门》](https://www.dotcpp.com/course/ds/)，学习基础的数据结构和算法知识，能够编写简单的算法题目。
     - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html) ， [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)，如果对自己要求更高，可以通过学习算法导论掌握更深的算法分析能力。
 
-[Stage 3: 在线编程练习](3_code_practice/README.md) （需要在3周-6周完成）
+### 2.3 [Stage 3: 在线编程练习](3_code_practice/README.md) 
+
+**需要在3周-6周完成：**
 
 - 在基础知识学习到一定程度之后，需要找一些算法练习题目来继续提高自己的能力
 - 如果自己想不到很好的练习题目，可以通过做 [《leetcode在线网站》](https://leetcode-cn.com/) 的练习题，来练习
@@ -91,28 +97,44 @@
     - [中级算法 - 巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/)
     - [高级算法 - 提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard/)
 
-[Stage 4: 综合编程练习项目](4_projects/README.md) （需要在2周-4周完成）
+### 2.4 [Stage 4: 综合编程练习项目](4_projects/README.md) 
+
+**需要在2周-4周完成：**
 
 - 可以思考一下，如何将所学的编程知识去解决一些实际问题
 - 通过这个综合练习，运用所学的知识解决一个或者多个实际问题，从而锻炼系统性解决问题的能力，并提高思维水平
 - 如果自己想不到太好的例子，可以参考所列的：[《综合练习例子程序》](4_projects/README.md)
 
-[Stage 5: 高级技巧](5_advanced/README.md) （需要在2周-4周完成）
+### 2.5 [Stage 5: 高级技巧](5_advanced/README.md) 
 
+**需要在2周-4周完成：**
+
+- 如何把自己代码写的更规范：命名、格式、函数、类等。
+    - 参考[《编码规范》](5_advanced/programming_standard)，将自己写过的代码按照规范进行格式、写法的调整
 - 琢磨如何将前面所写的代码进行重构，如何提高代码的复用能力
+    - 思考程序哪里写的不好，不容易理解，如何才能更好理解
+    - 程序是否结构不清晰，如何分割成更好的函数、类
+    - 思考那些函数、类是可以复用的，可以写成头文件
 - 如何利用[CMake](6_tools/cmake)，[PICMake](6_tools/cmake/PICMake.md)将所有的代码组织起来，一次将自己编写的代码自动编译出来
+    - 将自己C++（[Stage1](1_c++)），数据结构([Stage2](2_datastructure_algorithm))，综合练习项目（[Stage4](4_projects/README.md)）的程序用CMake组织起来
 - 研究、学习如何将常用的函数、类组织到一个代码库，后续直接使用
-- 如何把自己代码写的更规范：命名、格式、函数、类等
-- 如何让代码更清晰易懂，在什么地方用什么设计模式？
+    - 分析哪些函数、类可以复用，将可以复用的写成库
+- 如何让代码更清晰易懂，在什么地方用什么[设计模式](5_advanced/4_DesignPattern_UML)？
+	- 分析程序常用几种写法、模式，学习[设计模式](5_advanced/4_DesignPattern_UML)
+	- 按照[设计模式](5_advanced/4_DesignPattern_UML)的方法，将自己的程序优化一下
 - 掌握[多种编程工具](6_tools)的用法
 - 在用的过程多琢磨技巧，并不断总结
 
+### 2.6 [Stage 6: 高级项目](6_adv_projects) 
 
-[Stage 6: 高级项目](6_adv_projects) （需要在2周-4周完成，为更好的提高自己的能力建议完成）
+**需要在2周-4周完成，为更好的提高自己的能力建议完成：**
+
 - 在学习基本工具的基础上，通过完成一个更复杂一点的项目，将编程语言、数据结构、工具、Debug、设计模式等多种技能进行综合练习，巩固所学的知识和技能。
 
+### 2.7 [Stage 7: 高级C++](7_adv_c++) 
 
-[Stage 7: 高级C++](7_adv_c++) （需要在2周-4周完成，为更好的提高自己的能力建议完成）
+**需要在2周-4周完成，为更好的提高自己的能力建议完成：**
+
 - 主要学习C++ 11， C++14， C++20等最新功能、函数。
 - 目前主流的高端项目使用了大量的高级C++技巧，因此为了能编写复杂软件系统，建议好好学习一下高级C++
 
@@ -127,8 +149,8 @@
 ### 3.1 具体要求：
 
 1. 根据自己的学习过程，将所编写的程序保存到对应的目录里，分门别类存放程序、文档（养成条理的习惯）
-2. 学习使用[《Git》](6_tools/git)，将代码、报告提交到[Gitee](https://gitee.com)
-3. 可以参考[《报告例子》](report/20200511_report_demo.md)来写每周的报告。其中关于[Markdown](6_tools/markdown)的用法可以通过学习资料进行学习
+2. 学习使用[《Git》](6_tools/git/README.md)，将代码、报告提交到[Gitee](https://gitee.com)
+3. 可以参考[《报告例子》](report/20200511_report_demo.md)来写每周的报告。其中关于[Markdown](6_tools/markdown/README.md)的用法可以通过学习资料进行学习
 
 
 ### 3.2 具体操作步骤：
@@ -136,12 +158,15 @@
 * [大家fork这个项目到自己的项目](6_tools/git/HowToForkClone.md)
 * [然后git clone自己的项目到本地机器](6_tools/git/HowToForkClone.md)
 * 在各目录里写入各自的代码、报告等
-* 通过`git push origin master`上传作业到自己的项目里。每次完成一个作业就提交代码一次，或者每天完成之后提交一次代码。
-* 由于本作业会更新因此需要更新到最新的版本，可以如下操作
+* 提交代码到本地仓库
 ```
-git remote add upstream git@gitee.com:pi-lab/learn_programming.git
-git pull upstream master
+git add -A
+git commit -m "Change log"
 ```
+* 通过`git push origin master`上传作业到自己的项目里。
+
+每次完成一个作业就提交代码一次，或者每天完成之后提交一次代码。
+
 
 
 
@@ -149,7 +174,7 @@ git pull upstream master
 
 * 关于Git和Gitee的操作可以深入学习[《Git教程》](6_tools/git/README.md)。
 
-* 可以参考[《Gitee增加用户》](6_tools/git/gitee_addmember.md)来增加用户，**将邀请链接地址发送给`bushuhui@nwpu.edu.cn`** （重要步骤，请不要忘记遗漏），从而加提高协同便捷性。大家提交作业后，我会在大家的项目里写入批注、建议等等，从而构建良好的反馈机制，能够更有效的取得学习效果。
+* 可以参考[《Gitee增加用户》](6_tools/git/gitee_addmember.md)来增加用户，**将邀请链接地址发送给`bushuhui@nwpu.edu.cn`** （重要步骤，请不要忘记遗漏！），从而加提高协同便捷性。大家提交作业后，我会在大家的项目里写入批注、建议等等，从而构建良好的反馈机制，能够更有效的取得学习效果。
 
 * 可以安装Git客户端软件[GitKraken](https://www.gitkraken.com)，能够方便查看每次的提交都有那些更改，或者查看有那些批注、建议等。
 
@@ -197,7 +222,7 @@ git pull upstream master
 
 16. 要相信奇迹会发生，自己只要能坚持把Stage4做完，能力就会有比较大的提升。根据以往的经验，这个练习题做完的同学，解决问题、编程思维等能力都有很大的提升，所以需要让自己坚信，内功真的需要一层一层修炼。
 
-    
+17. 完成编程练习，[《Stage4的综合练习》](4_projects)等，往往编写的程序比较混乱、代码不清晰、复用能力比较弱。需要通过多次的[《代码重构》](5_advanced/README.md)来提高自己的综合编程能力，在多次的代码重构过程中，提升自己的逻辑思维能力、工具和技巧等方面的能力。
 
 
 
@@ -219,12 +244,16 @@ git pull upstream master
 
 
 
-工具的使用教程等
+### 5.1 工具的使用教程等
 
 * [Code Cook - 编程参考代码，技巧集合](https://gitee.com/pi-lab/code_cook)
-* [Linux](6_tools/linux)
-* [Markdown](6_tools/markdown)
-* [Git](6_tools/git)
-* [CMake](6_tools/cmake)
+* [Linux](6_tools/linux/README.md)
+* [Markdown](6_tools/markdown/README.md)
+* [Git](6_tools/git/README.md)
+* [CMake](6_tools/cmake/README.md)
 
 
+
+### 5.2 参考资料：
+
+* [C++的算法、程序大全](https://github.com/TheAlgorithms/C-Plus-Plus)
