@@ -95,6 +95,30 @@ wh
 
 
 
+## Helpful GNU apps
+
+### sed
+
+This is a stream editor that can be used in pipeline.
+
+```shell
+#usage:
+sed [OPTION]{SCRIPT}[INPUTFILE]
+
+# useful options:
+--version
+--help
+-e [SCRIPT] # specify sed inline command for running, or --expression=[SCRIPT]
+-f [SCRIPT] # specify sed script file for running, or --file=[SCRIPT]
+-i[SUFFIX] # edit in-place(change original file)
+
+# sed script gramma
+[addr]X[options]
+# [addr]: optional line address
+```
+
+
+
 ## 查询与文件管理
 
 ```shell
