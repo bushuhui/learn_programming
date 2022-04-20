@@ -30,6 +30,33 @@ pdf去白边
 pdfcrop [file]
 ```
 
+### System
+
+`supervisor`:守护进程管理工具（并支持开机自启动，可以远程控制）
+
+[自动配置supervisor脚本](./system/supervisor/configSupervisor.sh)（`注：记得修改supervisord.conf中需要进行守护的程序信息后再运行脚本`
+
+[参考文章](https://www.cnblogs.com/liuhaidon/p/12217153.html)
+
+```sh
+# install
+sudo apt install supervisor
+# test for successful installation (by calling cmd provided by it)
+echo_supervisord_cof
+
+# do config by run the config script or follow instructions of reference
+
+# enable auto-start service (skip if using script)
+systemctl enable supervisord
+
+# check if auto-start enabled
+systemctl is-enabled supervisord
+```
+
+`开机自动登陆`:
+
+- 对于`xubuntu`，将[lightdm.conf](./system/lightdm.conf)放在`/etc/lightdm/`文件夹下（若存在对应文件，则添加内容）
+
 
 
 ## 零碎细节知识
