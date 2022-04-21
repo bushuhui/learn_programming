@@ -123,7 +123,7 @@ apt-get update
 
 # create failure list
 FNUM=0
-FLIST=0
+FLIST="None"
 
 
 ################################################################################
@@ -218,11 +218,13 @@ if [ ${RAX} = "true" ];then
 	# create user folder
     if [ ! -d /home/${USER}/xsc ];then
 	    mkdir -p /home/${USER}/xsc
+		chmod 775 /home/${USER}/xsc
     fi
 
 	# create file server folder
 	if [ ! -d /home/fileServer ];then
 		mkdir -p /home/fileServer
+		chmod 775 /home/fileServer
 	fi
 
 	# set alias
@@ -275,9 +277,10 @@ if [ ${RAX} = "true" ];then
 	# set ssh keys
 	if [ ! -d ~/.ssh ];then
 		mkdir ~/.ssh
+		chmod 775 ~/.ssh
 	fi
 	if [ ! -f  ~/.ssh/id_rsa_rax ];then
-		ssh-keygen -t rsa -C "1209137430@qq.com" -f ~/.ssh/id_rsa_rax && echo "[SSH key] generated"
+		ssh-keygen -t rsa -C "1209137430@qq.com" -f ~/.ssh/id_rsa_rax && echo "[SSH key] generated" # possible problem due to authority of ssh file
 		sleep 1
 		# set it to remote server
 		# FIXME: test required
