@@ -36,7 +36,8 @@ pdfcrop [file]
 
 [自动配置supervisor脚本](./system/supervisor/configSupervisor.sh)（`注：记得修改supervisord.conf中需要进行守护的程序信息后再运行脚本`
 
-[参考文章](https://www.cnblogs.com/liuhaidon/p/12217153.html)
+[参考文章](https://www.cnblogs.com/liuhaidon/p/12217153.html)和[更详细的文章](https://www.cnblogs.com/CHLL55/p/14096451.html)
+**Note**: 由于启动`supervisor`时`x-server`可能尚未启动/没有给予授权，在运行需要`x-server`支持的程序(例如qt程序)时会失败
 
 ```sh
 # install
@@ -56,6 +57,9 @@ systemctl is-enabled supervisord
 `开机自动登陆`:
 
 - 对于`xubuntu`，将[lightdm.conf](./system/lightdm.conf)放在`/etc/lightdm/`文件夹下（若存在对应文件，则添加内容）
+`(带图形界面的)程序开机自启动设置`：
+在`/etc/profile`文件的开头添加对应的程序命令，如`cd  /home/user/ && ./qtApp`
+**Note**:该方法较为危险，酌情使用，同时尽量保持自启动的程序具有退出的按钮。若出现问题，考虑开启新的tty并删除对`/etc/profile`文件的修改（需要熟悉`vim`或者`nano`的操作）
 
 
 
