@@ -307,6 +307,10 @@ if [ ${RAX} = "true" ];then
 		echo "[SSH key] already generated"
 		sleep 1
 	fi
+	# config git
+	git config --global user.name Rax_Xue
+	git config --global user.email 1209137430@qq.com
+
 fi	
 
 echo "[settings] added"

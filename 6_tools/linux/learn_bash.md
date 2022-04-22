@@ -265,6 +265,8 @@ chmod [u|g|o|a][+/=/-][r|w|x] <FILENAME>
 # add user right to start docker
 sudo usermod -a -G docker <USERNAME>
 
+# run cmd with current terminal still active
+[cmd] &
 ```
 
 - `source` = `.`，意味着你在当前shell中执行脚本/程序，而使用`./<Script>`或者`bash <Script>`会开启一个子shell并执行，他们之间的区别通常是定义的变量是否会影响当前shell(或者被当前shell影响)。
