@@ -100,12 +100,14 @@ echo "[change source] session done"
 # install common apps
 ################################################################################
 
+read -p "To operate properly, please enter user name: " USER
+UPATH="/home/${USER}"
 # get correct user folder
 if [ ! -d /home/${USER} ];then
     USER=${UPATH#/home/}
     UPATH="/home/${USER}"
     if [ ! -d ${UPATH} ];then
-        read -p "[Error]Unable to find user folder, please enter user folder manually" UPATH
+        read -p "[Error]Unable to find user folder, please enter user folder manually:" UPATH
         USER=${UPATH#/home/}
     fi
 fi
