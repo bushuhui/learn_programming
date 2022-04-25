@@ -240,7 +240,7 @@ torch.cuda.version
 
 
 
-## Linux Tips
+## Ubuntu Tips
 
 ```shell
 # 快捷命令与额外设置：修改/home下 .bashrc 文件，增加代码：
@@ -268,6 +268,7 @@ sudo usermod -a -G docker <USERNAME>
 ```
 
 - `source` = `.`，意味着你在当前shell中执行脚本/程序，而使用`./<Script>`或者`bash <Script>`会开启一个子shell并执行，他们之间的区别通常是定义的变量是否会影响当前shell(或者被当前shell影响)。
+- `keyring`，一个[ubuntu安全特性](https://zhuanlan.zhihu.com/p/128133025)
 
 #### QGC install(failed ver
 

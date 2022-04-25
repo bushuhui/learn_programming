@@ -55,7 +55,8 @@ systemctl is-enabled supervisord
 
 `开机自动登陆`:
 
-- 对于`xubuntu`，将[lightdm.conf](./system/lightdm.conf)放在`/etc/lightdm/`文件夹下（若存在对应文件，则添加内容）
+- 对于`xubuntu`，将[lightdm.conf](./system/lightdm.conf)放在`/etc/lightdm/`文件夹下（若存在对应文件，则添加内容），[注意这样登陆将不会解锁密钥环](https://zhuanlan.zhihu.com/p/128133025)
+- 对于`ubuntu`，可以直接从设置中进行设置
 
 
 
