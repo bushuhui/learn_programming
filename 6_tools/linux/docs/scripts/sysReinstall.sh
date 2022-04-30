@@ -25,6 +25,7 @@
 # 3. requires a log file and [FIXED]summarize all install/setting states at last to clearly see what has been successfully done
 # 4. more functions required
 # 5. better notification of failure, smart skip if download/install takes too much time without progressing
+# 6. another test for changes should be taken
 ################################################################################
 
 ################################################################################
@@ -38,8 +39,10 @@
 # warning
 echo "warning: this file hasn't been tested thoroughly and this copy is recommended being used only for bash-learning;"
 echo "It is you the user who will take responsibility for any damages caused by this script."
-read -t 15 -p "If you have understood the risk, press enter to continue(auto continue in 15s)"
+read -t 15 -p "If you have understood the risk, press enter to continue(auto continue in 15s):"
 
+# judge if in root privilige
+(( EUID )) && { echo 'Please run this script with root priviliges.'; exit 1; }
 ################################################################################
 # arg parse and special setting
 # current args: 
@@ -80,9 +83,8 @@ fi
 # change ubuntu source
 ################################################################################
 echo "begin change source"
-USOURCE="sources.list"
-cd /etc/apt
-sudo cat > ${USOURCE} <<EOF
+APTSOURCE="/etc/apt/sources.list"
+cat > ${APTSOURCE} <<EOF
 deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
 deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
@@ -100,18 +102,19 @@ echo "[change source] session done"
 # install common apps
 ################################################################################
 
-read -p "To operate properly, please enter user name: " USER
+# user and its home deduction
+STR=`who` # or users
+USER=${STR%%" "*}
 UPATH="/home/${USER}"
-# get correct user folder
-if [ ! -d /home/${USER} ];then
+if [ ! -d ${UPATH} ];then
+    read -p "[Error] Unable to find user home folder, please enter user folder manually:" UPATH
     USER=${UPATH#/home/}
-    UPATH="/home/${USER}"
-    if [ ! -d ${UPATH} ];then
-        read -p "[Error]Unable to find user folder, please enter user folder manually:" UPATH
-        USER=${UPATH#/home/}
+    if [[ $USER == */* ]];then
+        read -p "[Error] Unable to deduce user name from user home folder, please enter user folder maunally:" USER
     fi
 fi
-    
+STR=""
+read -t 10 -p "[Notice] Target user is [$USER] and target user home folder is [$UPATH], please quit if it is not correct, elsewise press enter for continue(auto continue in 10s):"
 
 cd ${UPATH}
 TF="sysInstallTemp"
@@ -243,7 +246,7 @@ if [ ${RAX} = "true" ];then
 	done < ${BASHRC}
 
 	# writing into .bashrc
-	cat >> ${BASHRC} <<EOF
+	cat >> ${BASHRC} <<-EOF
 	# extra user alias
 	if [ -f ~/.bashadd ]; then
 		. ~/.bashadd
@@ -254,10 +257,10 @@ if [ ${RAX} = "true" ];then
 	if [ ! -f ${BASHFILE} ]; then
 		touch ${BASHFILE}
 		chmod 664 ${BASHFILE}
-	fi
+    fi
 
 	# writing in .bashadd
-	cat > ${BASHFILE} <<EOF
+	cat >> ${BASHFILE} <<-EOF
 	# mount lab file server
 	alias mFileServer='sudo mount -t nfs 192.168.1.4:/home/a409 /home/fileServer'
 	# multi-core faster make
@@ -286,7 +289,7 @@ if [ ${RAX} = "true" ];then
 		sleep 1
 		# set it to remote server
 		# FIXME: test required
-		expect <<EOF
+		/usr/bin/expect <<-EOF
 		set timeout 10
 		spawn ssh-copy-id a409@192.168.1.5
 		expect {

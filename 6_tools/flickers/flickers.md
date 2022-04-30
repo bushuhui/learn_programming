@@ -4,6 +4,8 @@
 
 ## 可堪一用的软件
 
+> 如无特殊说明，均可使用apt install [appName]或者 pip install [appName]下载安装
+
 ### 文字排版
 
 `axmath`用于查找字符，支持latex源码转换
@@ -29,6 +31,14 @@ pdf去白边
 ```
 pdfcrop [file]
 ```
+
+`tldr` 是`man`的简化版本，用于查看命令的基本用法*Note: 初次使用会自动从github(或其镜像)上克隆*
+
+```sh
+tldr [command]
+```
+
+
 
 ### System
 
