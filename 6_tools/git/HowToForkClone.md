@@ -17,7 +17,7 @@
 
 
 
-## 3. Fork仓库到自己的参考
+## 3. Fork仓库到自己的仓库
 
 如下图所示，点击红色圈圈部分的`Fork`
 
@@ -25,7 +25,7 @@
 
 
 
-## 4. clone参考到本地
+## 4. clone仓库到本地
 
 [git clone / 下载代码](https://gitee.com/help/articles/4192#article-header0)
 
