@@ -1,5 +1,5 @@
 #ifndef __COMM_H__
-#defien __COMM_H__
+#define __COMM_H__
 
 #include "GSLAM.h"
 #include "Svar.h"

@@ -10,6 +10,7 @@
 由于大部分的同学开发经验并不丰富，所以仅仅理解了设计模式字面含义，并不会对里面深入的意图、应用有深刻理解，因此也不会主动使用设计模式里面的方法在自己的程序中。设计模式如果仅仅只是看书，比较难理解其中的原理、实现。下面通过一些示例演示如何应用，大家可以通过借鉴学习的方式，将下面的例子转化并应用到自己的程序中。
 
 
+
 ## 1. 设计模式教程
 
 设计模式是软件设计中常见问题的典型解决方案。 每个模式就像一张蓝图，你可以通过对其进行定制来解决代码中的特定设计问题。设计模式与方法或库的使用方式不同，你很难直接在自己的程序中套用某个设计模式。模式并不是一段特定的代码，而是解决特定问题的一般性概念。你可以根据模式来实现符合自己程序实际所需的解决方案。 
@@ -38,6 +39,7 @@
 
 * [C++的模块化设计示例](sample_plugin)
 * [Python的模块化设计示例](https://gitee.com/pi-lab/code_cook/tree/master/python/modules)
+* [Svar模块化设计](svar_module)
 
 
 
@@ -46,9 +48,11 @@
 随着程序规模变大，程序有很多参数，如果直接将参数写在程序里，这样不方便维护、管理。最好的方式是将参数放在配置文件里，通过修改数据配置文件改变程序的运行逻辑。
 
 
+
 ## 1.5 [模块化通信](sample_messenger)
 
 将程序拆解成各个模块，如果使用传统的变量传值的方式，不容易将各个模块解耦。通过消息队列等DDS （Data Distribution Service，数据分发服务），ROS等方式，将各个模块构建成独立的模块，这样不仅方便代码维护，而且方便协同开发。
+
 
 
 ## 2. UML
@@ -76,5 +80,4 @@
 * [ROS Design Patterns, C++ APIs, and Best Practices](https://courses.cs.washington.edu/courses/cse466/11au/calendar/ros_cc_2_patterns.pdf)
     - [ROS Best Practices](https://github.com/leggedrobotics/ros_best_practices/wiki)
 * [Creating Web APIs with Python and Flask](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
-
 
