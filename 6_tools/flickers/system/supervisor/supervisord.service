@@ -1,0 +1,15 @@
+[Unit]
+Description=Process Monitoring and Control Daemon(Supervisor daemon)
+After=rc-local.service nss-user-lookup.target
+ 
+[Service]
+Type=forking
+ExecStart=/usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+ExecStop=/usr/bin/supervisord shutdown
+ExecReload=/usr/bin/supervisord reload
+killMode=process
+Restart=on-failure
+RestartSec=42s
+ 
+[Install]
+WantedBy=multi-user.target

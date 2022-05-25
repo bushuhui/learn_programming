@@ -1,30 +1,57 @@
 # 如何Fork代码到自己的仓库并clone到本地
 
-## 0. [如何快速的注册账号并完成第一次提交](https://gitee.com/help/categories/19)
+详见 [如何快速的注册账号并完成第一次提交](https://gitee.com/help/categories/19)
 
-### 1) [注册 Gitee 账号](https://gitee.com/help/articles/4113)
+## 1. [注册 Gitee 账号](https://gitee.com/help/articles/4113)
 
-目前 Gitee 提供了面向个人开发者的「社区版」和面向企业研发团队的「企业版」服务，支持 Git/SVN 管理，提供代码审核、Bug 跟踪以及 Webhook 钩子回调等功能，开发者可以在 G...
-
-### 2) [创建你的第一个仓库](https://gitee.com/help/articles/4120)
-
-在注册完成并成功登录码云账号后，用户可以开始创建自己的第一个仓库。 1、通过网站右上角的「+」号，选择「新建仓库」，进入新建仓库页面 新建仓库 2、在新建仓库页面填写仓库信息。仓库相关概念说明...
-
-### 3) [提交第一行代码](https://gitee.com/help/articles/4122)
-
-在创建完仓库之后，用户可以通过如下方式，可以向仓库提交第一行代码。 此处我们以用户账号下命名为 HelloGitee 的仓库为例。对应的仓库地址为：https://gitee.com/用户个性地...
+如果没有注册Gitee账户，先注册一个账户。按照[注册 Gitee 账号](https://gitee.com/help/articles/4113)的说明操作。
 
 
 
-## 1. 如下图所示，点击红色圈圈部分的`Fork`
+## 2. [安装Git软件，配置环境](README.md)
+
+按照[安装Git软件，配置环境](README.md)，进行如下操作：
+1. 安装 Git
+2. 配置个人的基本信息
+3. 设置SSH公钥
+
+
+
+## 3. Fork仓库到自己的仓库
+
+如下图所示，点击红色圈圈部分的`Fork`
 
 ![usage](pic_git/how_to_fork.png)
 
 
 
-## 2. 如何clone代码
+## 4. clone仓库到本地
 
 [git clone / 下载代码](https://gitee.com/help/articles/4192#article-header0)
 
 ![usage](pic_git/git_clone_code.png)
+
+
+
+
+
+## 5. [提交第一行代码](https://gitee.com/help/articles/4122)
+
+在自己的本地仓库进行修改，确认无误后，进入到本地参考的目录，执行
+```
+git add -A
+git commit -m "Message"
+git push origin master
+```
+
+如果遇到问题，可以使用如下命令排查错误
+```
+# 查看仓库的服务器地址，确认是否是自己的地址；否则不是自己的仓库，没有权限push
+git remote -v
+
+# 查看仓库的具体信息
+git status
+```
+
+
 

@@ -1,4 +1,4 @@
- 
+
 # Linux入门
 
 ## 1. 概述
@@ -596,3 +596,5 @@ sudo apt-get install fcitx-libs libfcitx-qt0
 ---
 * [Bash Guide for Beginners](docs/Bash-Beginners-Guide.pdf)
 * [BASH 中文文档](docs/bashref.pdf)
+
+- [learn_bash_2021](./learn_bash.md)

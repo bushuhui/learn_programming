@@ -1,0 +1,128 @@
+%update time: 4/25/2021
+%state: unfinished
+%set article type to support Chinese
+\documentclass[UTF-8, linspread=1.25, zihao = -4]{ctexart}
+\usepackage{ctex}
+%Preamble part
+
+%1.Page layout
+%Margins
+\usepackage[a4paper]{geometry}
+\geometry{
+	left=31.8 mm,
+	right=31.8mm,
+	top=25.4mm,
+	bottom=25.4mm,
+	heightrounded,
+}
+
+%set font
+\usepackage{fontspec}
+
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+\usepackage{type1cm}
+
+
+%set row spacing
+\usepackage{setspace}
+
+
+%set first line indent to be 2 zh charactor wide
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+
+%2.Text content control
+%set subtitle format
+\ctexset
+{
+	%section
+	section/format	   = \heiti \fontsize{16pt}{16pt} \centering,
+	section/name       = {第,章},
+	section/number     = \chinese{section},
+	section/beforeskip = {24pt},
+	section/afterskip  = {12pt},
+	%subsection
+	%subsubsection
+	%paragraph
+	%subparagraph
+}
+%set headers & footers
+\usepackage{fancyhdr}
+\usepackage{fancyref}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]
+{
+	\fontsize{16pt}{16pt}
+	\includegraphics[scale=0.2 ]{nwpuname.png}
+	\heiti
+	本科毕业设计（论文）
+}
+\fancyfoot[C]
+{
+	\thepage
+}
+
+%set footnotes
+\usepackage[perpage, symbol]{footmisc}
+
+%set title
+\title
+{
+	\begin{spacing}{1}
+		\fontsize{22pt}{22pt}
+		\heiti	%function as bold
+		固定翼无人机的编队控制：理论与实验
+	\end{spacing}
+}
+
+%Zh abstract
+\renewenvironment{abstract}
+{
+	\par
+	\vskip 24pt
+	\fontsize{16pt}{16pt}
+	\noindent\mbox{}\hfill{\heiti 摘 \ \ 要}\hfill\mbox{}
+	\vskip 12pt
+	\fontsize{12pt}{15pt}
+}{\par}
+
+%En abstract
+\newcommand{\enabstract}{Abstract}
+\newenvironment{enabstract}
+{
+	\par
+	\vskip 24pt
+	\fontsize{16pt}{16pt}
+	\noindent\mbox{}\hfill{\Roman \bf ABSTRACT}\hfill\mbox{}
+	\vskip 12pt
+	\fontsize{12pt}{15pt}
+}{\par}
+
+\author{Christopher Heintz\qquad Sean C.C. Bailey\qquad Jesse B. Hoagg}
+
+%Main body
+\begin{document}
+	%title
+	\maketitle
+	%table
+	\tableofcontents
+	%abstract part
+	\begin{abstract}
+	{
+		听觉虚拟又可称为可听化，是近年来随着声学仿真技术的发展而出现的新概念，即通过对包含单个（或多个）声源的声场进行物理或数学建模，以达到模拟空间听音效果的目的。若考虑双耳效应，则可称为双耳听觉虚拟（ Binaural Modeling）。
+	}
+	\end{abstract}
+	\begin{enabstract}
+	{
+		Hadingasd aasas as as das aslncvlkznxcvlnzcvnzx;cvnz;cxvn;zcnv; n;ncv;z ncv;zxkcnv ;znxc
+	}
+	\end{enabstract}
+	\section{绪论}
+	阿斯达斯第三
+	\\
+	阿斯达斯的
+	\newpage
+	\section{编队控制}
+\end{document}
