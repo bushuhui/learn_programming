@@ -17,6 +17,11 @@ void callBackFunc(string msg)
     cout << "Normal function is printing message: \n" << msg << endl;
 }
 
+void callBackFunc(int num)
+{
+    cout << "Normal function is printing message: \n" << msg << endl;
+}
+
 
 int main(int argc, char** argv)
 {
