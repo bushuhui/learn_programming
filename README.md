@@ -153,7 +153,7 @@
 
 1. 根据自己的学习过程，将所编写的程序保存到对应的目录里，分门别类存放程序、文档（养成条理的习惯）
 2. 学习使用[《Git》](6_tools/git/README.md)，将代码、报告提交到[Gitee](https://gitee.com)
-3. 可以参考[《报告例子》](report/20200511_report_demo.md)来写每周的报告。其中关于[Markdown](6_tools/markdown/README.md)的用法可以通过学习资料进行学习
+3. 可以参考[《报告例子》](Progress.md)来写每周的报告。其中关于[Markdown](6_tools/markdown/README.md)的用法可以通过学习资料进行学习
 
 
 ### 3.2 具体操作步骤：
