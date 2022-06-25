@@ -185,7 +185,11 @@ git commit -m "Change log"
 
 * 关于Markdown，可以参考[《Markdown教程》](6_tools/markdown)，可以安装[Typora软件](https://typora.io)来编写Markdown，这个软件最大的特点是能够及时看到最终的效果。
 
+### 3.3 进度安排
 
+由于本课程只是后续科研的基础，所以需要快速、高质量完成编程的学习，但是编程能力的提高又不是短期能突击的，因此需要锻炼并提升自己的快速学习能力。上面所列的8个阶段的学习，最好能同时进行2-3个以上内容的学习、练习。例如在做Stage3的LeetCode练习题的时候，可以同步做Stage4的小项目练习。具体的进度安排可以参考下面的进度图，其中每个色块表示当前阶段开始、结束、以及持续的时间。
+
+![suggested_progress](images/suggested_progress.png)
 
 ## 四、学习的建议
 
