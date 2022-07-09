@@ -206,7 +206,7 @@ git config --global https.proxy 'http://127.0.0.1:8888'
 
 或者在`~/.gitconfig`里面加入下面的语句，通过代理服务器访问github。其中1081是代理服务器的端口（可也以是1082, 1083, 1084)
 ```
-[https "https://github.com"]
+[http "https://github.com"]
 	proxy = socks5://192.168.1.4:1081
 ```
 
