@@ -198,8 +198,19 @@ git submodule update --init --recursive
 ```
 即可将子模块内容下载下来后工程才不会缺少相应的文件。
 
+### 5.3 git使用proxy
+设置git的代理服务器
+```
+git config --global https.proxy 'http://127.0.0.1:8888'
+```
 
-### 5.3 git命令行显示中文
+或者在`~/.gitconfig`里面加入下面的语句，通过代理服务器访问github。其中1081是代理服务器的端口（可也以是1082, 1083, 1084)
+```
+[https "https://github.com"]
+	proxy = socks5://192.168.1.4:1081
+```
+
+### 5.4 git命令行显示中文
 将git 配置文件 core.quotepath项设置为false。quotepath表示引用路径
 ```
 git config --global core.quotepath false
