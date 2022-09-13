@@ -60,17 +60,18 @@ git clone git@192.168.1.3:pi-lab/PIL2.git
 对本地代码、文件进行编辑、操作
 
 
-### 2.4 将服务器最新代码下载到本地
+### 2.4 增加、提交到本地仓库
+```
+git add -A
+git commit -m "comments to this revision"
+```
+
+### 2.5 将服务器最新代码下载到本地
 为了防止服务器上的代码其他人更改，可以现在推送本地文件到服务之前，将服务器最新代码更新到本地
 ```
 git pull origin master
 ```
 
-### 2.5 增加、提交到本地仓库
-```
-git add -A
-git commit -m "comments to this revision"
-```
 
 ### 2.6 提交到服务器
 ```
@@ -92,11 +93,13 @@ git init
 
 输入`仓库名称`（最好是英文），`路径`（必须是英文），以及`仓库介绍`
 
+
 ### 3.3 关联本地仓库与服务器仓库
 进入新建的本地仓库，然后输入下面的命令
 ```
 git remote add origin git@gitee.com:pi-lab/project_name.git
 ```
+
 
 ### 3.4 增加、编辑文件，提交到仓库
 在本地文件夹操作，可以增加文件、编辑问题
@@ -126,6 +129,7 @@ git push origin master
 git checkout -b <branchname>
 ```
 
+
 ### 4.2 合并其他分支的代码 （高级用法）
 ```
 # 将服务器上的dev分支合并到本地的分支
@@ -140,6 +144,7 @@ git commit -m "comments to this revision"
 # 提交到远端服务器
 git push origin <branchname>
 ```
+
 
 ### 4.3 合并目前代码到`dev`或者`master`分支 （高级用法）
 ```
@@ -198,6 +203,7 @@ git submodule update --init --recursive
 ```
 即可将子模块内容下载下来后工程才不会缺少相应的文件。
 
+
 ### 5.3 git使用proxy
 设置git的代理服务器
 ```
@@ -209,6 +215,7 @@ git config --global https.proxy 'http://127.0.0.1:8888'
 [http "https://github.com"]
 	proxy = socks5://192.168.1.4:1081
 ```
+
 
 ### 5.4 git命令行显示中文
 将git 配置文件 core.quotepath项设置为false。quotepath表示引用路径
