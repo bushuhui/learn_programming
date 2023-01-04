@@ -15,9 +15,18 @@
 
 ## References
 
+教程、说明：
+
+* [C++11 教程](https://gitee.com/pi-lab/SummerCamp/blob/master/cpp/cpp11/c++11.md)
+* [Learn Programming - Stage 7 现代C++](https://gitee.com/pi-lab/learn_programming/tree/master/7_adv_c++)
+* [C++11 示例代码](https://gitee.com/pi-lab/code_cook/tree/master/c++/c++_basic_stl)
+* [C++11常用特性的使用经验总结](https://www.cnblogs.com/feng-sc/p/5710724.html)
+
+
+
+图书：
+
 * [《现代C++教程（中文版）》.pdf](books/《现代C++教程（中文版）》.pdf)
-
 * [《现代C++教程（英文版）》.pdf](books/《现代C++教程（英文版）》.pdf)
-
 * 《Effective C++》
 
