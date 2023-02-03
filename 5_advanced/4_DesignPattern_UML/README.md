@@ -77,7 +77,16 @@
 
 教程、说明：
 
+* [网络通信 - 示例集合](https://gitee.com/pi-lab/code_cook/tree/master/c++/network)
 * [ROS Design Patterns, C++ APIs, and Best Practices](https://courses.cs.washington.edu/courses/cse466/11au/calendar/ros_cc_2_patterns.pdf)
     - [ROS Best Practices](https://github.com/leggedrobotics/ros_best_practices/wiki)
 * [Creating Web APIs with Python and Flask](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
 
+
+
+
+
+## 4. 参考资料
+
+* [SVar and Modules](https://gitee.com/pi-lab/Svar-allinone)
+* [Python模块化编程](https://gitee.com/pi-lab/code_cook/tree/master/python/modules)
