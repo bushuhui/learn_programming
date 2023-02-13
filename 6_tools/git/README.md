@@ -40,7 +40,7 @@ ssh-keygen -t rsa -C "youremail@xxx.com"
 ```
 然后一路回车，这个会在当前用户文件夹下，生成`~/.ssh`文件夹，里边有个`id_rsa.pub`文件，用文本编辑器（记事本）打开，复制其中的全部内容。 
 
-然后打开 https://gitee.com/profile/sshkeys 页面,在该页面中添加公钥,标题可以随便填,公钥就是刚才复制过的内容,然后保存即可。
+然后打开 https://gitee.com/profile/sshkeys 页面（如果使用gitee，如果是其他网站则是对应的网址），在该页面中添加公钥，标题可以随便填，公钥就是刚才复制过的内容，然后保存即可。
 
 
 
@@ -51,7 +51,7 @@ ssh-keygen -t rsa -C "youremail@xxx.com"
 
 
 ### 2.2 Clone项目到本地
-在自己项目的页面，找到“Clone or download”，根据需要选择SSH，或者HTTPS网址，然后在本地命令行执行如下命令，可以参考[操作页面示例](https://gitee.com/pi-lab/learn_programming/blob/master/6_tools/git/pic_git/git_clone_code.png)
+在自己项目的页面，找到`Clone or download`，根据需要选择`SSH`，或者`HTTPS`网址，然后在本地命令行执行如下命令，可以参考[操作页面示例](https://gitee.com/pi-lab/learn_programming/blob/master/6_tools/git/pic_git/git_clone_code.png)
 ```
 git clone git@192.168.1.3:pi-lab/PIL2.git
 ```
@@ -223,36 +223,60 @@ git config --global https.proxy 'http://127.0.0.1:8888'
 git config --global core.quotepath false
 ```
 
+### 5.5 在项目中使用Git的技巧
 
-## 其他
+#### 5.5.1 Git操作的好习惯
+* 不用非得等程序等都写完才提交到git仓库。最好每天有阶段的成果的时候就提交到仓库，把comments写清楚就好
+* 除了管理代码，Latex论文，研究思路等都可以使用git管理
+* 每次操作之前，最好 `git pull origin master`，将服务器最新的版本更新到本地，这样的操作尽可能减少冲突的发生的情况
+
+
+#### 5.5.2 如何在ROS项目中使用
+由于ROS需要把代码放到 `~/catkin_ws/src/`，因此为了能继续使用git，可以把git项目的目录放在其他地方，例如`~/git_ws/crossing_circle`，通过符号链接的方式，将其他目录的ROS代码引入到ROS的编译目录。
+
+```
+cd ~/catkin_ws/src/
+ln -s ~/git_ws/crossing_circle crossig_circle
+```
+
+#### 5.5.3 项目中除了代码，还有很多数据文件
+
+如果数据文件不大的情况下，可以把数据、程序放到一起利用 git 管理；但是一般的做法是，把数据单独放到一个目录，代码放到另一个目录，在代码的目录里 `README.md` 里面写清楚，数据文件的路径。
+
+如果项目中很多本地文件、临时文件不需要让git管理，可以设置 `.gitigore` 文件，这个文件可以放在仓库的根目录，或者需要起作用的目录。
+
+在程序中尽可能不要把路径写死，可以通过参数配置读取的方式，如果是C++项目可以使用 `Svar`, 如果是Python程序可以使用 `pconf`
+* C++的配置读取示例： [svar_argparse](https://gitee.com/pi-lab/code_cook/tree/master/c++/argparse/svar_argparse)
+* Python的配置读取示例： [pconf](https://gitee.com/pi-lab/code_cook/tree/master/python/pconf)
+
+
+
+## 6. 其他
 
 ![Git常用命令](git-cheatsheet_cn.jpg)
 
 
 
-## 参考资料
+## 7. 参考资料
 
-基础教程
+### 7.1 基础教程
 * [Git快速入门 - Git初体验](https://my.oschina.net/dxqr/blog/134811)
 * [在Win7系统下使用TortoiseGit(乌龟git)简单操作Git](https://my.oschina.net/longxuu/blog/141699)
 
 
-系统教程
+### 7.2 系统教程
 * [Git简明教程.md](git简明教程.md)
 * [Git教程.pdf](Git教程.pdf)
 * [Git系统学习 - 廖雪峰的Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 
-实验室常用功能介绍
+### 7.3 实验室常用功能介绍
 * [PILAB的Git使用教程](Git使用教程_PILAB.pdf)
 * [如何Fork代码到自己的仓库并clone到本地](HowToForkClone.md)
 * [如何在Gitee添加其他用户](gitee_addmember.md)
 
 
-参考手册等
+### 7.4 参考手册等
 * [Git Cheatsheet](git-cheatsheet.pdf)
 * [Git常用命令](git-cheatsheet_cn.jpg)
-
-
-## 好用的工具
-* [GitKraken](https://www.gitkraken.com/) - Git Client
+* [Git大全](https://gitee.com/all-about-git)
