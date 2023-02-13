@@ -1,6 +1,11 @@
 # Git使用教程
 
+Git 不仅仅是个版本控制系统，它也是个内容管理系统(CMS)，工作管理系统等。
+
+
+
 ## 1. 安装与配置
+
 ### 1.1 安装 Git
 Windows操作系统：首先下载 https://pc.qq.com/detail/13/detail_22693.html ；然后安装到自己的电脑中。
 
@@ -121,6 +126,7 @@ git push origin master
 ```
 
 
+
 ## 4. 操作分支
 
 
@@ -130,7 +136,9 @@ git checkout -b <branchname>
 ```
 
 
+
 ### 4.2 合并其他分支的代码 （高级用法）
+
 ```
 # 将服务器上的dev分支合并到本地的分支
 git pull origin dev
@@ -146,7 +154,9 @@ git push origin <branchname>
 ```
 
 
+
 ### 4.3 合并目前代码到`dev`或者`master`分支 （高级用法）
+
 ```
 git checkout dev
 git merge <branchname>
@@ -171,6 +181,7 @@ git log # to see which revision want to back, and get the number, eg. "bdc6980"
     
 git reset --hard "bdc6980"
 ```
+
 
 
 ### 5.2 Submodule
@@ -204,7 +215,9 @@ git submodule update --init --recursive
 即可将子模块内容下载下来后工程才不会缺少相应的文件。
 
 
+
 ### 5.3 git使用proxy
+
 设置git的代理服务器
 ```
 git config --global https.proxy 'http://127.0.0.1:8888'
@@ -217,21 +230,31 @@ git config --global https.proxy 'http://127.0.0.1:8888'
 ```
 
 
+
 ### 5.4 git命令行显示中文
+
 将git 配置文件 core.quotepath项设置为false。quotepath表示引用路径
 ```
 git config --global core.quotepath false
 ```
 
-### 5.5 在项目中使用Git的技巧
 
-#### 5.5.1 Git操作的好习惯
+
+## 6. 在项目中使用Git的技巧
+
+### 6.1 Git操作的好习惯
 * 不用非得等程序等都写完才提交到git仓库。最好每天有阶段的成果的时候就提交到仓库，把comments写清楚就好
+* 循环迭代的方式是一个很好的方式，能够有效克服眼高手低，克服畏难情绪。虽然刚开始做的比较简单，但是只要开始，通过不断的迭代，持续不断总能提高
+* 不要高估自己的记忆力，勤动手有效克服自己错误的认识
 * 除了管理代码，Latex论文，研究思路等都可以使用git管理
 * 每次操作之前，最好 `git pull origin master`，将服务器最新的版本更新到本地，这样的操作尽可能减少冲突的发生的情况
+* 可以构建一个索引将所有的项目管理起来（例如 https://gitee.com/pi-lab/pilab_research_fields），通过构建一个图（其实就是知识图谱），将各种知识、项目等连接起来，从而构建自己的知识、技能、思维体系
+* [HSMM-Network项目](https://gitee.com/pi-lab/hsmm-network) 是一个典型例子，没有使用git管理，很难复现当时的程序，通过完整的`README.md`说明程序的结构、数据集、运行方法，能够很快复现前人的工作
 
 
-#### 5.5.2 如何在ROS项目中使用
+
+### 6.2 如何在ROS项目中使用
+
 由于ROS需要把代码放到 `~/catkin_ws/src/`，因此为了能继续使用git，可以把git项目的目录放在其他地方，例如`~/git_ws/crossing_circle`，通过符号链接的方式，将其他目录的ROS代码引入到ROS的编译目录。
 
 ```
@@ -239,11 +262,13 @@ cd ~/catkin_ws/src/
 ln -s ~/git_ws/crossing_circle crossig_circle
 ```
 
-#### 5.5.3 项目中除了代码，还有很多数据文件
+
+
+### 6.3 项目中除了代码，还有很多数据文件
 
 如果数据文件不大的情况下，可以把数据、程序放到一起利用 git 管理；但是一般的做法是，把数据单独放到一个目录，代码放到另一个目录，在代码的目录里 `README.md` 里面写清楚，数据文件的路径。
 
-如果项目中很多本地文件、临时文件不需要让git管理，可以设置 `.gitigore` 文件，这个文件可以放在仓库的根目录，或者需要起作用的目录。
+如果项目中很多本地文件、临时文件不需要让git管理，可以设置 [.gitigore 文件](gitignore.md)，这个文件可以放在仓库的根目录，或者需要起作用的目录。
 
 在程序中尽可能不要把路径写死，可以通过参数配置读取的方式，如果是C++项目可以使用 `Svar`, 如果是Python程序可以使用 `pconf`
 * C++的配置读取示例： [svar_argparse](https://gitee.com/pi-lab/code_cook/tree/master/c++/argparse/svar_argparse)
@@ -251,32 +276,32 @@ ln -s ~/git_ws/crossing_circle crossig_circle
 
 
 
-## 6. 其他
+## 7. Git常用命令速查表
 
 ![Git常用命令](git-cheatsheet_cn.jpg)
 
 
 
-## 7. 参考资料
+## 8. 参考资料
 
-### 7.1 基础教程
+### 8.1 基础教程
 * [Git快速入门 - Git初体验](https://my.oschina.net/dxqr/blog/134811)
 * [在Win7系统下使用TortoiseGit(乌龟git)简单操作Git](https://my.oschina.net/longxuu/blog/141699)
 
 
-### 7.2 系统教程
+### 8.2 系统教程
 * [Git简明教程.md](git简明教程.md)
 * [Git教程.pdf](Git教程.pdf)
 * [Git系统学习 - 廖雪峰的Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 
-### 7.3 实验室常用功能介绍
+### 8.3 实验室常用功能介绍
 * [PILAB的Git使用教程](Git使用教程_PILAB.pdf)
 * [如何Fork代码到自己的仓库并clone到本地](HowToForkClone.md)
 * [如何在Gitee添加其他用户](gitee_addmember.md)
 
 
-### 7.4 参考手册等
+### 8.4 参考手册等
 * [Git Cheatsheet](git-cheatsheet.pdf)
 * [Git常用命令](git-cheatsheet_cn.jpg)
 * [Git大全](https://gitee.com/all-about-git)
