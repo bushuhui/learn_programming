@@ -250,6 +250,7 @@ git config --global core.quotepath false
 * 每次操作之前，最好 `git pull origin master`，将服务器最新的版本更新到本地，这样的操作尽可能减少冲突的发生的情况
 * 可以构建一个索引将所有的项目管理起来（例如 https://gitee.com/pi-lab/pilab_research_fields），通过构建一个图（其实就是知识图谱），将各种知识、项目等连接起来，从而构建自己的知识、技能、思维体系，成体系的知识、技能才能发挥更大的作用。
 * [HSMM-Network项目](https://gitee.com/pi-lab/hsmm-network) 是一个典型例子，没有使用git管理，很难复现当时的程序，通过完整的`README.md`说明程序的结构、数据集、运行方法，能够很快复现前人的工作
+* 为了将一份代码同时保管在多个代码仓库，可以设置多个`git remote`，例如 `git remote add gitee git@gitee.com:pi-lab/learn_hardware.git`，这样可以将本地的代码同时提交到多个服务器
 
 
 
