@@ -257,11 +257,23 @@ git config --global core.quotepath false
 
 ### 6.2 如何在ROS项目中使用
 
+方法一：
+
 由于ROS需要把代码放到 `~/catkin_ws/src/`，因此为了能继续使用git，可以把git项目的目录放在其他地方，例如`~/git_ws/crossing_circle`，通过符号链接的方式，将其他目录的ROS代码引入到ROS的编译目录。
 
 ```
 cd ~/catkin_ws/src/
 ln -s ~/git_ws/crossing_circle crossig_circle
+```
+
+方法二:
+
+新建一个ros空间，任意起名即可，如PX4_ws,然后在里面创建src文件夹，将git上的代码下载到src文件
+
+```
+cd ~/PX4_ws/
+catkin_make
+source devel/setup.bash
 ```
 
 
