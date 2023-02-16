@@ -1,16 +1,9 @@
 #include "Svar.h"
+#include <user_data.h>
+
 #include <iostream>
 #include <vector>
 #include <string>
-
-struct UserData
-{
-    std::string name;
-    int         id;
-
-public:
-    UserData(char *_n, int _i) : name(_n), id(_i) {}
-};
 
 
 int main(int argc, char *argv[])
@@ -21,7 +14,7 @@ int main(int argc, char *argv[])
     std::cout<<a["add"](1,2)<<std::endl;
     std::cout<<b["add"](1,2)<<std::endl;
 
-    // test complex arguments
+    // test complex arguments (user defined data)
     std::vector<UserData> list1 = { UserData("Jack", 1), UserData("Tom", 2)};
     a["list"](list1);
     b["list"](list1);

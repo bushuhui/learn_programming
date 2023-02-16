@@ -1,4 +1,6 @@
 #include "Svar.h"
+#include "user_data.h"
+
 #include <iostream>
 
 double add(double a , double b){
@@ -6,14 +8,6 @@ double add(double a , double b){
     return a+b;
 }
 
-struct UserData
-{
-    std::string name;
-    int         id;
-
-public:
-    UserData(char *_n, int _i) : name(_n), id(_i) {}
-};
 
 int list(sv::Svar &a)
 {

@@ -1,4 +1,6 @@
 #include "Svar.h"
+#include "user_data.h"
+
 #include <iostream>
 #include <vector>
 
@@ -8,14 +10,6 @@ double add(double a , double b){
 }
 
 
-struct UserData
-{
-    std::string name;
-    int         id;
-
-public:
-    UserData(char *_n, int _i) : name(_n), id(_i) {}
-};
 
 int list(sv::Svar &a)
 {
