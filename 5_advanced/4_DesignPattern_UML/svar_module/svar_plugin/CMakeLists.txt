@@ -10,7 +10,7 @@ endif()
 
 INCLUDE_DIRECTORIES(src)
 
-pi_add_target(a SHARED src/a.cpp  REQUIRED System LTO)
+pi_add_target(a SHARED src/a.cpp REQUIRED System LTO)
 pi_add_target(b SHARED src/b.cpp REQUIRED System LTO)
 pi_add_target(svar_test BIN src/main.cpp REQUIRED System LTO)
 

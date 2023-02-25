@@ -1,9 +1,9 @@
 #ifndef FACTORY_H
 #define FACTORY_H
 
-#include<map>
-#include<iostream>
-#include<functional>
+#include <map>
+#include <iostream>
+#include <functional>
 #include <memory>
 
 class Message;
@@ -22,13 +22,13 @@ public:
     }
 };
 
-struct factory {
+struct Factory {
     template<typename T>
     struct register_t
     {
         register_t(const std::string& key)
         {
-            factory::get().map_.emplace(key, [] { return std::make_shared<T>(); });
+            Factory::get().map_.emplace(key, [] { return std::make_shared<T>(); });
         }
     };
 
@@ -40,23 +40,23 @@ struct factory {
         return map_[key]();
     }
 
-    static factory& get()
+    static Factory& get()
     {
-        static factory instance;
+        static Factory instance;
         return instance;
     }
 
 private:
-    factory() {}
-    factory(const factory&) = delete;
-    factory(factory&&) = delete;
+    Factory() {}
+    Factory(const Factory&) = delete;
+    Factory(Factory&&) = delete;
 
     std::map<std::string, std::function<funcMessage>> map_;
 };
 
 
 #define REGISTER_MESSAGE_VNAME(T) reg_msg_##T##_
-#define REGISTER_MESSAGE(T, key, ...) static factory::register_t<T> REGISTER_MESSAGE_VNAME(T)(key, ##__VA_ARGS__);
+#define REGISTER_MESSAGE(T, key, ...) static Factory::register_t<T> REGISTER_MESSAGE_VNAME(T)(key, ##__VA_ARGS__);
 
 
 
