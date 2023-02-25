@@ -12,6 +12,8 @@
 
 ### Others
 
+> 建议使用 `man [command]`（或`tldr [command]`，详见对应条目）来查看更详细的指引与用法
+
 `axel`用于替代wget，多线程快速下载 
 
 ```shell

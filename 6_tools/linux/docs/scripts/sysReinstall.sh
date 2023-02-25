@@ -4,12 +4,12 @@
 # this is the system reboot install script for ubuntu LTS 18.04
 # to use this script, do following command in terminal
 # sudo chmod +x sysReinstall.sh
-# sudo ./sysReinstall.sh
+# sudo bash sysReinstall.sh
 # Note: currently there are some interactions that requires user to accomplish, such as generating ssh key
 # Note: currently this shell is not smart, which means it can not detect failure automatically, and some commands are not fully tested in a brand-new system, neither a messy system, therefore it is advised to monitor the failed actions and try to make up manuallly for those that this script cannot handle
 # To be added: conda source change, pip source change, pytorch, tencent meeting.
 # To change: make a simplest version of this with only basic ones
-# last update : 4/21/2022
+# last update : 2/24/2023
 ################################################################################
 
 ################################################################################
@@ -20,12 +20,18 @@
 ################################################################################
 # Test summary:
 # first test accomplished. Problem:
-# 1. [FIXED]must be run in root auth, fix this or change code under this condition
+# 1. [FIXED]must be run in root auth, fix this or change code under this condition like give 755 to influenced files
 # 2. ssh key gen error( might be related to in-root running)
 # 3. requires a log file and [FIXED]summarize all install/setting states at last to clearly see what has been successfully done
 # 4. more functions required
 # 5. better notification of failure, smart skip if download/install takes too much time without progressing
 # 6. another test for changes should be taken
+# 7. give briefing of what is going and Debug sector before taking further actions
+# 8. more debug and error notifications in brighter color like red
+# 9. [FIXED]`[!` syntax problem
+# 10. allow quiting 1 single installation while matintain the process
+# 11. need something like tqdm
+# 12. [Tight] version should be supported for very restricted time and storage
 ################################################################################
 
 ################################################################################
@@ -33,10 +39,22 @@
 # 1. Syntax error: "(" unexpected
 # solution: try to run this shell by "sudo bash sysReinstall.sh" to avoid using dash on ubuntu, which can't recognize some symbols and commands
 ################################################################################
+
+################################################################################
+# Update
+# 2022: Module [change source], [Chinese support], [Build tools], [APPs], [Rax] supported
+# 2022-10-1: Module [ROS] supported
+################################################################################
 # To see each cmd
 # set -x
 
 # warning
+echo "[User tips]:
+# this is the system reboot install script for ubuntu LTS 18.04
+# to use this script, do following command in terminal
+# sudo chmod +x sysReinstall.sh
+# sudo bash sysReinstall.sh"
+
 echo "warning: this file hasn't been tested thoroughly and this copy is recommended being used only for bash-learning;"
 echo "It is you the user who will take responsibility for any damages caused by this script."
 read -t 15 -p "If you have understood the risk, press enter to continue(auto continue in 15s):"
@@ -53,6 +71,7 @@ read -t 15 -p "If you have understood the risk, press enter to continue(auto con
 ################################################################################
 RAX="false"
 SIMPLE="false"
+ROS="false"
 
 if [ $# -ge 1 ];then
     for i in $*; do
@@ -75,7 +94,12 @@ if [ $# -ge 1 ];then
             "
         elif [ $i == "-x" ];then
 			set -x
-		fi    
+		elif [ $i == "ros" -o $i == "--ros" -o $i == "--ROS" ];then
+			echo "ROS is enabled, ros-melodic for ubuntu 18.04 will be installed."
+			echo "[Warning]: ros source and its key may be invalid, manually check it if errors occured."
+			echo "[Warning]: ROS will be installed in the last part, if any error occured, plz refer to official site for help: https://wiki.ros.org"
+			ROS="true"
+		fi
     done
 fi
 
@@ -138,9 +162,10 @@ FLIST="None"
 CHSSUP=(ibus-pinyin ibus-qt4)
 
 # Note: $? will be the last command return value
+cd /home/$USER/$TF
 for i in ${CHSSUP[*]}; do
     $install_command $i && echo "[$i] installed" 
-	if [! $? -eq 0 ];then
+	if [ ! $? -eq 0 ];then
 		echo "[$i] install failed"
 		FLIST[${FNUM}]=$i
 		let FNUM+=1
@@ -149,12 +174,14 @@ done
 
 ################################################################################
 # build tools
+# Abandoned: qtcreator-plugin-valgrind
 ################################################################################
-BUILDTOOL=(expect python python3 python-numpy python-fftw python-scipy python-scientific python-scitools qt4-default qt5-default qtcreator qtcreator-plugin-cmake qtcreator-plugin-valgrind vim-common vim-doc vim-gtk vim-scripts build-essential g++ libstdc++5 cmake cmake-gui libboost-all-dev libpoco-dev libopencv-dev)
+BUILDTOOL=(expect python python3 python3-pip python-numpy qt4-default qt5-default qtcreator qtcreator-plugin-cmake  vim-common vim-doc vim-gtk vim-scripts build-essential g++ libstdc++5 cmake cmake-gui libboost-all-dev libpoco-dev libopencv-dev libunwind-dev binutils-dev)
 
+cd /home/$USER/$TF
 for i in ${BUILDTOOL[*]}; do
  	$install_command $i && echo "[$i] installed" 
-	if [! $? -eq 0 ];then
+	if [ ! $? -eq 0 ];then
 		echo "[$i] install failed"
 		FLIST[${FNUM}]=$i
 		let FNUM+=1
@@ -164,11 +191,12 @@ done
 ################################################################################
 # useful apps such as git, markdown, file system, server & disk, media player
 ################################################################################
-USEAPP=(git gedit ack nautilus pcmanfm nfs-common samda samda-common chromium-browser vlc ffmpeg)
+USEAPP=(git gedit ack nautilus pcmanfm nfs-common samda samda-common chromium-browser vlc ffmpeg net-tools ssh)
 
+cd /home/$USER/$TF
 for i in ${USEAPP[*]}; do
  	$install_command $i && echo "[$i] installed" 
-	if [! $? -eq 0 ];then
+	if [ ! $? -eq 0 ];then
 		echo "[$i] install failed"
 		FLIST[${FNUM}]=$i
 		let FNUM+=1
@@ -207,6 +235,23 @@ else
 		echo "[Remarkable] installed"
 	fi
 fi
+
+################################################################################
+# flickers, funny tiny apps
+################################################################################
+if [ ${RAX} = "true" ];then
+    FLICKER=(cmatrix sl fortune-mod fortune-zh oneko pv)
+    
+    for i in ${FLICKER[*]}; do
+        $install_command $i && echo "[$i] installed" 
+	    if [ ! $? -eq 0 ];then
+		    echo "[$i] install failed"
+		    FLIST[${FNUM}]=$i
+		    let FNUM+=1
+	    fi
+    done
+fi
+
 
 echo "[common apps install] session done, total failure number is $FNUM, they are:"
 for i in ${FLIST[*]}; do
@@ -326,8 +371,111 @@ echo "[settings] added"
 ################################################################################
 
 
+################################################################################
+# set ros-melodic
+# since this part is integrated, ros will be installed here instead of install session
+################################################################################
+# FIXME:test
 
+if [ ${ROS} = "true" ];then
+	cd /home/$USER/$TF
+	ROSFLAG="true"
+	echo "[ROS]: adding ros sources"
+	sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list' && apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+	if [ ! $? -eq 0 ];then
+		echo "[ROS] ros sources adding failed"
+		FLIST[${FNUM}]="ROS source"
+		let FNUM+=1
+		ROSFLAG="false"
+	else
+		echo "[ROS] ros sources added"
+	fi
+	apt update
+	
+	if [ ${ROSFLAG} = "true" ];then	
+		echo "[ROS] ros installing"
+		$install_command ros-melodic-desktop && echo "[ROS] ros installed"
+		if [ ! $? -eq 0 ];then
+			echo "[ROS] ros install failed"
+			FLIST[${FNUM}]="ROS"
+			let FNUM+=1
+			ROSFLAG="false"
+		fi
+		echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+		source ~/.bashrc
+	fi
+	
+	echo "[ROS] rosdep operating"
+	$install_command python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+	
+	if [ ${ROSFLAG} = "true" ];then	
+		ROSDEP="false"
+		if [ ${ROSDEP} = "false" ];then
+			echo "[ROS] trying rosdep"
+			rosdep init && rosdep update
+			if [ ! $? -eq 0 ];then
+				echo "[ROS] rosdep failed"
+			else
+				ROSDEP="true"
+			fi
+		fi
+		if [ ${ROSDEP} = "false" ];then
+			echo "[ROS] trying rosdepc"
+			$install_command python3-pip && pip install rosdepc
+			rosdepc init && rosdepc update
+			if [ ! $? -eq 0 ];then
+				echo "[ROS] rosdepc failed"
+			else
+				ROSDEP="true"
+			fi
+		fi
+		if [ ${ROSDEP} = "false" ];then
+			echo "[ROS] trying rosdep with tsinghua source"
+			rm update_rosdep_tsinghua.sh
+			wget https://gitee.com/ncnynl/rosdep/raw/master/update_rosdep_tsinghua.sh
+			chmod +x ./update_rosdep_tsinghua.sh
+			bash update_rosdep_tsinghua.sh && rosdep update
+			if [ ! $? -eq 0 ];then
+				echo "[ROS] rosdepc with tsinghua source failed"
+			else
+				ROSDEP="true"
+			fi
+		fi
+		
+		if [ ${ROSDEP} = "false" ];then
+			echo "[ROS] rosdep failed, please try other methods"
+			FLIST[${FNUM}]="ROS-rosdep"
+			let FNUM+=1
+			ROSFLAG="false"
+		else
+			echo "[ROS] rosdep succeed"
+		fi
+	fi
+	
+	if [ ${ROSFLAG} = "true" ];then	
+		echo "[ROS] installing catkin"
+		$install_command ros-melodic-catkin python-catkin-tools && echo "[ROS] catkin installed"
+	    if [ ! $? -eq 0 ];then
+		    echo "ROS-catkin install failed"
+		    FLIST[${FNUM}]="ROS-catkin"
+		    let FNUM+=1
+		    ROSFLAG="false"
+	    fi
+    fi
+    
+    if [ ${ROSFLAG} = "true" ];then
+    	echo "[ROS] all installed and set up"
+    	echo "try: roscore; rosrun turtlesim turtlesim_node"
+	else
+		echo "[ROS] installed failed, please check error log above"
+	fi
+fi
+		
 
+echo "All session done, total failure number is $FNUM, they are:"
+for i in ${FLIST[*]}; do
+    echo -n "[$i] "
+done
 
 cd /home/$USER && rm -rf ${TF}
 echo "sysReinstall script excutation done."

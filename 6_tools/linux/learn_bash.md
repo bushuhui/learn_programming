@@ -8,6 +8,8 @@
 
 ### git
 
+[git global config ref](../git/.gitconfig) with proxy setttings for github
+
 ```shell
 # 配置用户
 git config --global user.name "yourname"
