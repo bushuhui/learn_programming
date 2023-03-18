@@ -162,8 +162,43 @@ arr_t.push_back(t);	//将此对象存入数组，此时产生了t的临时副本
 
 `undefined reference to 'pthread_create'`：C++库文件缺失，需要手动添加提示的库，例如 `-lpthread`
 
+## 6.Clion
+* Clion 是一款专门开发 C 以及 C++ 所设计的跨平台的 IDE。它是以 IntelliJ 为基础设计的，包含了许多智能功能来提高开发人员的生产力。
+* 这种强大的 IDE 帮助开发人员在 Linux、OSX 和 Windows 上来开发 C/C++ ，同时它还能使用智能编辑器来提高代码质量、自动代码重构并且深度整合 Cmake 编译系统，从而提高开发人员的工作效率。
+* CLion 支持 GCC、clang、MinGW、Cygwin 编译器以及 GDB 调试器。提供对 Cmake 支持：包含自动处理 Cmake changes 和 Cmake Targets，更新新创建的 C/C++ 档案以及 Cmake Cache 编辑器。
+### 6.1 Clion的安装（Linux）
+* 官网下载[链接](https://www.jetbrains.com/clion/download/#section=linux)
+* 解压缩包，运行目录bin下的cling.sh安装
+* 在License Activation页面，需要在Activation code中输入激活码才可以使用Clion
+* 激活码
+	* 学生认证可以使用一年
+	* 淘宝8.9元购买，可永久使用
+* 如果出现安装错误，那就是cmake库没安装，终端执行命令
+```
+sudo apt-get install cmake
+```
+### 6.2 Clion的启动
+如果不经过任何处理，每次启动clion必须运行目录bin下的cling.sh，对此有以下两种解决方法
+* 1.在.bashrc中加入以下命令
+```
+alias clion="/home/xhjack/clion-2022.3.3/bin/clion.sh"##不要盲目复制，使用自己clion.sh所在的绝对路径
+```
+这样在终端中输入 clion 即可启动
+* 2.在桌面创建快捷方式,可自行参考[链接](https://blog.csdn.net/qq_41694024/article/details/125084013)
 
-## 6. 参考资料
+### 6.3 Clion的debug（ROS）
+Clion支持调试ROS功能包的代码
+example：/home/xhjack/catkin_ws/src/basic/takeoff_land.cpp
+* 在file-open打开/home/xhjack/catkin_ws/src/basic功能包，配置默认即可，点击OK![img](images/Clion_configure.png)
+* 打开gazebo仿真环境
+```
+roslaunch px4 mavros_posix_sitl.launch
+```
+* 打开takeoff_land.cpp
+* 点击Clion中右上角绿色三角符号即可运行![img](images/Clion_run.png)
+* 打上断点，点击Clion中右上角绿色爬虫符号即可开始调试，程序会停止在断点处，可查看变量![img](images/Clion_debug.png)
+
+## 7. 参考资料
 * [段错误(segmentation fault )：9种实用调试方法](https://m.toutiaocdn.com/i6833639010007515659)
 
 * [C++/Python程序调试、Debug的工具](https://www.toutiao.com/i7018532327781351948)
