@@ -6,6 +6,7 @@
 
 * 基础知识：
 	* [计算机操作系统知识点总结](https://blog.csdn.net/Royalic/article/details/119999404)
+	* [Linux快速入门](../6_tools/linux/README.md)
 	* [Linux入门教程](http://c.biancheng.net/linux_tutorial/)
 
 * 操作系统编程：
