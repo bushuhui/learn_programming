@@ -6,9 +6,16 @@
 ## 0. 代码重构
 通过前面的学习，把C++基础、数据结构与算法、LeetCode练习题、小项目，已经能够完成一个独立的小工程，并能解决实际问题。大部分情况下，第一次写完的程序，虽然已经实现了功能，但是往往存在如下的问题：
 * [程序命名不规范](programming_standard/README.md)
+
 * 逻辑、功能比较混乱，代码不够清晰
+
 * 文件组织混乱，代码、数据等混杂
+
 * 程序里有很多固定的路径、常数等，不方便移植，无法在其他人的电脑上运行
+
+* 使用全局变量
+
+    
 
 为了更进一步提升自己的编程能力，需要通过多次的代码重构提升自己的综合能力。主要的内容包括：
 
@@ -26,6 +33,16 @@
 	- 分析程序常用几种写法、模式，学习[设计模式](4_DesignPattern_UML)
 	- 按照[设计模式](4_DesignPattern_UML)的方法，将自己的程序优化一下
 - 借鉴学习[《示例项目》](https://gitee.com/pi-lab/code_cook/blob/master/DemoProjects.md)，学习如何组织项目，如何使用第三方库，以及设计模式
+
+
+
+关于代码重构可以借鉴学习如下的项目：
+
+* 代码重构示例： [无人机动态路径规划](1_Refactoring/refactoring_samples/UAV_path_planning)
+* 代码重构示例： [数独](1_Refactoring/refactoring_samples/Sudoku)
+* 程序示例： [动态路径规划](https://gitee.com/pi-lab/DynamicPathPlanning)
+* 程序示例： [FastSLAM](https://gitee.com/pi-lab/fastslam)
+
 
 
 ## 1. CMake与库
