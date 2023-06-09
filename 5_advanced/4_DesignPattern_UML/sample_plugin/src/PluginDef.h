@@ -50,7 +50,7 @@ inline PluginPtr PluginBase::create(const std::string& pluginName) {
 
 inline PluginBase* PluginBase::instance()
 {
-    static PluginBase* v = new PluginBase();
+    static SPtr<PluginBase> v( new PluginBase());
     return v;
 }
 
