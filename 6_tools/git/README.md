@@ -238,7 +238,46 @@ git config --global https.proxy 'http://127.0.0.1:8888'
 git config --global core.quotepath false
 ```
 
+### 5.5 使用meld作为git对比工具
 
+#### 5.5.1 下载meld
+
+```
+sudo apt install meld
+```
+
+meld 的基本使用方法，请参考文档
+
+```
+man meld
+```
+
+#### 5.5.2 设置git diff
+
+```
+gedit ~/.gitconfig
+```
+
+将下面的内容加入
+
+```
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+```
+
+#### 5.5. 3 使用
+
+当我们进行版本比较的时候
+
+```
+git difftool -d 版本1 版本2
+```
+
+会自动比较文件夹下的所有内容
 
 ## 6. 在项目中使用Git的技巧
 
