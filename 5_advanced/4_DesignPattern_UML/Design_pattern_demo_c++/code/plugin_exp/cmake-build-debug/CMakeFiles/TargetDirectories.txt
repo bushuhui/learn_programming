@@ -1,0 +1,4 @@
+/home/kelly/gitbag/selfbag/learn_gcc/pattern_design/code/plugin_exp/cmake-build-debug/CMakeFiles/mylib.dir
+/home/kelly/gitbag/selfbag/learn_gcc/pattern_design/code/plugin_exp/cmake-build-debug/CMakeFiles/plugin_exp.dir
+/home/kelly/gitbag/selfbag/learn_gcc/pattern_design/code/plugin_exp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kelly/gitbag/selfbag/learn_gcc/pattern_design/code/plugin_exp/cmake-build-debug/CMakeFiles/rebuild_cache.dir

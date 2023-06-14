@@ -1,0 +1,3 @@
+ToolSet: 1.0 (local)Options: 
+
+Options:-DCMAKE_MAKE_PROGRAM=/opt/clion/clion-2022.3.2/bin/ninja/linux/x64/ninja

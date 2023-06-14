@@ -1,0 +1,12 @@
+/opt/clion/clion-2022.3.2/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/opt/clion/clion-2022.3.2/bin/ninja/linux/x64/ninja -G Ninja -S /home/kelly/gitbag/selfbag/learn_gcc/pattern_design/code/plugin_exp -B /home/kelly/gitbag/selfbag/learn_gcc/pattern_design/code/plugin_exp/cmake-build-debug
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/kelly/gitbag/selfbag/learn_gcc/pattern_design/code/plugin_exp/cmake-build-debug
