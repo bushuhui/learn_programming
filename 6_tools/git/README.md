@@ -184,39 +184,7 @@ git reset --hard "bdc6980"
 
 
 
-### 5.2 Submodule
-
-1. Add submodule to current project
-```
-git submodule add 仓库地址 路径
-
-# 即
-
-git submodule add https://android.googlesource.com/platform/frameworks/volley extras
-```
-
-2. Update:
-
-如果过了一段时间volley库有更新，这时候我们的app也需要更新，命令如下：
-```
-git submodule update
-```
-
-3. Delete
-
-submodule的删除稍微麻烦点：首先，要在“.gitmodules”文件中删除相应配置信息。然后，执行“git rm –cached ”命令将子模块所在的文件从git中删除。
-        
-4. 下载的工程带有submodule
-
-当使用git clone下来的工程中带有submodule时，初始的时候，submodule的内容并不会自动下载下来的，此时，只需执行如下命令：
-```
-git submodule update --init --recursive
-```
-即可将子模块内容下载下来后工程才不会缺少相应的文件。
-
-
-
-### 5.3 git使用proxy
+### 5.2 git使用proxy
 
 设置git的代理服务器
 ```
@@ -231,16 +199,16 @@ git config --global https.proxy 'http://127.0.0.1:8888'
 
 
 
-### 5.4 git命令行显示中文
+### 5.3 git命令行显示中文
 
 将git 配置文件 core.quotepath项设置为false。quotepath表示引用路径
 ```
 git config --global core.quotepath false
 ```
 
-### 5.5 使用meld作为git对比工具
+### 5.4 使用meld作为git对比工具
 
-#### 5.5.1 下载meld
+#### 5.4.1 下载meld
 
 ```
 sudo apt install meld
@@ -252,7 +220,7 @@ meld 的基本使用方法，请参考文档
 man meld
 ```
 
-#### 5.5.2 设置git diff
+#### 5.4.2 设置git diff
 
 ```
 gedit ~/.gitconfig
@@ -269,7 +237,7 @@ gedit ~/.gitconfig
 	cmd = meld "$LOCAL" "$REMOTE"
 ```
 
-#### 5.5. 3 使用
+#### 5.4.3 使用
 
 当我们进行版本比较的时候
 
@@ -321,7 +289,7 @@ source devel/setup.bash
 
 如果数据文件不大的情况下，可以把数据、程序放到一起利用 git 管理；但是一般的做法是，把数据单独放到一个目录，代码放到另一个目录，在代码的目录里 `README.md` 里面写清楚，数据文件的路径。
 
-如果项目中很多本地文件、临时文件不需要让git管理，可以设置 [.gitigore 文件](gitignore.md)，这个文件可以放在仓库的根目录，或者需要起作用的目录。
+如果项目中很多本地文件、临时文件不需要让git管理，可以设置 [.gitignore 文件](gitignore.md)，这个文件可以放在仓库的根目录，或者需要起作用的目录。
 
 在程序中尽可能不要把路径写死，可以通过参数配置读取的方式，如果是C++项目可以使用 `Svar`, 如果是Python程序可以使用 `pconf`
 * C++的配置读取示例： [svar_argparse](https://gitee.com/pi-lab/code_cook/tree/master/c++/argparse/svar_argparse)
@@ -329,32 +297,69 @@ source devel/setup.bash
 
 
 
-## 7. Git常用命令速查表
+## 7. Git Submodule
+
+### 7.1 Add submodule to current project
+
+```
+git submodule add 仓库地址 路径
+
+# 即
+
+git submodule add https://android.googlesource.com/platform/frameworks/volley extras
+```
+
+### 7.2 Update
+
+如果过了一段时间volley库有更新，这时候我们的app也需要更新，命令如下：
+
+```
+git submodule update
+```
+
+### 7.3 Delete
+
+submodule的删除稍微麻烦点：首先，要在“.gitmodules”文件中删除相应配置信息。然后，执行“git rm –cached ”命令将子模块所在的文件从git中删除。
+        
+
+### 7.4 下载的工程带有submodule
+
+当使用git clone下来的工程中带有submodule时，初始的时候，submodule的内容并不会自动下载下来的，此时，只需执行如下命令：
+
+```
+git submodule update --init --recursive
+```
+
+即可将子模块内容下载下来后工程才不会缺少相应的文件。
+
+
+
+## 8. Git常用命令速查表
 
 ![Git常用命令](git-cheatsheet_cn.jpg)
 
 
 
-## 8. 参考资料
+## 9. 参考资料
 
-### 8.1 基础教程
+### 9.1 基础教程
 * [Git快速入门 - Git初体验](https://my.oschina.net/dxqr/blog/134811)
 * [在Win7系统下使用TortoiseGit(乌龟git)简单操作Git](https://my.oschina.net/longxuu/blog/141699)
 
 
-### 8.2 系统教程
+### 9.2 系统教程
 * [Git简明教程.md](git简明教程.md)
 * [Git教程.pdf](Git教程.pdf)
 * [Git系统学习 - 廖雪峰的Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 
-### 8.3 实验室常用功能介绍
+### 9.3 实验室常用功能介绍
 * [PILAB的Git使用教程](Git使用教程_PILAB.pdf)
 * [如何Fork代码到自己的仓库并clone到本地](HowToForkClone.md)
 * [如何在Gitee添加其他用户](gitee_addmember.md)
 
 
-### 8.4 参考手册等
+### 9.4 参考手册等
 * [Git Cheatsheet](git-cheatsheet.pdf)
 * [Git常用命令](git-cheatsheet_cn.jpg)
 * [Git大全](https://gitee.com/all-about-git)

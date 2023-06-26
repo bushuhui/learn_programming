@@ -38,7 +38,7 @@
     - 安装Linux
     - 常用命令
 * IDE
-    - 熟悉自己所用的IDE （建议[QtCreator](https://blog.csdn.net/sinat_27554409/article/details/78171499)）
+    - 熟悉自己所用的IDE （建议[QtCreator](6_tools/qt/QtCreator.md)）
     - 使用IDE进行单步调试
 * [Debug能力](6_tools/debug)
     - 学会debug
