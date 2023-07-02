@@ -298,9 +298,24 @@ source devel/setup.bash
 
 
 ## 7. Git Submodule
+submodule是git中的一个概念，可以将一个git仓库作为另一个git仓库的子目录。例如，我们的项目中需要使用volley库，但是volley库又是一个git仓库，这时候就可以使用submodule的方式将volley库作为我们项目的子目录。这样做的好处是，我们的项目可以使用volley库的最新版本，而不用担心volley库的更新会影响我们的项目。
 
-### 7.1 Add submodule to current project
+### 7.1 下载及同步更新
+#### ① 递归clone含有submodule的库
 
+```
+git clone --recurse-submodules 仓库地址
+当已经clone主分支，但没有使用--recurse-submodules时，submodule的内容并不会自动下载下来。可以使用如下命令更新submodule
+git submodule update --init --recursive
+```
+#### ② 更新仓库及其子仓库
+如果过了一段时间volley库有更新，这时候我们的app也需要更新，命令如下：
+
+```
+git submodule update
+```
+### 7.2 当前仓库添加或删除submodule
+#### ①添加submodule
 ```
 git submodule add 仓库地址 路径
 
@@ -308,29 +323,24 @@ git submodule add 仓库地址 路径
 
 git submodule add https://android.googlesource.com/platform/frameworks/volley extras
 ```
-
-### 7.2 Update
-
-如果过了一段时间volley库有更新，这时候我们的app也需要更新，命令如下：
+这个命令会将volley仓库clone到extras目录下。然后，我们需要将extras目录下的内容提交到git仓库中，命令如下：
 
 ```
-git submodule update
+git add extras
+git commit -m "add a submodule"
 ```
-
-### 7.3 Delete
-
-submodule的删除稍微麻烦点：首先，要在“.gitmodules”文件中删除相应配置信息。然后，执行“git rm –cached ”命令将子模块所在的文件从git中删除。
-        
-
-### 7.4 下载的工程带有submodule
-
-当使用git clone下来的工程中带有submodule时，初始的时候，submodule的内容并不会自动下载下来的，此时，只需执行如下命令：
+#### ② 删除当前项目的某个submodule
 
 ```
-git submodule update --init --recursive
+git submodule deinit extras
+rm -rf .git/modules/extras
+rm -f extras
+打开.gitmodules文件，删除对应的submodule信息
+git add .gitmodules 以及submodule所在目录
+git commit -m "remove a submodule"
 ```
 
-即可将子模块内容下载下来后工程才不会缺少相应的文件。
+`注意: 当在子目录中commit之后，需要在主目录也commit一下，否则主目录的submodule信息不会更新。`
 
 
 
