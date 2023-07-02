@@ -1,0 +1,110 @@
+#
+# https://www.cnblogs.com/BlueSkyyj/p/8143826.html
+#
+# YAML 语言（发音 /ˈjæməl/ ）的设计目标，就是方便人类读写。它实质上是一种通用的数据串行化格式。
+#
+# 基本语法规则如下：
+#   1、大小写敏感
+#   2、使用缩进表示层级关系
+#   3、缩进时不允许使用Tab键，只允许使用空格。
+#   4、缩进的空格数目不重要，只要相同层级的元素左侧对齐即可
+#   5、# 表示注释，从这个字符一直到行尾，都会被解析器忽略，这个和python的注释一样
+#
+# YAML 支持的数据结构有三种：
+#   1、对象：键值对的集合，又称为映射（mapping）/ 哈希（hashes） / 字典（dictionary）
+#   2、数组：一组按次序排列的值，又称为序列（sequence） / 列表（list）
+#   3、纯量（scalars）：单个的、不可再分的值。字符串、布尔值、整数、浮点数、Null、时间、日期
+
+
+languages:
+ - Ruby
+ - Perl
+ - Python
+
+
+todo:
+    Task1:
+        workdir : $syspath/data
+        cmd : do_task1
+    Task2:
+        workdir : $syspath/data2
+        cmd : do_task2
+
+
+websites:
+ YAML: yaml.org
+ Ruby: ruby-lang.org
+ Python: python.org
+ Perl: use.perl.org
+
+db:
+    host: xxx
+    port: 3306
+    user: weibospider
+    password: xxx
+    db_name: weibo
+    db_type: mysql
+
+
+#######################################字符串##############################################
+#1、字符串默认不使用引号表示
+str1: 这是一个字符串
+
+#2、如果字符串之中包含空格或特殊字符，需要放在引号之中。
+str2: '内容： *字符串'
+
+#3、单引号和双引号都可以使用，双引号不会对特殊字符转义。
+str3: '内容\n字符串'
+str4: "content\n string"
+
+#4、单引号之中如果还有单引号，必须连续使用两个单引号转义。
+s3: 'labor''s day'
+
+#5、字符串可以写成多行，从第二行开始，必须有一个单空格缩进。换行符会被转为空格
+strline: 这是一段
+  多行
+  字符串
+
+#6、多行字符串可以使用|保留换行符，也可以使用>折叠换行
+this: |
+  Foo
+  Bar
+that: >
+  Foo
+  Bar
+
+#7、+表示保留文字块末尾的换行，-表示删除字符串末尾的换行。
+s4: |
+  Foo4
+s5: |+
+  Foo5
+s6: |-
+  Foo6
+s7: |
+  Foo7
+
+
+books : 
+    name : "book1"
+    author :
+        name :"Jack"
+    publishDate : "2018-10-10"
+    publisher : "xxx company"
+  
+  
+# the executeable file path
+exe : Z:\pis\RTMapper3\RTMapper3InOne\bin\Sibitu.exe
+
+# output result data folder (log, image, pointclouds, etc...)
+output_dir : Z:\pis\dataset_selected\eval_results
+
+# datasets
+datasets :
+    - Z:\pis\dataset_selected/mavic-factory/mavic-factory.rtm
+    - Z:\pis\dataset_selected/mavic_famensi/mavic_famensi.rtm
+
+
+# program options
+exe_opts :
+    - Debug.AutoRun=5
+    - Debug.AutoExport=10
