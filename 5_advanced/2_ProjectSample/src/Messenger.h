@@ -64,6 +64,9 @@
 #define messenger GSLAM::Messenger::instance()
 
 namespace GSLAM {
+using sv::Svar;
+using sv::SvarClass;
+using sv::SvarFunction;
 
 #ifndef DOXYGEN_IGNORE_INTERNAL
 namespace msg{
@@ -246,8 +249,8 @@ protected:
               unsubscribed_(false),
               queue_size_(queue_size),
               workthread_(queue_size ? new msg::ThreadPool(1) : nullptr) {
-            assert(callback.arg_types.size()==1);
-            type_=callback.arg_types[0];
+          if(callback.arg_types.size()==2)
+            type_=callback.arg_types.back();
         }
 
         ~Impl(){workthread_.reset();}
@@ -473,7 +476,7 @@ public:
     /// @param callback the callback function used to handle the messages
     Subscriber subscribe(
             const std::string& topic, uint32_t queue_size,
-            SvarFunction callback) {
+            const SvarFunction& callback) {
         if(topic.empty()) return Subscriber();
         Subscriber sub(topic, callback,queue_size);
         join(sub);
@@ -482,7 +485,7 @@ public:
     }
 
     /// @brief subscribe a topic with callback function
-    Subscriber subscribe(const std::string& topic, SvarFunction callback,
+    Subscriber subscribe(const std::string& topic, const SvarFunction& callback,
                          uint32_t queue_size=0){
         if(topic.empty()) return Subscriber();
         Subscriber sub(topic, callback,queue_size);

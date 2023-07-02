@@ -39,12 +39,6 @@ void callBackFunc(string msg)
     cout << "Normal function is printing message: \n" << msg << endl;
 }
 
-void callBackFunc(int num)
-{
-    cout << "Normal function is printing message: \n" << msg << endl;
-}
-
-
 int test_messenger(void)
 {
     //define topic
@@ -52,7 +46,7 @@ int test_messenger(void)
     int queueSize = 0;
 
     //create subscriber
-    auto subSimple = messenger.subscribe(topicSimple, queueSize, callBackFunc);
+    auto subSimple = messenger.subscribe(topicSimple, callBackFunc, queueSize);
 
     //create publisher
     auto pubSimple = messenger.advertise<string>(topicSimple, queueSize);
@@ -122,12 +116,10 @@ int main(int argc, char *argv[])
 
     // svar可以看做是个全局的变量容器，可以在函数、类直接传递参数，这样不用定义变量，包含头文件
     do_print();
-    
-    
+
     // 测试 Messenger
     test_messenger();
-    
-    
+
     // 测试插件
     test_std_plugin();
     test_svar_plugin();

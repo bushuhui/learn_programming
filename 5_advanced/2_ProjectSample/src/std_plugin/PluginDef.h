@@ -51,7 +51,7 @@ inline PluginPtr PluginBase::create(const std::string& pluginName) {
 inline PluginBase* PluginBase::instance()
 {
     static SPtr<PluginBase> v( new PluginBase());
-    return v;
+    return v.get();
 }
 
 // regist plugin using class & name
