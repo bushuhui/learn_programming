@@ -5,9 +5,9 @@
 开发高级的计算机视觉、机器学习应用，需要理解操作系统中进程、文件、设备管理等概念、实现、应用等。非计算机专业的同学并没有学过此课程，因此大家可以通过如下的网上资料快速入手并学会基本的知识，并在后续学习过程不断深入对操作系统的理解。
 
 * 基础知识：
-	* [计算机操作系统知识点总结](https://blog.csdn.net/Royalic/article/details/119999404)
-	* [Linux快速入门](../6_tools/linux/README.md)
-	* [Linux入门教程](http://c.biancheng.net/linux_tutorial/)
+    * [计算机操作系统知识点总结](https://blog.csdn.net/Royalic/article/details/119999404)
+    * [Linux快速入门](../6_tools/linux/README.md)
+    * [Linux入门教程](http://c.biancheng.net/linux_tutorial/)
 
 * 操作系统编程：
-	* [多进程、多线程编程](../5_advanced/5_MultiThread)
+    * [多进程、多线程编程](../5_advanced/5_MultiThread)

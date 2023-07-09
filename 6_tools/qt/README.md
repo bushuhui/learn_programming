@@ -33,11 +33,14 @@ Qt4安装
 sudo apt-get install libqt4-dev libqt4-opengl-dev
 ```
 
+## 2. [QtCreator](QtCreator.md)
 
-## 2. 示例代码
+[QtCreator](QtCreator.md) 是一个轻量级、快速的C++ IDE，更多使用技巧可以阅读 [QtCreator](QtCreator.md)
+
+## 3. 示例代码
 
 * [Qt示例代码](https://gitee.com/pi-lab/code_cook/tree/master/gui/qt)
 * [综合示例项目](https://gitee.com/pi-lab/code_cook/blob/master/DemoProjects.md)
 
-## 3. 学习资料
+## 4. 学习资料
 * [《Qt学习资料汇总》](https://gitee.com/pi-lab/code_cook/blob/master/gui/qt/README.md)
