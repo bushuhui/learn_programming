@@ -181,6 +181,13 @@
 
 为了更进一步提升自己的编程能力，需要通过多次的代码重构提升自己的综合能力。建议仔细阅读[《代码重构》](../5_advanced/README.md)，并对自己编写的程序进行改进。
 
+关于代码重构可以借鉴学习如下的项目：
+
+* 代码重构示例： [无人机动态路径规划](1_Refactoring/refactoring_samples/UAV_path_planning)
+* 代码重构示例： [数独](1_Refactoring/refactoring_samples/Sudoku)
+* 程序示例： [动态路径规划](https://gitee.com/pi-lab/DynamicPathPlanning)
+* 程序示例： [FastSLAM](https://gitee.com/pi-lab/fastslam)
+
 
 
 ## 5. 其他练习项目
