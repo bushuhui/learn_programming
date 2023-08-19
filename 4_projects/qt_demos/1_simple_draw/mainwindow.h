@@ -1,5 +1,3 @@
-#ifndef __MAINWINDOW_H__
-#define __MAINWINDOW_H__
 
 #pragma once
 
@@ -28,7 +26,4 @@ protected:
 private:
     QImage          *m_img;
 };
-
-
-#endif // end of __MAINWINDOW_H__
 

@@ -1,0 +1,4 @@
+build
+.qtc_clangd
+*.pro.user*
+CMakeLists.txt.user*
