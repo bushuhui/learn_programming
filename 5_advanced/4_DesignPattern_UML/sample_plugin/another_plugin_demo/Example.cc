@@ -1,9 +1,9 @@
-#include "Avar.h"
+#include "PluginManager.h"
 #include "PluginBase.h"
 
 typedef std::shared_ptr<PluginBase> PluginBasePtr;
 
-int test_plugin(void) 
+void test_plugin(void) 
 {
   PluginBasePtr pa = Plugin(PluginBase)::create("PluginA");
   PluginBasePtr pb = Plugin(PluginBase)::create("PluginB");
