@@ -74,7 +74,15 @@
 3. 如何识别二维码，如何解算相对位姿
 4. 如何控制多旋翼无人机逼近Marker
 
+参考资料：
 
+* [《一步一步学ROS》](https://gitee.com/pi-lab/learn_ros)
+
+* [《一步一步学飞控》](https://gitee.com/pi-lab/research_flight_controller)
+
+* [无人机自主飞行](https://gitee.com/pi-lab/uav-autonomous-flight)
+
+    
 
 ### 2.5 集群无人机的4D轨迹规划
 编写程序模拟多架无人机在空中编队飞行，在空中展现出不同的形状，例如一字形、人字形等等。
