@@ -1,3 +1,17 @@
+
+/*
+
+install libs:
+
+sudo apt install libunwind-dev
+sudo apt install binutils-dev
+
+compile:
+g++ test_backward.cpp backward.cpp -lbfd -lunwind -ldl -g -rdynamic
+
+*/
+
+
 // Pick your poison.
 //
 // On GNU/Linux, you have few choices to get the most out of your stack trace.
