@@ -16,7 +16,9 @@
 sudo apt install libunwind-dev # -lunwind
 
 ## 下面的库任选一个安装
-sudo apt install binutils-dev # -lbfd  该库已经过测试可以使用
+sudo apt install binutils-dev # -lbfd  该库已经过测试可以使用 （默认）
+
+## 下面的可选
 sudo apt install libdw-dev # -ldw
 sudo apt install libdwarf-dev # -ldwarf
 ```
@@ -34,7 +36,7 @@ sudo apt install libdwarf-dev # -ldwarf
 
    ```shell
    # 已安装binutils-dev和libunwind-dev库
-   g++ test_stacktrace.cpp backward.cpp -lbfd -lunwind -ldl -g -rdynamic
+   g++ test_backward.cpp backward.cpp -lbfd -lunwind -ldl -g -rdynamic
    ```
 
 [源码库链接](https://github.com/bombela/backward-cpp)上面有更为详细的介绍和自定义backtrace格式的说明，可以参考修改对应内容
