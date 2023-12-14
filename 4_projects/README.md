@@ -192,12 +192,17 @@
 
 
 
-## 5. 其他练习项目
+## 5. 其他练习项目和参考代码
 
+其他练习项目：
 * [精选 22 个 C++ 项目，推荐新人练手首选！](https://zhuanlan.zhihu.com/p/86779615)
 
-## 6. 参考代码
-https://gitee.com/pi-lab/code_cook/blob/master/DemoProjects.md
 
-* SimpGCS https://gitee.com/pi-lab/SimpGCS
-
+可以借鉴[示例代码](https://gitee.com/pi-lab/code_cook/blob/master/DemoProjects.md)进行学习，具体的示例如下：
+* [SimpGCS](https://gitee.com/pi-lab/SimpGCS) : 一个简单的地面站程序，通过解析MAVLINK协议，将无人机的位置等信息可视化在Qt的地图控件上
+* [简单的路径规划模拟系统](https://gitee.com/pi-lab/DynamicPathPlanning) ： 提供了一个简单的C++模拟系统，支持地图编辑、路径规划、可视化等功能
+* [C++的2D SLAM演示系统](https://gitee.com/pi-lab/fastslam) : 一个简单的2D EKF/Fast SLAM演示系统，通过这个演示系统，能够学会如何将算法、Qt GUI结合起来
+* [简单的路径规划模拟系统](https://gitee.com/pi-lab/DynamicPathPlanning) ： 提供了一个简单的C++模拟系统，支持地图编辑、路径规划、可视化等功能
+* [PI-SLAM](https://gitee.com/pi-lab/pi-slam) : 智能系统实验室开发的插件化SLAM系统，能够学习视觉SLAM编程
+* [Map2DFusion](https://gitee.com/pi-lab/Map2DFusion) ： 实时二维地图拼接，通过视觉SLAM解算位姿，并增量式拼接二维地图
+* [序列化图像的SfM重建](https://gitee.com/pi-lab/SequenceSfM) : 本实例程序演示了如何编写基本的SfM程序，通过利用序列化数据的特点加快重建的速度
