@@ -24,7 +24,7 @@ Step4：选择安装组件：选择`Qt 5.9.9 - MingGW 5.3.0 32bit` 和 `Developm
 Qt5安装
 ```bash
 sudo apt install build-essential cmake git gcc g++
-sudo apt install qt5-default qt5-qmake-bin
+sudo apt install qt5-default qt5-qmake-bin qtdeclarative5-dev
 sudo apt install libqt5network5 libqt5sql5 libqt5svg5 libqt5svg5-dev 
 ```
 
