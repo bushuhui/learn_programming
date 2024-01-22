@@ -163,6 +163,9 @@ inet_pton(AF_INET, ip, &m_RemoteAddress.sin_addr);
 通过上面简单UDP编程逻辑介绍和常用函数介绍，基本可以理解UDP的通讯原理和逻辑，如果想要进一步了解对UDP通讯的编程的应用可以参考[code_cook里面的socket++程序](https://gitee.com/pi-lab/code_cook/tree/master/network/socket++)，这个程序实现了tcp、udp的发送与接收。
 
 ##### Reference
+
 [【C++开发UDP通信：使用socket创建UDP服务器端和客户端】](https://blog.csdn.net/weixin_41275726/article/details/124529812?ops_request_misc=&request_id=&biz_id=102&utm_term=%E7%94%A8C++%E7%BC%96%E6%88%90%E5%AE%9E%E7%8E%B0UDP%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-124529812.142^v99^pc_search_result_base9&spm=1018.2226.3001.4187)
+
 [【UDP Client Server using connect | C implementation】](https://www.geeksforgeeks.org/udp-client-server-using-connect-c-implementation/)
+
 [【UDP SAMPLE CODE】](https://groups.seas.harvard.edu/courses/cs143/pa-one/client-server.html)
