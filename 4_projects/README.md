@@ -6,10 +6,10 @@
 
 ## 1. 基础知识与方法
 
-下面的项目需要图形界面，因此需要学习[『Qt』](qt_demos)或者[『SFML』](sfml_demos)程序的编写。具体的学习方法可以如下：
+下面的项目需要图形界面，因此需要学习[『Qt』](../6_tools/qt)或者[『SFML』](../6_tools/sfml)程序的编写。具体的学习方法可以如下：
 
 1. 由于综合练习需要学习使用第三方库，而Linux下使用第三方库比较方便，因此建议先花些时间把Linux基本用法学会。具体的教程可以参考： [《Linux教程》](../6_tools/linux/README.md)
-2. 先看看[《Qt例子程序》](qt_demos)，或者[《示例项目》](https://gitee.com/pi-lab/code_cook/blob/master/DemoProjects.md)程序，把程序结构、第三方库的用法等学会，然后分析例子程序与自己的程序所需要的功能差距在哪里？如果可以在例子程序的基础上逐步修改得到需要的画图功能，可以一步步从简单画线、画矩形等着手，然后逐步添加更多的功能，直到完成所需的功能为止。
+2. 先看看 [《Qt例子程序》](../6_tools/qt) 程序，把程序结构、第三方库的用法等学会，然后分析例子程序与自己的程序所需要的功能差距在哪里？如果可以在例子程序的基础上逐步修改得到需要的画图功能，可以一步步从简单画线、画矩形等着手，然后逐步添加更多的功能，直到完成所需的功能为止。
 3. 考虑具体的算法应该是什么样？用什么样的数据结构，用哪种算法类型？开始可以不用想的非常完美，只要能把最基础的功能实现即可，在实现基本功能的情况下通过不断的迭代改进，实现最终所需要的效果。下面的项目，可以先把基本的正向功能实现，就是能人操作能够显示、变化、移动等功能。
 4. 在完成最基本的绘图和操作等功能之后，再考虑如何自己编程序实现电脑找最优的位置落子等。从而实现电脑玩游戏的功能。
 5. 总而言之，不要一上来想一下子做好，而是将项目分解成多个小的任务，通过循环迭代的方式，先把简单的功能实现，然后逐步完成难度更大的功能，最终当一个个问题解决之后再合并起来完成整体的功能。
@@ -19,7 +19,7 @@
 
 ## 2. 示例项目
 
-可以参看下面所列的，也可以自己想一个去实现。更多示例项目可以参考[《示例项目》](https://gitee.com/pi-lab/code_cook/blob/master/DemoProjects.md) （可以先看看示例项目，了解一下要做成什么样子，自己还缺那些知识、技能）
+可以参看下面所列的，也可以自己想一个去实现。可以先看看示例项目，了解一下要做成什么样子，自己还缺那些知识、技能。
 
 
 ### 2.1 模拟自动巡线的智能小车
@@ -74,7 +74,15 @@
 3. 如何识别二维码，如何解算相对位姿
 4. 如何控制多旋翼无人机逼近Marker
 
+参考资料：
 
+* [《一步一步学ROS》](https://gitee.com/pi-lab/learn_ros)
+
+* [《一步一步学飞控》](https://gitee.com/pi-lab/research_flight_controller)
+
+* [无人机自主飞行](https://gitee.com/pi-lab/uav-autonomous-flight)
+
+    
 
 ### 2.5 集群无人机的4D轨迹规划
 编写程序模拟多架无人机在空中编队飞行，在空中展现出不同的形状，例如一字形、人字形等等。
@@ -145,28 +153,22 @@
 ![image](images/uav_circle.jpeg)
 
 * 构思仿真环境的搭建，可以使用Gazebo，或者AirSim
-
 * 实现识别颜色圆环的代码
-
 * 根据颜色圆环生成飞行策略
-
 * 学习MAVROS，控制无人机的飞行
-
 * 将颜色圆环的识别程序与控制程序整合，实现多旋翼无人机钻圈的功能
-
-    
+  
 
 
 ## 3. 关于GUI界面
 
 通过自己查找合适的资料、教程学习如何编写一个图形化的界面，从而方便进行交互。建议的方法是，找到一个类似的实例程序，通过不断的修改，将demo程序改造成你所设想的样子。
 
-* [《示例项目》](https://gitee.com/pi-lab/code_cook/blob/master/DemoProjects.md)
 * Qt
-    - [Qt例子程序](qt_demos)
+    - [Qt例子程序](../6_tools/qt/qt_demos)
     - [Qt学习资料](https://gitee.com/pi-lab/resources/tree/master/books/qt)
 * [SFML](https://github.com/SFML/SFML)
-    - [SFML例子程序](sfml_demos)
+    - [SFML例子程序](../6_tools/sfml)
     - [SFML学习资料](https://gitee.com/pi-lab/resources/tree/master/books/sfml/SFML-2.5.1_doc)
 
 
@@ -177,13 +179,30 @@
 * 程序命名不规范
 * 逻辑、功能比较混乱，代码不够清晰
 * 文件组织混乱，代码、数据等混杂
-* 程序里有很多固定的路径、常熟等，不方便移植，无法在其他人的电脑上运行
+* 程序里有很多固定的路径、常数等，不方便移植，无法在其他人的电脑上运行
 
 为了更进一步提升自己的编程能力，需要通过多次的代码重构提升自己的综合能力。建议仔细阅读[《代码重构》](../5_advanced/README.md)，并对自己编写的程序进行改进。
 
+关于代码重构可以借鉴学习如下的项目：
+
+* 代码重构示例： [无人机动态路径规划](../5_advanced/1_Refactoring/refactoring_samples/UAV_path_planning)
+* 代码重构示例： [数独](../5_advanced/1_Refactoring/refactoring_samples/Sudoku)
+* 程序示例： [动态路径规划](https://gitee.com/pi-lab/DynamicPathPlanning)
+* 程序示例： [FastSLAM](https://gitee.com/pi-lab/fastslam)
 
 
-## 5. 其他练习项目
 
+## 5. 其他练习项目和参考代码
+
+其他练习项目：
 * [精选 22 个 C++ 项目，推荐新人练手首选！](https://zhuanlan.zhihu.com/p/86779615)
 
+
+可以借鉴[示例代码](https://gitee.com/pi-lab/code_cook/blob/master/DemoProjects.md)进行学习，具体的示例如下：
+* [SimpGCS](https://gitee.com/pi-lab/SimpGCS) : 一个简单的地面站程序，通过解析MAVLINK协议，将无人机的位置等信息可视化在Qt的地图控件上
+* [简单的路径规划模拟系统](https://gitee.com/pi-lab/DynamicPathPlanning) ： 提供了一个简单的C++模拟系统，支持地图编辑、路径规划、可视化等功能
+* [C++的2D SLAM演示系统](https://gitee.com/pi-lab/fastslam) : 一个简单的2D EKF/Fast SLAM演示系统，通过这个演示系统，能够学会如何将算法、Qt GUI结合起来
+* [简单的路径规划模拟系统](https://gitee.com/pi-lab/DynamicPathPlanning) ： 提供了一个简单的C++模拟系统，支持地图编辑、路径规划、可视化等功能
+* [PI-SLAM](https://gitee.com/pi-lab/pi-slam) : 智能系统实验室开发的插件化SLAM系统，能够学习视觉SLAM编程
+* [Map2DFusion](https://gitee.com/pi-lab/Map2DFusion) ： 实时二维地图拼接，通过视觉SLAM解算位姿，并增量式拼接二维地图
+* [序列化图像的SfM重建](https://gitee.com/pi-lab/SequenceSfM) : 本实例程序演示了如何编写基本的SfM程序，通过利用序列化数据的特点加快重建的速度

@@ -32,10 +32,15 @@ CMake是一个跨平台的安装（编译）工具，它允许开发者编写一
 
 ## 三、推荐资料
 
+### CMake基础教程
 * [CMake 入门实战](http://www.hahack.com/codes/cmake/) 
 * [cmake教程.pdf](./cmake教程.pdf)
 * [CMake 学习笔记](http://blog.csdn.net/dbzhang800/article/details/6314073)
 
-赵勇师兄的PICMake(CMake的简化版？建议掌握CMake之后看一下)
-[PICMake](https://github.com/zdzhaoyong/PICMake)
+### PI-CMake
+* 赵勇师兄的PICMake(CMake的简化版？建议掌握CMake之后看一下)
+    - https://gitee.com/pi-lab/picmake
 
+### CMake高级用法
+* 全自动编译Thirdparty库（下载，编译，安装到指定目录） https://github.com/OpenDroneMap/ODM/tree/master/SuperBuild
+* CMake: How to build external projects and include their targets https://stackoverflow.com/questions/15175318/cmake-how-to-build-external-projects-and-include-their-targets

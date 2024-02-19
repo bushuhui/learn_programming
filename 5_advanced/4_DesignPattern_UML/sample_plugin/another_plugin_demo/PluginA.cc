@@ -1,5 +1,5 @@
 #include "PluginBase.h"
-#include "Avar.h"
+#include "PluginManager.h"
 
 class PluginA : public PluginBase
 {

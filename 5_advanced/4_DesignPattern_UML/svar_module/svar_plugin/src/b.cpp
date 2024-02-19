@@ -12,7 +12,7 @@ double add(double a , double b){
 int list(sv::Svar &a)
 {
     std::vector<UserData> b = a.castAs<std::vector<UserData>>();
-    std::cout << "List contents: " << std::endl;
+    std::cout << "[B] List contents: " << std::endl;
     for(auto i : b) {
         std::cout << __FILE__ << " " << i.id << ", name: " << i.name << std::endl;
     }

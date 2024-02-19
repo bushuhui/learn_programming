@@ -24,15 +24,15 @@
 
 ### 0.2 打印工具
 可以借助Log/打印工具帮助分析程序
-* [dbg-macro](dbg-macro), [项目地址](https://github.com/sharkdp/dbg-macro)
-
+* [dbg-macro](log/dbg-macro), [项目地址](https://github.com/sharkdp/dbg-macro)
+* [spdlog](log/spdlog.md), [项目地址](https://github.com/gabime/spdlog)
 
 
 ## 1. backtrace
 
 对于C、C++程序，内存访问异常是最常见的一类问题。遇到程序内存访问异常导致的崩溃，不用害怕，目前编程语言、操作系统、IDE都有很好的支持，能够很快的定位到出现的问题地方。
 
-针对示例程序 [backtrace](backtrace) ，具体的操作包括：
+针对示例程序 [backtrace](stack_trace/backtrace) ，具体的操作包括：
 
 * 编译的时候打开Debug模式，否则编译器不会把源代码、符号编译到程序中，无法直接看到错误地点的代码。针对`qmake`具体的操作是： `qmake backtrace.pro CONFIG+=debug`
 
@@ -54,7 +54,7 @@
 
 
 
-1 - 我们打开Qt界面程序的主窗口
+1 - 我们打开 QtCreator 界面程序的主窗口
 
 我们将编辑的窗口切换到Debug的窗口
 

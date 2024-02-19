@@ -2,6 +2,7 @@
 
 #include <string>
 
+// 用户定义结构体
 struct UserData
 {
     std::string name;
