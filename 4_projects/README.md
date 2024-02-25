@@ -203,6 +203,5 @@
 * [简单的路径规划模拟系统](https://gitee.com/pi-lab/DynamicPathPlanning) ： 提供了一个简单的C++模拟系统，支持地图编辑、路径规划、可视化等功能
 * [C++的2D SLAM演示系统](https://gitee.com/pi-lab/fastslam) : 一个简单的2D EKF/Fast SLAM演示系统，通过这个演示系统，能够学会如何将算法、Qt GUI结合起来
 * [简单的路径规划模拟系统](https://gitee.com/pi-lab/DynamicPathPlanning) ： 提供了一个简单的C++模拟系统，支持地图编辑、路径规划、可视化等功能
-* [PI-SLAM](https://gitee.com/pi-lab/pi-slam) : 智能系统实验室开发的插件化SLAM系统，能够学习视觉SLAM编程
 * [Map2DFusion](https://gitee.com/pi-lab/Map2DFusion) ： 实时二维地图拼接，通过视觉SLAM解算位姿，并增量式拼接二维地图
 * [序列化图像的SfM重建](https://gitee.com/pi-lab/SequenceSfM) : 本实例程序演示了如何编写基本的SfM程序，通过利用序列化数据的特点加快重建的速度

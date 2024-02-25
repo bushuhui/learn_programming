@@ -38,13 +38,15 @@
     - 安装Linux
     - 常用命令
 * IDE
-    - 熟悉自己所用的IDE （建议[QtCreator](6_tools/qt/QtCreator.md)）
+    - 熟悉自己所用的IDE
+        - [QtCreator](6_tools/qt/QtCreator.md)
+        - [VS Code](6_tools/ide/vs_code.md)
     - 使用IDE进行单步调试
 * [Debug能力](6_tools/debug)
     - 学会debug
     - 单元测试
 * 第三方库
-    - Qt，OpenGL
+    - [Qt](6_tools/qt)，[OpenGL](6_tools/opengl)
     - Eigen3
     - OpenCV
 * [综合练习，小项目（小游戏，模拟仿真程序）](4_projects)
@@ -122,6 +124,9 @@
     - 思考那些函数、类是可以复用的，可以写成头文件
 - 如何利用[CMake](6_tools/cmake)，[PICMake](6_tools/cmake/PICMake.md)将所有的代码组织起来，一次将自己编写的代码自动编译出来
     - 将自己C++（[Stage1](1_c++)），数据结构([Stage2](2_datastructure_algorithm))，综合练习项目（[Stage4](4_projects/README.md)）的程序用CMake组织起来
+- 更进一步学习IDE的使用
+    - [QtCreator](6_tools/qt/QtCreator.md)
+    - [VS Code](6_tools/ide/vs_code.md)
 - 研究、学习如何将常用的函数、类组织到一个代码库，后续直接使用
     - 分析哪些函数、类可以复用，将可以复用的写成库
 - 如何让代码更清晰易懂，在什么地方用什么[设计模式](5_advanced/4_DesignPattern_UML)？
@@ -277,7 +282,8 @@ git commit -m "Change log"
 * [Markdown](6_tools/markdown/README.md)
 * [Git](6_tools/git/README.md)
 * [CMake](6_tools/cmake/README.md)
-
+- [QtCreator](6_tools/qt/QtCreator.md)
+- [VS Code](6_tools/ide/vs_code.md)
 
 
 ### 5.2 参考资料：
