@@ -198,7 +198,7 @@
 * [精选 22 个 C++ 项目，推荐新人练手首选！](https://zhuanlan.zhihu.com/p/86779615)
 
 
-可以借鉴[示例代码](https://gitee.com/pi-lab/code_cook/blob/master/DemoProjects.md)进行学习，具体的示例如下：
+可以借鉴如下示例代码进行学习，具体的示例如下：
 * [SimpGCS](https://gitee.com/pi-lab/SimpGCS) : 一个简单的地面站程序，通过解析MAVLINK协议，将无人机的位置等信息可视化在Qt的地图控件上
 * [简单的路径规划模拟系统](https://gitee.com/pi-lab/DynamicPathPlanning) ： 提供了一个简单的C++模拟系统，支持地图编辑、路径规划、可视化等功能
 * [C++的2D SLAM演示系统](https://gitee.com/pi-lab/fastslam) : 一个简单的2D EKF/Fast SLAM演示系统，通过这个演示系统，能够学会如何将算法、Qt GUI结合起来
