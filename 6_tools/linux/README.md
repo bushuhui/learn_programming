@@ -61,29 +61,29 @@ linux是一种自由和开放源码的类Unix操作系统，其不同于windows�
 * 完成linux命令输入后，按下enter键，即可执行该命令。
 
 ### 2.2 目录结构
-linux的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录/，然后在此目录下再创建其他的目录。
+linux的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录`/`，然后在此目录下再创建其他的目录。
 
-![Alt text](./v2-51e916cd73db13a6a7b1a1d85f63064e_720w.jpg)
- 目录具体存放内容可参考以下文档：
-* https://zhuanlan.zhihu.com/p/60423235
+目录具体存放内容可参考以下文档 https://zhuanlan.zhihu.com/p/60423235
 
 
 ### 2.3 Linux文件夹简介
-* / 这是根目录（文件夹），文件系统树的根。
-* /bin 包含二进制文件，系统启动需要的可执行程序。
-* /boot 包含机器启动时所需的内核和文件。
-* /dev 包含设备节点，与连接到计算机的物理设备一起使用的指令/接口。
-* /etc 包含系统范围的配置文件（发音为etsy），大型软件包（如gtk，python，X11）一般也在此处存储配置文件。
-* /home 包含系统用户的目录（每个用户的下载、图片等）。
-* /lib 包含启动计算机的核心程序所必需的共享库。
-* /lost+found 包含由于系统崩溃或驱动器错误而放错位置的数据。
-* /media 包含用于USB、CD和DVD等媒体设备的安装点。
-* /mnt 是临时文件系统的挂载点（例如用来安装系统的内容。
-* /opt 包含程序的其他程序包。在我的机器中，Google Chrome和Minecraft Launcher将文件保存在此处。
-* /proc 包含与内核和正在运行的进程有关的文件。
-* /tmp 包含在执行程序时可能创建的临时文件。
-* /usr 包含一个次要的只读系统树，用于与某些程序共享或用于安装在其他Linux系统上。上面存在许多目录也存在这里，并包含一些其他文件。
-* /var 包含随时间变化其大小发生变化的文件，例如日志和备份。
+* `/` 这是根目录（文件夹），文件系统树的根。
+* `/bin` 包含二进制文件，系统启动需要的可执行程序。
+* `/boot` 包含机器启动时所需的内核和文件。
+* `/dev` 包含设备节点，与连接到计算机的物理设备一起使用的指令/接口。
+* `/etc` 包含系统范围的配置文件（发音为etsy），大型软件包（如gtk，python，X11）一般也在此处存储配置文件。
+* `/home` 包含系统用户的目录（每个用户的下载、图片等）。
+* `/lib` 包含启动计算机的核心程序所必需的共享库。
+* `/lost+found` 包含由于系统崩溃或驱动器错误而放错位置的数据。
+* `/media` 包含用于USB、CD和DVD等媒体设备的安装点。
+* `/mnt` 是临时文件系统的挂载点（例如用来安装系统的内容。
+* `/opt` 包含程序的其他程序包。在我的机器中，Google Chrome和Minecraft Launcher将文件保存在此处。
+* `/proc` 包含与内核和正在运行的进程有关的文件。
+* `/tmp` 包含在执行程序时可能创建的临时文件。
+* `/usr` 包含一个次要的只读系统树，用于与某些程序共享或用于安装在其他Linux系统上。上面存在许多目录也存在这里，并包含一些其他文件。
+* `/var` 包含随时间变化其大小发生变化的文件，例如日志和备份。
+
+
 ### 2.4 绝对路径与相对路径
 根据档名写法的不同，也可将所谓的路径(path)定义为绝对路径(absolute)与相对路径(relative)。 这两种文件名/路径的写法依据是这样的：
 1.绝对路径：
@@ -91,7 +91,7 @@ linux的文件系统是采用级层式的树状目录结构，在此结构中的
 2.相对路径：
 相对于目前路径的文件名写法。 例如 ./home/dmtsai 。反正开头不是 / 就属于相对路径的写法
 
-### 2.4`sudo`临时切换身份到root
+### 2.5 `sudo`临时切换身份到root
 Debian, Ubuntu， LinuxMint等系统默认是不让直接使用root身份，所以安装软件、或者操作系统文件的时候需要临时切换身份。
 
 **重要！！！重要！！！ 直接使用会导致操作系统被损坏，而且直接使用root这个习惯非常恶劣！需要养成不使用root的习惯！**
@@ -161,8 +161,12 @@ uid=1000(zm) gid=1000(zm) 组=1000(zm),4(adm),24(cdrom),27(sudo),30(dip),46(plug
 ## 4. 常用指令（文件目录）
 
 ### 1) 查看命令的使用说明
-1.初学者，能够灵活的使用`man`命令，能够极大的提高学习的速度。大多数的Linux命令都有在线的使用手册，因此通过man命令能够让你在不清楚命令参数的情况下，快速的学到用法。基本的用法是`man <command>`
-2.help命令同样也能够查看命令的使用说明，基本的用法是`<command> --help`
+1. 初学者，能够灵活的使用`man`命令，能够极大的提高学习的速度。大多数的Linux命令都有在线的使用手册，因此通过man命令能够让你在不清楚命令参数的情况下，快速的学到用法。基本的用法是`man <command>`
+2. help命令同样也能够查看命令的使用说明，基本的用法是`<command> --help`
+
+基本的用法是`man <command>`
+
+![man_demo](images/man_ls.png)
 
 由于man使用了`vim`的键盘设置，因此能够使用快捷键来操作
 
@@ -390,6 +394,7 @@ zm@zm-VirtualBox:~$ cd 桌面/test
 zm@zm-VirtualBox:~/桌面/test$ ls
 flower	lion  tiger
 ```
+
 ### 10）`cat`指令
 `cat`查看文件内容
 * 基本语法：`cat [选项]  要查看的文件`
@@ -734,23 +739,23 @@ home/zm/桌面/cat.txt
 
 使用Linux最方便的优点是通过包管理可以快速的安装所需要的软件，因此极大的提高研究的效率。由于研究人员主要使用Ubuntu系列的软件，所以我们只需要学习`apt-get`系列的命令，如果有精力可以学习`yum`方面的命令（主要用在网络服务器上，我们使用的非常少）。
 
-`sudo apt-get update`更新源
-`sudo apt-get install package`安装包
-`sudo apt-get remove package`删除包
+`sudo apt-get update` - 更新源
+`sudo apt-get install package` - 安装包
+`sudo apt-get remove package` - 删除包
 
-`sudo apt-cache search package`搜索软件包
-`sudo apt-cache show package`获取包的相关信息，如说明、大小、版本等
-`sudo apt-get install package --reinstall`重新安装包
+`sudo apt-cache search package` - 搜索软件包
+`sudo apt-cache show package` - 获取包的相关信息，如说明、大小、版本等
+`sudo apt-get install package --reinstall` - 重新安装包
 
-`sudo apt-get-f install`修复安装
-`sudo apt-get remove package --purge`删除包，包括配置文件等
-`sudo apt-get build-dep package`安装相关的编译环境
+`sudo apt-get-f install` - 修复安装
+`sudo apt-get remove package --purge` - 删除包，包括配置文件等
+`sudo apt-get build-dep package` - 安装相关的编译环境
 
-`sudo apt-get upgrade`更新已安装的包
-`sudo apt-get dist-upgrade`升级系统
-`sudo apt-cache depends package`了解该包依赖那些包
-`sudo apt-cache rdepends package`查看该包被哪些包依赖
-`sudo apt-get source package`下载该包的源代码
+`sudo apt-get upgrade` - 更新已安装的包
+`sudo apt-get dist-upgrade` - 升级系统
+`sudo apt-cache depends package` - 了解该包依赖那些包
+`sudo apt-cache rdepends package` - 查看该包被哪些包依赖
+`sudo apt-get source package` - 下载该包的源代码
 
 ### 1) `apt-cache search`查找有那些软件包
 例如查找Lapack相关的安装包
@@ -818,6 +823,16 @@ tem@T470p> dpkg -L liblapack3
 /usr/share/doc/liblapack3/changelog.Debian.gz
 ```
 
+### 6) 设置软件源，提高安装的速度
+由于默认Ubuntu，LinuxMint使用国外的源所以访问速度比较慢，可以通过设置使用国内的镜像网站来加快安装软件的速度。具体的操作如下：
+
+1. 进入软件源的设置“System - Software Sources"
+![Software source](images/LinuxMint_Software_Source1.png)
+
+
+2. 选择Main, Base的镜像为国内的服务器
+![Select Mirrors](images/LinuxMint_Software_Source2.png)
+
 
 
 ## 9. 管道符号|之后的常用命令
@@ -864,7 +879,20 @@ SummerCamp2018@T470p> cat README.md | grep linux
 
 ## 10. 其他常用命令
 
-### 1) `df`显示磁盘的空间
+### 1） `history` 列出最近的命令
+```
+tem@T470p> history 
+ 4031  ls
+ 4032  ll
+ 4033  cd conf/
+ 4034  ls
+ 4035  ll
+ 4036  vi enable-php.conf 
+ 4037  vi fastcgi_params
+ ...
+```
+
+### 2) `df`显示磁盘的空间
 
 `df -h`显示的空间使用易读的格式，`df -T`显式分区的格式
 
@@ -883,7 +911,7 @@ tmpfs                 3.2G   17M  3.1G   1% /run
 /dev/sdb5              32G   15G   15G  51% /
 /dev/sda1             1.9T  1.5T  344G  82% /home
 ```
-### 2） `ps`显示进程
+### 3） `ps`显示进程
 
 ```
 tem@T470p> ps 
@@ -911,7 +939,7 @@ tem@T470p> ps ax | grep kate
  9340 pts/7    S+     0:00 grep --color kate
 ```
 
-### 3） `kill` 给指定的进程发送信号，例如杀死进程 `kill -9 <process_id>`
+### 4） `kill` 给指定的进程发送信号，例如杀死进程 `kill -9 <process_id>`
 
 ```
 tem@T470p> ps ax | grep kate 
@@ -921,7 +949,7 @@ tem@T470p> kill -9 9252
 ```
 
 
-### 4） `alias`显示、设置别名
+### 5） `alias`显示、设置别名
 
 显示别名：
 ```
@@ -942,7 +970,7 @@ alias g='grep -i'
 设置的别名为了能够一直起作用，可以放置在`~/.bashrc`里面（如果你用的是bash）
 
 
-### 5） `env`显示、设置系统变量
+### 6） `env`显示、设置系统变量
 
 显示系统变量：
 ```
@@ -965,9 +993,10 @@ AAA=10
 当然这个系统变量，也可以放置在`~/.bashrc`里面，这样可以一直使用该设置。
 
 ## 11.Shell编程
+
 ### 1）Shell是什么
 Shell是一个命令行解释器，它为用户提供了一个向Linux内核发送请求以便运行程序的界面系统级程序，用户可以用Shell来启动、挂起、停止甚至编写一些程序。
-![Alt text](./893b4c9bc35ae87e05214fec6d1fb02.png)
+
 
 ### 2）Shell脚本的执行方式
 * 脚本格式要求：
@@ -984,6 +1013,7 @@ echo "hello world!"
 首先需要赋予helloworld.sh脚本的+x权限，再执行脚本
 2.方式2（sh+脚本）
 不用赋予脚本+x权限，直接执行即可
+
 ### 3）Shell的变量
 Linux Shell中的变量分为，系统变量和用户自定义变量。系统变量：`$HOME`、`$PWD`、`$SHELL`、`$USER`等，可以使用`set`指令显示当前shell中所有变量
  shell变量的定义：
@@ -1006,6 +1036,7 @@ Linux Shell中的变量分为，系统变量和用户自定义变量。系统变
 A=100
 echo $A
 ```
+
 ### 4）设置环境变量
 基本语法
 * `export 变量名=变量值`（功能描述：打将shell变量输出为环境变量）
@@ -1027,11 +1058,12 @@ SSH是目前较可靠，专为远程登录会话和其他网络服务提供安�
 
 远程登录视频教程：[https://www.bilibili.com/video/BV1Sv411r7vd?p=114]
 
+
 ## 13. 课程作业
 1. 安装一个Linux到你的电脑，例如LinuxMint，关于如何分区，如何制作安装启动U盘，可以在网上查找资料，或者问问师兄、师姐。
 2. 练习上述命令，掌握Linux命令行的精髓。
 
-## References
+## 参考资料
 
 更多的Linux使用学习材料可以阅读下述资料：
 
