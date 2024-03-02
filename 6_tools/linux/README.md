@@ -53,11 +53,11 @@ linux是一种自由和开放源码的类Unix操作系统，其不同于windows�
 ### 2.1 命令行操作
 * `<>`表示必须输入参数
 * `[]`表示可选的输入参数
-* Linux终端里面的命令几乎都是以命令 [选项] [参数]的格式来进行输入的
+* Linux终端里面的命令几乎都是以命令 [选项] [参数] 的格式来进行输入的
 * 命令这一部分肯定是存在
 * 选项和参数不一定存在，可有可无。 选项和参数取决于你使用该命令实现的具体目的。
-* 选项是以 “ -  ”来指明的
-* 、命令、选项、参数之间是以空格来隔开的， 一个或多个空格都视为1个空格
+* 选项是以 ` -  ` 来指明的
+* 命令、选项、参数之间是以空格来隔开的， 一个或多个空格都视为1个空格
 * 完成linux命令输入后，按下enter键，即可执行该命令。
 
 ### 2.2 目录结构
@@ -86,10 +86,8 @@ linux的文件系统是采用级层式的树状目录结构，在此结构中的
 
 ### 2.4 绝对路径与相对路径
 根据档名写法的不同，也可将所谓的路径(path)定义为绝对路径(absolute)与相对路径(relative)。 这两种文件名/路径的写法依据是这样的：
-1.绝对路径：
-由根目录(/)开始写起的文件名或目录名称， 例如 /home/dmtsai/.bashrc；
-2.相对路径：
-相对于目前路径的文件名写法。 例如 ./home/dmtsai 。反正开头不是 / 就属于相对路径的写法
+1. 绝对路径：由根目录(`/`)开始写起的文件名或目录名称， 例如 `/home/dmtsai/.bashrc`
+2. 相对路径：相对于目前路径的文件名写法。 例如 `./home/dmtsai` 。反正开头不是 `/` 就属于相对路径的写法
 
 ### 2.5 `sudo`临时切换身份到root
 Debian, Ubuntu， LinuxMint等系统默认是不让直接使用root身份，所以安装软件、或者操作系统文件的时候需要临时切换身份。
@@ -155,7 +153,6 @@ uid=1000(zm) gid=1000(zm) 组=1000(zm),4(adm),24(cdrom),27(sudo),30(dip),46(plug
 * 增加用户时指定组`useradd -g 用户组 用户名 `
 * 修改用户的组：`usermod -g 用户组 用户名`
 
-----------
 
 
 ## 4. 常用指令（文件目录）
@@ -739,23 +736,24 @@ home/zm/桌面/cat.txt
 
 使用Linux最方便的优点是通过包管理可以快速的安装所需要的软件，因此极大的提高研究的效率。由于研究人员主要使用Ubuntu系列的软件，所以我们只需要学习`apt-get`系列的命令，如果有精力可以学习`yum`方面的命令（主要用在网络服务器上，我们使用的非常少）。
 
-`sudo apt-get update` - 更新源
-`sudo apt-get install package` - 安装包
-`sudo apt-get remove package` - 删除包
+* `sudo apt-get update` - 更新源
+* `sudo apt-get install package` - 安装包
+* `sudo apt-get remove package` - 删除包
 
-`sudo apt-cache search package` - 搜索软件包
-`sudo apt-cache show package` - 获取包的相关信息，如说明、大小、版本等
-`sudo apt-get install package --reinstall` - 重新安装包
+* `sudo apt-cache search package` - 搜索软件包
+* `sudo apt-cache show package` - 获取包的相关信息，如说明、大小、版本等
+* `sudo apt-get install package --reinstall` - 重新安装包
 
-`sudo apt-get-f install` - 修复安装
-`sudo apt-get remove package --purge` - 删除包，包括配置文件等
-`sudo apt-get build-dep package` - 安装相关的编译环境
+* `sudo apt-get-f install` - 修复安装
+* `sudo apt-get remove package --purge` - 删除包，包括配置文件等
+* `sudo apt-get build-dep package` - 安装相关的编译环境
 
-`sudo apt-get upgrade` - 更新已安装的包
-`sudo apt-get dist-upgrade` - 升级系统
-`sudo apt-cache depends package` - 了解该包依赖那些包
-`sudo apt-cache rdepends package` - 查看该包被哪些包依赖
-`sudo apt-get source package` - 下载该包的源代码
+* `sudo apt-get upgrade` - 更新已安装的包
+* `sudo apt-get dist-upgrade` - 升级系统
+* `sudo apt-cache depends package` - 了解该包依赖那些包
+* `sudo apt-cache rdepends package` - 查看该包被哪些包依赖
+* `sudo apt-get source package` - 下载该包的源代码
+
 
 ### 1) `apt-cache search`查找有那些软件包
 例如查找Lapack相关的安装包
@@ -827,10 +825,12 @@ tem@T470p> dpkg -L liblapack3
 由于默认Ubuntu，LinuxMint使用国外的源所以访问速度比较慢，可以通过设置使用国内的镜像网站来加快安装软件的速度。具体的操作如下：
 
 1. 进入软件源的设置“System - Software Sources"
+
 ![Software source](images/LinuxMint_Software_Source1.png)
 
 
 2. 选择Main, Base的镜像为国内的服务器
+
 ![Select Mirrors](images/LinuxMint_Software_Source2.png)
 
 
@@ -1054,9 +1054,8 @@ SSH为Secure Shell的缩写，由IETF的网络工作小组制定，SSH为建立�
 SSH是目前较可靠，专为远程登录会话和其他网络服务提供安全性的协议。常用于远程登录。几乎所有UNIX/Linux都可运行SSH。
 
 使用SSH服务，需要安装相应的服务器和客户端。服务器和客户端的关系：如果，A机器想被B机器远程控制，那么，A机器需要安装SSH服务器，B机器需要安装SSH客户端。
-![Alt text](./16291020521.png)
 
-远程登录视频教程：[https://www.bilibili.com/video/BV1Sv411r7vd?p=114]
+[远程登录视频教程](https://www.bilibili.com/video/BV1Sv411r7vd?p=114)
 
 
 ## 13. 课程作业
@@ -1068,14 +1067,14 @@ SSH是目前较可靠，专为远程登录会话和其他网络服务提供安�
 更多的Linux使用学习材料可以阅读下述资料：
 
 ### Linux使用
----
+
 * [鸟哥的linux私房菜](http://cn.linux.vbird.org/linux_basic/linux_basic.php), [PDF版本](docs/鸟哥的Linux私房菜基础篇-第三版.pdf)
 * [ubuntu linux命令行简明教程](docs/ubuntu命令行简明教程.pdf)
 * [Unix Toolbox](docs/unixtoolbox.pdf), [Unix Toolbox中文版](docs/unixtoolbox_cn.pdf)
 * [Linux Mint 18自动安装脚本（里面包含大多数常用软件的名字）](docs/auto_setup_mint_18.sh)
 
 ### Bash
----
+
 * [Bash Guide for Beginners](docs/Bash-Beginners-Guide.pdf)
 * [BASH 中文文档](docs/bashref.pdf)
 
