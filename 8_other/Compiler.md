@@ -181,6 +181,11 @@ readelf -l libmyfun.so
 `readelf -s` 符号表机制: 符号表保存了程序实现或使用的所有全局变量和函数，如果程序引用一个自身代码未定义的符号，则称之为未定义符号，这类引用必须在静态链接期间用其他目标模块或库解决，或在加载时通过动态链接解决。
 
 
+### patchelf
+可以更改elf程序的rpath，lib链接等
+
+* Patchelf和glibc-all-in_one使用笔记，修改程序链接的库 https://sillyrabbit.cn/pwn/patchif%E5%92%8Cglibc-all-in_one%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/
+
 
 
 更多参考：
