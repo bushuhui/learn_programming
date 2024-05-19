@@ -353,6 +353,14 @@ git commit -m "remove a submodule"
 注意: 当在子目录中commit之后，需要在主目录也commit一下，否则主目录的submodule信息不会更新。
 
 
+### 7.3 删除误放置的代码仓库
+
+例如，删除 `Thirdpart/yaml-cpp`，不作为git submodule:
+
+```
+git rm --cached Thirdpart/yaml-cpp
+```
+
 
 ## 8. Git常用命令速查表
 
