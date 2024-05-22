@@ -170,137 +170,10 @@ git push origin dev
 ```
 
 
-
-
-
-## 5. 小技巧
-
-### 5.1 Discard current modification
-```
-git log # to see which revision want to back, and get the number, eg. "bdc6980"
-    
-git reset --hard "bdc6980"
-```
-
-
-
-### 5.2 git使用proxy
-
-设置git的代理服务器
-```
-git config --global https.proxy 'http://127.0.0.1:8888'
-```
-
-或者在`~/.gitconfig`里面加入下面的语句，通过代理服务器访问github。其中1081是代理服务器的端口（可也以是1082, 1083, 1084)
-```
-[http "https://github.com"]
-	proxy = socks5://192.168.1.4:1081
-```
-
-
-
-### 5.3 git命令行显示中文
-
-将git 配置文件 core.quotepath项设置为false。quotepath表示引用路径
-```
-git config --global core.quotepath false
-```
-
-### 5.4 使用meld作为git对比工具
-
-#### 5.4.1 下载meld
-
-```
-sudo apt install meld
-```
-
-meld 的基本使用方法，请参考文档
-
-```
-man meld
-```
-
-#### 5.4.2 设置git diff
-
-```
-gedit ~/.gitconfig
-```
-
-将下面的内容加入
-
-```
-[diff]
-	tool = meld
-[difftool]
-	prompt = false
-[difftool "meld"]
-	cmd = meld "$LOCAL" "$REMOTE"
-```
-
-#### 5.4.3 使用
-
-当我们进行版本比较的时候
-
-```
-git difftool -d 版本1 版本2
-```
-
-会自动比较文件夹下的所有内容
-
-## 6. 在项目中使用Git的技巧
-
-### 6.1 Git操作的好习惯
-* 不用非得等程序等都写完才提交到git仓库。最好每天有阶段的成果的时候就提交到仓库，把comments写清楚就好
-* 循环迭代的方式是一个很好的方式，能够有效克服眼高手低，克服畏难情绪。虽然刚开始做的比较简单，但是只要开始，通过不断的迭代，持续不断总能提高
-* 不要高估自己的记忆力，勤动手有效克服自己错误的认识
-* 除了管理代码，Latex论文，研究思路，技术路线，相关文献等都可以使用git管理。例如 https://gitee.com/pi-lab/research_change_detection
-* 每次操作之前，最好 `git pull origin master`，将服务器最新的版本更新到本地，这样的操作尽可能减少冲突的发生的情况
-* 可以构建一个索引将所有的项目管理起来（例如 https://gitee.com/pi-lab/pilab_research_fields），通过构建一个图（其实就是知识图谱），将各种知识、项目等连接起来，从而构建自己的知识、技能、思维体系，成体系的知识、技能才能发挥更大的作用。
-* [HSMM-Network项目](https://gitee.com/pi-lab/hsmm-network) 是一个典型例子，没有使用git管理，很难复现当时的程序，通过完整的`README.md`说明程序的结构、数据集、运行方法，能够很快复现前人的工作
-* 为了将一份代码同时保管在多个代码仓库，可以设置多个`git remote`，例如 `git remote add gitee git@gitee.com:pi-lab/learn_hardware.git`，这样可以将本地的代码同时提交到多个服务器
-* git仓库最好不要放特别大的文件，例如模型、训练数据等。一个比较好的解决办法是，将这些大文件放到服务器的一个目录，然后在项目的`README.md`中，写下数据文件的目录。
-
-
-
-### 6.2 如何在ROS项目中使用
-
-方法一：
-
-由于ROS需要把代码放到 `~/catkin_ws/src/`，因此为了能继续使用git，可以把git项目的目录放在其他地方，例如`~/git_ws/crossing_circle`，通过符号链接的方式，将其他目录的ROS代码引入到ROS的编译目录。
-
-```
-cd ~/catkin_ws/src/
-ln -s ~/git_ws/crossing_circle crossig_circle
-```
-
-方法二:
-
-新建一个ros空间，任意起名即可，如PX4_ws,然后在里面创建src文件夹，将git上的代码下载到src文件
-
-```
-cd ~/PX4_ws/
-catkin_make
-source devel/setup.bash
-```
-
-
-
-### 6.3 项目中除了代码，还有很多数据文件
-
-如果数据文件不大的情况下，可以把数据、程序放到一起利用 git 管理；但是一般的做法是，把数据单独放到一个目录，代码放到另一个目录，在代码的目录里 `README.md` 里面写清楚，数据文件的路径。
-
-如果项目中很多本地文件、临时文件不需要让git管理，可以设置 [.gitignore 文件](gitignore.md)，这个文件可以放在仓库的根目录，或者需要起作用的目录。
-
-在程序中尽可能不要把路径写死，可以通过参数配置读取的方式，如果是C++项目可以使用 `Svar`, 如果是Python程序可以使用 `pconf`
-* C++的配置读取示例： [svar_argparse](https://gitee.com/pi-lab/code_cook/tree/master/c++/argparse/svar_argparse)
-* Python的配置读取示例： [pconf](https://gitee.com/pi-lab/code_cook/tree/master/python/pconf)
-
-
-
-## 7. Git Submodule
+## 5. Git Submodule
 submodule是git中的一个概念，可以将一个git仓库作为另一个git仓库的子目录。例如，我们的项目中需要使用volley库，但是volley库又是一个git仓库，这时候就可以使用submodule的方式将volley库作为我们项目的子目录。这样做的好处是，我们的项目可以使用volley库的最新版本，而不用担心volley库的更新会影响我们的项目。
 
-### 7.1 下载及同步更新
+### 5.1 下载及同步更新
 #### ① 递归clone含有submodule的库
 
 ```
@@ -314,21 +187,25 @@ git submodule update --init --recursive
 ```
 
 
+
 #### ② 更新仓库及其子仓库
+
 如果过了一段时间volley库有更新，这时候我们的app也需要更新，命令如下：
 
 ```
 git submodule update
 ```
 
-### 7.2 当前仓库添加或删除submodule
+### 5.2 当前仓库添加或删除submodule
 #### ①添加submodule
 ```
 git submodule add 仓库地址 路径
 
 # 即
-
 git submodule add https://android.googlesource.com/platform/frameworks/volley extras
+
+# 指定分支
+git submodule add -b master git@gitee.com:pi-lab/GSLAM.git src/GSLAM
 ```
 
 这个命令会将volley仓库clone到extras目录下。然后，我们需要将extras目录下的内容提交到git仓库中，命令如下：
@@ -353,13 +230,139 @@ git commit -m "remove a submodule"
 注意: 当在子目录中commit之后，需要在主目录也commit一下，否则主目录的submodule信息不会更新。
 
 
-### 7.3 删除误放置的代码仓库
+### 5.3 删除误放置的代码仓库
 
 例如，删除 `Thirdpart/yaml-cpp`，不作为git submodule:
 
 ```
 git rm --cached Thirdpart/yaml-cpp
 ```
+
+
+
+
+## 6. 小技巧
+
+### 6.1 Discard current modification
+```
+git log # to see which revision want to back, and get the number, eg. "bdc6980"
+    
+git reset --hard "bdc6980"
+```
+
+
+
+### 6.2 git使用proxy
+
+设置git的代理服务器
+```
+git config --global https.proxy 'http://127.0.0.1:8888'
+```
+
+或者在`~/.gitconfig`里面加入下面的语句，通过代理服务器访问github。其中1081是代理服务器的端口（可也以是1082, 1083, 1084)
+```
+[http "https://github.com"]
+	proxy = socks5://192.168.1.4:1081
+```
+
+
+
+### 6.3 git命令行显示中文
+
+将git 配置文件 core.quotepath项设置为false。quotepath表示引用路径
+```
+git config --global core.quotepath false
+```
+
+### 6.4 使用meld作为git对比工具
+
+#### 6.4.1 下载meld
+
+```
+sudo apt install meld
+```
+
+meld 的基本使用方法，请参考文档
+
+```
+man meld
+```
+
+#### 6.4.2 设置git diff
+
+```
+gedit ~/.gitconfig
+```
+
+将下面的内容加入
+
+```
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+```
+
+#### 6.4.3 使用
+
+当我们进行版本比较的时候
+
+```
+git difftool -d 版本1 版本2
+```
+
+会自动比较文件夹下的所有内容
+
+## 7. 在项目中使用Git的技巧
+
+### 7.1 Git操作的好习惯
+* 不用非得等程序等都写完才提交到git仓库。最好每天有阶段的成果的时候就提交到仓库，把comments写清楚就好
+* 循环迭代的方式是一个很好的方式，能够有效克服眼高手低，克服畏难情绪。虽然刚开始做的比较简单，但是只要开始，通过不断的迭代，持续不断总能提高
+* 不要高估自己的记忆力，勤动手有效克服自己错误的认识
+* 除了管理代码，Latex论文，研究思路，技术路线，相关文献等都可以使用git管理。例如 https://gitee.com/pi-lab/research_change_detection
+* 每次操作之前，最好 `git pull origin master`，将服务器最新的版本更新到本地，这样的操作尽可能减少冲突的发生的情况
+* 可以构建一个索引将所有的项目管理起来（例如 https://gitee.com/pi-lab/pilab_research_fields），通过构建一个图（其实就是知识图谱），将各种知识、项目等连接起来，从而构建自己的知识、技能、思维体系，成体系的知识、技能才能发挥更大的作用。
+* [HSMM-Network项目](https://gitee.com/pi-lab/hsmm-network) 是一个典型例子，没有使用git管理，很难复现当时的程序，通过完整的`README.md`说明程序的结构、数据集、运行方法，能够很快复现前人的工作
+* 为了将一份代码同时保管在多个代码仓库，可以设置多个`git remote`，例如 `git remote add gitee git@gitee.com:pi-lab/learn_hardware.git`，这样可以将本地的代码同时提交到多个服务器
+* git仓库最好不要放特别大的文件，例如模型、训练数据等。一个比较好的解决办法是，将这些大文件放到服务器的一个目录，然后在项目的`README.md`中，写下数据文件的目录。
+
+
+
+### 7.2 如何在ROS项目中使用
+
+方法一：
+
+由于ROS需要把代码放到 `~/catkin_ws/src/`，因此为了能继续使用git，可以把git项目的目录放在其他地方，例如`~/git_ws/crossing_circle`，通过符号链接的方式，将其他目录的ROS代码引入到ROS的编译目录。
+
+```
+cd ~/catkin_ws/src/
+ln -s ~/git_ws/crossing_circle crossig_circle
+```
+
+方法二:
+
+新建一个ros空间，任意起名即可，如PX4_ws,然后在里面创建src文件夹，将git上的代码下载到src文件
+
+```
+cd ~/PX4_ws/
+catkin_make
+source devel/setup.bash
+```
+
+
+
+### 7.3 项目中除了代码，还有很多数据文件
+
+如果数据文件不大的情况下，可以把数据、程序放到一起利用 git 管理；但是一般的做法是，把数据单独放到一个目录，代码放到另一个目录，在代码的目录里 `README.md` 里面写清楚，数据文件的路径。
+
+如果项目中很多本地文件、临时文件不需要让git管理，可以设置 [.gitignore 文件](gitignore.md)，这个文件可以放在仓库的根目录，或者需要起作用的目录。
+
+在程序中尽可能不要把路径写死，可以通过参数配置读取的方式，如果是C++项目可以使用 `Svar`, 如果是Python程序可以使用 `pconf`
+* C++的配置读取示例： [svar_argparse](https://gitee.com/pi-lab/code_cook/tree/master/c++/argparse/svar_argparse)
+* Python的配置读取示例： [pconf](https://gitee.com/pi-lab/code_cook/tree/master/python/pconf)
+
 
 
 ## 8. Git常用命令速查表
