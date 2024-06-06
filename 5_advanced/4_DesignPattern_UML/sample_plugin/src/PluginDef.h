@@ -1,6 +1,4 @@
-#ifndef __PLUGINDEF_H__
-#define __PLUGINDEF_H__
-
+#pragma once
 
 #include <memory>
 #include <string>
@@ -51,7 +49,7 @@ inline PluginPtr PluginBase::create(const std::string& pluginName) {
 inline PluginBase* PluginBase::instance()
 {
     static SPtr<PluginBase> v( new PluginBase());
-    return v;
+    return v.get();
 }
 
 // regist plugin using class & name
@@ -62,9 +60,5 @@ inline PluginBase* PluginBase::instance()
         MapFunctions& mf = PluginBase::instance()->__mapFunc; \
         mf.insert(std::pair<std::string,void*>(#E, (void*)(create##E))); \
     }} D##E##_instance;
-
-
-
-#endif // end of __PLUGINDEF_H__
 
 

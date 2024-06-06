@@ -19,5 +19,5 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # Input
-HEADERS += src/PluginDef.h src/Svar.h
+HEADERS += src/PluginDef.h
 SOURCES += src/PluginDemo.cpp src/PluginImplA.cpp src/PluginImplB.cpp
