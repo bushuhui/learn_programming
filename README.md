@@ -178,8 +178,6 @@
 
 ### 3.2 具体操作步骤：
 
-* [大家fork这个项目到自己的项目](6_tools/git/HowToForkClone.md)
-* [然后git clone自己的项目到本地机器](6_tools/git/HowToForkClone.md)
 * 在各目录里写入各自的代码、报告等
 * 提交代码到本地仓库
 ```
@@ -196,8 +194,6 @@ git commit -m "Change log"
 其他说明：
 
 * 关于Git和Gitee的操作可以深入学习[《Git教程》](6_tools/git/README.md)。
-
-* 可以参考[《Gitee增加用户》](6_tools/git/gitee_addmember.md)来增加用户，**将邀请链接地址发送给`bushuhui@nwpu.edu.cn`** （重要步骤，请不要忘记遗漏！），从而加提高协同便捷性。大家提交作业后，我会在大家的项目里写入批注、建议等等，从而构建良好的反馈机制，能够更有效的取得学习效果。
 
 * 如果无法提交代码到服务器，可以尝试将服务器最新的代码更新到本地，执行操作: `git pull origin master`。合并完成之后再执行代码提交`git push origin master`
 
@@ -273,7 +269,12 @@ git commit -m "Change log"
 6. [编程代码参考、技巧集合](https://gitee.com/pi-lab/code_cook)
     - 可以在这个代码、技巧集合中找到某项功能的示例，从而加快自己代码的编写
 
-
+其他主要的程序库有：
+* [Svar](https://gitee.com/pi-lab/Svar) - 变量容器、插件管理
+* [Svar-allinone](https://gitee.com/pi-lab/Svar-allinone) - Svar模块
+* [GSLAM](https://gitee.com/pi-lab/GSLAM) - GSLAM，视觉计算库
+* [PI-Mavlink](https://gitee.com/pi-lab/pi-mavlink) - Mavlink，无人机管理，集群
+* [code_cook](https://gitee.com/pi-lab/code_cook) - 代码实例
 
 ### 5.1 工具的使用教程等
 
