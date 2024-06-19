@@ -1077,5 +1077,5 @@ SSH是目前较可靠，专为远程登录会话和其他网络服务提供安�
 
 * [Bash Guide for Beginners](docs/Bash-Beginners-Guide.pdf)
 * [BASH 中文文档](docs/bashref.pdf)
-
+* [bash_cheatsheet](bash_cheatsheet.sh)
 
