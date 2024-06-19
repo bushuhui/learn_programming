@@ -56,7 +56,7 @@ ssh-keygen -t rsa -C "youremail@xxx.com"
 
 
 ### 2.2 Clone项目到本地
-在自己项目的页面，找到`Clone or download`，根据需要选择`SSH`，或者`HTTPS`网址，然后在本地命令行执行如下命令，可以参考[操作页面示例](https://gitee.com/pi-lab/learn_programming/blob/master/6_tools/git/pic_git/git_clone_code.png)
+在自己项目的页面，找到`Clone or download`，根据需要选择`SSH`，或者`HTTPS`网址，然后在本地命令行执行如下命令，可以参考[操作页面示例](pic_git/git_clone_code.png)
 ```
 git clone git@192.168.1.3:pi-lab/PIL2.git
 ```
@@ -64,8 +64,24 @@ git clone git@192.168.1.3:pi-lab/PIL2.git
 ### 2.3 增加、编辑代码
 对本地代码、文件进行编辑、操作
 
-
 ### 2.4 增加、提交到本地仓库
+
+在增加代码到本地仓库前，可以先看一下本地目录有那些改变
+
+```
+git status
+```
+
+看看是否有不需要增加的文件，如果有则把本地、临时文件等增加到 `.gitignore` 文件里面，例如：
+
+```
+build
+CMakeList.txt.*
+bin
+```
+
+然后再通过 `git status`确认是否不需要提交到仓库的文件都忽略了。如果没有问题，则继续执行如下命令提交到本地仓库：
+
 ```
 git add -A
 git commit -m "comments to this revision"
@@ -135,7 +151,7 @@ git push origin master
 git checkout -b <branchname>
 ```
 
-
+其中 `<branchname>` 是分支名字。
 
 ### 4.2 合并其他分支的代码 （高级用法）
 
@@ -171,7 +187,7 @@ git push origin dev
 
 
 ## 5. Git Submodule
-submodule是git中的一个概念，可以将一个git仓库作为另一个git仓库的子目录。例如，我们的项目中需要使用volley库，但是volley库又是一个git仓库，这时候就可以使用submodule的方式将volley库作为我们项目的子目录。这样做的好处是，我们的项目可以使用volley库的最新版本，而不用担心volley库的更新会影响我们的项目。
+submodule是Git中的一个概念，可以将一个git仓库作为另一个git仓库的子目录。例如，我们的项目中需要使用volley库，但是volley库又是一个Git仓库，这时候就可以使用submodule的方式将volley库作为我们项目的子目录。这样做的好处是，我们的项目可以使用volley库的最新版本，而不用担心volley库的更新会影响我们的项目。
 
 ### 5.1 下载及同步更新
 #### ① 递归clone含有submodule的库
