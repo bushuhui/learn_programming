@@ -395,6 +395,7 @@ source devel/setup.bash
 ## 9. 参考资料
 
 ### 9.1 基础教程
+* [关于git和gitee的操作，可以观看这个视频学习，gitee（码云）以及git使用教程](https://b23.tv/6InxI3p)
 * [Git快速入门 - Git初体验](https://my.oschina.net/dxqr/blog/134811)
 * [在Win7系统下使用TortoiseGit(乌龟git)简单操作Git](https://my.oschina.net/longxuu/blog/141699)
 
