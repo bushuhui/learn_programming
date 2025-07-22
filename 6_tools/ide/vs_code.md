@@ -11,6 +11,7 @@ VS Code的设置教程：
 ## AI编程
 
 主要的插件包括：
+* Cline
 * RooCode
 * Continue
 

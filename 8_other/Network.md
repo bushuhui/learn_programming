@@ -7,5 +7,5 @@
 为了对计算机网络有一个初步的了解，并且学会简单的通讯协议的编程，我们提供了一下资料供大家学习。
 
 * [TCP/IP网络基础](Network/tcp_ip.md)
-* [网络通信实例代码集合](https://gitee.com/pi-lab/code_cook/tree/master/network)
+* [网络通信实例代码集合](https://gitee.com/pi-lab/code_cook/tree/master/network_web)
 * [UDP通讯协议编程](Network/UDPNote/README.md)

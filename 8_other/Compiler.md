@@ -19,7 +19,7 @@
 ## GCC 工具链
 
 ### gcc / g++
-GCC (GNU Compiler Collaction) 是用的比较多的编译器。由于支持的特性非常多，所以需要掌握其核心的模式、常用的参数等。
+GCC (GNU Compiler Collation) 是用的比较多的编译器。由于支持的特性非常多，所以需要掌握其核心的模式、常用的参数等。
 
 * [gcc 编译命令详解及最佳实践](https://zhuanlan.zhihu.com/p/380180101)
 * [GCC 参数详解](https://www.runoob.com/w3cnote/gcc-parameter-detail.html)
@@ -191,5 +191,4 @@ readelf -l libmyfun.so
 更多参考：
 * [使用readelf和objdump解析目标文件](https://www.jianshu.com/p/863b279c941e)
 * [linux 的readelf命令查看so文件](https://www.jianshu.com/p/0599d846e1df)
-
 

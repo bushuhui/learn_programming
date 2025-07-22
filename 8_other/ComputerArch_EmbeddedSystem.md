@@ -13,5 +13,5 @@
 
 
 通过嵌入式系统能够更好、更快的理解计算机系统的原理与构成：
-* [简明Arduino教程（90分钟学Arduino）](https://gitee.com/pi-lab/learn_hardware/tree/master/Arduino)
+* [简明Arduino教程（90分钟学Arduino）](https://gitee.com/pi-lab/learn_hardware/tree/master/EmbeddedSoftware/Arduino)
 * [无人机飞控与硬件模块](https://gitee.com/pi-lab/research_flight_controller/tree/master/hardware)

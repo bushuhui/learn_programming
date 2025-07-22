@@ -65,7 +65,7 @@
 
 大部分的飞行器控制、计算机视觉、机器学习算法的底层代码通过C++来实现，另外经典的算法教程通过C/C++来讲授，因此需要把C++学好。但是C++非常博大精深，很难一上来就全部学会，因此需要采用 **循环迭代** 的学习方法，即通过多次from the shallower to the deeper的学习过程实现高效率的学习。比较高级、复杂的语言特性不用一上来就去学，可以等基本语法、常用数据结构学的比较扎实之后再着手高级的语法、技巧等。或者等基本语法、用法学完之后，在做练习题目的时候琢磨高级语法特性、技巧，体会为什么要设计这些高级用法，这样的学习有的放矢，效率更高。
 
-主要的学习阶段和步骤分为如下的5个阶段，可以同时进行两个或以上的内容学习和练习，从而提高整体的学习效率。
+主要的学习阶段和步骤分为如下的8个阶段，可以同时进行两个或以上的内容学习和练习，从而提高整体的学习效率。
 
 ### 2.1 [Stage 1: C++基础](1_c++/README.md) 
 
@@ -83,14 +83,14 @@
 
 **需要在3周-6周完成：**
 
-- 推荐下面的[《 Hello 算法 》](https://www.hello-algo.com/) 或者 [《数据结构与算法入门》](https://www.dotcpp.com/course/ds/)，先把各种数据结构和基本的几种算法思维学会。如果对自己有更高的要求，可以学习《算法导论》
+- 推荐[《 Hello 算法 》](https://www.hello-algo.com/) 或者 [《数据结构与算法入门》](https://www.dotcpp.com/course/ds/)，先把各种数据结构和基本的几种算法思维学会。如果对自己有更高的要求，可以学习《算法导论》
 - 根据自己的基础，把重要的内容学一下，并尝试将算法练习题自己实现一下 （大约3-6周）
 - 实现过程需要思考，算法的本质是什么，如何将算法转化成循环、判断
 - 如何实现算法，如何测试代码，如何构建测试数据
 - 可以参考一些教程，加快学习速度，例如：
     - [《 Hello 算法 》 - 动画图解、一键运行的数据结构与算法教程 (推荐)](https://www.hello-algo.com/)
     - [《数据结构与算法入门》](https://www.dotcpp.com/course/ds/)，学习基础的数据结构和算法知识，能够编写简单的算法题目。
-    - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html) ， [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)，如果对自己要求更高，可以通过学习算法导论掌握更深的算法分析能力。
+    - 在学习完上面的算法与数据结构之后，如果想学的更深入，可以学习[麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html) ， [你是如何坚持读完《算法导论》这本书](https://www.zhihu.com/question/27744730)，如果对自己要求更高，可以通过学习算法导论掌握更深的算法分析能力。
 
 ### 2.3 [Stage 3: 在线编程练习](3_code_practice/README.md) 
 
@@ -258,27 +258,26 @@ git commit -m "Change log"
 
 在上述内容学习完成之后，可以进行机器学习、计算机视觉方面的学习与研究，具体的资料可以参考：
 1. 飞行器智能感知与控制实验室 - 培训教程与作业
-    - [《飞行器智能感知与控制实验室-暑期培训教程》](https://gitee.com/pi-lab/SummerCamp)
-    - [《飞行器智能感知与控制实验室-暑期培训作业》](https://gitee.com/pi-lab/SummerCampHomework)
+    - [《飞行器智能感知与控制实验室-暑期培训教程》（内部资料）](https://gitee.com/pi-lab/SummerCamp)
+    - [《飞行器智能感知与控制实验室-暑期培训作业》（内部资料）](https://gitee.com/pi-lab/SummerCampHomework)
 2. 机器学习教程与作业
     - [《机器学习教程》](https://gitee.com/pi-lab/machinelearning_notebook)
     - [《机器学习课程作业》](https://gitee.com/pi-lab/machinelearning_homework)
 3. [《一步一步学SLAM》](https://gitee.com/pi-lab/learn_slam)
 4. [《一步一步学ROS》](https://gitee.com/pi-lab/learn_ros)
 5. [飞行器智能感知与控制实验室-研究课题](https://gitee.com/pi-lab/pilab_research_fields)
-6. [编程代码参考、技巧集合](https://gitee.com/pi-lab/code_cook)
+6. [编程代码参考、技巧集合 （内部资料）](https://gitee.com/pi-lab/code_cook)
     - 可以在这个代码、技巧集合中找到某项功能的示例，从而加快自己代码的编写
 
 其他主要的程序库有：
 * [Svar](https://gitee.com/pi-lab/Svar) - 变量容器、插件管理
 * [Svar-allinone](https://gitee.com/pi-lab/Svar-allinone) - Svar模块
 * [GSLAM](https://gitee.com/pi-lab/GSLAM) - GSLAM，视觉计算库
-* [PI-Mavlink](https://gitee.com/pi-lab/pi-mavlink) - Mavlink，无人机管理，集群
-* [code_cook](https://gitee.com/pi-lab/code_cook) - 代码实例
+* [PI-Mavlink](https://gitee.com/pi-lab/pi-mavlink) - Mavlink，无人机管理，集群 （内部资料）
+* [code_cook](https://gitee.com/pi-lab/code_cook) - 代码实例 （内部资料）
 
 ### 5.1 工具的使用教程等
 
-* [Code Cook - 编程参考代码，技巧集合](https://gitee.com/pi-lab/code_cook)
 * [Linux](6_tools/linux/README.md)
 * [Markdown](6_tools/markdown/README.md)
 * [Git](6_tools/git/README.md)
@@ -290,3 +289,4 @@ git commit -m "Change log"
 ### 5.2 参考资料：
 
 * [C++的算法、程序大全](https://github.com/TheAlgorithms/C-Plus-Plus)
+

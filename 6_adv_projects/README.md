@@ -12,7 +12,6 @@
 具体的学习牵引项目如下所列，可以思考如何自己独立自主实现下面所示例的项目。
 
 * [FastGCS无人机地面站](https://gitee.com/pi-lab/FastGCS)：能够支持航线飞行、定点飞行的无人机地面站，整合了无人机实时地图、无人机飞行仿真
-* [PI-SLAM](https://gitee.com/pi-lab/pi-slam) : 智能系统实验室开发的插件化SLAM系统，能够学习视觉SLAM编程
 * [Map2DFusion](https://gitee.com/pi-lab/Map2DFusion) ： 实时二维地图拼接，通过视觉SLAM解算位姿，并增量式拼接二维地图
 * [序列化图像的SfM重建](https://gitee.com/pi-lab/SequenceSfM) : 本实例程序演示了如何编写基本的SfM程序，通过利用序列化数据的特点加快重建的速度
 

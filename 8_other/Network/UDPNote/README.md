@@ -1,4 +1,4 @@
-## UDP学习使用笔记
+# UDP学习使用笔记
 
 该笔记主要服务于通过UDP通讯协议发布MAVLink指令，以此达到控制无人机的效果。
 
@@ -6,7 +6,7 @@
 
 相关程序可以从google上面查询**UDP SAMPLE CODE**或**ASIO**，前者是UDP通讯协议发送和接收的基本方法和流程，后面是一个与网络通讯的大网站，可以在里面查询代码。
 
-### 一. 什么是UDP？
+## 一. 什么是UDP？
 
 UDP是User Datagram Protocol(用户数据报协议)的缩写，它是一个简单的协议，简单到UDP规范RFC0768只有区区3页。
 
@@ -24,14 +24,14 @@ IP数据报到达目的主机后，内核层实现的IP模块，会负责接收�
 
 ![2](./picture/2.png)
 
-### 二. UDP数据报封装格式
+## 二. UDP数据报封装格式
 
 IPv4协议(Protocol)字段用值17来标识UDP，UDP数据报头部通常是8字节，IPv4头部之后紧接着是UDP头部，然后是UDP数据Payload(如有)。
 
 ![3](./picture/3.png)
 
 
-### 三. UDP编程通讯逻辑
+## 三. UDP编程通讯逻辑
 
 要想用C++编成实现UDP服务端和客户端的创建，需要用到一些列函数，这些函数被封装在
 UDP通讯程序运行逻辑如图所示：
@@ -40,7 +40,7 @@ UDP通讯程序运行逻辑如图所示：
 
 下面简单介绍一下里面所用的函数和数据类型
 
-#### 1.socket函数
+### 1.socket函数
 
 用来创建套接字，这个是UDP通讯协议的核心，不论是创建UDP服务器还是UDP客户端都必须要先创建套接字。
 
@@ -55,7 +55,7 @@ int socket(int domain, int type, int protocol)
 - protocol：一般取为0。成功时，返回一个小的非负整数值，与文件描述符类似;
 - return：成功0; 失败-1;（可以通过这个来判断是否成功生成套接字）
 
-#### 2.bind函数
+### 2.bind函数
 
 bind 功能是把一个本地协议地址赋予一个套接字，告知内核去选择该IP地址。该函数用于服务端。
 
@@ -68,7 +68,7 @@ int bind(int sockfd, const struct sockaddr* my_addr, socklen_t addrlen);
 - addrlen：表示 my_addr 结构的长度，用 sizeof 操作符获取;
 - return：成功0; 失败-1;
 
-#### 3.sockaddr_in和sockaddr数据类型
+### 3.sockaddr_in和sockaddr数据类型
 
 sockaddr_in：sockaddr_in是用于IPv4地址的结构体，定义如下：
 
@@ -93,7 +93,7 @@ struct sockaddr {
 
 **一般在定义地址信息的时候使用sockaddr_in结构体，但是考虑到某些函数输入参数的要求（eg:bind()）,所以经常把sockaddr_in数据转换为sockaddr数据((struct sockaddr\*))**
 
-#### 4.connect
+### 4.connect
 
 connect 功能是用于建立与指定socket的连接,该函数用于客户端。
 
@@ -108,7 +108,7 @@ int connect(int soctfd, const struct sockaddr * addr, int addrlen);
 - a. 硬错：端口号错误，服务器进程未开启，收到RST，立刻返回ECONNREFUSED;
 - b. 软错：IP不可达，协议ICMP，比如 no route to host，通常是发送arp请求无响应;
 
-#### 5.sendto
+### 5.sendto
 
 发送消息字
 
@@ -127,7 +127,7 @@ ssize_t sendto(int sockfd, const void *buf, size_t len, int flags,
 
 tips：可以通过成功返还的数据长度进行高级操作。
 
-#### 6.recvfrom
+### 6.recvfrom
 
 接收消息字
 
@@ -146,8 +146,8 @@ ssize_t recvfrom(int sockfd, void *buf, size_t len, int flags,
 
 tips：可以通过成功返还的数据长度进行高级操作。
 
-#### 7.小工具
- 
+### 7.小工具
+
 ```
 // 打印ip和port
 std::printf("接收到一个连接, 其ip: %s, port: %d\n", inet_ntoa(m_RemoteAddress.sin_addr), ntohs(m_RemoteAddress.sin_port));
@@ -158,14 +158,12 @@ std::printf("接收到一个连接, 其ip: %s, port: %d\n", inet_ntoa(m_RemoteAd
 inet_pton(AF_INET, ip, &m_RemoteAddress.sin_addr);  
 ```
 
-#### 结语
+## 结语
 
 通过上面简单UDP编程逻辑介绍和常用函数介绍，基本可以理解UDP的通讯原理和逻辑，如果想要进一步了解对UDP通讯的编程的应用可以参考[code_cook里面的socket++程序](https://gitee.com/pi-lab/code_cook/tree/master/network/socket++)，这个程序实现了tcp、udp的发送与接收。
 
-##### Reference
+## Reference
 
-[【C++开发UDP通信：使用socket创建UDP服务器端和客户端】](https://blog.csdn.net/weixin_41275726/article/details/124529812?ops_request_misc=&request_id=&biz_id=102&utm_term=%E7%94%A8C++%E7%BC%96%E6%88%90%E5%AE%9E%E7%8E%B0UDP%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-124529812.142^v99^pc_search_result_base9&spm=1018.2226.3001.4187)
-
-[【UDP Client Server using connect | C implementation】](https://www.geeksforgeeks.org/udp-client-server-using-connect-c-implementation/)
-
-[【UDP SAMPLE CODE】](https://groups.seas.harvard.edu/courses/cs143/pa-one/client-server.html)
+* [【C++开发UDP通信：使用socket创建UDP服务器端和客户端】](https://blog.csdn.net/weixin_41275726/article/details/124529812?ops_request_misc=&request_id=&biz_id=102&utm_term=%E7%94%A8C++%E7%BC%96%E6%88%90%E5%AE%9E%E7%8E%B0UDP%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-124529812.142^v99^pc_search_result_base9&spm=1018.2226.3001.4187)
+* [【UDP Client Server using connect | C implementation】](https://www.geeksforgeeks.org/udp-client-server-using-connect-c-implementation/)
+* [【UDP SAMPLE CODE】](https://groups.seas.harvard.edu/courses/cs143/pa-one/client-server.html)
