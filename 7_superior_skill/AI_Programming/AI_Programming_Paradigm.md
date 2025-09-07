@@ -96,3 +96,4 @@ Markdown 这种格式非常了不起。它人类可读、可版本化、有变�
 * https://zhuanlan.zhihu.com/p/1929225732837585807 OpenAI 员工揭秘 AI 编程新范式：提示词工程已死，未来属于「规范工程师」
 * https://github.com/openai/model_spec The OpenAI Model Spec
 * 万字长文｜OpenAI模型规范（全文） https://zhuanlan.zhihu.com/p/702411697
+* Toolkit to help you get started with Spec-Driven Development https://github.com/github/spec-kit
