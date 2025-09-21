@@ -38,13 +38,13 @@
 * 编程思维，分析问题、分解问题、解决问题能力
 
 
-## 二、如何学习C++
+## 一、如何学习C++
 
 大部分的飞行器控制、计算机视觉、机器学习算法的底层代码通过C++来实现，另外经典的算法教程通过C/C++来讲授，因此需要把C++学好。但是C++非常博大精深，很难一上来就全部学会，因此需要采用 **循环迭代** 的学习方法，即通过多次from the shallower to the deeper的学习过程实现高效率的学习。比较高级、复杂的语言特性不用一上来就去学，可以等基本语法、常用数据结构学的比较扎实之后再着手高级的语法、技巧等。或者等基本语法、用法学完之后，在做练习题目的时候琢磨高级语法特性、技巧，体会为什么要设计这些高级用法，这样的学习有的放矢，效率更高。
 
 主要的学习阶段和步骤分为如下的8个阶段，可以同时进行两个或以上的内容学习和练习，从而提高整体的学习效率。
 
-### 2.1 [Stage 1: C++基础](1_c++/README.md) 
+### 1.1 [Stage 1: C++基础](1_c++/README.md) 
 
 **需要在2周-3周完成：**
 
@@ -56,7 +56,7 @@
     - [《C++ 教程》 （推荐这个教程）](http://www.runoob.com/cplusplus/cpp-tutorial.html) ，通过这个教程快速学会C++的语法等。
     - 如果对自己有更高的要求，可以学习《[C++ Primer》 （可以有一定基础之后学习）](https://www.zhihu.com/question/32087709)。不过最好还是用上面普通的教程先把基础知识学好之后，把Stage4的小项目做完之后，再学习C++ Primer更有效率。
 
-### 2.2 [Stage 2: 算法](2_datastructure_algorithm/README.md)
+### 1.2 [Stage 2: 算法](2_datastructure_algorithm/README.md)
 
 **需要在3周-6周完成：**
 
@@ -69,7 +69,7 @@
     - [《数据结构与算法入门》](https://www.dotcpp.com/course/ds/)，学习基础的数据结构和算法知识，能够编写简单的算法题目。
     - 在学习完上面的算法与数据结构之后，如果想学的更深入，可以学习[麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html) ， [你是如何坚持读完《算法导论》这本书](https://www.zhihu.com/question/27744730)，如果对自己要求更高，可以通过学习算法导论掌握更深的算法分析能力。
 
-### 2.3 [Stage 3: 在线编程练习](3_code_practice/README.md) 
+### 1.3 [Stage 3: 在线编程练习](3_code_practice/README.md) 
 
 **需要在3周-6周完成：**
 
@@ -81,7 +81,7 @@
     - [中级算法 - 巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/)
     - [高级算法 - 提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard/)
 
-### 2.4 [Stage 4: 综合编程练习项目](4_projects/README.md) 
+### 1.4 [Stage 4: 综合编程练习项目](4_projects/README.md) 
 
 **需要在2周-4周完成：**
 
@@ -89,7 +89,7 @@
 - 通过这个综合练习，运用所学的知识解决一个或者多个实际问题，从而锻炼系统性解决问题的能力，并提高思维水平
 - 如果自己想不到太好的例子，可以参考所列的：[《综合练习例子程序》](4_projects/README.md)
 
-### 2.5 [Stage 5: 高级技巧](5_advanced/README.md) 
+### 1.5 [Stage 5: 高级技巧](5_advanced/README.md) 
 
 **需要在2周-4周完成：**
 
@@ -112,7 +112,7 @@
 - 掌握[多种编程工具](6_tools)的用法
 - 在用的过程多琢磨技巧，并不断总结
 
-### 2.6 [Stage6：计算机基础知识](8_other/README.md)
+### 1.6 [Stage6：计算机基础知识](8_other/README.md)
 
 如果没有学过操作系统、计算机原理、嵌入式系统、编译原理、计算机网络等课程，可以快速学习这方面的知识，学过这方面的知识会提升大家对开发大型、面向实用系统的开发能力。主要包括内容包括
 
@@ -122,13 +122,13 @@
 * [编译原理](8_other/Compiler.md)
 
 
-### 2.7 [Stage 7: 高级项目](6_adv_projects) 
+### 1.7 [Stage 7: 高级项目](6_adv_projects) 
 
 **需要在2周-4周完成，为更好的提高自己的能力建议完成：**
 
 - 在学习基本工具的基础上，通过完成一个更复杂一点的项目，将编程语言、数据结构、工具、Debug、设计模式等多种技能进行综合练习，巩固所学的知识和技能。
 
-### 2.8 [Stage 8: 高级技能](7_superior_skill) 
+### 1.8 [Stage 8: 高级技能](7_superior_skill) 
 
 **需要在2周-4周完成，为更好的提高自己的能力建议完成：**
 
@@ -138,12 +138,12 @@
     - [AI 编程新范式](7_superior_skill/AI_Programming/AI_Programming_Paradigm.md)
     - [AI 编程工具](7_superior_skill/AI_Programming/AI_Programming_Tools.md)
 
-### 2.9 恭喜通关！
+### 1.9 恭喜通关！
 
 如果你能坚持到这个阶段，说明你编程功力很强了！可以自由遨游于机器的世界，充分发挥你的能力去创造奇迹！
 
 
-## 三、相关学习资料参考
+## 二、相关学习资料参考
 
 在上述内容学习完成之后，可以进行机器学习、计算机视觉方面的学习与研究，具体的资料可以参考：
 1. 机器学习教程与作业
@@ -159,7 +159,7 @@
 * [Svar](https://gitee.com/pi-lab/Svar) - 变量容器、插件管理
 * [GSLAM](https://gitee.com/pi-lab/GSLAM) - GSLAM，视觉计算库
 
-### 5.1 工具的使用教程等
+### 2.1 工具的使用教程等
 
 * [Linux](6_tools/linux/README.md)
 * [Markdown](6_tools/markdown/README.md)
@@ -169,7 +169,7 @@
 - [VS Code](6_tools/ide/vs_code.md)
 
 
-### 5.2 参考资料
+### 2.2 参考资料
 
 * [C++的算法、程序大全](https://github.com/TheAlgorithms/C-Plus-Plus)
 

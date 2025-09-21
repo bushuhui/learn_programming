@@ -39,20 +39,15 @@
     - 常用命令
 * IDE
     - 熟悉自己所用的IDE
-        - [QtCreator](6_tools/qt/QtCreator.md)
         - [VS Code](6_tools/ide/vs_code.md)
-    - 使用IDE进行单步调试
+    - 使用IDE进行调试
 * [Debug能力](6_tools/debug)
     - 学会debug
     - 单元测试
 * 第三方库
-    - [Qt](6_tools/qt)，[OpenGL](6_tools/opengl)
-    - Eigen3
-    - OpenCV
+    - [numpy](https://gitee.com/pi-lab/machinelearning_notebook/blob/master/1_numpy_matplotlib_scipy_sympy/1-numpy_tutorial.ipynb), [matplotlib](https://gitee.com/pi-lab/machinelearning_notebook/blob/master/1_numpy_matplotlib_scipy_sympy/2-matplotlib_tutorial.ipynb)
+    - [PyTorch](https://gitee.com/pi-lab/machinelearning_notebook/tree/master/6_pytorch)
 * [综合练习，小项目（小游戏，模拟仿真程序）](4_projects)
-* 高级技巧（[CMake](6_tools/cmake)，[库编写](5_advanced/3_Library)）
-    - 使用CMake编写项目编译脚本等
-    - 如何把常用的程序组织成库（静态库，动态库）
 * [代码规范](5_advanced/programming_standard)
 * [设计模式](5_advanced/4_DesignPattern_UML)
 * 编程思维，分析问题、分解问题、解决问题能力
@@ -83,8 +78,8 @@
 
 **需要在3周-6周完成：**
 
-- 推荐[《 Hello 算法 》](https://www.hello-algo.com/) ，先把各种数据结构和基本的几种算法思维学会。如果对自己有更高的要求，可以学习《算法导论》
-- 根据自己的基础，把重要的内容学一下，并尝试将算法练习题自己实现一下 （大约3-6周）
+- 推荐[《 Hello 算法 》](https://www.hello-algo.com/) ，先把各种数据结构和基本的几种算法思维学会。
+- 根据自己的基础，把重要的内容学一下，并尝试将算法练习题自己实现一下 
 - 实现过程需要思考，算法的本质是什么，如何将算法转化成循环、判断
 - 如何实现算法，如何测试代码，如何构建测试数据
 - 可以参考一些教程，加快学习速度，例如：
@@ -212,7 +207,7 @@ git commit -m "Change log"
 
 9. 因为研究生阶段需要学习的知识、技能非常多，按照传统的学习方法已远远无法满足大量知识、技能的学习。在本练习过程可以改变学习的策略，即通过项目牵引的方式进行学习，不是让大家囫囵吞枣，而是调整学习过程的一些先后顺序。尽可能早的完成 [《第四阶段的小项目》](4_projects) 的练习，虽然基础可能不是特别牢固，但是克服自己心中的恐惧，尽可能用已有的知识，通过改造示例程序去完成第一个小项目。在做到过程发现缺少哪些知识、技能，然后在整个过程有意识的去补相关的知识、技能。
 
-10. 这些课题最好使用[《Linux》](6_tools/linux)以及Linux下的开发工具来做。逼迫自己使用[《Linux》](6_tools/linux)，只有多练、多用才能快速进步。如果实在太难，先在虚拟机里装一个Linux（例如Ubuntu，或者LinuxMint等），先熟悉一下。但是最终需要学会使用Linux。
+10. 这些课题最好使用[《Linux》](6_tools/linux)以及Linux下的开发工具来做。逼迫自己使用[《Linux》](6_tools/linux)，只有多练、多用才能快速进步。如果实在太难，先在虚拟机里装一个Linux（例如Ubuntu），先熟悉一下。但是最终需要学会使用Linux。
 
 11. **制定计划，严格按照自己设定的时间节点来完成。如果有拖延症，努力克服自己的拖延症**。
 
