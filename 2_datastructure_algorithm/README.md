@@ -10,6 +10,7 @@
 * 可以参考一些教程，加快学习速度，例如：
     - [《 Hello 算法 》 - 动画图解、一键运行的数据结构与算法教程 (推荐)](https://www.hello-algo.com/)
     - [数据结构与算法入门](https://www.dotcpp.com/course/ds/)
+    - [数据结构与算法的可视化，方便算法原理的理解](https://algorithm-visualizer.org/)
     - [麻省理工学院公开课：算法导论](http://open.163.com/special/opencourse/algorithms.html)
       - [你是如何坚持读完《算法导论》这本书的？](https://www.zhihu.com/question/27744730)
 
