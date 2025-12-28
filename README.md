@@ -141,6 +141,7 @@
 - AI编程将起到越来越重要的作用，因此有必要好好琢磨并学习AI编程的思路、技巧等
     - [AI 编程新范式](7_superior_skill/AI_Programming/AI_Programming_Paradigm.md)
     - [AI 编程工具](7_superior_skill/AI_Programming/AI_Programming_Tools.md)
+    - [The Modern Software Developer](https://themodernsoftware.dev/)
 
 ### 2.8 恭喜通关！
 
